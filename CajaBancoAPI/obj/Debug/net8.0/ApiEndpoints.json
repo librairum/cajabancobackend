@@ -1,0 +1,157 @@
+[
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.BancoController",
+    "Method": "GetBancos",
+    "RelativePath": "Banco",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CajaBancoAPI.Models.Banco, CajaBancoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.BancoController",
+    "Method": "PostBanco",
+    "RelativePath": "Banco",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "banco",
+        "Type": "CajaBancoAPI.Models.Banco",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CajaBancoAPI.Models.Banco",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.BancoController",
+    "Method": "PutBanco",
+    "RelativePath": "Banco",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idbanco",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "registro",
+        "Type": "CajaBancoAPI.Models.Banco",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.BancoController",
+    "Method": "DeleteBanco",
+    "RelativePath": "Banco",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idbanco",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.BancoController",
+    "Method": "GetBanco",
+    "RelativePath": "Banco/{empresa}/{idbanco}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "idbanco",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CajaBancoAPI.Models.Banco",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PermisosxPerfilController",
+    "Method": "GetMenuPerfiles",
+    "RelativePath": "PermisosxPerfil/{codigoPerfil}/{cCodModulo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoPerfil",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "cCodModulo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CajaBancoAPI.Models.PermisosxPerfil, CajaBancoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
