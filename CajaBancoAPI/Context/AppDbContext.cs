@@ -12,6 +12,7 @@ namespace CajaBancoAPI.Context
         public DbSet<Banco> Ban01Banco { get;set; }
         public DbSet<PermisosxPerfil> ListaMenuxPerfil { get; set; }
         public DbSet<Cuenta_Bancaria> Ban01CuentaBancaria { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.Entity<Banco>().HasNoKey();
@@ -23,6 +24,9 @@ namespace CajaBancoAPI.Context
                 .HasKey(cb => new { cb.Ban01Empresa, cb.Ban01IdBanco, cb.Ban01IdCuenta });
 
             modelBuilder.Entity<PermisosxPerfil>().HasNoKey();
+
+            modelBuilder.Entity<Usuario>().HasKey(u => new { u.Sistema, u.Nombre });
+
         }
 
     }

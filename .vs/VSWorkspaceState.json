@@ -1,0 +1,9 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\CajaBancoAPI",
+    "\\CajaBancoAPI\\Context"
+  ],
+  "SelectedNode": "\\CajaBancoAPI\\Context\\AppDbContext.cs",
+  "PreviewInSolutionExplorer": false
+}

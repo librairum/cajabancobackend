@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "CajaBancoAPI.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBancoAPI.Controllers.UsuarioLoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CajaBancoAPI.Controllers.BancoController",
     "Method": "GetBancos",
     "RelativePath": "Banco",
@@ -124,6 +140,145 @@
     ]
   },
   {
+    "ContainingType": "CajaBancoAPI.Controllers.CuentaBancariaController",
+    "Method": "GetCuentasBancarias",
+    "RelativePath": "CuentaBancaria",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CajaBancoAPI.Models.Cuenta_Bancaria, CajaBancoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.CuentaBancariaController",
+    "Method": "CreateCuentaBancaria",
+    "RelativePath": "CuentaBancaria",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cuentaBancaria",
+        "Type": "CajaBancoAPI.Models.Cuenta_Bancaria",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CajaBancoAPI.Models.Cuenta_Bancaria",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.CuentaBancariaController",
+    "Method": "GetCuentaBancaria",
+    "RelativePath": "CuentaBancaria/{empresa}/{idbanco}/{idcuenta}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "idbanco",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "idcuenta",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CajaBancoAPI.Models.Cuenta_Bancaria",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.CuentaBancariaController",
+    "Method": "UpdateCuentaBancaria",
+    "RelativePath": "CuentaBancaria/{empresa}/{idbanco}/{idcuenta}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "idbanco",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "idcuenta",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "cuentaBancaria",
+        "Type": "CajaBancoAPI.Models.Cuenta_Bancaria",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.CuentaBancariaController",
+    "Method": "DeleteCuentaBancaria",
+    "RelativePath": "CuentaBancaria/{empresa}/{idbanco}/{idcuenta}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "idbanco",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "idcuenta",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CajaBancoAPI.Controllers.PermisosxPerfilController",
     "Method": "GetMenuPerfiles",
     "RelativePath": "PermisosxPerfil/{codigoPerfil}/{cCodModulo}",
@@ -153,5 +308,98 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.UsuarioController",
+    "Method": "GetUsuarios",
+    "RelativePath": "Usuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CajaBancoAPI.Models.Usuario, CajaBancoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.UsuarioController",
+    "Method": "CrearUsuario",
+    "RelativePath": "Usuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "CajaBancoAPI.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CajaBancoAPI.Models.Usuario",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.UsuarioController",
+    "Method": "UpdateUsuario",
+    "RelativePath": "Usuario/{sistema}/{nombre}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sistema",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "usuario",
+        "Type": "CajaBancoAPI.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.UsuarioController",
+    "Method": "DeleteUsuario",
+    "RelativePath": "Usuario/{sistema}/{nombre}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sistema",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
