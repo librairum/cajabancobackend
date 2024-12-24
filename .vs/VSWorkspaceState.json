@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\CajaBancoAPI",
-    "\\CajaBancoAPI\\Context"
+    "\\CajaBancoAPI\\Context",
+    "\\CajaBancoAPI\\Controllers",
+    "\\CajaBancoAPI\\Properties",
+    "\\CajaBancoAPI\\Service"
   ],
-  "SelectedNode": "\\CajaBancoAPI\\Context\\AppDbContext.cs",
+  "SelectedNode": "\\CajaBancoAPI\\Controllers\\AuthController.cs",
   "PreviewInSolutionExplorer": false
 }
