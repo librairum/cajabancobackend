@@ -18,7 +18,8 @@ namespace CajaBancoAPI.Controllers
         }
 
         [HttpGet("{codigoPerfil}/{cCodModulo}")]
-        public async Task<ActionResult<IEnumerable<PermisosxPerfil>>> GetMenuPerfiles(string codigoPerfil, string cCodModulo)
+        public async Task<ActionResult<IEnumerable<PermisosxPerfil>>> GetMenuPerfiles(string codigoPerfil,
+            string cCodModulo)
         {
             if (_context == null) {
                 throw new Exception("dbcontext es nulo");

@@ -23,6 +23,8 @@ namespace CajaBancoAPI.Context
                 .HasKey(cb => new { cb.Ban01Empresa, cb.Ban01IdBanco, cb.Ban01IdCuenta });
 
             modelBuilder.Entity<PermisosxPerfil>().HasNoKey();
+
+            
         }
 
     }
