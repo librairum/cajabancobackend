@@ -1,135 +1,97 @@
-﻿using CajaBancoAPI.Context;
+﻿using CajaBanco.Abstractions.IApplication;
+using CajaBanco.DTO.Banco;
+using CajaBancoAPI.Context;
 using CajaBancoAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Metadata;
 
 namespace CajaBancoAPI.Controllers
 {
 
-    [Route("[controller]")]
+    
     [ApiController]
+    [Route("[controller]")]
     public class BancoController : Controller
     {
-
-        private readonly AppDbContext _context;
-        private readonly ILogger<BancoController> _logger;
-        public BancoController(AppDbContext context) {
-            this._context = context;
+        
+        //private readonly AppDbContext _context;
+        //private readonly ILogger<BancoController> _logger;
+        private IBancoApplication _bancoAplicacion;
+        public BancoController(IBancoApplication bancoAplicacion)
+        {
+            this._bancoAplicacion = bancoAplicacion;
         }
 
 
-        // GET: BancoController/GetBancos
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Banco>>> GetBancos() {
-            return await _context.Ban01Banco.ToListAsync();
-            
-        }
-        //// GET: BancoController
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
-
-        // GET: BancoController/Details/5
-        // GET: BancoController/GetBanco/5
-        [HttpGet("{empresa}/{idbanco}")]
-        public async Task<ActionResult<Banco>>  GetBanco(string empresa,string idbanco)
+        [Route("SpList")]
+        public async Task<ActionResult> ObtenerLista(string empresa, string descripcion="")
         {
-            var banco = await _context.Ban01Banco.FindAsync(empresa, idbanco);
-            if (banco == null) {
-                return NotFound();
+            try
+            {
+                var result = await this._bancoAplicacion.SpListaBanco(empresa, descripcion);
+                return Ok(result);
             }
-            return banco;
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
         }
 
-        // GET: BancoController/Create
-        // GET: BancoController/PostBanco
-        //public ActionResult PostBanco()
-        //{
-        //    return View();
-        //}
-
-        // POST: BancoController/Create
-        //BancoController/PostBanco
         [HttpPost]
-        //[ValidateAntiForgeryToken]
-        public async Task<ActionResult<Banco>> PostBanco(Banco banco)
+        [Route("SpCreate")]
+        public async Task<ActionResult> SpInsertaBanco(BancoCreateRequestDTO request)
         {
             try
             {
-                _context.Ban01Banco.Add(banco);
-                await _context.SaveChangesAsync();
-                //return CreatedAtAction("GetBanco", new { id = banco.Ban01IdBanco }, banco);
-                return Ok(new { message = "Banco creado exitosamente" });
-                //return RedirectToAction(nameof(Index));
-
+                var result = await this._bancoAplicacion.SpInsertaBanco(request);
+                return Ok(result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                _logger.LogError(ex, "An unexpected error occurred.");
-                return StatusCode(500, "An unexpected error occurred.");
+                return BadRequest(ex.Message);
             }
         }
-
-     
-        // PUT: BancoController/Edit/5
-        //[HttpPost]
+        
         [HttpPut]
-        //[ValidateAntiForgeryToken]
-        public async Task<ActionResult>  PutBanco(string empresa, string idbanco, Banco registro)
+        [Route("SpUpdate")]
+        public async Task<ActionResult> SpActualiza(BancoCreateRequestDTO request)
         {
-            //var registro = await _context.Ban01Banco.FindAsync(empresa, idbanco)
-            if (empresa!= registro.Ban01Empresa && idbanco !=registro.Ban01IdBanco)
-            {
-                return BadRequest();
-            }
-            _context.Entry(registro).State = EntityState.Modified; 
             try
             {
-                await _context.SaveChangesAsync();
-                //return RedirectToAction(nameof(Index));
-                return Ok(new { message = "Banco actualizado exitosamente" });
-            }
-            catch(DbUpdateConcurrencyException)
+                var result = await this._bancoAplicacion.SpActualizaBanco(request);
+                return Ok(result);
+
+            }catch(Exception ex)
             {
-                //if(!)
-                //return View();
-                return NotFound();
-                throw;
+                return BadRequest(ex.Message);
             }
-
-            
-
         }
 
-        // DELETE: BancoController/Delete/5
         [HttpDelete]
-        //[ValidateAntiForgeryToken]
-        public async  Task<ActionResult> DeleteBanco(string empresa, string idbanco)
+        [Route("SpDelete")]
+        public async Task<ActionResult> SpEliminaBanco(string idempresa, string idbanco)
         {
-            var registroBanco = await _context.Ban01Banco.FindAsync(empresa, idbanco);
-            if (registroBanco == null)
-            {
-                return NotFound();
-            }
-
             try
             {
-                _context.Ban01Banco.Remove(registroBanco);
-                await _context.SaveChangesAsync();
-                return Ok(new { message = "Banco eliminado exitosamente" });
-                //return RedirectToAction(nameof(Index));
+                var result = await this._bancoAplicacion.SpEliminaBanco(idempresa, idbanco);
+                return Ok(result);
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                return BadRequest(ex.Message);
             }
-            
         }
 
-        private bool BancoExiste(string id) {
-            return _context.Ban01Banco.Any(x => x.Ban01IdBanco == id);
-        }
+        
+
+
+
+
+
+
     }
 }

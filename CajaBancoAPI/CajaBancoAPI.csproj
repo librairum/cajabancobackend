@@ -13,4 +13,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="7.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CajaBanco.Abstractions\CajaBanco.Abstractions.csproj" />
+    <ProjectReference Include="..\CajaBanco.Application\CajaBanco.Application.csproj" />
+    <ProjectReference Include="..\CajaBanco.DTO\CajaBanco.DTO.csproj" />
+    <ProjectReference Include="..\CajaBanco.Repository\CajaBanco.Repository.csproj" />
+    <ProjectReference Include="..\CajaBanco.Services\CajaBanco.Services.csproj" />
+  </ItemGroup>
+
 </Project>

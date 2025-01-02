@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CajaBancoAPI", "CajaBancoAPI\CajaBancoAPI.csproj", "{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CajaBancoAPI", "CajaBancoAPI\CajaBancoAPI.csproj", "{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CajaBanco.DTO", "CajaBanco.DTO\CajaBanco.DTO.csproj", "{059E282C-6831-4AEF-A569-8EB41C161013}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CajaBanco.Abstractions", "CajaBanco.Abstractions\CajaBanco.Abstractions.csproj", "{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CajaBanco.Repository", "CajaBanco.Repository\CajaBanco.Repository.csproj", "{D2E4BE2D-A929-49AA-9445-168BEDE3E812}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CajaBanco.Services", "CajaBanco.Services\CajaBanco.Services.csproj", "{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CajaBanco.Application", "CajaBanco.Application\CajaBanco.Application.csproj", "{D95A43DA-2792-4FE2-8243-5E4C30137DB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +25,26 @@ Global
 		{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{059E282C-6831-4AEF-A569-8EB41C161013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{059E282C-6831-4AEF-A569-8EB41C161013}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{059E282C-6831-4AEF-A569-8EB41C161013}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{059E282C-6831-4AEF-A569-8EB41C161013}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2E4BE2D-A929-49AA-9445-168BEDE3E812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2E4BE2D-A929-49AA-9445-168BEDE3E812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2E4BE2D-A929-49AA-9445-168BEDE3E812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2E4BE2D-A929-49AA-9445-168BEDE3E812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D95A43DA-2792-4FE2-8243-5E4C30137DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D95A43DA-2792-4FE2-8243-5E4C30137DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D95A43DA-2792-4FE2-8243-5E4C30137DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D95A43DA-2792-4FE2-8243-5E4C30137DB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
