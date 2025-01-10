@@ -32,6 +32,7 @@ namespace CajaBanco.Repository.Banco
                 cmd.Parameters.AddWithValue("@Ban01IdBanco", "");
                 cmd.Parameters.AddWithValue("@Ban01Descripcion", request.Ban01Descripcion);
                 cmd.Parameters.AddWithValue("@Ban01Prefijo", request.Ban01Prefijo);
+
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
                 parMensaje.Direction = ParameterDirection.Output;
 
