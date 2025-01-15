@@ -61,6 +61,20 @@ namespace CajaBancoAPI.Controllers
                 return BadRequest(ex.Message); 
             }
         }
+        [HttpPut]
+        [Route("SpUpdateDetraccionesPagos")]
+        public async Task<ActionResult> SpUdpateDetraccionesPagos(DetraccionPagosUpdDTO request)
+        {
+            try
+            {
+                var result = await this._detraccionaplicacion.SpUpdDetraccionPagos(request);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
         [HttpGet]
         [Route("SpTraePagoDetraccion")]
         public async Task<ActionResult> ObtenerPagoDetraccion(string empresa, string codigo)

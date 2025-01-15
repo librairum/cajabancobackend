@@ -34,6 +34,10 @@ namespace CajaBanco.Services.Detracciones
         {
             return await _detraccionRepositorio.SpTraePagoTraccion(empresa, codigo);
         }
+        public async Task<ResultDto<string>> SpUpdDetraccionPagos(DetraccionPagosUpdDTO request)
+        {
+            return await _detraccionRepositorio.SpUpdDetraccionPagos(request);
+        }
 
 
     }

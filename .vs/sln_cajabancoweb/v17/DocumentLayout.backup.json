@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|d:\\gmingenieros\\backend\\cajabancobackend\\cajabancoapi\\controllers\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\controllers\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|d:\\gmingenieros\\backend\\cajabancobackend\\cajabancoapi\\controllers\\detraccionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\controllers\\detraccionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 227,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
@@ -28,43 +24,9 @@
               "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\ReportesController.cs",
               "ToolTip": "D:\\GMINGENIEROS\\backend\\cajabancobackend\\CajaBancoAPI\\Controllers\\ReportesController.cs",
               "RelativeToolTip": "CajaBancoAPI\\Controllers\\ReportesController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowAUAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T18:03:08.363Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "8c3cd7cd-993a-45b7-8976-70a7e92bc64b",
-        "Display": 0,
-        "X": 318,
-        "Y": 183,
-        "Width": 1214,
-        "Height": 526,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DetraccionesController.cs",
-              "DocumentMoniker": "D:\\GMINGENIEROS\\backend\\cajabancobackend\\CajaBancoAPI\\Controllers\\DetraccionesController.cs",
-              "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\DetraccionesController.cs",
-              "ToolTip": "D:\\GMINGENIEROS\\backend\\cajabancobackend\\CajaBancoAPI\\Controllers\\DetraccionesController.cs",
-              "RelativeToolTip": "CajaBancoAPI\\Controllers\\DetraccionesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T18:02:48.287Z",
+              "WhenOpened": "2025-01-15T22:14:05.332Z",
               "EditorCaption": ""
             }
           ]

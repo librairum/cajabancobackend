@@ -25,5 +25,17 @@ namespace CajaBanco.Services.Reportes
         {
             return await _reportesRepository.SpListarTraeFactPendientes(usuario,valor);
         }
+        public async Task<ResultDto<string>> SpRegistro(RegistroCreateRequestDTO request)
+        {
+            return await _reportesRepository.SpRegistro(request);
+        }
+        public async Task<ResultDto<string>> SpDelRegistroxUsuario(string empresa, string usuario)
+        {
+            return await _reportesRepository.SpDelRegistroxUsuario(empresa,usuario);
+        }
+        public async Task<ResultDto<string>> SPDelRegistro(string empresa, string usuario, string item)
+        {
+            return await _reportesRepository.SPDelRegistro(empresa, usuario, item);
+        }
     }
 }

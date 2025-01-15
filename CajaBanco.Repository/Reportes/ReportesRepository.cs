@@ -6,6 +6,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,5 +72,115 @@ namespace CajaBanco.Repository.Reportes
             }
             return res;
         }
+        public async Task<ResultDto<string>> SpRegistro(RegistroCreateRequestDTO request)
+        {
+            ResultDto<string> result=new ResultDto<string>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Ins_Registro", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@empresa", request.empresa);
+                cmd.Parameters.AddWithValue("@usuario", request.usuario);
+                cmd.Parameters.AddWithValue("@item", request.item);
+                cmd.Parameters.AddWithValue("@numeroPago", request.numeroPago);
+                cmd.Parameters.AddWithValue("@nroVoucher", request.nroVoucher);
+
+                var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
+                parMensaje.Direction = ParameterDirection.Output;
+
+                var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                parFlag.Direction = ParameterDirection.Output;
+
+
+                cn.Open();
+                var respuesta = await cmd.ExecuteNonQueryAsync();
+                cn.Close();
+                result.Item = request.usuario;
+                result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
+                result.Message = parMensaje.Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
+        }
+        public async Task<ResultDto<string>> SpDelRegistroxUsuario(string empresa, string usuario)
+        {
+            ResultDto<string> result=new ResultDto<string>();
+            try
+            {
+                using (var cn=new SqlConnection(_connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand("Spu_Ban_Del_RegistroxUsuario", cn);
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@empresa", empresa);
+                    cmd.Parameters.AddWithValue("@usuario", usuario);
+                    var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
+                    parMensaje.Direction = ParameterDirection.Output;
+
+                    var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                    parFlag.Direction = ParameterDirection.Output;
+
+
+
+                    cn.Open();
+                    var respuesta = await cmd.ExecuteNonQueryAsync();
+                    cn.Close();
+                    result.Item = usuario;
+
+                    result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
+                    result.Message = parMensaje.Value.ToString();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
+        }
+        public async Task<ResultDto<string>> SPDelRegistro(string empresa, string usuario,string item)
+        {
+            ResultDto<string> result = new ResultDto<string>();
+            try
+            {
+                using (var cn = new SqlConnection(_connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand("Spu_Ban_Del_Registro", cn);
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@empresa", empresa);
+                    cmd.Parameters.AddWithValue("@usuario", usuario);
+                    cmd.Parameters.AddWithValue("@item", item);
+                    var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
+                    parMensaje.Direction = ParameterDirection.Output;
+
+                    var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                    parFlag.Direction = ParameterDirection.Output;
+
+
+
+                    cn.Open();
+                    var respuesta = await cmd.ExecuteNonQueryAsync();
+                    cn.Close();
+                    result.Item = usuario;
+
+                    result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
+                    result.Message = parMensaje.Value.ToString();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
+        }        
     }
 }

@@ -14,5 +14,6 @@ namespace CajaBanco.Abstractions.IApplication
         public Task<ResultDto<DetraccionPagoListDTO>> SpListarDetraccionPago(string empresa);
         public Task<ResultDto<string>> SpActualizarDetraccionPago(DetraccionPagoUpdateRequestDTO request);
         public Task<ResultDto<TraePagoDetraccionDTO>> SpTraePagoTraccion(string empresa, string codigo);
+        public Task<ResultDto<string>> SpUpdDetraccionPagos(DetraccionPagosUpdDTO request);
     }
 }

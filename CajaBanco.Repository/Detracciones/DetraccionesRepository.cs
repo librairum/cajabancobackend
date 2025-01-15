@@ -74,6 +74,39 @@ namespace CajaBanco.Repository.Detracciones
             return res;
         }
 
+        public async Task<ResultDto<string>> SpUpdDetraccionPagos(DetraccionPagosUpdDTO request)
+        {
+            ResultDto<string> result = new ResultDto<string>();
+            try
+            {
+                using (var cn = new SqlConnection(_connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand("Spu_Ban_Upd_DetraccionPagos", cn);
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@empresa", request.empresa);
+                    cmd.Parameters.AddWithValue("@codigo", request.codigo);
+                    var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                    parFlag.Direction = ParameterDirection.Output;
+                    var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
+                    parMensaje.Direction = ParameterDirection.Output;
+
+                    cn.Open();
+                    var respuesta = await cmd.ExecuteNonQueryAsync();
+                    cn.Close();
+                    result.Item = request.codigo;
+                    result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
+                    result.Message = parMensaje.Value.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
+        }
+
         public async Task<ResultDto<string>> SpActualizarDetraccionPago(DetraccionPagoUpdateRequestDTO request)
         {
             ResultDto<string> result = new ResultDto<string>();
@@ -137,5 +170,6 @@ namespace CajaBanco.Repository.Detracciones
             }
             return res;
         }
+        
     }
 }

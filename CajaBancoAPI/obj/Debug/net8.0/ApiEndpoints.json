@@ -180,6 +180,22 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.DetraccionesController",
+    "Method": "SpUdpateDetraccionesPagos",
+    "RelativePath": "Detracciones/SpUpdateDetraccionesPagos",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Detracciones.DetraccionPagosUpdDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.DetraccionesController",
     "Method": "SpActualizarDetraccionPago",
     "RelativePath": "Detracciones/SpUpdatePago",
     "HttpMethod": "PUT",
@@ -227,6 +243,53 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SPDelRegistro",
+    "RelativePath": "Reportes/SpDeleteRegistro",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "item",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpDelRegistroxUsuario",
+    "RelativePath": "Reportes/SpDeletexRegistroxUsuario",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
     "Method": "SpListarTraeFactPendientes",
     "RelativePath": "Reportes/SpListarFactPendientes",
     "HttpMethod": "GET",
@@ -258,6 +321,22 @@
         "Name": "empresa",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpRegistroReporte",
+    "RelativePath": "Reportes/SpRegistro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Reportes.RegistroCreateRequestDTO",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
