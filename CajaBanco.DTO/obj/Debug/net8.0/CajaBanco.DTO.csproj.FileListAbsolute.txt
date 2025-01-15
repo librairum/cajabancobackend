@@ -10,3 +10,15 @@ D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.DTO\obj\Debug\net8.0\
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.DTO\obj\Debug\net8.0\refint\CajaBanco.DTO.dll
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.DTO\obj\Debug\net8.0\CajaBanco.DTO.pdb
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.DTO\obj\Debug\net8.0\ref\CajaBanco.DTO.dll
+D:\GMINGENIEROS\backend\cajabancobackend\CajaBanco.DTO\bin\Debug\net8.0\CajaBanco.DTO.deps.json
+D:\GMINGENIEROS\backend\cajabancobackend\CajaBanco.DTO\bin\Debug\net8.0\CajaBanco.DTO.dll
+D:\GMINGENIEROS\backend\cajabancobackend\CajaBanco.DTO\bin\Debug\net8.0\CajaBanco.DTO.pdb
+D:\GMINGENIEROS\backend\cajabancobackend\CajaBanco.DTO\obj\Debug\net8.0\CajaBanco.DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\GMINGENIEROS\backend\cajabancobackend\CajaBanco.DTO\obj\Debug\net8.0\CajaBanco.DTO.AssemblyInfoInputs.cache
+D:\GMINGENIEROS\backend\cajabancobackend\CajaBanco.DTO\obj\Debug\net8.0\CajaBanco.DTO.AssemblyInfo.cs
+D:\GMINGENIEROS\backend\cajabancobackend\CajaBanco.DTO\obj\Debug\net8.0\CajaBanco.DTO.csproj.CoreCompileInputs.cache
+D:\GMINGENIEROS\backend\cajabancobackend\CajaBanco.DTO\obj\Debug\net8.0\CajaBanco.DTO.sourcelink.json
+D:\GMINGENIEROS\backend\cajabancobackend\CajaBanco.DTO\obj\Debug\net8.0\CajaBanco.DTO.dll
+D:\GMINGENIEROS\backend\cajabancobackend\CajaBanco.DTO\obj\Debug\net8.0\refint\CajaBanco.DTO.dll
+D:\GMINGENIEROS\backend\cajabancobackend\CajaBanco.DTO\obj\Debug\net8.0\CajaBanco.DTO.pdb
+D:\GMINGENIEROS\backend\cajabancobackend\CajaBanco.DTO\obj\Debug\net8.0\ref\CajaBanco.DTO.dll

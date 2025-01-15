@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using CajaBanco.Application;
 using CajaBanco.Repository;
 using CajaBanco.Services;
+using Microsoft.AspNetCore.Http.Features;
 
 var builder = WebApplication.CreateBuilder(args);
 var connecionString = builder.Configuration.GetConnectionString("conexion");

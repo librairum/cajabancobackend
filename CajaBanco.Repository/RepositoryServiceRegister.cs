@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using CajaBanco.Repository.Banco;
 using CajaBanco.Abstractions.IRepository;
 using CajaBanco.Repository.Autenticacion;
+using CajaBanco.Repository.Detracciones;
+using CajaBanco.Repository.Reportes;
 namespace CajaBanco.Repository
 {
     public static class RepositoryServiceRegister
@@ -16,6 +18,8 @@ namespace CajaBanco.Repository
         { 
             services.AddScoped<IBancoRepository, BancoRepository>();
             services.AddScoped<IAutenticacionRepository, AutenticacionRepository>();
+            services.AddScoped<IDetraccionesRepository, DetraccionesRepository>();
+            services.AddScoped<IReportesRepository, ReportesRepository>();
             return services;
         }
 
