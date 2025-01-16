@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "AejrvbnYFJA0EDhBpfHzcEI0el+oE9xKVBDUFCKQ7Qw=",
+  "Source": "CajaBancoAPI",
+  "BasePath": "_content/CajaBancoAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
