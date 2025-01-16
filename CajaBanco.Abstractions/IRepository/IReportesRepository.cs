@@ -16,5 +16,9 @@ namespace CajaBanco.Abstractions.IRepository
 
         public Task<ResultDto<string>> SpDelRegistroxUsuario(string empresa, string usuario);
         public Task<ResultDto<string>> SPDelRegistro(string empresa, string usuario, string item);
+        public Task<ResultDto<TraeDocumentoAnuladoDTO>> SpTraeDocumentoAnulado(string? empresa);
+        public Task<ResultDto<TraeCodigoPresupuestoAprobadoDTO>> SpTraeCodigoPresupuestoAprobado(string numero);
+        public Task<ResultDto<TraeEstadoIngresadoPagoDTO>> SpTraeEstadoIngresadoPago();
+        public Task<ResultDto<TraeOrdenCambiadoDTO>> SpTraeOrdenCambiado(string anio, string mes);
     }
 }

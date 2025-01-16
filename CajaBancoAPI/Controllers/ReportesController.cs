@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata;
 using CajaBanco.DTO.Common;
+using System.Drawing;
 
 namespace CajaBancoAPI.Controllers
 {
@@ -41,6 +42,62 @@ namespace CajaBancoAPI.Controllers
             try
             {
                 var result = await _reportesaplication.SpListarTraeFactPendientes(usuario,valor);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpListarPresupuestoAprobado")]
+        public async Task<ActionResult> SpListarPresupuestoAprobado(string numero)
+        {
+            try
+            {
+                var result = await _reportesaplication.SpTraeCodigoPresupuestoAprobado(numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpTraeDocumentoAnulado")]
+        public async Task<ActionResult> SpListarDocumentoAnulado(string? empresa)
+        {
+            try
+            {
+                var result = await _reportesaplication.SpTraeDocumentoAnulado(empresa);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpTraeEstadoIngresado")]
+        public async Task<ActionResult> SpTraeEstadoIngresadoPago()
+        {
+            try
+            {
+                var result = await _reportesaplication.SpTraeEstadoIngresadoPago();
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpTraeOrdenCambiado")]
+        public async Task<ActionResult> SpTraeOrdenCambiado(string anio, string mes)
+        {
+            try
+            {
+                var result = await _reportesaplication.SpTraeOrdenCambiado(anio,mes);
                 return Ok(result);
             }
             catch (Exception ex)

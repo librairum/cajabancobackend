@@ -327,6 +327,22 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpListarPresupuestoAprobado",
+    "RelativePath": "Reportes/SpListarPresupuestoAprobado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
     "Method": "SpRegistroReporte",
     "RelativePath": "Reportes/SpRegistro",
     "HttpMethod": "POST",
@@ -337,6 +353,53 @@
         "Name": "request",
         "Type": "CajaBanco.DTO.Reportes.RegistroCreateRequestDTO",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpListarDocumentoAnulado",
+    "RelativePath": "Reportes/SpTraeDocumentoAnulado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpTraeEstadoIngresadoPago",
+    "RelativePath": "Reportes/SpTraeEstadoIngresado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpTraeOrdenCambiado",
+    "RelativePath": "Reportes/SpTraeOrdenCambiado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

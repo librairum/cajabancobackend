@@ -1,4 +1,5 @@
-﻿using CajaBancoAPI.Models;
+﻿using CajaBanco.DTO.Reportes;
+using CajaBancoAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
