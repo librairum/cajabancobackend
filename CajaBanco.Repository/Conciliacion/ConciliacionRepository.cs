@@ -1,7 +1,7 @@
 ﻿using CajaBanco.Abstractions.IRepository;
 using CajaBanco.DTO.Common;
 using CajaBanco.DTO.Conciliacion;
-using CajaBanco.DTO.Liquidacion;
+
 using Dapper;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;

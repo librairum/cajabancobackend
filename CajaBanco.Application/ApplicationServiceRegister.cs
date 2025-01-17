@@ -9,6 +9,9 @@ using CajaBanco.Abstractions.IApplication;
 using CajaBanco.Application.Autenticacion;
 using CajaBanco.Application.Detracciones;
 using CajaBanco.Application.Reportes;
+using CajaBanco.Application.Conciliacion;
+using CajaBanco.Application.Liquidacion;
+using CajaBanco.Application.Contabilidad;
 namespace CajaBanco.Application
 {
     public static class ApplicationServiceRegister
@@ -18,6 +21,9 @@ namespace CajaBanco.Application
             services.AddScoped<IBancoApplication, BancoApplication>();
             services.AddScoped<IAutenticacionApplication, AutenticacionApplication>();
             services.AddScoped<IDetraccionApplication, DetraccionesAplication>();
+            services.AddScoped<IConciliacionApplication, ConciliacionApplication>();
+            services.AddScoped<ILiquidacionApplication, LiquidacionApplication>();
+            services.AddScoped<IContabilidadApplication, ContabilidadApplication>();
             services.AddScoped<IReportesApplication, ReportesAplication>();
             return services;
         }

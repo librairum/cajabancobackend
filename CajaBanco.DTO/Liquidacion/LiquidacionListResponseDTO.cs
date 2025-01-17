@@ -17,5 +17,12 @@ namespace CajaBanco.DTO.Liquidacion
         //DETRACCION X LIQUIDACION:
         public required string fecha { get; set; }
         public required string numero { get; set; }
+        public required string buscar { get; set; }
+        public required string buscar1 { get; set; }
+        public required string buscar2 { get; set; }
+        public required string fechaVenci1 { get; set; }
+        public required string fechaVenci2 { get; set; }
+        public required string fechaAnio { get; set; }
+        public required string fechaMes { get; set; }
     }
 }

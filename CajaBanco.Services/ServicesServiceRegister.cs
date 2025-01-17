@@ -9,6 +9,9 @@ using CajaBanco.Abstractions.IService;
 using CajaBanco.Services.Autenticacion;
 using CajaBanco.Services.Detracciones;
 using CajaBanco.Services.Reportes;
+using CajaBanco.Services.Conciliacion;
+using CajaBanco.Services.Contabilidad;
+using CajaBanco.Services.Liquidacion;
 
 namespace CajaBanco.Services
 {
@@ -19,6 +22,9 @@ namespace CajaBanco.Services
         { 
             services.AddScoped<IBancoService, BancoService>();
             services.AddScoped<IAutenticacionService,AutenticacionService>();
+            services.AddScoped<IConciliacionService, ConciliacionService>();
+            services.AddScoped<ILiquidacionService, LiquidacionService>();
+            services.AddScoped<IContabilidadService, ContabilidadService>();
             services.AddScoped<IDetraccionService, DetraccionesService>();
             services.AddScoped<IReportesService, ReportesService>();
             return services;

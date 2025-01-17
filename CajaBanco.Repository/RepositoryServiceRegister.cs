@@ -9,6 +9,9 @@ using CajaBanco.Abstractions.IRepository;
 using CajaBanco.Repository.Autenticacion;
 using CajaBanco.Repository.Detracciones;
 using CajaBanco.Repository.Reportes;
+using CajaBanco.Repository.Conciliacion;
+using CajaBanco.Repository.Contabilidad;
+using CajaBanco.Repository.Liquidacion;
 namespace CajaBanco.Repository
 {
     public static class RepositoryServiceRegister
@@ -18,6 +21,9 @@ namespace CajaBanco.Repository
         { 
             services.AddScoped<IBancoRepository, BancoRepository>();
             services.AddScoped<IAutenticacionRepository, AutenticacionRepository>();
+            services.AddScoped<IConciliacionRepository, ConciliacionRepository>();
+            services.AddScoped<IContabilidadRepository, ContabilidadRepository>();
+            services.AddScoped<ILiquidacionRepository, LiquidacionRepository>();
             services.AddScoped<IDetraccionesRepository, DetraccionesRepository>();
             services.AddScoped<IReportesRepository, ReportesRepository>();
             return services;

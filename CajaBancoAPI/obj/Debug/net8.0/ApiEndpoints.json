@@ -121,6 +121,216 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
+    "Method": "SpEliminaConciliacion",
+    "RelativePath": "Conciliacion/SpDelete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "banco",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ctaBancaria",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fila",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
+    "Method": "SpInsertaConciliacion",
+    "RelativePath": "Conciliacion/SpInsertaConciliacion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Conciliacion.ConciliacionCreateRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
+    "Method": "SpInsertaConciliacionPago",
+    "RelativePath": "Conciliacion/SpInsertaConciliacionPago",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Conciliacion.ConciliacionCreateRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
+    "Method": "SpInsertaConciliacionPorPago",
+    "RelativePath": "Conciliacion/SpInsertaConciliacionPorPago",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Conciliacion.ConciliacionCreateRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
+    "Method": "SpInsertaConciliacionSaldo",
+    "RelativePath": "Conciliacion/SpInsertaConciliacionSaldo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Conciliacion.ConciliacionCreateRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
+    "Method": "SpListaConciliacion",
+    "RelativePath": "Conciliacion/SpListaConciliacion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
+    "Method": "SpListaConciliacionBancariaxCuenta",
+    "RelativePath": "Conciliacion/SpListaConciliacionBancariaxCuenta",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
+    "Method": "SpListaConciliacionBanco",
+    "RelativePath": "Conciliacion/SpListaConciliacionBanco",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipoPago",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
+    "Method": "SpListaConciliacionNumeroBanco",
+    "RelativePath": "Conciliacion/SpListaConciliacionNumeroBanco",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
+    "Method": "SpListaConciliacionTipoCambio",
+    "RelativePath": "Conciliacion/SpListaConciliacionTipoCambio",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipoPago",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CajaBancoAPI.Controllers.DetraccionesController",
     "Method": "ObtenerListaPago",
     "RelativePath": "Detracciones/SpListPago",

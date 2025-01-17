@@ -18,6 +18,8 @@ namespace CajaBanco.DTO.Liquidacion
         public required string nroDoc { get; set; }
         public required string codigo { get; set; }
         public required string numero { get; set; }
+        public required string numeroPago { get; set; }
+        public required string nroVoucher { get; set; }
         //public required string fechaPeriodo { get; set; }
 
     }
