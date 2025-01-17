@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using CajaBanco.Application.Banco;
 using CajaBanco.Abstractions.IApplication;
 using CajaBanco.Application.Autenticacion;
+using CajaBanco.Application.Pago;
 namespace CajaBanco.Application
 {
     public static class ApplicationServiceRegister
@@ -15,6 +16,7 @@ namespace CajaBanco.Application
         {
             services.AddScoped<IBancoApplication, BancoApplication>();
             services.AddScoped<IAutenticacionApplication, AutenticacionApplication>();
+            services.AddScoped<IPagoApplication, PagoApplication>();
 
             return services;
         }

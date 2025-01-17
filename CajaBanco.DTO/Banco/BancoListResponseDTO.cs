@@ -15,6 +15,7 @@ namespace CajaBanco.DTO.Banco
         public int totalRecords { get; set; }
 
         //campos de consulta de procedimiento almacenado
+
         public string? ID { get; set; }
         public string? Bancos { get; set; }
         public string? NBancos { get; set; }

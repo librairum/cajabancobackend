@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using CajaBanco.Application;
 using CajaBanco.Repository;
 using CajaBanco.Services;
+using CajaBanco.Abstractions.IApplication;
+using NuGet.Protocol.Core.Types;
 
 var builder = WebApplication.CreateBuilder(args);
 var connecionString = builder.Configuration.GetConnectionString("conexion");
@@ -16,6 +18,9 @@ builder.Services.AddControllers();
 builder.Services.AddRepositoryServices();
 builder.Services.AddServiceServices();
 builder.Services.AddApplicationServices();
+
+
+
 
 var origenesPermitidos = builder.Configuration.GetValue<string>("OrigenesPermitidos")!.Split(",");
 

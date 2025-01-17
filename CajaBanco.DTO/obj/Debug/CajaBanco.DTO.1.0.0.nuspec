@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CajaBanco.DTO</id>
+    <version>1.0.0</version>
+    <authors>CajaBanco.DTO</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="5d96ea1460550de0bc5a578e525a7015a3e4a449" />
+    <dependencies>
+      <group targetFramework="net8.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Juan\Documents\prac\Github\backend\cajabancobackend\CajaBanco.DTO\bin\Debug\net8.0\CajaBanco.DTO.dll" target="lib\net8.0\CajaBanco.DTO.dll" />
+  </files>
+</package>
