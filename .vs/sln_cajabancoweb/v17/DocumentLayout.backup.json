@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\GMINGENIEROS\\backend\\cajabancobackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|d:\\gmingenieros\\backend\\cajabancobackend\\cajabancoapi\\controllers\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\controllers\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}|CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj|d:\\gmingenieros\\backend\\cajabancobackend\\cajabanco.abstractions\\iapplication\\ireportesapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}|CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj|solutionrelative:cajabanco.abstractions\\iapplication\\ireportesapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|d:\\gmingenieros\\backend\\cajabancobackend\\cajabanco.repository\\reportes\\reportesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\reportes\\reportesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|d:\\gmingenieros\\backend\\cajabancobackend\\cajabancoapi\\controllers\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\controllers\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "IReportesApplication.cs",
+              "DocumentMoniker": "D:\\GMINGENIEROS\\backend\\cajabancobackend\\CajaBanco.Abstractions\\IApplication\\IReportesApplication.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Abstractions\\IApplication\\IReportesApplication.cs",
+              "ToolTip": "D:\\GMINGENIEROS\\backend\\cajabancobackend\\CajaBanco.Abstractions\\IApplication\\IReportesApplication.cs",
+              "RelativeToolTip": "CajaBanco.Abstractions\\IApplication\\IReportesApplication.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T14:32:53.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ReportesController.cs",
               "DocumentMoniker": "D:\\GMINGENIEROS\\backend\\cajabancobackend\\CajaBancoAPI\\Controllers\\ReportesController.cs",
               "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\ReportesController.cs",
               "ToolTip": "D:\\GMINGENIEROS\\backend\\cajabancobackend\\CajaBancoAPI\\Controllers\\ReportesController.cs",
               "RelativeToolTip": "CajaBancoAPI\\Controllers\\ReportesController.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAqwGMAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAuwG0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T22:09:31.871Z",
+              "WhenOpened": "2025-01-17T14:32:15.492Z",
               "EditorCaption": ""
             },
             {
@@ -41,9 +58,9 @@
               "RelativeDocumentMoniker": "CajaBanco.Repository\\Reportes\\ReportesRepository.cs",
               "ToolTip": "D:\\GMINGENIEROS\\backend\\cajabancobackend\\CajaBanco.Repository\\Reportes\\ReportesRepository.cs",
               "RelativeToolTip": "CajaBanco.Repository\\Reportes\\ReportesRepository.cs",
-              "ViewState": "AgIAAAYBAAAAAAAAAAAiwA0BAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAACgBAAAAAAAAAAAqwDMBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T22:05:54.559Z",
+              "WhenOpened": "2025-01-17T14:30:08.9Z",
               "EditorCaption": ""
             }
           ]

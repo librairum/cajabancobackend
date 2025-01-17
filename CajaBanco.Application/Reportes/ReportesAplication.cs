@@ -54,5 +54,13 @@ namespace CajaBanco.Application.Reportes
         {
             return await _reportesService.SpTraeOrdenCambiado(anio,mes);
         }
+        public async Task<ResultDto<TraePagoActualizadoDTO>> SpTraePagoActualizadoCodigo(string numero)
+        {
+            return await _reportesService.SpTraePagoActualizadoCodigo(numero);
+        }        
+        public async Task<ResultDto<TraePagoAprobadoDTO>> SpTraePagoAprobado(string anio, string mes)
+        {
+            return await _reportesService.SpTraePagoAprobado(anio, mes);
+        }
     }
 }

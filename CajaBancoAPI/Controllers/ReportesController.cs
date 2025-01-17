@@ -64,6 +64,20 @@ namespace CajaBancoAPI.Controllers
             }
         }
         [HttpGet]
+        [Route("SpPagoActualizadoCodigo")]
+        public async Task<ActionResult> SpTraePagoActualizadoCodigo(string numero)
+        {
+            try
+            {
+                var result = await _reportesaplication.SpTraePagoActualizadoCodigo(numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
         [Route("SpTraeDocumentoAnulado")]
         public async Task<ActionResult> SpListarDocumentoAnulado(string? empresa)
         {
@@ -84,6 +98,20 @@ namespace CajaBancoAPI.Controllers
             try
             {
                 var result = await _reportesaplication.SpTraeEstadoIngresadoPago();
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpTraePagoAprobado")]
+        public async Task<ActionResult> SpTraePagoAprobado(string anio, string mes)
+        {
+            try
+            {
+                var result = await _reportesaplication.SpTraePagoAprobado(anio, mes);
                 return Ok(result);
             }
             catch (Exception ex)

@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CajaBanco.DTO"
+    "\\CajaBanco.DTO",
+    "\\CajaBancoAPI",
+    "\\CajaBancoAPI\\Controllers"
   ],
   "SelectedNode": "\\sln_cajabancoweb.sln",
   "PreviewInSolutionExplorer": false

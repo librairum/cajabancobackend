@@ -19,5 +19,7 @@ namespace CajaBanco.Abstractions.IService
         public Task<ResultDto<TraeCodigoPresupuestoAprobadoDTO>> SpTraeCodigoPresupuestoAprobado(string numero);
         public Task<ResultDto<TraeEstadoIngresadoPagoDTO>> SpTraeEstadoIngresadoPago();
         public Task<ResultDto<TraeOrdenCambiadoDTO>> SpTraeOrdenCambiado(string anio, string mes);
+        public Task<ResultDto<TraePagoActualizadoDTO>> SpTraePagoActualizadoCodigo(string numero);
+        public Task<ResultDto<TraePagoAprobadoDTO>> SpTraePagoAprobado(string anio,string mes);
     }
 }

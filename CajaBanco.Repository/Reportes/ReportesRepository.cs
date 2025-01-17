@@ -267,6 +267,74 @@ namespace CajaBanco.Repository.Reportes
             }
             return res;
         }
+        public async Task<ResultDto<TraePagoActualizadoDTO>> SpTraePagoActualizadoCodigo(string numero)
+        {
+            ResultDto<TraePagoActualizadoDTO> res = new ResultDto<TraePagoActualizadoDTO>();
+            List<TraePagoActualizadoDTO> list = new List<TraePagoActualizadoDTO>();
+            try
+            {
+                using (var cn = new SqlConnection(_connectionString))
+                {
+                    DynamicParameters parameters = new DynamicParameters();
+                    parameters.Add("@numero", numero);
+                    var mapping = new Dictionary<string, string>
+                    {
+                        { "Id Nro", "Id_Nro" },
+                        { "Fecha Pago", "Fecha_Pago" }
+                    };
+                    var mapper = new CustomPropertyTypeMap(typeof(TraePagoActualizadoDTO),
+                        (type, columnName) => type.GetProperty(mapping.ContainsKey(columnName) ? mapping[columnName] : columnName));
+                    Dapper.SqlMapper.SetTypeMap(typeof(TraePagoActualizadoDTO), mapper);
+
+                    list = (List<TraePagoActualizadoDTO>)await cn.QueryAsync<TraePagoActualizadoDTO>("Spu_Ban_Trae_PagoActualizadoCodigo",
+                        parameters, commandType: System.Data.CommandType.StoredProcedure);
+                    res.IsSuccess = list.Count > 0 ? true : false;
+                    res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
+                    res.Data = list.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
+        public async Task<ResultDto<TraePagoAprobadoDTO>> SpTraePagoAprobado(string anio, string mes)
+        {
+            ResultDto<TraePagoAprobadoDTO> res = new ResultDto<TraePagoAprobadoDTO>();
+            List<TraePagoAprobadoDTO> list = new List<TraePagoAprobadoDTO>();
+            try
+            {
+                using (var cn = new SqlConnection(_connectionString))
+                {
+                    DynamicParameters parameters = new DynamicParameters();
+                    parameters.Add("@anio", anio);
+                    parameters.Add("@mes", mes);
+                    var mapping = new Dictionary<string, string>
+                    {
+                        { "Id Nro", "Id_Nro" },
+                        { "Fecha Pago", "Fecha_Pago" }
+                    };
+                    var mapper = new CustomPropertyTypeMap(typeof(TraePagoAprobadoDTO),
+                        (type, columnName) => type.GetProperty(mapping.ContainsKey(columnName) ? mapping[columnName] : columnName));
+                    Dapper.SqlMapper.SetTypeMap(typeof(TraePagoAprobadoDTO), mapper);
+
+                    list = (List<TraePagoAprobadoDTO>)await cn.QueryAsync<TraePagoAprobadoDTO>("Spu_Ban_Trae_PagoAprobado",
+                        parameters, commandType: System.Data.CommandType.StoredProcedure);
+                    res.IsSuccess = list.Count > 0 ? true : false;
+                    res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
+                    res.Data = list.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
+
         public async Task<ResultDto<TraeOrdenCambiadoDTO>> SpTraeOrdenCambiado(string anio, string mes)
         {
             ResultDto<TraeOrdenCambiadoDTO> res = new ResultDto<TraeOrdenCambiadoDTO>();
