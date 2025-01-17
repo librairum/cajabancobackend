@@ -61,5 +61,17 @@ namespace CajaBanco.Services.Reportes
         {
             return await _reportesRepository.SpTraePagoAprobado(anio, mes);
         }
+        public async Task<ResultDto<TraePagoContabilizarDTO>> SpTraePagoContabilizar()
+        {
+            return await _reportesRepository.SpTraePagoContabilizar();
+        }
+        public async Task<ResultDto<TraePagoEjecutarCodigoDTO>> SpTraePagoEjecutarCodigo(string numero)
+        {
+            return await _reportesRepository.SpTraePagoEjecutarCodigo(numero);
+        }
+        public async Task<ResultDto<TraePresupuestoImprimirDTO>> SpTraePresupuestoImprimir(string numero)
+        {
+            return await _reportesRepository.SpTraePresupuestoImprimir(numero);
+        }
     }
 }

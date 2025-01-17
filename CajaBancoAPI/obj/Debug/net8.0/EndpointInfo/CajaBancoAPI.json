@@ -403,6 +403,27 @@
         }
       }
     },
+    "/Reportes/SpTraePresupuestoImprimir": {
+      "get": {
+        "tags": [
+          "Reportes"
+        ],
+        "parameters": [
+          {
+            "name": "numero",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Reportes/SpListarFactPendientes": {
       "get": {
         "tags": [
@@ -444,6 +465,39 @@
               "type": "string"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Reportes/SpTraePagoEjecutarCodigo": {
+      "get": {
+        "tags": [
+          "Reportes"
+        ],
+        "parameters": [
+          {
+            "name": "numero",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Reportes/SpTraePagoContabilizar": {
+      "get": {
+        "tags": [
+          "Reportes"
         ],
         "responses": {
           "200": {

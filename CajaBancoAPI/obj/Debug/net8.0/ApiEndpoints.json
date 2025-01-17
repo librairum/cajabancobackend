@@ -440,5 +440,47 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpTraePagoContabilizar",
+    "RelativePath": "Reportes/SpTraePagoContabilizar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpTraePagoEjecutarCodigo",
+    "RelativePath": "Reportes/SpTraePagoEjecutarCodigo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpTraePresupuestoImprimir",
+    "RelativePath": "Reportes/SpTraePresupuestoImprimir",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

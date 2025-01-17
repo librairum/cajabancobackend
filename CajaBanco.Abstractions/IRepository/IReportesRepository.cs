@@ -13,7 +13,6 @@ namespace CajaBanco.Abstractions.IRepository
         public Task<ResultDto<TraeMontoValeDTO>> SpListarTraeMontoVale(string empresa);
         public Task<ResultDto<TraeFactPendientesDTO>> SpListarTraeFactPendientes(string usuario, string valor);
         public Task<ResultDto<string>> SpRegistro(RegistroCreateRequestDTO request);
-
         public Task<ResultDto<string>> SpDelRegistroxUsuario(string empresa, string usuario);
         public Task<ResultDto<string>> SPDelRegistro(string empresa, string usuario, string item);
         public Task<ResultDto<TraeDocumentoAnuladoDTO>> SpTraeDocumentoAnulado(string? empresa);
@@ -22,5 +21,8 @@ namespace CajaBanco.Abstractions.IRepository
         public Task<ResultDto<TraeOrdenCambiadoDTO>> SpTraeOrdenCambiado(string anio, string mes);
         public Task<ResultDto<TraePagoActualizadoDTO>> SpTraePagoActualizadoCodigo(string numero);
         public Task<ResultDto<TraePagoAprobadoDTO>> SpTraePagoAprobado(string anio, string mes);
+        public Task<ResultDto<TraePagoContabilizarDTO>> SpTraePagoContabilizar();
+        public Task<ResultDto<TraePagoEjecutarCodigoDTO>> SpTraePagoEjecutarCodigo(string numero);
+        public Task<ResultDto<TraePresupuestoImprimirDTO>> SpTraePresupuestoImprimir(string numero);
     }
 }

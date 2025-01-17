@@ -36,6 +36,20 @@ namespace CajaBancoAPI.Controllers
             }
         }
         [HttpGet]
+        [Route("SpTraePresupuestoImprimir")]
+        public async Task<ActionResult> SpTraePresupuestoImprimir(string numero)
+        {
+            try
+            {
+                var result = await _reportesaplication.SpTraePresupuestoImprimir(numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
         [Route("SpListarFactPendientes")]
         public async Task<ActionResult> SpListarTraeFactPendientes(string usuario, string valor)
         {
@@ -56,6 +70,34 @@ namespace CajaBancoAPI.Controllers
             try
             {
                 var result = await _reportesaplication.SpTraeCodigoPresupuestoAprobado(numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpTraePagoEjecutarCodigo")]
+        public async Task<ActionResult> SpTraePagoEjecutarCodigo(string numero)
+        {
+            try
+            {
+                var result = await _reportesaplication.SpTraePagoEjecutarCodigo(numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpTraePagoContabilizar")]
+        public async Task<ActionResult> SpTraePagoContabilizar()
+        {
+            try
+            {
+                var result = await _reportesaplication.SpTraePagoContabilizar();
                 return Ok(result);
             }
             catch (Exception ex)
