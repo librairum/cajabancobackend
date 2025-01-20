@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CajaBanco.DTO.CuentaBancaria
 {
-    public class CuentaBancariaListRequestDTO
+    public class CtaBancariaListRequestDTO
     {
 
         public int index { get; set; }

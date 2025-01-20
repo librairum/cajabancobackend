@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CajaBanco.DTO.CuentaBancaria
 {
-    internal class CuentaBancariaCreateRequestDTO
+    public class CtaBancariaRequest
     {
         
         public required string Ban01Empresa { get; set; }
