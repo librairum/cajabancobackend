@@ -16,7 +16,7 @@ namespace CajaBanco.Application
         {
             services.AddScoped<IBancoApplication, BancoApplication>();
             services.AddScoped<IAutenticacionApplication, AutenticacionApplication>();
-            services.AddScoped<ICtaBancariaApplication, CtaBancariaApplication>();
+
             return services;
         }
 

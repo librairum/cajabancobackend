@@ -24,6 +24,7 @@ namespace CajaBancoAPI.Context
 
             modelBuilder.Entity<PermisosxPerfil>().HasNoKey();
 
+
             
         }
 

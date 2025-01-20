@@ -1,71 +1,62 @@
 [
   {
-    "ContainingType": "CajaBancoAPI.Controllers.BancoController",
-    "Method": "GetBancos",
-    "RelativePath": "Banco",
+    "ContainingType": "CajaBancoAPI.Controllers.AutenticacionController",
+    "Method": "ObtenerUsuario",
+    "RelativePath": "Autenticacion/SpList",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
+    "Parameters": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[CajaBancoAPI.Models.Banco, CajaBancoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "nombreusuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "claveusuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codigoempresa",
+        "Type": "System.String",
+        "IsRequired": false
       }
-    ]
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.AutenticacionController",
+    "Method": "SpTraeMenuxPerfil",
+    "RelativePath": "Autenticacion/SpTraeMenuxPerfil",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoPerfil",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codModulo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.BancoController",
-    "Method": "PostBanco",
-    "RelativePath": "Banco",
+    "Method": "SpInsertaBanco",
+    "RelativePath": "Banco/SpCreate",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "banco",
-        "Type": "CajaBancoAPI.Models.Banco",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "CajaBancoAPI.Models.Banco",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "CajaBancoAPI.Controllers.BancoController",
-    "Method": "PutBanco",
-    "RelativePath": "Banco",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "empresa",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "idbanco",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "registro",
-        "Type": "CajaBancoAPI.Models.Banco",
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Banco.BancoCreateRequestDTO",
         "IsRequired": true
       }
     ],
@@ -73,14 +64,14 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.BancoController",
-    "Method": "DeleteBanco",
-    "RelativePath": "Banco",
+    "Method": "SpEliminaBanco",
+    "RelativePath": "Banco/SpDelete",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "empresa",
+        "Name": "idempresa",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -94,8 +85,8 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.BancoController",
-    "Method": "GetBanco",
-    "RelativePath": "Banco/{empresa}/{idbanco}",
+    "Method": "ObtenerLista",
+    "RelativePath": "Banco/SpList",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -103,25 +94,105 @@
       {
         "Name": "empresa",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
-        "Name": "idbanco",
+        "Name": "descripcion",
         "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.BancoController",
+    "Method": "SpActualiza",
+    "RelativePath": "Banco/SpUpdate",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Banco.BancoCreateRequestDTO",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.DetraccionesController",
+    "Method": "ObtenerListaPago",
+    "RelativePath": "Detracciones/SpListPago",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Type": "CajaBancoAPI.Models.Banco",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
       }
-    ]
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.DetraccionesController",
+    "Method": "ObtenerListaPagoDetalle",
+    "RelativePath": "Detracciones/SpListPagoDetalle",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ruc",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.DetraccionesController",
+    "Method": "ObtenerPagoDetraccion",
+    "RelativePath": "Detracciones/SpTraePagoDetraccion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.DetraccionesController",
+    "Method": "SpActualizarDetraccionPago",
+    "RelativePath": "Detracciones/SpUpdatePago",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Detracciones.DetraccionPagoUpdateRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.PermisosxPerfilController",
@@ -153,5 +224,42 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpListarTraeFactPendientes",
+    "RelativePath": "Reportes/SpListarFactPendientes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "valor",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpListarTraeMontoVale",
+    "RelativePath": "Reportes/SpListarMontoVale",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
