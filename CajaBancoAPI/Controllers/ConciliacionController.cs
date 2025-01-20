@@ -120,7 +120,7 @@ namespace CajaBancoAPI.Controllers
 
         }
         [HttpGet]
-        [Route("SpListaConciliacionBancariaxCuenta")]
+        [Route("SpListaBancariaxCuenta")]
         public async Task<ActionResult> SpListaConciliacionBancariaxCuenta(string empresa, string numero)
         {
             try
@@ -135,12 +135,102 @@ namespace CajaBancoAPI.Controllers
 
         }
         [HttpGet]
-        [Route("SpListaConciliacionNumeroBanco")]
+        [Route("SpListaNumeroBanco")]
         public async Task<ActionResult> SpListaConciliacionNumeroBanco(string empresa, string numero)
         {
             try
             {
                 var result = await this._conciliacionApplication.SpListaConciliacionNumeroBanco(empresa, numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+        [HttpGet]
+        [Route("SpListaCuentaNumero")]
+        public async Task<ActionResult> SpListaConciliacionCuentaNumero(string empresa, string tipoPago)
+        {
+            try
+            {
+                var result = await this._conciliacionApplication.SpListaConciliacionCuentaNumero(empresa, tipoPago);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+        [HttpGet]
+        [Route("SpListaImprimir")]
+        public async Task<ActionResult> SpListaConciliacionImprimir(string empresa, string numero)
+        {
+            try
+            {
+                var result = await this._conciliacionApplication.SpListaConciliacionImprimir(empresa, numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+        [HttpGet]
+        [Route("SpListaTipoPago")]
+        public async Task<ActionResult> SpListaConciliacionTipoPago(string empresa, string numero, string ctaBancaria, string tipoPago)
+        {
+            try
+            {
+                var result = await this._conciliacionApplication.SpListaConciliacionTipoPago(empresa, numero, ctaBancaria, tipoPago);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+        [HttpGet]
+        [Route("SpListaCuenta")]
+        public async Task<ActionResult> SpListaConciliacionCuenta(string empresa, string numero)
+        {
+            try
+            {
+                var result = await this._conciliacionApplication.SpListaConciliacionCuenta(empresa, numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+        [HttpGet]
+        [Route("SpListaValidacionCuenta")]
+        public async Task<ActionResult> SpListaConciliacionValidacionCuenta(string empresa, string tipoPago)
+        {
+            try
+            {
+                var result = await this._conciliacionApplication.SpListaConciliacionValidacionCuenta(empresa, tipoPago);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+        [HttpGet]
+        [Route("SpListaCuentaBancaria")]
+        public async Task<ActionResult> SpListaConciliacionCuentaBancaria(string empresa, string numero)
+        {
+            try
+            {
+                var result = await this._conciliacionApplication.SpListaConciliacionCuentaBancaria(empresa, numero);
                 return Ok(result);
             }
             catch (Exception ex)

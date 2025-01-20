@@ -227,6 +227,27 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
+    "Method": "SpListaConciliacionBancariaxCuenta",
+    "RelativePath": "Conciliacion/SpListaBancariaxCuenta",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
     "Method": "SpListaConciliacion",
     "RelativePath": "Conciliacion/SpListaConciliacion",
     "HttpMethod": "GET",
@@ -240,27 +261,6 @@
       },
       {
         "Name": "mes",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
-    "Method": "SpListaConciliacionBancariaxCuenta",
-    "RelativePath": "Conciliacion/SpListaConciliacionBancariaxCuenta",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "empresa",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "numero",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -290,8 +290,29 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
-    "Method": "SpListaConciliacionNumeroBanco",
-    "RelativePath": "Conciliacion/SpListaConciliacionNumeroBanco",
+    "Method": "SpListaConciliacionTipoCambio",
+    "RelativePath": "Conciliacion/SpListaConciliacionTipoCambio",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipoPago",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
+    "Method": "SpListaConciliacionCuenta",
+    "RelativePath": "Conciliacion/SpListaCuenta",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -311,8 +332,29 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
-    "Method": "SpListaConciliacionTipoCambio",
-    "RelativePath": "Conciliacion/SpListaConciliacionTipoCambio",
+    "Method": "SpListaConciliacionCuentaBancaria",
+    "RelativePath": "Conciliacion/SpListaCuentaBancaria",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
+    "Method": "SpListaConciliacionCuentaNumero",
+    "RelativePath": "Conciliacion/SpListaCuentaNumero",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -324,6 +366,735 @@
       },
       {
         "Name": "tipoPago",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
+    "Method": "SpListaConciliacionImprimir",
+    "RelativePath": "Conciliacion/SpListaImprimir",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
+    "Method": "SpListaConciliacionNumeroBanco",
+    "RelativePath": "Conciliacion/SpListaNumeroBanco",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
+    "Method": "SpListaConciliacionTipoPago",
+    "RelativePath": "Conciliacion/SpListaTipoPago",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ctaBancaria",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipoPago",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ConciliacionController",
+    "Method": "SpListaConciliacionValidacionCuenta",
+    "RelativePath": "Conciliacion/SpListaValidacionCuenta",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipoPago",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpListaDocumentoLiquidacion",
+    "RelativePath": "Contabilidad/ SpListaDocLiquidacion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpEliminaAsientoContable",
+    "RelativePath": "Contabilidad/SpEliminaAsientoContable",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "valor",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpEliminaAsientoContableInd",
+    "RelativePath": "Contabilidad/SpEliminaAsientoContableInd",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "valor",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpEliminaAsientoContableLiquidacion",
+    "RelativePath": "Contabilidad/SpEliminaLiquidacion",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "valor",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpEliminaAsientoContableRetencion",
+    "RelativePath": "Contabilidad/SpEliminaRetencion",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "valor",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpListaAsientoContable",
+    "RelativePath": "Contabilidad/SpListaAsientoContable",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "valor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "libro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codBanco",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ctaBancaria",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpListaAsientoContableInd",
+    "RelativePath": "Contabilidad/SpListaAsientoContableInd",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "valor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "libro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codBanco",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpListaAsientoCuentaBanco",
+    "RelativePath": "Contabilidad/SpListaBanco",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpListaDocumentoIndividual",
+    "RelativePath": "Contabilidad/SpListaDocIndividual",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpListaDocumentoLote",
+    "RelativePath": "Contabilidad/SpListaDocLote",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpListaDocumentoRetencion",
+    "RelativePath": "Contabilidad/SpListaDocRetencion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpListaDocumentoContabiliza",
+    "RelativePath": "Contabilidad/SpListaDocumento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpListaAsientoContableLiquidacion",
+    "RelativePath": "Contabilidad/SpListaLiquidacion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "valor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "libro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ctaBancaria",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpListaAsientoContableLot",
+    "RelativePath": "Contabilidad/SpListaLote",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "valor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "libro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codBanco",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpListaAsientoContableRetencion",
+    "RelativePath": "Contabilidad/SpListaRetencion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "valor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "libro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "cuenta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "flagnumvoucher",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpListaAsientoContableSR",
+    "RelativePath": "Contabilidad/SpListasientoSinRelacion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "valor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "libro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codBanco",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ctaBancaria",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpListaValidacionBanco",
+    "RelativePath": "Contabilidad/SpListaValidacionBanco",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "proceso",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpListaValidacionDetIndividual",
+    "RelativePath": "Contabilidad/SpListaValidacionIndividual",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "proceso",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpListaValidacionLiquidacion",
+    "RelativePath": "Contabilidad/SpListaValidacionLiquidacion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "proceso",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpListaValidacionDetLote",
+    "RelativePath": "Contabilidad/SpListaValidacionLote",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "proceso",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ContabilidadController",
+    "Method": "SpListaValidacionRetencion",
+    "RelativePath": "Contabilidad/SpListaValidacionRetencion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "proceso",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -400,6 +1171,567 @@
         "Name": "request",
         "Type": "CajaBanco.DTO.Detracciones.DetraccionPagoUpdateRequestDTO",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpEliminaLiquidacionDetalle",
+    "RelativePath": "Liquidacion/SpEliminaDetalle",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codigoLiq",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpEliminaLiquidacion",
+    "RelativePath": "Liquidacion/SpEliminaLiquidacion",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codigoLiq",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpEliminaLiquidacionRegistro",
+    "RelativePath": "Liquidacion/SpEliminaRegistro",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codigoLiq",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "item",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpEliminaLiquidacionTemp",
+    "RelativePath": "Liquidacion/SpEliminaTemp",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codigoLiqTemp",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpEliminaLiquidacionUsuario",
+    "RelativePath": "Liquidacion/SpEliminaUsuario",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpInsertaLiquidacionDetTemp",
+    "RelativePath": "Liquidacion/SpInsertaDetTemp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Liquidacion.LiquidacionCreateRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpInsertaLiquidacionTemp",
+    "RelativePath": "Liquidacion/SpInsertaLiquidacionTemp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Liquidacion.LiquidacionCreateRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpInsertaLiquidacionPago",
+    "RelativePath": "Liquidacion/SpInsertaPago",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Liquidacion.LiquidacionCreateRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpInsertaLiquidacionRegistro",
+    "RelativePath": "Liquidacion/SpInsertaRegistro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Liquidacion.LiquidacionCreateRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpInsertaLiquidacionTempPago",
+    "RelativePath": "Liquidacion/SpInsertaTempPago",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Liquidacion.LiquidacionCreateRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpListaLiquidacionDocumentoPago",
+    "RelativePath": "Liquidacion/SpListaDocumentoPago",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpListaLiquidacion",
+    "RelativePath": "Liquidacion/SpListaLiquidacion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpListaLiquidacionMenu",
+    "RelativePath": "Liquidacion/SpListaMenu",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpListaLiquidacionModulo",
+    "RelativePath": "Liquidacion/SpListaModulo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fecha",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpListaLiquidacionPago",
+    "RelativePath": "Liquidacion/SpListaPago",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpListaLiqPendienteTodo",
+    "RelativePath": "Liquidacion/SpListaPendiente",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpListaLiqPendienteDetraccion",
+    "RelativePath": "Liquidacion/SpListaPendienteDetraccion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpListaLiqPendientePeriodo",
+    "RelativePath": "Liquidacion/SpListaPendientePeriodo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaVenci1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaVenci2",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaAnio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaMes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpListaLiqPendienteRetencion",
+    "RelativePath": "Liquidacion/SpListaPendienteRetencion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpListaLiqVencimientoTodo",
+    "RelativePath": "Liquidacion/SpListaVencimiento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaVenci1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaVenci2",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaAnio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaMes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpListaLiqVencimientoDetraccion",
+    "RelativePath": "Liquidacion/SpListaVencimientoDetraccion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaVenci1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaVenci2",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaAnio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaMes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.LiquidacionController",
+    "Method": "SpListaLiqVencimientoRetencion",
+    "RelativePath": "Liquidacion/SpListaVencimientoRetencion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaVenci1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "buscar2",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

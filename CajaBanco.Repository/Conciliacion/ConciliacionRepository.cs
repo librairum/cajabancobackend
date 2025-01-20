@@ -47,8 +47,8 @@ namespace CajaBanco.Repository.Conciliacion
                 cmd.Parameters.AddWithValue("@ingreso", "");
                 cmd.Parameters.AddWithValue("@egreso", "");
                 cmd.Parameters.AddWithValue("@ITF", "");
-                cmd.Parameters.AddWithValue("@saldo","");
-                cmd.Parameters.AddWithValue("@estado","");
+                cmd.Parameters.AddWithValue("@saldo", "");
+                cmd.Parameters.AddWithValue("@estado", "");
                 cmd.Parameters.AddWithValue("@cta", "");
                 cmd.Parameters.AddWithValue("@ruc", "");
                 cmd.Parameters.AddWithValue("@tipoDoc", "");
@@ -227,10 +227,10 @@ namespace CajaBanco.Repository.Conciliacion
             return result;
         }
 
-        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionBancariaxCuenta(string empresa, string numero)
+        public async Task<ResultDto<BancariaxCuentaListResponseDTO>> SpListaConciliacionBancariaxCuenta(string empresa, string numero)
         {
-            ResultDto<ConciliacionListResponseDTO> result = new ResultDto<ConciliacionListResponseDTO>();
-            List<ConciliacionListResponseDTO> list = new List<ConciliacionListResponseDTO>();
+            ResultDto<BancariaxCuentaListResponseDTO> result = new ResultDto<BancariaxCuentaListResponseDTO>();
+            List<BancariaxCuentaListResponseDTO> list = new List<BancariaxCuentaListResponseDTO>();
 
             try
             {
@@ -241,7 +241,7 @@ namespace CajaBanco.Repository.Conciliacion
                     parametros.Add("@empresa", empresa);
                     parametros.Add("@numero", numero);
 
-                    list = (List<ConciliacionListResponseDTO>)await cn.QueryAsync<ConciliacionListResponseDTO>("Spu_Ban_Trae_CuentaBancariaxCuenta",
+                    list = (List<BancariaxCuentaListResponseDTO>)await cn.QueryAsync<BancariaxCuentaListResponseDTO>("Spu_Ban_Trae_CuentaBancariaxCuenta",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
@@ -258,10 +258,10 @@ namespace CajaBanco.Repository.Conciliacion
             return result;
         }
 
-        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionBanco(string empresa, string tipoPago)
+        public async Task<ResultDto<ConciliacionBancoListResponseDTO>> SpListaConciliacionBanco(string empresa, string tipoPago)
         {
-            ResultDto<ConciliacionListResponseDTO> result = new ResultDto<ConciliacionListResponseDTO>();
-            List<ConciliacionListResponseDTO> list = new List<ConciliacionListResponseDTO>();
+            ResultDto<ConciliacionBancoListResponseDTO> result = new ResultDto<ConciliacionBancoListResponseDTO>();
+            List<ConciliacionBancoListResponseDTO> list = new List<ConciliacionBancoListResponseDTO>();
 
             try
             {
@@ -272,7 +272,7 @@ namespace CajaBanco.Repository.Conciliacion
                     parametros.Add("@empresa", empresa);
                     parametros.Add("@tipoPago", tipoPago);
 
-                    list = (List<ConciliacionListResponseDTO>)await cn.QueryAsync<ConciliacionListResponseDTO>("Spu_Ban_Trae_ConciliacionBanco",
+                    list = (List<ConciliacionBancoListResponseDTO>)await cn.QueryAsync<ConciliacionBancoListResponseDTO>("Spu_Ban_Trae_ConciliacionBanco",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
@@ -320,10 +320,10 @@ namespace CajaBanco.Repository.Conciliacion
             return result;
         }
 
-        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionCuentaBancaria(string empresa, string numero)
+        public async Task<ResultDto<CuentaBancariaListResponseDTO>> SpListaConciliacionCuentaBancaria(string empresa, string numero)
         {
-            ResultDto<ConciliacionListResponseDTO> result = new ResultDto<ConciliacionListResponseDTO>();
-            List<ConciliacionListResponseDTO> list = new List<ConciliacionListResponseDTO>();
+            ResultDto<CuentaBancariaListResponseDTO> result = new ResultDto<CuentaBancariaListResponseDTO>();
+            List<CuentaBancariaListResponseDTO> list = new List<CuentaBancariaListResponseDTO>();
 
             try
             {
@@ -334,8 +334,9 @@ namespace CajaBanco.Repository.Conciliacion
                     parametros.Add("@empresa", empresa);
                     parametros.Add("@numero", numero);
 
-                    list = (List<ConciliacionListResponseDTO>)await cn.QueryAsync<ConciliacionListResponseDTO>("Spu_Ban_Trae_CuentaBancaria",
+                    list = (List<CuentaBancariaListResponseDTO>)await cn.QueryAsync<CuentaBancariaListResponseDTO>("Spu_Ban_Trae_CuentaBancaria",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
+
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
                     result.Data = list.ToList();
@@ -351,10 +352,10 @@ namespace CajaBanco.Repository.Conciliacion
             return result;
         }
 
-        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionCuentaNumero(string empresa, string tipoPago)
+        public async Task<ResultDto<CuentaValidacionListResponseDTO>> SpListaConciliacionCuentaNumero(string empresa, string tipoPago)
         {
-            ResultDto<ConciliacionListResponseDTO> result = new ResultDto<ConciliacionListResponseDTO>();
-            List<ConciliacionListResponseDTO> list = new List<ConciliacionListResponseDTO>();
+            ResultDto<CuentaValidacionListResponseDTO> result = new ResultDto<CuentaValidacionListResponseDTO>();
+            List<CuentaValidacionListResponseDTO> list = new List<CuentaValidacionListResponseDTO>();
 
             try
             {
@@ -365,7 +366,7 @@ namespace CajaBanco.Repository.Conciliacion
                     parametros.Add("@empresa", empresa);
                     parametros.Add("@tipoPago", tipoPago);
 
-                    list = (List<ConciliacionListResponseDTO>)await cn.QueryAsync<ConciliacionListResponseDTO>("Spu_Ban_Trae_CuentaNumeroBancaria",
+                    list = (List<CuentaValidacionListResponseDTO>)await cn.QueryAsync<CuentaValidacionListResponseDTO>("Spu_Ban_Trae_CuentaNumeroBancaria",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
@@ -413,10 +414,10 @@ namespace CajaBanco.Repository.Conciliacion
             return result;
         }
 
-        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionNumeroBanco(string empresa, string numero)
+        public async Task<ResultDto<CuentaBancoListResponseDTO>> SpListaConciliacionNumeroBanco(string empresa, string numero)
         {
-            ResultDto<ConciliacionListResponseDTO> result = new ResultDto<ConciliacionListResponseDTO>();
-            List<ConciliacionListResponseDTO> list = new List<ConciliacionListResponseDTO>();
+            ResultDto<CuentaBancoListResponseDTO> result = new ResultDto<CuentaBancoListResponseDTO>();
+            List<CuentaBancoListResponseDTO> list = new List<CuentaBancoListResponseDTO>();
 
             try
             {
@@ -427,7 +428,7 @@ namespace CajaBanco.Repository.Conciliacion
                     parametros.Add("@empresa", empresa);
                     parametros.Add("@numero", numero);
 
-                    list = (List<ConciliacionListResponseDTO>)await cn.QueryAsync<ConciliacionListResponseDTO>("Spu_Ban_Trae_CuentaNumeroBanco",
+                    list = (List<CuentaBancoListResponseDTO>)await cn.QueryAsync<CuentaBancoListResponseDTO>("Spu_Ban_Trae_CuentaNumeroBanco",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
@@ -475,10 +476,10 @@ namespace CajaBanco.Repository.Conciliacion
             return result;
         }
 
-        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionTipoPago(string empresa, string numero, string ctaBancaria, string tipoPago)
+        public async Task<ResultDto<CuentaBancariaListResponseDTO.Numero>> SpListaConciliacionTipoPago(string empresa, string numero, string ctaBancaria, string tipoPago)
         {
-            ResultDto<ConciliacionListResponseDTO> result = new ResultDto<ConciliacionListResponseDTO>();
-            List<ConciliacionListResponseDTO> list = new List<ConciliacionListResponseDTO>();
+            ResultDto<CuentaBancariaListResponseDTO.Numero> result = new ResultDto<CuentaBancariaListResponseDTO.Numero>();
+            List<CuentaBancariaListResponseDTO.Numero> list = new List<CuentaBancariaListResponseDTO.Numero>();
 
             try
             {
@@ -491,7 +492,7 @@ namespace CajaBanco.Repository.Conciliacion
                     parametros.Add("@ctaBancaria", ctaBancaria);
                     parametros.Add("@tipoPago", tipoPago);
 
-                    list = (List<ConciliacionListResponseDTO>)await cn.QueryAsync<ConciliacionListResponseDTO>("Spu_Ban_Trae_CuentaBancariaNumeroxTipoPago",
+                    list = (List<CuentaBancariaListResponseDTO.Numero>)await cn.QueryAsync<CuentaBancariaListResponseDTO.Numero>("Spu_Ban_Trae_CuentaBancariaNumeroxTipoPago",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
@@ -508,10 +509,10 @@ namespace CajaBanco.Repository.Conciliacion
             return result;
         }
 
-        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionValidacionCuenta(string empresa, string tipoPago)
+        public async Task<ResultDto<CuentaValidacionListResponseDTO>> SpListaConciliacionValidacionCuenta(string empresa, string tipoPago)
         {
-            ResultDto<ConciliacionListResponseDTO> result = new ResultDto<ConciliacionListResponseDTO>();
-            List<ConciliacionListResponseDTO> list = new List<ConciliacionListResponseDTO>();
+            ResultDto<CuentaValidacionListResponseDTO> result = new ResultDto<CuentaValidacionListResponseDTO>();
+            List<CuentaValidacionListResponseDTO> list = new List<CuentaValidacionListResponseDTO>();
 
             try
             {
@@ -522,7 +523,7 @@ namespace CajaBanco.Repository.Conciliacion
                     parametros.Add("@empresa", empresa);
                     parametros.Add("@tipoPago", tipoPago);
 
-                    list = (List<ConciliacionListResponseDTO>)await cn.QueryAsync<ConciliacionListResponseDTO>("Spu_Ban_Trae_CuentaBancariaValidacion",
+                    list = (List<CuentaValidacionListResponseDTO>)await cn.QueryAsync<CuentaValidacionListResponseDTO>("Spu_Ban_Trae_CuentaBancariaValidacion",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";

@@ -638,8 +638,8 @@ namespace CajaBanco.Repository.Liquidacion
 
                     parametros.Add("@empresa", empresa);
                     parametros.Add("@buscar", buscar);
-                    parametros.Add("@buscar1", buscar);
-                    parametros.Add("@buscar2", buscar);
+                    parametros.Add("@buscar1", buscar1);
+                    parametros.Add("@buscar2", buscar2);
 
                     list = (List<LiquidacionListResponseDTO>)await cn.QueryAsync<LiquidacionListResponseDTO>("Spu_Ban_Trae_DocumentoPendienteDetraccion",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
