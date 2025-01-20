@@ -24,6 +24,19 @@ namespace CajaBanco.Abstractions.IService
         public Task<ResultDto<EstadoPagoListResponseDTO>> SpListaPagoxNum(string numero);
         public Task<ResultDto<EstadoPagoListResponseDTO>> SpListaPagos();
         public Task<ResultDto<PagoNumListResponseDTO>> SpListaPagoNumEnProcesoPago(string anio, string mes);
+        public Task<ResultDto<CuentasBancariasListResponseDTO>> SpListaCuentasBancarias();
+        public Task<ResultDto<BancoCuentaBancariaListResponseDTO>> SpListaBancoCuentaBancaria();
+        public Task<ResultDto<TipoPagoCuentaNumerosListResponseDTO>> SpListaTipoPagoCuentaNumeros(string empresa, string tipopago);
+        public Task<ResultDto<BancosEmpresaListResponseDTO>> SpListaBancosxEmpresa(string empresa, string tipopago);
+        public Task<ResultDto<CuentaBancariaxBancoListResponseDTO>> SpListaCuentaBancariaxBanco(string empresa, string numero);
+        public Task<ResultDto<CuentaNumerosBancoListResponseDTO>> SpListaCuentaNumerosBanco(string empresa, string numero);
+        public Task<ResultDto<CuentaNumerosChequesListResponseDTO>> SpListaCuentaNumerosCheques(string empresa, string tipopago);
+        public Task<ResultDto<CuentaNumerosComentariosListResponseDTO>> SpListaCuentaNumerosComentarios(string empresa, string numero);
+        public Task<ResultDto<CuentaNumerosNumPagoListResponseDTO>> SpListaCuentaNumerosTipoPago(string empresa, string tipopago, string ctabancaria, string numero);
+        public Task<ResultDto<CuentaNumerosNumPagoListResponseDTO>> SpListaCuentaNumerosxNumero(string empresa, string numero);
+        public Task<ResultDto<CuentaNumerosChequesListResponseDTO>> SpListaCuentaBancariaCheques(string empresa, string numero);
+        public Task<ResultDto<CuentaxBancoListResponseDTO>> SpListaCuentaxBanco(string empresa, string numero);
+
 
 
     }

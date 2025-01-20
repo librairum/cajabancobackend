@@ -211,5 +211,187 @@ namespace CajaPagoAPI.Controllers
             }
 
         }
+        [HttpGet]
+        [Route("SpList/CuentasBancarias")]
+        public async Task<ActionResult> ObtenerCuentasBancarias()
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaCuentasBancarias();
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpList/BancoCuentasBancarias")]
+        public async Task<ActionResult> ObtenerBancoCuentasBancarias()
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaBancoCuentaBancaria();
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("SpList/TipoPagoCuentaNumeros")]
+        public async Task<ActionResult> ObtenerListaTipoPagoCuentaNumeros(string empresa, string tipopago)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaTipoPagoCuentaNumeros(empresa, tipopago);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+        [HttpGet]
+        [Route("SpList/BancosxEmpresa")]
+        public async Task<ActionResult> ObtenerListaBancosxEmpresa(string empresa, string tipopago)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaBancosxEmpresa(empresa, tipopago);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+        [HttpGet]
+        [Route("SpList/CuentaBancariaxBanco")]
+        public async Task<ActionResult> ObtenerListaCuentaBancariaxBanco(string empresa, string numero)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaCuentaBancariaxBanco(empresa, numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+        [HttpGet]
+        [Route("SpList/CuentaNumerosBanco")]
+        public async Task<ActionResult> ObtenerListaCuentaNumerosBanco(string empresa, string numero)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaCuentaNumerosBanco(empresa, numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+
+        [HttpGet]
+        [Route("SpList/CuentaNumerosCheques")]
+        public async Task<ActionResult> ObtenerListaCuentaNumerosCheques(string empresa, string tipopago)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaCuentaNumerosCheques(empresa, tipopago);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+
+        [HttpGet]
+        [Route("SpList/CuentaNumerosComentarios")]
+        public async Task<ActionResult> ObtenerListaCuentaNumerosComentarios(string empresa, string numero)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaCuentaNumerosComentarios(empresa, numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+        [HttpGet]
+        [Route("SpList/CuentaNumerosTipoPago")]
+        public async Task<ActionResult> ObtenerListaCuentaNumerosTipoPago(string empresa, string tipopago, string ctabancaria, string numero)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaCuentaNumerosTipoPago(empresa, tipopago, ctabancaria, numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+        [HttpGet]
+        [Route("SpList/CuentaNumerosxNumero")]
+        public async Task<ActionResult> ObtenerListaCuentaNumerosxNumero(string empresa, string numero)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaCuentaNumerosxNumero(empresa, numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+
+        [HttpGet]
+        [Route("SpList/CuentaBancariaCheques")]
+        public async Task<ActionResult> ObtenerListaCuentaBancariaCheques(string empresa, string numero)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaCuentaBancariaCheques(empresa, numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpList/CuentaxBanco")]
+        public async Task<ActionResult> ObtenerListaCuentaxBanco(string empresa, string numero)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaCuentaxBanco(empresa, numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
     }
 }

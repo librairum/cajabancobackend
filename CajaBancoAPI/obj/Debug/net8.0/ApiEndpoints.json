@@ -122,6 +122,225 @@
   },
   {
     "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerBancoCuentasBancarias",
+    "RelativePath": "Pago/SpList/BancoCuentasBancarias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaBancosxEmpresa",
+    "RelativePath": "Pago/SpList/BancosxEmpresa",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipopago",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaCuentaBancariaCheques",
+    "RelativePath": "Pago/SpList/CuentaBancariaCheques",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaCuentaBancariaxBanco",
+    "RelativePath": "Pago/SpList/CuentaBancariaxBanco",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaCuentaNumerosBanco",
+    "RelativePath": "Pago/SpList/CuentaNumerosBanco",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaCuentaNumerosCheques",
+    "RelativePath": "Pago/SpList/CuentaNumerosCheques",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipopago",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaCuentaNumerosComentarios",
+    "RelativePath": "Pago/SpList/CuentaNumerosComentarios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaCuentaNumerosTipoPago",
+    "RelativePath": "Pago/SpList/CuentaNumerosTipoPago",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipopago",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ctabancaria",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaCuentaNumerosxNumero",
+    "RelativePath": "Pago/SpList/CuentaNumerosxNumero",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerCuentasBancarias",
+    "RelativePath": "Pago/SpList/CuentasBancarias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaCuentaxBanco",
+    "RelativePath": "Pago/SpList/CuentaxBanco",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
     "Method": "ObtenerListaPagoNumEnProcesoPago",
     "RelativePath": "Pago/SpList/PagoNumEnProcesoPago",
     "HttpMethod": "GET",
@@ -329,6 +548,27 @@
     "Parameters": [
       {
         "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaTipoPagoCuentaNumeros",
+    "RelativePath": "Pago/SpList/TipoPagoCuentaNumeros",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipopago",
         "Type": "System.String",
         "IsRequired": false
       }

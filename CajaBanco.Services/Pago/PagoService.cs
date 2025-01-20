@@ -72,6 +72,55 @@ namespace CajaBanco.Services.Pago
         {
             return await _pagoRepository.SpListaPagoNumEnProcesoPago(anio, mes);
         }
+        public async Task<ResultDto<CuentasBancariasListResponseDTO>> SpListaCuentasBancarias()
+        {
+            return await _pagoRepository.SpListaCuentasBancarias();
+        }
+        public async Task<ResultDto<BancoCuentaBancariaListResponseDTO>> SpListaBancoCuentaBancaria()
+        {
+            return await _pagoRepository.SpListaBancoCuentaBancaria();
+        }
+
+        public async Task<ResultDto<TipoPagoCuentaNumerosListResponseDTO>> SpListaTipoPagoCuentaNumeros(string empresa, string tipopago)
+        {
+            return await _pagoRepository.SpListaTipoPagoCuentaNumeros(empresa, tipopago);
+        }
+        public async Task<ResultDto<BancosEmpresaListResponseDTO>> SpListaBancosxEmpresa(string empresa, string tipopago)
+        {
+            return await _pagoRepository.SpListaBancosxEmpresa(empresa, tipopago);
+        }
+        public async Task<ResultDto<CuentaBancariaxBancoListResponseDTO>> SpListaCuentaBancariaxBanco(string empresa, string numero)
+        {
+            return await _pagoRepository.SpListaCuentaBancariaxBanco(empresa, numero);
+        }
+        public async Task<ResultDto<CuentaNumerosBancoListResponseDTO>> SpListaCuentaNumerosBanco(string empresa, string numero)
+        {
+            return await _pagoRepository.SpListaCuentaNumerosBanco(empresa, numero);
+        }
+        public async Task<ResultDto<CuentaNumerosChequesListResponseDTO>> SpListaCuentaNumerosCheques(string empresa, string tipopago)
+        {
+            return await _pagoRepository.SpListaCuentaNumerosCheques(empresa, tipopago);
+        }
+        public async Task<ResultDto<CuentaNumerosComentariosListResponseDTO>> SpListaCuentaNumerosComentarios(string empresa, string numero)
+        {
+            return await _pagoRepository.SpListaCuentaNumerosComentarios(empresa, numero);
+        }
+        public async Task<ResultDto<CuentaNumerosNumPagoListResponseDTO>> SpListaCuentaNumerosTipoPago(string empresa, string tipopago, string ctabancaria, string numero)
+        {
+            return await _pagoRepository.SpListaCuentaNumerosTipoPago(empresa, tipopago, ctabancaria, numero);
+        }
+        public async Task<ResultDto<CuentaNumerosNumPagoListResponseDTO>> SpListaCuentaNumerosxNumero(string empresa, string numero)
+        {
+            return await _pagoRepository.SpListaCuentaNumerosxNumero(empresa, numero);
+        }
+        public async Task<ResultDto<CuentaNumerosChequesListResponseDTO>> SpListaCuentaBancariaCheques(string empresa, string numero)
+        {
+            return await _pagoRepository.SpListaCuentaBancariaCheques(empresa, numero);
+        }
+        public async Task<ResultDto<CuentaxBancoListResponseDTO>> SpListaCuentaxBanco(string empresa, string numero)
+        {
+            return await _pagoRepository.SpListaCuentaxBanco(empresa, numero);
+        }
 
 
     }
