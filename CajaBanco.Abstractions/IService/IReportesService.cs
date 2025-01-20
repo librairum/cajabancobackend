@@ -24,5 +24,21 @@ namespace CajaBanco.Abstractions.IService
         public Task<ResultDto<TraePagoContabilizarDTO>> SpTraePagoContabilizar();
         public Task<ResultDto<TraePagoEjecutarCodigoDTO>> SpTraePagoEjecutarCodigo(string numero);
         public Task<ResultDto<TraePresupuestoImprimirDTO>> SpTraePresupuestoImprimir(string numero);
+        public Task<ResultDto<string>> SpInsConsulta();
+        public Task<ResultDto<string>> SpInsProveedorCabecera();
+        public Task<ResultDto<string>> SpInsProveedorSubTotal();
+        public Task<ResultDto<string>> SpInsTablaResumen(RegistroCreateTableResumenDTO request);        
+        public Task<ResultDto<TraeEjecutarCodigoPagoDTO>>SpuTraeEjecutarCodigoPago(string numero);
+        public Task<ResultDto<TraePagoActualizadoDTO>> SpTraePagoActualizado(string anio, string mes);
+        public Task<ResultDto<TraePagoActualizadoDTO>> SpTraePagoCodigoPresupuesto(string numero);
+        public Task<ResultDto<TraePagoActualizadoDTO>> SpTraePagoEjecutado(string anio, string mes);
+        public Task<ResultDto<TraePagoActualizadoDTO>> SpuTraePagoPresupuesto();
+        public Task<ResultDto<TraePagoActualizadoDTO>> SpTraePagoPresupuestoxFecha(string anio, string mes);
+        public Task<ResultDto<TraeResultadoDTO>> SpTraeResultados();
+        //nuevo
+        public Task<ResultDto<TraePagoEjecutadosImporteDTO>> SpTraePagosEjecutadosImporte(string empresa, string ruc, string numero, string codigo);
+        public Task<ResultDto<TraePagosPresupuestosDTO>> SpTraePagosPresupuesto(string empresa);
+        public Task<ResultDto<TraeDocumentoValidacionesDetraccionDTO>> SpTraeDocumentoValidacionDetraccion(string empresa, string ruc, string numero, string codigo);
+        public Task<ResultDto<TraeDocumentoValidacionRetencionDTO>> SpTraeDocumentoValidacionRetencion(string empresa, string ruc, string numero, string codigo);
     }
 }

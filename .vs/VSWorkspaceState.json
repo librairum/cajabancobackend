@@ -5,6 +5,6 @@
     "\\CajaBancoAPI",
     "\\CajaBancoAPI\\Controllers"
   ],
-  "SelectedNode": "\\sln_cajabancoweb.sln",
+  "SelectedNode": "\\CajaBancoAPI\\Controllers\\ReportesController.cs",
   "PreviewInSolutionExplorer": false
 }

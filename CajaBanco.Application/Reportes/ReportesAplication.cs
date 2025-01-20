@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CajaBanco.Application.Reportes
 {
@@ -73,6 +74,67 @@ namespace CajaBanco.Application.Reportes
         public async Task<ResultDto<TraePresupuestoImprimirDTO>> SpTraePresupuestoImprimir(string numero)
         {
             return await _reportesService.SpTraePresupuestoImprimir(numero);
+        }
+        public async Task<ResultDto<string>> SpInsConsulta()
+        {
+            return await _reportesService.SpInsConsulta();
+        }
+        public async Task<ResultDto<string>> SpInsProveedorCabecera()
+        {
+            return await _reportesService.SpInsProveedorCabecera();
+        }
+        public async Task<ResultDto<string>> SpInsProveedorSubTotal()
+        {
+            return await _reportesService.SpInsProveedorSubTotal();
+        }
+        public async Task<ResultDto<string>> SpInsTablaResumen(RegistroCreateTableResumenDTO request)
+        {
+            return await _reportesService.SpInsTablaResumen(request);
+        }
+        public async Task<ResultDto<TraeEjecutarCodigoPagoDTO>> SpuTraeEjecutarCodigoPago(string numero)
+        {
+            return await _reportesService.SpuTraeEjecutarCodigoPago(numero);
+        }
+        public async Task<ResultDto<TraePagoActualizadoDTO>> SpTraePagoActualizado(string anio, string mes)
+        {
+            return await _reportesService.SpTraePagoActualizado(anio, mes);
+        }
+        public async Task<ResultDto<TraePagoActualizadoDTO>> SpTraePagoCodigoPresupuesto(string numero)
+        {
+            return await _reportesService.SpTraePagoCodigoPresupuesto(numero);
+        }
+        public async Task<ResultDto<TraePagoActualizadoDTO>> SpTraePagoEjecutado(string anio, string mes)
+        {
+            return await _reportesService.SpTraePagoEjecutado(anio,mes);
+        }
+        public async Task<ResultDto<TraePagoActualizadoDTO>> SpuTraePagoPresupuesto()
+        {
+            return await _reportesService.SpuTraePagoPresupuesto();
+        }
+        public async Task<ResultDto<TraePagoActualizadoDTO>> SpTraePagoPresupuestoxFecha(string anio, string mes)
+        {
+            return await _reportesService.SpTraePagoPresupuestoxFecha(anio, mes);
+        }
+        public async Task<ResultDto<TraeResultadoDTO>> SpTraeResultados()
+        {
+            return await _reportesService.SpTraeResultados();
+        }
+        //nuevo
+        public async Task<ResultDto<TraePagoEjecutadosImporteDTO>> SpTraePagosEjecutadosImporte(string empresa, string ruc, string numero, string codigo)
+        {
+            return await _reportesService.SpTraePagosEjecutadosImporte(empresa,ruc,numero,codigo);
+        }
+        public async Task<ResultDto<TraePagosPresupuestosDTO>> SpTraePagosPresupuesto(string empresa)
+        {
+            return await _reportesService.SpTraePagosPresupuesto(empresa);
+        }
+        public async Task<ResultDto<TraeDocumentoValidacionesDetraccionDTO>> SpTraeDocumentoValidacionDetraccion(string empresa, string ruc, string numero, string codigo)
+        {
+            return await _reportesService.SpTraeDocumentoValidacionDetraccion(empresa, ruc, numero, codigo);
+        }
+        public async Task<ResultDto<TraeDocumentoValidacionRetencionDTO>> SpTraeDocumentoValidacionRetencion(string empresa, string ruc, string numero, string codigo)
+        {
+            return await _reportesService.SpTraeDocumentoValidacionRetencion(empresa, ruc, numero, codigo);
         }
     }
 }

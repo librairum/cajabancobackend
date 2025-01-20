@@ -290,6 +290,52 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpInsConsulta",
+    "RelativePath": "Reportes/SpInsConsulta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpInsProveedorCabecera",
+    "RelativePath": "Reportes/SpInsProveedorCabecera",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpInsProveedorSubTotal",
+    "RelativePath": "Reportes/SpInsProveedorSubTotal",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpInsTablaResumen",
+    "RelativePath": "Reportes/SpInsTablaResumen",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Reportes.RegistroCreateTableResumenDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
     "Method": "SpListarTraeFactPendientes",
     "RelativePath": "Reportes/SpListarFactPendientes",
     "HttpMethod": "GET",
@@ -391,6 +437,68 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpTraeDocumentoValidacionDetraccion",
+    "RelativePath": "Reportes/SpTraeDocumentoValidacionDetraccion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ruc",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpTraeDocumentoValidacionRetencion",
+    "RelativePath": "Reportes/SpTraeDocumentoValidacionRetencion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ruc",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
     "Method": "SpTraeEstadoIngresadoPago",
     "RelativePath": "Reportes/SpTraeEstadoIngresado",
     "HttpMethod": "GET",
@@ -403,6 +511,27 @@
     "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
     "Method": "SpTraeOrdenCambiado",
     "RelativePath": "Reportes/SpTraeOrdenCambiado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpTraePagoActualizado",
+    "RelativePath": "Reportes/SpTraePagoActualizado",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -443,12 +572,49 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpTraePagoCodigoPresupuesto",
+    "RelativePath": "Reportes/SpTraePagoCodigoPresupuesto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
     "Method": "SpTraePagoContabilizar",
     "RelativePath": "Reportes/SpTraePagoContabilizar",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpTraePagoEjecutado",
+    "RelativePath": "Reportes/SpTraePagoEjecutado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -469,6 +635,74 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpTraePagoPresupuestoxFecha",
+    "RelativePath": "Reportes/SpTraePagoPresupuestoxFecha",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpTraePagosEjecutadosImporte",
+    "RelativePath": "Reportes/SpTraePagosEjecutadosImporte",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ruc",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpTraePagosPresupuesto",
+    "RelativePath": "Reportes/SpTraePagosPresupuesto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
     "Method": "SpTraePresupuestoImprimir",
     "RelativePath": "Reportes/SpTraePresupuestoImprimir",
     "HttpMethod": "GET",
@@ -481,6 +715,42 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpTraeResultados",
+    "RelativePath": "Reportes/SpTraeResultados",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpuTraeEjecutarCodigoPago",
+    "RelativePath": "Reportes/SpuTraeEjecutarCodigoPago",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.ReportesController",
+    "Method": "SpuTraePagoPresupuesto",
+    "RelativePath": "Reportes/SpuTraePagoPresupuesto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

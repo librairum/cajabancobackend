@@ -73,5 +73,66 @@ namespace CajaBanco.Services.Reportes
         {
             return await _reportesRepository.SpTraePresupuestoImprimir(numero);
         }
+        public async Task<ResultDto<string>> SpInsConsulta()
+        {
+            return await _reportesRepository.SpInsConsulta();
+        }
+        public async Task<ResultDto<string>> SpInsProveedorCabecera()
+        {
+            return await _reportesRepository.SpInsProveedorCabecera();
+        }
+        public async Task<ResultDto<string>> SpInsProveedorSubTotal()
+        {
+            return await _reportesRepository.SpInsProveedorSubTotal();
+        }
+        public async Task<ResultDto<string>> SpInsTablaResumen(RegistroCreateTableResumenDTO request)
+        {
+            return await _reportesRepository.SpInsTablaResumen(request);
+        }
+        public async Task<ResultDto<TraeEjecutarCodigoPagoDTO>> SpuTraeEjecutarCodigoPago(string numero)
+        {
+            return await _reportesRepository.SpuTraeEjecutarCodigoPago(numero);
+        }
+        public async Task<ResultDto<TraePagoActualizadoDTO>> SpTraePagoActualizado(string anio, string mes)
+        {
+            return await _reportesRepository.SpTraePagoActualizado(anio, mes);
+        }
+        public async Task<ResultDto<TraePagoActualizadoDTO>> SpTraePagoCodigoPresupuesto(string numero)
+        {
+            return await _reportesRepository.SpTraePagoCodigoPresupuesto(numero);
+        }
+        public async Task<ResultDto<TraePagoActualizadoDTO>> SpTraePagoEjecutado(string anio, string mes)
+        {
+            return await _reportesRepository.SpTraePagoEjecutado(anio, mes);
+        }
+        public async Task<ResultDto<TraePagoActualizadoDTO>> SpuTraePagoPresupuesto()
+        {
+            return await _reportesRepository.SpuTraePagoPresupuesto();
+        }
+        public async Task<ResultDto<TraePagoActualizadoDTO>> SpTraePagoPresupuestoxFecha(string anio, string mes)
+        {
+            return await _reportesRepository.SpTraePagoPresupuestoxFecha(anio, mes);
+        }
+        public async Task<ResultDto<TraeResultadoDTO>> SpTraeResultados()
+        {
+            return await _reportesRepository.SpTraeResultados();
+        }
+        //nuevo
+        public async Task<ResultDto<TraePagoEjecutadosImporteDTO>> SpTraePagosEjecutadosImporte(string empresa, string ruc, string numero, string codigo)
+        {
+            return await _reportesRepository.SpTraePagosEjecutadosImporte(empresa, ruc, numero, codigo);
+        }
+        public async Task<ResultDto<TraePagosPresupuestosDTO>> SpTraePagosPresupuesto(string empresa)
+        {
+            return await _reportesRepository.SpTraePagosPresupuesto(empresa);
+        }
+        public async Task<ResultDto<TraeDocumentoValidacionesDetraccionDTO>> SpTraeDocumentoValidacionDetraccion(string empresa, string ruc, string numero, string codigo)
+        {
+            return await _reportesRepository.SpTraeDocumentoValidacionDetraccion(empresa, ruc, numero, codigo);
+        }
+        public async Task<ResultDto<TraeDocumentoValidacionRetencionDTO>> SpTraeDocumentoValidacionRetencion(string empresa, string ruc, string numero, string codigo)
+        {
+            return await _reportesRepository.SpTraeDocumentoValidacionRetencion(empresa, ruc, numero, codigo);
+        }
     }
 }
