@@ -53,7 +53,7 @@ namespace CajaBanco.Services.Conciliacion
             return await _conciliacionRepositorio.SpListaConciliacionBancariaxCuenta(empresa, numero);
         }
 
-        public async Task<ResultDto<ConciliacionBancoListResponseDTO>> SpListaConciliacionBanco(string empresa, string tipoPago)
+        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionBanco(string empresa, string tipoPago)
         {
             return await _conciliacionRepositorio.SpListaConciliacionBanco(empresa, tipoPago);
         }
@@ -63,12 +63,12 @@ namespace CajaBanco.Services.Conciliacion
             return await _conciliacionRepositorio.SpListaConciliacionCuenta(empresa, numero);
         }
 
-        public async Task<ResultDto<CuentaBancariaListResponseDTO>> SpListaConciliacionCuentaBancaria(string empresa, string numero)
+        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionCuentaBancaria(string empresa, string numero)
         {
             return await _conciliacionRepositorio.SpListaConciliacionCuentaBancaria(empresa, numero);
         }
 
-        public async Task<ResultDto<CuentaValidacionListResponseDTO>> SpListaConciliacionCuentaNumero(string empresa, string tipoPago)
+        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionCuentaNumero(string empresa, string tipoPago)
         {
             return await _conciliacionRepositorio.SpListaConciliacionCuentaNumero(empresa, tipoPago);
         }
@@ -88,12 +88,12 @@ namespace CajaBanco.Services.Conciliacion
             return await _conciliacionRepositorio.SpListaConciliacionTipoCambio(empresa, tipoPago);
         }
 
-        public async Task<ResultDto<CuentaBancariaListResponseDTO.Numero>> SpListaConciliacionTipoPago(string empresa, string numero, string ctaBancaria, string tipoPago)
+        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionTipoPago(string empresa, string numero, string ctaBancaria, string tipoPago)
         {
             return await _conciliacionRepositorio.SpListaConciliacionTipoPago(empresa, numero, ctaBancaria, tipoPago);
         }
 
-        public async Task<ResultDto<CuentaValidacionListResponseDTO>> SpListaConciliacionValidacionCuenta(string empresa, string tipoPago)
+        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionValidacionCuenta(string empresa, string tipoPago)
         {
             return await _conciliacionRepositorio.SpListaConciliacionValidacionCuenta(empresa, tipoPago);
         }

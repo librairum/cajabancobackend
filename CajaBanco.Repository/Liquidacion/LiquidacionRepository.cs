@@ -1,6 +1,7 @@
 ﻿using CajaBanco.Abstractions.IRepository;
 using CajaBanco.DTO.Banco;
 using CajaBanco.DTO.Common;
+using CajaBanco.DTO.Conciliacion;
 using CajaBanco.DTO.Liquidacion;
 using Dapper;
 using Microsoft.Data.SqlClient;
@@ -421,6 +422,14 @@ namespace CajaBanco.Repository.Liquidacion
                     parametros.Add("@empresa", empresa);
                     parametros.Add("@anio", anio);
                     parametros.Add("@mes", mes);
+                    var mapping = new Dictionary<string, string>
+                    {
+                        { "Numero Doc", "NumeroDoc" },
+                        { "Nro Pago", "NroPago" }
+                    };
+                    var mapper = new CustomPropertyTypeMap(typeof(LiquidacionListResponseDTO),
+                        (type, columnName) => type.GetProperty(mapping.ContainsKey(columnName) ? mapping[columnName] : columnName));
+                    Dapper.SqlMapper.SetTypeMap(typeof(LiquidacionListResponseDTO), mapper);
 
                     list = (List<LiquidacionListResponseDTO>)await cn.QueryAsync<LiquidacionListResponseDTO>("Spu_Ban_Trae_LiquidacionCaja",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
@@ -439,10 +448,10 @@ namespace CajaBanco.Repository.Liquidacion
             return result;
         }
 
-        public async Task<ResultDto<LiquidacionListResponseDTO>> SpListaLiquidacionDocumentoPago(string empresa)
+        public async Task<ResultDto<LiquidacionDocumentoListResponseDTO>> SpListaLiquidacionDocumentoPago(string empresa)
         {
-            ResultDto<LiquidacionListResponseDTO> result = new ResultDto<LiquidacionListResponseDTO>();
-            List<LiquidacionListResponseDTO> list = new List<LiquidacionListResponseDTO>();
+            ResultDto<LiquidacionDocumentoListResponseDTO> result = new ResultDto<LiquidacionDocumentoListResponseDTO>();
+            List<LiquidacionDocumentoListResponseDTO> list = new List<LiquidacionDocumentoListResponseDTO>();
 
             try
             {
@@ -452,7 +461,7 @@ namespace CajaBanco.Repository.Liquidacion
 
                     parametros.Add("@empresa", empresa);
 
-                    list = (List<LiquidacionListResponseDTO>)await cn.QueryAsync<LiquidacionListResponseDTO>("Spu_Ban_Trae_TipoDocumentoPago",
+                    list = (List<LiquidacionDocumentoListResponseDTO>)await cn.QueryAsync<LiquidacionDocumentoListResponseDTO>("Spu_Ban_Trae_TipoDocumentoPago",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
@@ -540,6 +549,16 @@ namespace CajaBanco.Repository.Liquidacion
                     parametros.Add("@empresa", empresa);
                     parametros.Add("@numero", numero);
 
+                    var mapping = new Dictionary<string, string>
+                    {
+                        { "FECHA LIQ", "Fecha" },
+                        { "TIPO LIQ", "TipoLiq" },
+                     
+                    };
+                    var mapper = new CustomPropertyTypeMap(typeof(LiquidacionListResponseDTO),
+                        (type, columnName) => type.GetProperty(mapping.ContainsKey(columnName) ? mapping[columnName] : columnName));
+                    Dapper.SqlMapper.SetTypeMap(typeof(LiquidacionListResponseDTO), mapper);
+
                     list = (List<LiquidacionListResponseDTO>)await cn.QueryAsync<LiquidacionListResponseDTO>("Spu_Ban_Trae_LiquidacionPago",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
@@ -559,10 +578,10 @@ namespace CajaBanco.Repository.Liquidacion
 
 
 
-        public async Task<ResultDto<LiquidacionListResponseDTO>> SpListaLiqPendienteTodo(string empresa, string buscar, string buscar1, string buscar2)
+        public async Task<ResultDto<LiquidacionDocumentoListResponseDTO>> SpListaLiqPendienteTodo(string empresa, string buscar, string buscar1, string buscar2)
         {
-            ResultDto<LiquidacionListResponseDTO> result = new ResultDto<LiquidacionListResponseDTO>();
-            List<LiquidacionListResponseDTO> list = new List<LiquidacionListResponseDTO>();
+            ResultDto<LiquidacionDocumentoListResponseDTO> result = new ResultDto<LiquidacionDocumentoListResponseDTO>();
+            List<LiquidacionDocumentoListResponseDTO> list = new List<LiquidacionDocumentoListResponseDTO>();
 
             try
             {
@@ -575,7 +594,22 @@ namespace CajaBanco.Repository.Liquidacion
                     parametros.Add("@buscar1", buscar);
                     parametros.Add("@buscar2", buscar);
 
-                    list = (List<LiquidacionListResponseDTO>)await cn.QueryAsync<LiquidacionListResponseDTO>("Spu_Ban_Trae_DocumentoPendienteTodo",
+                    var mapping = new Dictionary<string, string>
+                    {
+                        { "Tipo Doc", "TipoDoc" },
+                        { "Nro Documento", "NumeroDoc" },
+                        { "D Atrazo", "DAtrazo" },
+                        { "Fecha Emision", "FechaEmision" },
+                        { "Fecha Vencimiento", "FechaVencimiento" },
+                        { "A DET", "AfectoDET" },
+                        { "A RET", "AfectoRET" },
+
+                    };
+                    var mapper = new CustomPropertyTypeMap(typeof(LiquidacionListResponseDTO),
+                        (type, columnName) => type.GetProperty(mapping.ContainsKey(columnName) ? mapping[columnName] : columnName));
+                    Dapper.SqlMapper.SetTypeMap(typeof(LiquidacionListResponseDTO), mapper);
+
+                    list = (List<LiquidacionDocumentoListResponseDTO>)await cn.QueryAsync<LiquidacionDocumentoListResponseDTO>("Spu_Ban_Trae_DocumentoPendienteTodo",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
@@ -592,10 +626,10 @@ namespace CajaBanco.Repository.Liquidacion
             return result;
         }
 
-        public async Task<ResultDto<LiquidacionListResponseDTO>> SpListaLiqPendienteRetencion(string empresa, string buscar, string buscar1, string buscar2)
+        public async Task<ResultDto<LiquidacionDocumentoListResponseDTO>> SpListaLiqPendienteRetencion(string empresa, string buscar, string buscar1, string buscar2)
         {
-            ResultDto<LiquidacionListResponseDTO> result = new ResultDto<LiquidacionListResponseDTO>();
-            List<LiquidacionListResponseDTO> list = new List<LiquidacionListResponseDTO>();
+            ResultDto<LiquidacionDocumentoListResponseDTO> result = new ResultDto<LiquidacionDocumentoListResponseDTO>();
+            List<LiquidacionDocumentoListResponseDTO> list = new List<LiquidacionDocumentoListResponseDTO>();
 
             try
             {
@@ -608,7 +642,22 @@ namespace CajaBanco.Repository.Liquidacion
                     parametros.Add("@buscar1", buscar);
                     parametros.Add("@buscar2", buscar);
 
-                    list = (List<LiquidacionListResponseDTO>)await cn.QueryAsync<LiquidacionListResponseDTO>("Spu_Ban_Trae_DocumentoPendienteRetencion",
+                    var mapping = new Dictionary<string, string>
+                    {
+                        { "Tipo Doc", "TipoDoc" },
+                        { "Nro Documento", "NumeroDoc" },
+                        { "D Atrazo", "DAtrazo" },
+                        { "Fecha Emision", "FechaEmision" },
+                        { "Fecha Vencimiento", "FechaVencimiento" },
+                        { "A DET", "AfectoDET" },
+                        { "A RET", "AfectoRET" },
+
+                    };
+                    var mapper = new CustomPropertyTypeMap(typeof(LiquidacionListResponseDTO),
+                        (type, columnName) => type.GetProperty(mapping.ContainsKey(columnName) ? mapping[columnName] : columnName));
+                    Dapper.SqlMapper.SetTypeMap(typeof(LiquidacionListResponseDTO), mapper);
+
+                    list = (List<LiquidacionDocumentoListResponseDTO>)await cn.QueryAsync<LiquidacionDocumentoListResponseDTO>("Spu_Ban_Trae_DocumentoPendienteRetencion",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
@@ -625,10 +674,10 @@ namespace CajaBanco.Repository.Liquidacion
             return result;
         }
 
-        public async Task<ResultDto<LiquidacionListResponseDTO>> SpListaLiqPendienteDetraccion(string empresa, string buscar, string buscar1, string buscar2)
+        public async Task<ResultDto<LiquidacionDocumentoListResponseDTO>> SpListaLiqPendienteDetraccion(string empresa, string buscar, string buscar1, string buscar2)
         {
-            ResultDto<LiquidacionListResponseDTO> result = new ResultDto<LiquidacionListResponseDTO>();
-            List<LiquidacionListResponseDTO> list = new List<LiquidacionListResponseDTO>();
+            ResultDto<LiquidacionDocumentoListResponseDTO> result = new ResultDto<LiquidacionDocumentoListResponseDTO>();
+            List<LiquidacionDocumentoListResponseDTO> list = new List<LiquidacionDocumentoListResponseDTO>();
 
             try
             {
@@ -640,8 +689,23 @@ namespace CajaBanco.Repository.Liquidacion
                     parametros.Add("@buscar", buscar);
                     parametros.Add("@buscar1", buscar1);
                     parametros.Add("@buscar2", buscar2);
+                    var mapping = new Dictionary<string, string>
+                    {
+                        { "Tipo Doc", "TipoDoc" },
+                        { "Nro Documento", "NumeroDoc" },
+                        { "D Atrazo", "DAtrazo" },
+                        { "Fecha Emision", "FechaEmision" },
+                        { "Fecha Vencimiento", "FechaVencimiento" },
+                        { "A DET", "AfectoDET" },
+                        { "A RET", "AfectoRET" },
 
-                    list = (List<LiquidacionListResponseDTO>)await cn.QueryAsync<LiquidacionListResponseDTO>("Spu_Ban_Trae_DocumentoPendienteDetraccion",
+                    };
+                    var mapper = new CustomPropertyTypeMap(typeof(LiquidacionListResponseDTO),
+                        (type, columnName) => type.GetProperty(mapping.ContainsKey(columnName) ? mapping[columnName] : columnName));
+                    Dapper.SqlMapper.SetTypeMap(typeof(LiquidacionListResponseDTO), mapper);
+
+
+                    list = (List<LiquidacionDocumentoListResponseDTO>)await cn.QueryAsync<LiquidacionDocumentoListResponseDTO>("Spu_Ban_Trae_DocumentoPendienteDetraccion",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
@@ -658,10 +722,10 @@ namespace CajaBanco.Repository.Liquidacion
             return result;
         }
 
-        public async Task<ResultDto<LiquidacionListResponseDTO>> SpListaLiqPendientePeriodo(string empresa, string fechaVenci1, string fechaVenci2, string fechaAnio, string fechaMes, string buscar, string buscar1, string buscar2)
+        public async Task<ResultDto<LiquidacionDocumentoListResponseDTO>> SpListaLiqPendientePeriodo(string empresa, string fechaVenci1, string fechaVenci2, string fechaAnio, string fechaMes, string buscar, string buscar1, string buscar2)
         {
-            ResultDto<LiquidacionListResponseDTO> result = new ResultDto<LiquidacionListResponseDTO>();
-            List<LiquidacionListResponseDTO> list = new List<LiquidacionListResponseDTO>();
+            ResultDto<LiquidacionDocumentoListResponseDTO> result = new ResultDto<LiquidacionDocumentoListResponseDTO>();
+            List<LiquidacionDocumentoListResponseDTO> list = new List<LiquidacionDocumentoListResponseDTO>();
 
             try
             {
@@ -678,7 +742,22 @@ namespace CajaBanco.Repository.Liquidacion
                     parametros.Add("@buscar1", buscar);
                     parametros.Add("@buscar2", buscar);
 
-                    list = (List<LiquidacionListResponseDTO>)await cn.QueryAsync<LiquidacionListResponseDTO>("Spu_Ban_Trae_DocumentoPendientePeriodo",
+                    var mapping = new Dictionary<string, string>
+                    {
+                        { "Tipo Doc", "TipoDoc" },
+                        { "Nro Documento", "NumeroDoc" },
+                        { "D Atrazo", "DAtrazo" },
+                        { "Fecha Emision", "FechaEmision" },
+                        { "Fecha Vencimiento", "FechaVencimiento" },
+                        { "A DET", "AfectoDET" },
+                        { "A RET", "AfectoRET" },
+
+                    };
+                    var mapper = new CustomPropertyTypeMap(typeof(LiquidacionListResponseDTO),
+                        (type, columnName) => type.GetProperty(mapping.ContainsKey(columnName) ? mapping[columnName] : columnName));
+                    Dapper.SqlMapper.SetTypeMap(typeof(LiquidacionListResponseDTO), mapper);
+
+                    list = (List<LiquidacionDocumentoListResponseDTO>)await cn.QueryAsync<LiquidacionDocumentoListResponseDTO>("Spu_Ban_Trae_DocumentoPendientePeriodo",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
@@ -695,10 +774,10 @@ namespace CajaBanco.Repository.Liquidacion
             return result;
         }
 
-        public async Task<ResultDto<LiquidacionListResponseDTO>> SpListaLiqVencimientoDetraccion(string empresa, string fechaVenci1, string fechaVenci2, string fechaAnio, string fechaMes, string buscar, string buscar1, string buscar2)
+        public async Task<ResultDto<LiquidacionDocumentoListResponseDTO>> SpListaLiqVencimientoDetraccion(string empresa, string fechaVenci1, string fechaVenci2, string fechaAnio, string fechaMes, string buscar, string buscar1, string buscar2)
         {
-            ResultDto<LiquidacionListResponseDTO> result = new ResultDto<LiquidacionListResponseDTO>();
-            List<LiquidacionListResponseDTO> list = new List<LiquidacionListResponseDTO>();
+            ResultDto<LiquidacionDocumentoListResponseDTO> result = new ResultDto<LiquidacionDocumentoListResponseDTO>();
+            List<LiquidacionDocumentoListResponseDTO> list = new List<LiquidacionDocumentoListResponseDTO>();
 
             try
             {
@@ -715,7 +794,22 @@ namespace CajaBanco.Repository.Liquidacion
                     parametros.Add("@buscar1", buscar);
                     parametros.Add("@buscar2", buscar);
 
-                    list = (List<LiquidacionListResponseDTO>)await cn.QueryAsync<LiquidacionListResponseDTO>("Spu_Ban_Trae_DocumentoVencimientoDetraccion",
+                    var mapping = new Dictionary<string, string>
+                    {
+                        { "Tipo Doc", "TipoDoc" },
+                        { "Nro Documento", "NumeroDoc" },
+                        { "D Atrazo", "DAtrazo" },
+                        { "Fecha Emision", "FechaEmision" },
+                        { "Fecha Vencimiento", "FechaVencimiento" },
+                        { "A DET", "AfectoDET" },
+                        { "A RET", "AfectoRET" },
+
+                    };
+                    var mapper = new CustomPropertyTypeMap(typeof(LiquidacionListResponseDTO),
+                        (type, columnName) => type.GetProperty(mapping.ContainsKey(columnName) ? mapping[columnName] : columnName));
+                    Dapper.SqlMapper.SetTypeMap(typeof(LiquidacionListResponseDTO), mapper);
+
+                    list = (List<LiquidacionDocumentoListResponseDTO>)await cn.QueryAsync<LiquidacionDocumentoListResponseDTO>("Spu_Ban_Trae_DocumentoVencimientoDetraccion",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
@@ -732,10 +826,10 @@ namespace CajaBanco.Repository.Liquidacion
             return result;
         }
 
-        public async Task<ResultDto<LiquidacionListResponseDTO>> SpListaLiqVencimientoRetencion(string empresa, string fechaVenci1, string buscar, string buscar1, string buscar2)
+        public async Task<ResultDto<LiquidacionDocumentoListResponseDTO>> SpListaLiqVencimientoRetencion(string empresa, string fechaVenci1, string buscar, string buscar1, string buscar2)
         {
-            ResultDto<LiquidacionListResponseDTO> result = new ResultDto<LiquidacionListResponseDTO>();
-            List<LiquidacionListResponseDTO> list = new List<LiquidacionListResponseDTO>();
+            ResultDto<LiquidacionDocumentoListResponseDTO> result = new ResultDto<LiquidacionDocumentoListResponseDTO>();
+            List<LiquidacionDocumentoListResponseDTO> list = new List<LiquidacionDocumentoListResponseDTO>();
 
             try
             {
@@ -748,8 +842,23 @@ namespace CajaBanco.Repository.Liquidacion
                     parametros.Add("@buscar", buscar);
                     parametros.Add("@buscar1", buscar);
                     parametros.Add("@buscar2", buscar);
+                    var mapping = new Dictionary<string, string>
+                    {
+                        { "Tipo Doc", "TipoDoc" },
+                        { "Nro Documento", "NumeroDoc" },
+                        { "D Atrazo", "DAtrazo" },
+                        { "Fecha Emision", "FechaEmision" },
+                        { "Fecha Vencimiento", "FechaVencimiento" },
+                        { "A DET", "AfectoDET" },
+                        { "A RET", "AfectoRET" },
 
-                    list = (List<LiquidacionListResponseDTO>)await cn.QueryAsync<LiquidacionListResponseDTO>("Spu_Ban_Trae_DocumentoVencimientoRetencion",
+                    };
+                    var mapper = new CustomPropertyTypeMap(typeof(LiquidacionListResponseDTO),
+                        (type, columnName) => type.GetProperty(mapping.ContainsKey(columnName) ? mapping[columnName] : columnName));
+                    Dapper.SqlMapper.SetTypeMap(typeof(LiquidacionListResponseDTO), mapper);
+
+
+                    list = (List<LiquidacionDocumentoListResponseDTO>)await cn.QueryAsync<LiquidacionDocumentoListResponseDTO>("Spu_Ban_Trae_DocumentoVencimientoRetencion",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
@@ -766,10 +875,10 @@ namespace CajaBanco.Repository.Liquidacion
             return result;
         }
 
-        public async Task<ResultDto<LiquidacionListResponseDTO>> SpListaLiqVencimientoTodo(string empresa, string fechaVenci1, string fechaVenci2, string fechaAnio, string fechaMes, string buscar, string buscar1, string buscar2)
+        public async Task<ResultDto<LiquidacionDocumentoListResponseDTO>> SpListaLiqVencimientoTodo(string empresa, string fechaVenci1, string fechaVenci2, string fechaAnio, string fechaMes, string buscar, string buscar1, string buscar2)
         {
-            ResultDto<LiquidacionListResponseDTO> result = new ResultDto<LiquidacionListResponseDTO>();
-            List<LiquidacionListResponseDTO> list = new List<LiquidacionListResponseDTO>();
+            ResultDto<LiquidacionDocumentoListResponseDTO> result = new ResultDto<LiquidacionDocumentoListResponseDTO>();
+            List<LiquidacionDocumentoListResponseDTO> list = new List<LiquidacionDocumentoListResponseDTO>();
 
             try
             {
@@ -786,7 +895,22 @@ namespace CajaBanco.Repository.Liquidacion
                     parametros.Add("@buscar1", buscar);
                     parametros.Add("@buscar2", buscar);
 
-                    list = (List<LiquidacionListResponseDTO>)await cn.QueryAsync<LiquidacionListResponseDTO>("Spu_Ban_Trae_DocumentoVencimientoTodo",
+                    var mapping = new Dictionary<string, string>
+                    {
+                        { "Tipo Doc", "TipoDoc" },
+                        { "Nro Documento", "NumeroDoc" },
+                        { "D Atrazo", "DAtrazo" },
+                        { "Fecha Emision", "FechaEmision" },
+                        { "Fecha Vencimiento", "FechaVencimiento" },
+                        { "A DET", "AfectoDET" },
+                        { "A RET", "AfectoRET" },
+
+                    };
+                    var mapper = new CustomPropertyTypeMap(typeof(LiquidacionListResponseDTO),
+                        (type, columnName) => type.GetProperty(mapping.ContainsKey(columnName) ? mapping[columnName] : columnName));
+                    Dapper.SqlMapper.SetTypeMap(typeof(LiquidacionListResponseDTO), mapper);
+
+                    list = (List<LiquidacionDocumentoListResponseDTO>)await cn.QueryAsync<LiquidacionDocumentoListResponseDTO>("Spu_Ban_Trae_DocumentoVencimientoTodo",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";

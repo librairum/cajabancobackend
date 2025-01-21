@@ -52,7 +52,7 @@ namespace CajaBanco.Application.Conciliacion
             return await this._conciliacionService.SpListaConciliacionBancariaxCuenta(empresa, numero);
         }
 
-        public async Task<ResultDto<ConciliacionBancoListResponseDTO>> SpListaConciliacionBanco(string empresa, string tipoPago)
+        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionBanco(string empresa, string tipoPago)
         {
             return await this._conciliacionService.SpListaConciliacionBanco(empresa, tipoPago);
         }
@@ -62,12 +62,12 @@ namespace CajaBanco.Application.Conciliacion
             return await this._conciliacionService.SpListaConciliacionCuenta(empresa, numero);
         }
 
-        public async Task<ResultDto<CuentaBancariaListResponseDTO>> SpListaConciliacionCuentaBancaria(string empresa, string numero)
+        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionCuentaBancaria(string empresa, string numero)
         {
             return await this._conciliacionService.SpListaConciliacionCuentaBancaria(empresa, numero);
         }
 
-        public async Task<ResultDto<CuentaValidacionListResponseDTO>> SpListaConciliacionCuentaNumero(string empresa, string tipoPago)
+        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionCuentaNumero(string empresa, string tipoPago)
         {
             return await this._conciliacionService.SpListaConciliacionCuentaNumero(empresa, tipoPago);
         }
@@ -77,7 +77,7 @@ namespace CajaBanco.Application.Conciliacion
             return await this._conciliacionService.SpListaConciliacionImprimir(empresa, numero);
         }
 
-        public async Task<ResultDto<CuentaBancoListResponseDTO>> SpListaConciliacionNumeroBanco(string empresa, string numero)
+        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionNumeroBanco(string empresa, string numero)
         {
             return await this._conciliacionService.SpListaConciliacionNumeroBanco(empresa, numero);
         }
@@ -87,12 +87,12 @@ namespace CajaBanco.Application.Conciliacion
             return await this._conciliacionService.SpListaConciliacionTipoCambio(empresa, tipoPago);
         }
 
-        public async Task<ResultDto<CuentaBancariaListResponseDTO.Numero>> SpListaConciliacionTipoPago(string empresa, string numero, string ctaBancaria, string tipoPago)
+        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionTipoPago(string empresa, string numero, string ctaBancaria, string tipoPago)
         {
             return await this._conciliacionService.SpListaConciliacionTipoPago(empresa, numero, ctaBancaria, tipoPago);
         }
 
-        public async Task<ResultDto<CuentaValidacionListResponseDTO>> SpListaConciliacionValidacionCuenta(string empresa, string tipoPago)
+        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionValidacionCuenta(string empresa, string tipoPago)
         {
             return await this._conciliacionService.SpListaConciliacionValidacionCuenta(empresa, tipoPago);
         }

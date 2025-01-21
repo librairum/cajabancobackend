@@ -210,12 +210,19 @@ namespace CajaBanco.Repository.Conciliacion
                     parametros.Add("@anio", anio);
                     parametros.Add("@mes", mes);
 
+                    var mapping = new Dictionary<string, string>
+                    {
+                        { "CUENTA BANCARIA", "CuentaBancaria" },
+                    };
+                    var mapper = new CustomPropertyTypeMap(typeof(ConciliacionListResponseDTO),
+                        (type, columnName) => type.GetProperty(mapping.ContainsKey(columnName) ? mapping[columnName] : columnName));
+                    Dapper.SqlMapper.SetTypeMap(typeof(ConciliacionListResponseDTO), mapper);
+                    
                     list = (List<ConciliacionListResponseDTO>)await cn.QueryAsync<ConciliacionListResponseDTO>("Spu_Ban_Trae_Conciliacion",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
                     result.Data = list.ToList();
-                    result.Total = list.Count > 0 ? list[0].totalRecords : 0;
 
                 }
             }
@@ -240,6 +247,17 @@ namespace CajaBanco.Repository.Conciliacion
 
                     parametros.Add("@empresa", empresa);
                     parametros.Add("@numero", numero);
+                    var mapping = new Dictionary<string, string>
+                    {
+                        { "Id Cuenta", "IdCuenta" },
+                        { "Cuenta Bancaria", "CuentaBancaria" },
+                        { "Cta Contable", "CtaContable" },
+                        { "Cta ITF", "CtaITF" },
+                        { "Cta Gastos", "CtaGastos" }
+                    };
+                    var mapper = new CustomPropertyTypeMap(typeof(BancariaxCuentaListResponseDTO),
+                        (type, columnName) => type.GetProperty(mapping.ContainsKey(columnName) ? mapping[columnName] : columnName));
+                    Dapper.SqlMapper.SetTypeMap(typeof(BancariaxCuentaListResponseDTO), mapper);
 
                     list = (List<BancariaxCuentaListResponseDTO>)await cn.QueryAsync<BancariaxCuentaListResponseDTO>("Spu_Ban_Trae_CuentaBancariaxCuenta",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
@@ -258,10 +276,10 @@ namespace CajaBanco.Repository.Conciliacion
             return result;
         }
 
-        public async Task<ResultDto<ConciliacionBancoListResponseDTO>> SpListaConciliacionBanco(string empresa, string tipoPago)
+        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionBanco(string empresa, string tipoPago)
         {
-            ResultDto<ConciliacionBancoListResponseDTO> result = new ResultDto<ConciliacionBancoListResponseDTO>();
-            List<ConciliacionBancoListResponseDTO> list = new List<ConciliacionBancoListResponseDTO>();
+            ResultDto<ConciliacionListResponseDTO> result = new ResultDto<ConciliacionListResponseDTO>();
+            List<ConciliacionListResponseDTO> list = new List<ConciliacionListResponseDTO>();
 
             try
             {
@@ -272,12 +290,19 @@ namespace CajaBanco.Repository.Conciliacion
                     parametros.Add("@empresa", empresa);
                     parametros.Add("@tipoPago", tipoPago);
 
-                    list = (List<ConciliacionBancoListResponseDTO>)await cn.QueryAsync<ConciliacionBancoListResponseDTO>("Spu_Ban_Trae_ConciliacionBanco",
+                    var mapping = new Dictionary<string, string>
+                    {
+                        { "Bancos", "BANCO" },
+                    };
+                    var mapper = new CustomPropertyTypeMap(typeof(ConciliacionListResponseDTO),
+                        (type, columnName) => type.GetProperty(mapping.ContainsKey(columnName) ? mapping[columnName] : columnName));
+                    Dapper.SqlMapper.SetTypeMap(typeof(ConciliacionListResponseDTO), mapper);
+
+                    list = (List<ConciliacionListResponseDTO>)await cn.QueryAsync<ConciliacionListResponseDTO>("Spu_Ban_Trae_ConciliacionBanco",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
                     result.Data = list.ToList();
-                    result.Total = list.Count > 0 ? list[0].totalRecords : 0;
 
                 }
             }
@@ -308,7 +333,6 @@ namespace CajaBanco.Repository.Conciliacion
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
                     result.Data = list.ToList();
-                    result.Total = list.Count > 0 ? list[0].totalRecords : 0;
 
                 }
             }
@@ -320,10 +344,10 @@ namespace CajaBanco.Repository.Conciliacion
             return result;
         }
 
-        public async Task<ResultDto<CuentaBancariaListResponseDTO>> SpListaConciliacionCuentaBancaria(string empresa, string numero)
+        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionCuentaBancaria(string empresa, string numero)
         {
-            ResultDto<CuentaBancariaListResponseDTO> result = new ResultDto<CuentaBancariaListResponseDTO>();
-            List<CuentaBancariaListResponseDTO> list = new List<CuentaBancariaListResponseDTO>();
+            ResultDto<ConciliacionListResponseDTO> result = new ResultDto<ConciliacionListResponseDTO>();
+            List<ConciliacionListResponseDTO> list = new List<ConciliacionListResponseDTO>();
 
             try
             {
@@ -334,13 +358,11 @@ namespace CajaBanco.Repository.Conciliacion
                     parametros.Add("@empresa", empresa);
                     parametros.Add("@numero", numero);
 
-                    list = (List<CuentaBancariaListResponseDTO>)await cn.QueryAsync<CuentaBancariaListResponseDTO>("Spu_Ban_Trae_CuentaBancaria",
+                    list = (List<ConciliacionListResponseDTO>)await cn.QueryAsync<ConciliacionListResponseDTO>("Spu_Ban_Trae_CuentaBancaria",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
-
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
                     result.Data = list.ToList();
-                    result.Total = list.Count > 0 ? list[0].totalRecords : 0;
 
                 }
             }
@@ -352,10 +374,10 @@ namespace CajaBanco.Repository.Conciliacion
             return result;
         }
 
-        public async Task<ResultDto<CuentaValidacionListResponseDTO>> SpListaConciliacionCuentaNumero(string empresa, string tipoPago)
+        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionCuentaNumero(string empresa, string tipoPago)
         {
-            ResultDto<CuentaValidacionListResponseDTO> result = new ResultDto<CuentaValidacionListResponseDTO>();
-            List<CuentaValidacionListResponseDTO> list = new List<CuentaValidacionListResponseDTO>();
+            ResultDto<ConciliacionListResponseDTO> result = new ResultDto<ConciliacionListResponseDTO>();
+            List<ConciliacionListResponseDTO> list = new List<ConciliacionListResponseDTO>();
 
             try
             {
@@ -366,12 +388,24 @@ namespace CajaBanco.Repository.Conciliacion
                     parametros.Add("@empresa", empresa);
                     parametros.Add("@tipoPago", tipoPago);
 
-                    list = (List<CuentaValidacionListResponseDTO>)await cn.QueryAsync<CuentaValidacionListResponseDTO>("Spu_Ban_Trae_CuentaNumeroBancaria",
+                    var mapping = new Dictionary<string, string>
+                    {
+                        { "Banco", "BANCO" },
+                        { "Cuenta Bancaria", "CuentaBancaria" },
+                        { "Numero Talonario", "NumeroTalonario" },
+                        { "Nro Cheque", "NumeroCheque" },
+                        { "Num Inicial", "NumInicial" },
+                        { "Num Final", "NumFinal" },
+                    };
+                    var mapper = new CustomPropertyTypeMap(typeof(ConciliacionListResponseDTO),
+                        (type, columnName) => type.GetProperty(mapping.ContainsKey(columnName) ? mapping[columnName] : columnName));
+                    Dapper.SqlMapper.SetTypeMap(typeof(ConciliacionListResponseDTO), mapper);
+
+                    list = (List<ConciliacionListResponseDTO>)await cn.QueryAsync<ConciliacionListResponseDTO>("Spu_Ban_Trae_CuentaNumeroBancaria",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
                     result.Data = list.ToList();
-                    result.Total = list.Count > 0 ? list[0].totalRecords : 0;
 
                 }
             }
@@ -414,10 +448,10 @@ namespace CajaBanco.Repository.Conciliacion
             return result;
         }
 
-        public async Task<ResultDto<CuentaBancoListResponseDTO>> SpListaConciliacionNumeroBanco(string empresa, string numero)
+        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionNumeroBanco(string empresa, string numero)
         {
-            ResultDto<CuentaBancoListResponseDTO> result = new ResultDto<CuentaBancoListResponseDTO>();
-            List<CuentaBancoListResponseDTO> list = new List<CuentaBancoListResponseDTO>();
+            ResultDto<ConciliacionListResponseDTO> result = new ResultDto<ConciliacionListResponseDTO>();
+            List<ConciliacionListResponseDTO> list = new List<ConciliacionListResponseDTO>();
 
             try
             {
@@ -428,12 +462,21 @@ namespace CajaBanco.Repository.Conciliacion
                     parametros.Add("@empresa", empresa);
                     parametros.Add("@numero", numero);
 
-                    list = (List<CuentaBancoListResponseDTO>)await cn.QueryAsync<CuentaBancoListResponseDTO>("Spu_Ban_Trae_CuentaNumeroBanco",
+                    var mapping = new Dictionary<string, string>
+                    { 
+                        { "Id Cuenta", "IdCuenta" },
+                        { "Banco", "BANCO" },
+                        { "Cta Bancaria", "CuentaBancaria" }
+                    };
+                    var mapper = new CustomPropertyTypeMap(typeof(ConciliacionListResponseDTO),
+                        (type, columnName) => type.GetProperty(mapping.ContainsKey(columnName) ? mapping[columnName] : columnName));
+                    Dapper.SqlMapper.SetTypeMap(typeof(ConciliacionListResponseDTO), mapper);
+
+                    list = (List<ConciliacionListResponseDTO>)await cn.QueryAsync<ConciliacionListResponseDTO>("Spu_Ban_Trae_CuentaNumeroBanco",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
                     result.Data = list.ToList();
-                    result.Total = list.Count > 0 ? list[0].totalRecords : 0;
 
                 }
             }
@@ -464,7 +507,6 @@ namespace CajaBanco.Repository.Conciliacion
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
                     result.Data = list.ToList();
-                    result.Total = list.Count > 0 ? list[0].totalRecords : 0;
 
                 }
             }
@@ -476,10 +518,10 @@ namespace CajaBanco.Repository.Conciliacion
             return result;
         }
 
-        public async Task<ResultDto<CuentaBancariaListResponseDTO.Numero>> SpListaConciliacionTipoPago(string empresa, string numero, string ctaBancaria, string tipoPago)
+        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionTipoPago(string empresa, string numero, string ctaBancaria, string tipoPago)
         {
-            ResultDto<CuentaBancariaListResponseDTO.Numero> result = new ResultDto<CuentaBancariaListResponseDTO.Numero>();
-            List<CuentaBancariaListResponseDTO.Numero> list = new List<CuentaBancariaListResponseDTO.Numero>();
+            ResultDto<ConciliacionListResponseDTO> result = new ResultDto<ConciliacionListResponseDTO>();
+            List<ConciliacionListResponseDTO> list = new List<ConciliacionListResponseDTO>();
 
             try
             {
@@ -492,12 +534,11 @@ namespace CajaBanco.Repository.Conciliacion
                     parametros.Add("@ctaBancaria", ctaBancaria);
                     parametros.Add("@tipoPago", tipoPago);
 
-                    list = (List<CuentaBancariaListResponseDTO.Numero>)await cn.QueryAsync<CuentaBancariaListResponseDTO.Numero>("Spu_Ban_Trae_CuentaBancariaNumeroxTipoPago",
+                    list = (List<ConciliacionListResponseDTO>)await cn.QueryAsync<ConciliacionListResponseDTO>("Spu_Ban_Trae_CuentaBancariaNumeroxTipoPago",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
                     result.Data = list.ToList();
-                    result.Total = list.Count > 0 ? list[0].totalRecords : 0;
 
                 }
             }
@@ -509,10 +550,10 @@ namespace CajaBanco.Repository.Conciliacion
             return result;
         }
 
-        public async Task<ResultDto<CuentaValidacionListResponseDTO>> SpListaConciliacionValidacionCuenta(string empresa, string tipoPago)
+        public async Task<ResultDto<ConciliacionListResponseDTO>> SpListaConciliacionValidacionCuenta(string empresa, string tipoPago)
         {
-            ResultDto<CuentaValidacionListResponseDTO> result = new ResultDto<CuentaValidacionListResponseDTO>();
-            List<CuentaValidacionListResponseDTO> list = new List<CuentaValidacionListResponseDTO>();
+            ResultDto<ConciliacionListResponseDTO> result = new ResultDto<ConciliacionListResponseDTO>();
+            List<ConciliacionListResponseDTO> list = new List<ConciliacionListResponseDTO>();
 
             try
             {
@@ -523,12 +564,24 @@ namespace CajaBanco.Repository.Conciliacion
                     parametros.Add("@empresa", empresa);
                     parametros.Add("@tipoPago", tipoPago);
 
-                    list = (List<CuentaValidacionListResponseDTO>)await cn.QueryAsync<CuentaValidacionListResponseDTO>("Spu_Ban_Trae_CuentaBancariaValidacion",
+                    var mapping = new Dictionary<string, string>
+                    {
+                        { "Banco", "BANCO" },
+                        { "Cuenta Bancaria", "CuentaBancaria" },
+                        { "Numero Talonario", "NumeroTalonario" },
+                        { "Nro Cheque", "NumeroCheque" },
+                        { "Num Inicial", "NumInicial" },
+                        { "Num Final", "NumFinal" },
+                    };
+                    var mapper = new CustomPropertyTypeMap(typeof(ConciliacionListResponseDTO),
+                        (type, columnName) => type.GetProperty(mapping.ContainsKey(columnName) ? mapping[columnName] : columnName));
+                    Dapper.SqlMapper.SetTypeMap(typeof(ConciliacionListResponseDTO), mapper);
+
+                    list = (List<ConciliacionListResponseDTO>)await cn.QueryAsync<ConciliacionListResponseDTO>("Spu_Ban_Trae_CuentaBancariaValidacion",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     result.IsSuccess = list.Count > 0 ? true : false;
                     result.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
                     result.Data = list.ToList();
-                    result.Total = list.Count > 0 ? list[0].totalRecords : 0;
 
                 }
             }

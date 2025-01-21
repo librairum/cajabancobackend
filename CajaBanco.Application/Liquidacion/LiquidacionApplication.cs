@@ -75,7 +75,7 @@ namespace CajaBanco.Application.Liquidacion
             return await this._liquidacionService.SpListaLiquidacion(empresa, anio, mes);
         }
 
-        public async Task<ResultDto<LiquidacionListResponseDTO>> SpListaLiquidacionDocumentoPago(string empresa)
+        public async Task<ResultDto<LiquidacionDocumentoListResponseDTO>> SpListaLiquidacionDocumentoPago(string empresa)
         {
             return await this._liquidacionService.SpListaLiquidacionDocumentoPago(empresa);
         }
@@ -95,37 +95,37 @@ namespace CajaBanco.Application.Liquidacion
             return await this._liquidacionService.SpListaLiquidacionPago(empresa, numero);
         }
 
-        public async Task<ResultDto<LiquidacionListResponseDTO>> SpListaLiqPendienteTodo(string empresa, string buscar, string buscar1, string buscar2)
+        public async Task<ResultDto<LiquidacionDocumentoListResponseDTO>> SpListaLiqPendienteTodo(string empresa, string buscar, string buscar1, string buscar2)
         {
             return await this._liquidacionService.SpListaLiqPendienteTodo(empresa, buscar, buscar1, buscar2);
         }
 
-        public async Task<ResultDto<LiquidacionListResponseDTO>> SpListaLiqPendienteRetencion(string empresa, string buscar, string buscar1, string buscar2)
+        public async Task<ResultDto<LiquidacionDocumentoListResponseDTO>> SpListaLiqPendienteRetencion(string empresa, string buscar, string buscar1, string buscar2)
         {
             return await this._liquidacionService.SpListaLiqPendienteRetencion(empresa, buscar, buscar1, buscar2);
         }
 
-        public async Task<ResultDto<LiquidacionListResponseDTO>> SpListaLiqPendienteDetraccion(string empresa, string buscar, string buscar1, string buscar2)
+        public async Task<ResultDto<LiquidacionDocumentoListResponseDTO>> SpListaLiqPendienteDetraccion(string empresa, string buscar, string buscar1, string buscar2)
         {
             return await this._liquidacionService.SpListaLiqPendienteDetraccion(empresa, buscar, buscar1, buscar2);
         }
 
-        public async Task<ResultDto<LiquidacionListResponseDTO>> SpListaLiqPendientePeriodo(string empresa, string fechaVenci1, string fechaVenci2, string fechaAnio, string fechaMes, string buscar, string buscar1, string buscar2)
+        public async Task<ResultDto<LiquidacionDocumentoListResponseDTO>> SpListaLiqPendientePeriodo(string empresa, string fechaVenci1, string fechaVenci2, string fechaAnio, string fechaMes, string buscar, string buscar1, string buscar2)
         {
             return await this._liquidacionService.SpListaLiqPendientePeriodo(empresa, fechaVenci1, fechaVenci2, fechaAnio, fechaMes, buscar, buscar1, buscar2);
         }
 
-        public async Task<ResultDto<LiquidacionListResponseDTO>> SpListaLiqVencimientoDetraccion(string empresa, string fechaVenci1, string fechaVenci2, string fechaAnio, string fechaMes, string buscar, string buscar1, string buscar2)
+        public async Task<ResultDto<LiquidacionDocumentoListResponseDTO>> SpListaLiqVencimientoDetraccion(string empresa, string fechaVenci1, string fechaVenci2, string fechaAnio, string fechaMes, string buscar, string buscar1, string buscar2)
         {
             return await this._liquidacionService.SpListaLiqVencimientoDetraccion(empresa, fechaVenci1, fechaVenci2, fechaAnio, fechaMes, buscar, buscar1, buscar2);
         }
 
-        public async Task<ResultDto<LiquidacionListResponseDTO>> SpListaLiqVencimientoRetencion(string empresa, string fechaVenci1, string buscar, string buscar1, string buscar2)
+        public async Task<ResultDto<LiquidacionDocumentoListResponseDTO>> SpListaLiqVencimientoRetencion(string empresa, string fechaVenci1, string buscar, string buscar1, string buscar2)
         {
             return await this._liquidacionService.SpListaLiqVencimientoRetencion(empresa, fechaVenci1, buscar, buscar1, buscar2);
         }
 
-        public async Task<ResultDto<LiquidacionListResponseDTO>> SpListaLiqVencimientoTodo(string empresa, string fechaVenci1, string fechaVenci2, string fechaAnio, string fechaMes, string buscar, string buscar1, string buscar2)
+        public async Task<ResultDto<LiquidacionDocumentoListResponseDTO>> SpListaLiqVencimientoTodo(string empresa, string fechaVenci1, string fechaVenci2, string fechaAnio, string fechaMes, string buscar, string buscar1, string buscar2)
         {
             return await this._liquidacionService.SpListaLiqVencimientoTodo(empresa, fechaVenci1, fechaVenci2, fechaAnio, fechaMes, buscar, buscar1, buscar2);
         }

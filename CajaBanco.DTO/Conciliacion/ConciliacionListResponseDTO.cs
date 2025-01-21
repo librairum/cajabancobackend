@@ -10,13 +10,25 @@ namespace CajaBanco.DTO.Conciliacion
 {
     public class ConciliacionListResponseDTO
     {
-        public required string? AÑO { get; set; }
-        public required string? MES { get; set; }
-        public required string? BANCO { get; set; }
-        public required string? IDBANCO { get; set; }
-        [Column("CUENTA BANCARIA")]
-        public string? cuenta_bancaria { get; set; } //corregir
-        public required string? MON { get; set; }
+        public string? AÑO { get; set; }
+        public string? MES { get; set; }
+        public string? BANCO { get; set; }
+        public string? IDBANCO { get; set; }
+        public string? MON { get; set; }
+        public string? NumeroCheque { get; set; }
+        public string? IdNumeros { get; set; }
+        public string? ID { get; set; }
+        public string? TipoPago { get; set; }
+        public string? Pagos { get; set; }
+        public string? IdCuenta { get; set; }
+        public string? CuentaBancaria { get; set; }
+        public string? NumeroTalonario { get; set; }
+        public string? NumInicial { get; set; }
+        public string? NumFinal { get; set; }
+        public string? Estado { get; set; }
+        public string? NBancos { get; set; }
+        public string? Alias { get; set; }
+        public string? Ban01Comentarios { get; set; }
         public int totalRecords { get; set; }
     }
 }
