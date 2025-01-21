@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "IvJKqX7v2Jc=",
+  "dgSpecHash": "jK9J5Y7QGYuB3oGpa9dh2ecKcNo++9I/BDdc0s489wLARfKQVmnVbrVJqmvBvjWiheLtcX85+yYDX6oqVlzeWw==",
   "success": true,
-  "projectFilePath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Application\\CajaBanco.Application.csproj",
+  "projectFilePath": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.Application\\CajaBanco.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\sistemas\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.0\\microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512",
-    "C:\\Users\\sistemas\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
+    "C:\\Users\\ivan\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.0\\microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512",
+    "C:\\Users\\ivan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
   ],
   "logs": []
 }

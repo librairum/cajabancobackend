@@ -1,12 +1,88 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|c:\\users\\ivan\\documents\\visual studio 2022\\webapi\\cajabancobackend\\cajabancoapi\\controllers\\autenticacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\controllers\\autenticacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|c:\\users\\ivan\\documents\\visual studio 2022\\webapi\\cajabancobackend\\cajabanco.repository\\autenticacion\\autenticacionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\autenticacion\\autenticacionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{059E282C-6831-4AEF-A569-8EB41C161013}|CajaBanco.DTO\\CajaBanco.DTO.csproj|c:\\users\\ivan\\documents\\visual studio 2022\\webapi\\cajabancobackend\\cajabanco.dto\\autenticacion\\accesousuarioresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{059E282C-6831-4AEF-A569-8EB41C161013}|CajaBanco.DTO\\CajaBanco.DTO.csproj|solutionrelative:cajabanco.dto\\autenticacion\\accesousuarioresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|c:\\users\\ivan\\documents\\visual studio 2022\\webapi\\cajabancobackend\\cajabancoapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AutenticacionController.cs",
+              "DocumentMoniker": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBancoAPI\\Controllers\\AutenticacionController.cs",
+              "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\AutenticacionController.cs",
+              "ToolTip": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBancoAPI\\Controllers\\AutenticacionController.cs",
+              "RelativeToolTip": "CajaBancoAPI\\Controllers\\AutenticacionController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T05:20:00.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccesoUsuarioResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.DTO\\Autenticacion\\AccesoUsuarioResponseDTO.cs",
+              "RelativeDocumentMoniker": "CajaBanco.DTO\\Autenticacion\\AccesoUsuarioResponseDTO.cs",
+              "ToolTip": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.DTO\\Autenticacion\\AccesoUsuarioResponseDTO.cs",
+              "RelativeToolTip": "CajaBanco.DTO\\Autenticacion\\AccesoUsuarioResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T05:03:23.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AutenticacionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.Repository\\Autenticacion\\AutenticacionRepository.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Repository\\Autenticacion\\AutenticacionRepository.cs",
+              "ToolTip": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.Repository\\Autenticacion\\AutenticacionRepository.cs",
+              "RelativeToolTip": "CajaBanco.Repository\\Autenticacion\\AutenticacionRepository.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwCQAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T05:01:38.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBancoAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "CajaBancoAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBancoAPI\\appsettings.json",
+              "RelativeToolTip": "CajaBancoAPI\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-21T05:00:21.391Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,20 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Repository\\CajaBanco.Repository.csproj": {}
+    "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.Repository\\CajaBanco.Repository.csproj": {}
   },
   "projects": {
-    "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj": {
+    "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj",
+        "projectUniqueName": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj",
         "projectName": "CajaBanco.Abstractions",
-        "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj",
-        "packagesPath": "C:\\Users\\sistemas\\.nuget\\packages\\",
-        "outputPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\obj\\",
+        "projectPath": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj",
+        "packagesPath": "C:\\Users\\ivan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.Abstractions\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sistemas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,8 +34,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj": {
-                "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj"
+              "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj": {
+                "projectPath": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj"
               }
             }
           }
@@ -65,21 +70,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj": {
+    "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj",
+        "projectUniqueName": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj",
         "projectName": "CajaBanco.DTO",
-        "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj",
-        "packagesPath": "C:\\Users\\sistemas\\.nuget\\packages\\",
-        "outputPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\obj\\",
+        "projectPath": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj",
+        "packagesPath": "C:\\Users\\ivan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.DTO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sistemas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -126,21 +136,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Repository\\CajaBanco.Repository.csproj": {
+    "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.Repository\\CajaBanco.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Repository\\CajaBanco.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.Repository\\CajaBanco.Repository.csproj",
         "projectName": "CajaBanco.Repository",
-        "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Repository\\CajaBanco.Repository.csproj",
-        "packagesPath": "C:\\Users\\sistemas\\.nuget\\packages\\",
-        "outputPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Repository\\obj\\",
+        "projectPath": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.Repository\\CajaBanco.Repository.csproj",
+        "packagesPath": "C:\\Users\\ivan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.Repository\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sistemas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -155,8 +170,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj": {
-                "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj"
+              "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj": {
+                "projectPath": "C:\\Users\\ivan\\Documents\\Visual Studio 2022\\Webapi\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj"
               }
             }
           }
@@ -209,7 +224,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

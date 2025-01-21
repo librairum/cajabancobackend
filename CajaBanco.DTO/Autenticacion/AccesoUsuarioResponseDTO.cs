@@ -8,12 +8,12 @@ namespace CajaBanco.DTO.Autenticacion
 {
     public class AccesoUsuarioResponseDTO
     {
-        public string Codigo { get; set; }
+        public string UsuarioCod { get; set; }
 
 public string NombreUsuario { get; set; }
 public string ClaveUsuario { get; set; }
 public string CodigoPerfil { get; set; }    
-public string CodigoEmpresa { get; set; }
+public string EmpresaCod { get; set; }
 
     }
 }

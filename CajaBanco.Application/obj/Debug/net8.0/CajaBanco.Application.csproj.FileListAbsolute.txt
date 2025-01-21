@@ -34,3 +34,21 @@ D:\GMINGENIEROS\backend\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\
 D:\GMINGENIEROS\backend\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\refint\CajaBanco.Application.dll
 D:\GMINGENIEROS\backend\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.pdb
 D:\GMINGENIEROS\backend\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\ref\CajaBanco.Application.dll
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.Application.deps.json
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.Application.dll
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.Application.pdb
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.Abstractions.dll
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.DTO.dll
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.Abstractions.pdb
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.DTO.pdb
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.csproj.AssemblyReference.cache
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.AssemblyInfoInputs.cache
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.AssemblyInfo.cs
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.csproj.CoreCompileInputs.cache
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.sourcelink.json
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanc.208C4748.Up2Date
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.dll
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\refint\CajaBanco.Application.dll
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.pdb
+C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\ref\CajaBanco.Application.dll
