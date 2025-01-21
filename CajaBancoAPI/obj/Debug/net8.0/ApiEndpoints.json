@@ -122,6 +122,53 @@
   },
   {
     "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "SpInsertaNumeroPagosPayCaja",
+    "RelativePath": "Pago/SpCreate/NumeroPagosPayCaja",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Pago.NumeroPagosPayCajaCreateRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaAprobacionPendiente",
+    "RelativePath": "Pago/SpList/AprobacionPendiente",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "flag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fecha",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
     "Method": "ObtenerBancoCuentasBancarias",
     "RelativePath": "Pago/SpList/BancoCuentasBancarias",
     "HttpMethod": "GET",
@@ -333,6 +380,53 @@
       },
       {
         "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaDocumentosImprimir",
+    "RelativePath": "Pago/SpList/DocumentosImprimir",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaNumeroPagosPayCaja",
+    "RelativePath": "Pago/SpList/NumeroPagosPayCaja",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idpago",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numerop",
         "Type": "System.String",
         "IsRequired": false
       }

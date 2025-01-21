@@ -121,6 +121,26 @@ namespace CajaBanco.Services.Pago
         {
             return await _pagoRepository.SpListaCuentaxBanco(empresa, numero);
         }
+        public async Task<ResultDto<PresupuestoPagoListResponseDTO>> SpListaAprobacionPendienteFlags_1_11(int flag, string empresa, string numero, string fecha)
+        {
+            return await _pagoRepository.SpListaAprobacionPendienteFlags_1_11(flag, empresa, numero, fecha);
+        }
+        public async Task<ResultDto<AprobacionPagoListResponseDTO>> SpListaAprobacionPendienteFlags_2_4(int flag, string empresa, string numero, string fecha)
+        {
+            return await _pagoRepository.SpListaAprobacionPendienteFlags_2_4(flag, empresa, numero, fecha);
+        }
+        public async Task<ResultDto<string>> SpInsertaNumeroPagosPayCaja(NumeroPagosPayCajaCreateRequestDTO request)
+        {
+            return await _pagoRepository.SpInsertaNumeroPagosPayCaja(request);
+        }
+        public async Task<ResultDto<NumeroPagosPayCajaListResponseDTO>> SpListaNumeroPagosPayCaja(string empresa, string idpago, string numerop)
+        {
+            return await _pagoRepository.SpListaNumeroPagosPayCaja(empresa, idpago, numerop);
+        }
+        public async Task<ResultDto<DocumentosImprimirListResponseDTO>> SpListaDocumentosImprimir(string empresa, string numero)
+        {
+            return await _pagoRepository.SpListaDocumentosImprimir(empresa, numero);
+        }
 
 
     }

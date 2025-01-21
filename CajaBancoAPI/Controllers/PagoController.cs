@@ -1,4 +1,6 @@
 ﻿using CajaBanco.Abstractions.IApplication;
+using CajaBanco.DTO.Banco;
+using CajaBanco.DTO.Pago;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CajaPagoAPI.Controllers
@@ -384,6 +386,80 @@ namespace CajaPagoAPI.Controllers
             try
             {
                 var result = await this._pagoAplicacion.SpListaCuentaxBanco(empresa, numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpList/AprobacionPendiente")]
+        public async Task<ActionResult> ObtenerListaAprobacionPendiente(int flag, string empresa, string numero, string fecha)
+        {
+            try
+            {
+                if (flag == 1 || flag==11)
+                {
+                    var result = await this._pagoAplicacion.SpListaAprobacionPendienteFlags_1_11(flag, empresa, numero, fecha);
+                    return Ok(result);
+
+                }
+                else if (flag == 2 || flag == 4)
+                {
+                    var result = await this._pagoAplicacion.SpListaAprobacionPendienteFlags_2_4(flag, empresa, numero, fecha);
+                    return Ok(result);
+
+                }
+                else
+                {
+                    return BadRequest("flag incorecto");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpList/NumeroPagosPayCaja")]
+        public async Task<ActionResult> ObtenerListaNumeroPagosPayCaja(string empresa, string idpago, string numerop)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaNumeroPagosPayCaja(empresa, idpago,numerop);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("SpList/DocumentosImprimir")]
+        public async Task<ActionResult> ObtenerListaDocumentosImprimir(string empresa, string numero)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaDocumentosImprimir(empresa, numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
+        [HttpPost]
+        [Route("SpCreate/NumeroPagosPayCaja")]
+        public async Task<ActionResult> SpInsertaNumeroPagosPayCaja(NumeroPagosPayCajaCreateRequestDTO request)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpInsertaNumeroPagosPayCaja(request);
                 return Ok(result);
             }
             catch (Exception ex)
