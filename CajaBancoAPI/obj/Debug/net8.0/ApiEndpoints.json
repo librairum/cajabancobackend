@@ -122,7 +122,7 @@
   },
   {
     "ContainingType": "CajaPagoAPI.Controllers.PagoController",
-    "Method": "SpInsertaNumeroPagosPayCaja",
+    "Method": "InsertaNumeroPagosPayCaja",
     "RelativePath": "Pago/SpCreate/NumeroPagosPayCaja",
     "HttpMethod": "POST",
     "IsController": true,
@@ -132,6 +132,69 @@
         "Name": "request",
         "Type": "CajaBanco.DTO.Pago.NumeroPagosPayCajaCreateRequestDTO",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "EliminaAprobaciones",
+    "RelativePath": "Pago/SpDelete/Aprobaciones",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "EliminaPagosComprobReten",
+    "RelativePath": "Pago/SpDelete/PagosComprobReten",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "EliminaPresupuestoDetalle",
+    "RelativePath": "Pago/SpDelete/PresupuestoDetalle",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -192,6 +255,27 @@
       },
       {
         "Name": "tipopago",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaBancoxCuentaPago",
+    "RelativePath": "Pago/SpList/BancoxCuentaPago",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "descripcion",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -401,6 +485,84 @@
       },
       {
         "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerEstados",
+    "RelativePath": "Pago/SpList/Estados",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaNumeroChequeMinimo",
+    "RelativePath": "Pago/SpList/NumeroChequeMinimo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "descripcion",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaNumeroPagoBuscar",
+    "RelativePath": "Pago/SpList/NumeroPagosBuscar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "descripcion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numerop",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaNumeroPagoGenerado",
+    "RelativePath": "Pago/SpList/NumeroPagosGenerado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "descripcion",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -646,6 +808,42 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerTipoCambioHoy",
+    "RelativePath": "Pago/SpList/TipoCambioHoy",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerTipoCambioxFecha",
+    "RelativePath": "Pago/SpList/TipoCambioxFecha",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fecha",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerTipoDocumentosCodigo",
+    "RelativePath": "Pago/SpList/TipoDocumentosCodigo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

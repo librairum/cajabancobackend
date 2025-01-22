@@ -41,6 +41,19 @@ namespace CajaBanco.Abstractions.IService
         public Task<ResultDto<string>> SpInsertaNumeroPagosPayCaja(NumeroPagosPayCajaCreateRequestDTO request);
         public Task<ResultDto<NumeroPagosPayCajaListResponseDTO>> SpListaNumeroPagosPayCaja(string empresa, string idpago, string numerop);
         public Task<ResultDto<DocumentosImprimirListResponseDTO>> SpListaDocumentosImprimir(string empresa, string numero);
+        public Task<ResultDto<NumerosPagPCListResponseDTO>> SpListaNumeroPagoGenerado(string empresa, string descripcion);
+        public Task<ResultDto<NumerosPagPCListResponseDTO>> SpListaNumeroPagoBuscar(string empresa, string descripcion, string numerop);
+        public Task<ResultDto<NumeroChequeListResponseDTO>> SpListaNumeroChequeMinimo(string empresa, string descripcion);
+        public Task<ResultDto<BancoCuentaPagoListResponseDTO>> SpListaBancoxCuentaPago(string empresa, string descripcion);
+        public Task<ResultDto<string>> SpEliminaPagosComprobReten(string empresa, string numero);
+        public Task<ResultDto<string>> SpEliminaAprobaciones(string empresa, string numero);
+        public Task<ResultDto<string>> SpEliminaPresupuestoDetalle(string empresa, string numero);
+        public Task<ResultDto<TipoCambioListResponseDTO>> SpListaTipoCambioHoy();
+        public Task<ResultDto<TipoCambioListResponseDTO>> SpListaTipoCambioxFecha(string fecha);
+        public Task<ResultDto<TipoDocumentoListResponseDTO>> SpListaTipoDocumentosCodigo();
+        public Task<ResultDto<EstadosListResponseDTO>> SpListaEstados();
+
+
 
 
 

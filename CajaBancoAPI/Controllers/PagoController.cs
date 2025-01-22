@@ -2,6 +2,7 @@
 using CajaBanco.DTO.Banco;
 using CajaBanco.DTO.Pago;
 using Microsoft.AspNetCore.Mvc;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CajaPagoAPI.Controllers
 {
@@ -452,10 +453,126 @@ namespace CajaPagoAPI.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("SpList/NumeroPagosGenerado")]
+        public async Task<ActionResult> ObtenerListaNumeroPagoGenerado(string empresa, string descripcion)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaNumeroPagoGenerado(empresa, descripcion);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("SpList/NumeroPagosBuscar")]
+        public async Task<ActionResult> ObtenerListaNumeroPagoBuscar(string empresa, string descripcion,string numerop)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaNumeroPagoBuscar(empresa, descripcion, numerop);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("SpList/NumeroChequeMinimo")]
+        public async Task<ActionResult> ObtenerListaNumeroChequeMinimo(string empresa, string descripcion)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaNumeroChequeMinimo(empresa, descripcion);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpList/BancoxCuentaPago")]
+        public async Task<ActionResult> ObtenerListaBancoxCuentaPago(string empresa, string descripcion)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaBancoxCuentaPago(empresa, descripcion);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("SpList/TipoCambioHoy")]
+        public async Task<ActionResult> ObtenerTipoCambioHoy()
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaTipoCambioHoy();
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpList/TipoCambioxFecha")]
+        public async Task<ActionResult> ObtenerTipoCambioxFecha(string fecha)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaTipoCambioxFecha(fecha);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpList/TipoDocumentosCodigo")]
+        public async Task<ActionResult> ObtenerTipoDocumentosCodigo()
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaTipoDocumentosCodigo();
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpList/Estados")]
+        public async Task<ActionResult> ObtenerEstados()
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaEstados();
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
 
         [HttpPost]
         [Route("SpCreate/NumeroPagosPayCaja")]
-        public async Task<ActionResult> SpInsertaNumeroPagosPayCaja(NumeroPagosPayCajaCreateRequestDTO request)
+        public async Task<ActionResult> InsertaNumeroPagosPayCaja(NumeroPagosPayCajaCreateRequestDTO request)
         {
             try
             {
@@ -467,6 +584,50 @@ namespace CajaPagoAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [HttpDelete]
+        [Route("SpDelete/PagosComprobReten")]
+        public async Task<ActionResult> EliminaPagosComprobReten(string empresa, string numero)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpEliminaPagosComprobReten(empresa, numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpDelete]
+        [Route("SpDelete/Aprobaciones")]
+        public async Task<ActionResult> EliminaAprobaciones(string empresa, string numero)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpEliminaAprobaciones(empresa, numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpDelete]
+        [Route("SpDelete/PresupuestoDetalle")]
+        public async Task<ActionResult> EliminaPresupuestoDetalle(string empresa, string numero)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpEliminaPresupuestoDetalle(empresa, numero);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
 
 
     }

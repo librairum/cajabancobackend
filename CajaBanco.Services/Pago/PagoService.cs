@@ -141,6 +141,50 @@ namespace CajaBanco.Services.Pago
         {
             return await _pagoRepository.SpListaDocumentosImprimir(empresa, numero);
         }
+        public async Task<ResultDto<NumerosPagPCListResponseDTO>> SpListaNumeroPagoGenerado(string empresa, string descripcion)
+        {
+            return await _pagoRepository.SpListaNumeroPagoGenerado(empresa, descripcion);
+        }
+        public async Task<ResultDto<NumerosPagPCListResponseDTO>> SpListaNumeroPagoBuscar(string empresa, string descripcion, string numerop)
+        {
+            return await _pagoRepository.SpListaNumeroPagoBuscar(empresa, descripcion, numerop);
+        }
+        public async Task<ResultDto<NumeroChequeListResponseDTO>> SpListaNumeroChequeMinimo(string empresa, string descripcion)
+        {
+            return await _pagoRepository.SpListaNumeroChequeMinimo(empresa, descripcion);
+        }
+        public async Task<ResultDto<BancoCuentaPagoListResponseDTO>> SpListaBancoxCuentaPago(string empresa, string descripcion)
+        {
+            return await _pagoRepository.SpListaBancoxCuentaPago(empresa, descripcion);
+        }
+        public async Task<ResultDto<string>> SpEliminaPagosComprobReten(string empresa, string numero)
+        {
+            return await _pagoRepository.SpEliminaPagosComprobReten(empresa, numero);
+        }
+        public async Task<ResultDto<string>> SpEliminaAprobaciones(string empresa, string numero)
+        {
+            return await _pagoRepository.SpEliminaAprobaciones(empresa, numero);
+        }
+        public async Task<ResultDto<string>> SpEliminaPresupuestoDetalle(string empresa, string numero)
+        {
+            return await _pagoRepository.SpEliminaPresupuestoDetalle(empresa, numero);
+        }
+        public async Task<ResultDto<TipoCambioListResponseDTO>> SpListaTipoCambioHoy()
+        {
+            return await _pagoRepository.SpListaTipoCambioHoy();
+        }
+        public async Task<ResultDto<TipoCambioListResponseDTO>> SpListaTipoCambioxFecha(string fecha)
+        {
+            return await _pagoRepository.SpListaTipoCambioxFecha(fecha);
+        }
+        public async Task<ResultDto<TipoDocumentoListResponseDTO>> SpListaTipoDocumentosCodigo()
+        {
+            return await _pagoRepository.SpListaTipoDocumentosCodigo();
+        }
+        public async Task<ResultDto<EstadosListResponseDTO>> SpListaEstados()
+        {
+            return await _pagoRepository.SpListaEstados();
+        }
 
 
     }
