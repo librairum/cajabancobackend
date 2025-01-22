@@ -26,5 +26,9 @@ namespace CajaBanco.Application.Autenticacion
         {
             return await this._authService.SpTraeMenuxPerfil(codigoPerfil, codModulo); 
         }
+        public async Task<ResultDto<TraeEmpresasxModuloDTO>> SpTraeEmpresasxModulo(string codigomodulo)
+        {
+            return await this._authService.SpTraeEmpresasxModulo(codigomodulo);
+        }
     }
 }

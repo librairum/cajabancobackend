@@ -68,6 +68,27 @@
         }
       }
     },
+    "/Autenticacion/SpTraeEmpresasxModulo": {
+      "get": {
+        "tags": [
+          "Autenticacion"
+        ],
+        "parameters": [
+          {
+            "name": "codigomodulo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Banco/SpList": {
       "get": {
         "tags": [

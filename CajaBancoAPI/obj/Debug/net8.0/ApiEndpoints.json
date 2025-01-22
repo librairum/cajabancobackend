@@ -27,6 +27,22 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.AutenticacionController",
+    "Method": "SpTraeEmpresasxModulo",
+    "RelativePath": "Autenticacion/SpTraeEmpresasxModulo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigomodulo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.AutenticacionController",
     "Method": "SpTraeMenuxPerfil",
     "RelativePath": "Autenticacion/SpTraeMenuxPerfil",
     "HttpMethod": "GET",

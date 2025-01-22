@@ -2,9 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\CajaBanco.DTO",
+    "\\CajaBanco.Repository",
+    "\\CajaBanco.Repository\\Autenticacion",
+    "\\CajaBanco.Repository\\Reportes",
     "\\CajaBancoAPI",
     "\\CajaBancoAPI\\Controllers"
   ],
-  "SelectedNode": "\\CajaBancoAPI\\Controllers\\ReportesController.cs",
+  "SelectedNode": "\\CajaBanco.Repository\\Autenticacion\\AutenticacionRepository.cs",
   "PreviewInSolutionExplorer": false
 }

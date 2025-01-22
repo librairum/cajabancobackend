@@ -14,6 +14,7 @@ namespace CajaBanco.Abstractions.IApplication
             string claveUsuario, string codigoempresa);
         public Task<ResultDto<PermisosListResponseDTO>> SpTraeMenuxPerfil(string codigoPerfil,
             string codModulo);
+        public Task<ResultDto<TraeEmpresasxModuloDTO>> SpTraeEmpresasxModulo(string codigomodulo);
         
         
     }

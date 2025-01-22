@@ -14,6 +14,7 @@ namespace CajaBanco.Abstractions.IRepository
             string claveUsuario, string codigoempresa);
 
         public Task<ResultDto<PermisosListResponseDTO>> SpTraeMenuxPerfil(string codigoPerfil, string codModudlo);
-        
+        public Task<ResultDto<TraeEmpresasxModuloDTO>> SpTraeEmpresasxModulo(string codigomodulo);
+
     }
 }

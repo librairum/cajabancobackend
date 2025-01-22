@@ -2,6 +2,7 @@
 using CajaBanco.Abstractions.IApplication;
 using CajaBanco.DTO.Autenticacion;
 using CajaBancoAPI.Context;
+using CajaBanco.DTO.Common;
 
 
 namespace CajaBancoAPI.Controllers
@@ -42,6 +43,20 @@ namespace CajaBancoAPI.Controllers
             try
             {
                 var result = await this._authAplicacion.SpTraeMenuxPerfil(codigoPerfil, codModulo);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpTraeEmpresasxModulo")]
+        public async Task<ActionResult> SpTraeEmpresasxModulo(string codigomodulo)
+        {
+            try
+            {
+                var result = await this._authAplicacion.SpTraeEmpresasxModulo(codigomodulo);
                 return Ok(result);
             }
             catch (Exception ex)
