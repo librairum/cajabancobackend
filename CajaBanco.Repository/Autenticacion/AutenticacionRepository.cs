@@ -20,7 +20,7 @@ namespace CajaBanco.Repository.Autenticacion
         {
             this._connectionString = configuration.GetConnectionString("conexion");
         }
-        public async Task<ResultDto<AccesoUsuarioResponseDTO>> SpAccesoUsuario(string nombreusuario, string claveUsuario, string codigoempresa)
+        public async Task<ResultDto<AccesoUsuarioResponseDTO>> SpAccesoUsuario(AccesoRequest request)
         {
             ResultDto<AccesoUsuarioResponseDTO> res = new ResultDto<AccesoUsuarioResponseDTO> ();
             List<AccesoUsuarioResponseDTO> list = new List<AccesoUsuarioResponseDTO>();
@@ -30,9 +30,9 @@ namespace CajaBanco.Repository.Autenticacion
                 using (var cn = new SqlConnection(_connectionString)) {
                     DynamicParameters parametros = new DynamicParameters();
 
-                    parametros.Add("@NombreUsuario", nombreusuario);
-                    parametros.Add("@ClaveUsuario", claveUsuario);
-                    parametros.Add("@codigoEmpresa", "00001");
+                    parametros.Add("@NombreUsuario", request.nombreusuario);
+                    parametros.Add("@ClaveUsuario", request.claveusuario);
+                    parametros.Add("@codigoEmpresa", request.codigoempresa);
 
                     list = (List<AccesoUsuarioResponseDTO>)await cn.QueryAsync<AccesoUsuarioResponseDTO>("Spu_Seg_Trae_AutenticacionUsuario",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
@@ -70,6 +70,35 @@ namespace CajaBanco.Repository.Autenticacion
 
                      list = (List<PermisosListResponseDTO>)await cn.QueryAsync<PermisosListResponseDTO>("Spu_Seg_Trae_menuxperfil",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
+					res.IsSuccess = list.Count > 0 ? true : false;
+                    res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
+                    res.Data = list.ToList();
+                    res.Total = list.Count;
+                    cn.Open();
+                }
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
+        public async Task<ResultDto<TraeEmpresasxModuloDTO>> SpTraeEmpresasxModulo(string codigomodulo)
+        {
+            ResultDto<TraeEmpresasxModuloDTO> res = new ResultDto<TraeEmpresasxModuloDTO>();
+            List<TraeEmpresasxModuloDTO> list = new List<TraeEmpresasxModuloDTO>();
+            try
+            {
+                using (var cn = new SqlConnection(_connectionString))
+                {
+                    DynamicParameters parametros = new DynamicParameters();
+
+                    parametros.Add("@codigomodulo", codigomodulo);
+
+
+                    list = (List<TraeEmpresasxModuloDTO>)await cn.QueryAsync<TraeEmpresasxModuloDTO>("Spu_Ban_Trae_EmpresasxModulo",
+                       parametros, commandType: System.Data.CommandType.StoredProcedure);
                     res.IsSuccess = list.Count > 0 ? true : false;
                     res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
                     res.Data = list.ToList();

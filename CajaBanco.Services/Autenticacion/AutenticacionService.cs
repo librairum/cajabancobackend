@@ -18,15 +18,20 @@ namespace CajaBanco.Services.Autenticacion
             _authRepositorio = authRepositorio;
         }
 
-        public async Task<ResultDto<AccesoUsuarioResponseDTO>> SpAccesoUsuario(string nombreusuario, string claveUsuario, string codigoempresa)
+        public async Task<ResultDto<AccesoUsuarioResponseDTO>> SpAccesoUsuario(AccesoRequest request)
         {
             //throw new NotImplementedException();
-            return await this._authRepositorio.SpAccesoUsuario(nombreusuario, claveUsuario, codigoempresa);
+            return await this._authRepositorio.SpAccesoUsuario(request);
         }
 
         public async Task<ResultDto<PermisosListResponseDTO>> SpTraeMenuxPerfil(string codigoPerfil, string codModulo)
         {
             return await this._authRepositorio.SpTraeMenuxPerfil(codigoPerfil, codModulo);
+ 		}
+        public async Task<ResultDto<TraeEmpresasxModuloDTO>> SpTraeEmpresasxModulo(string codigomodulo)
+        {
+            return await this._authRepositorio.SpTraeEmpresasxModulo(codigomodulo);
+        
         }
     }
 }

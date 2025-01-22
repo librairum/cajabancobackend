@@ -20,13 +20,13 @@ namespace CajaBancoAPI.Controllers
             this._authAplicacion = authAplicacion;
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("SpList")]
-        public async Task<ActionResult> ObtenerUsuario(string nombreusuario, string claveusuario, string codigoempresa)
+        public async Task<ActionResult> ObtenerUsuario(AccesoRequest request)
         {
             try
             {
-                var result = await this._authAplicacion.SpAccesoUsuario(nombreusuario, claveusuario, codigoempresa);
+                var result = await this._authAplicacion.SpAccesoUsuario(request);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -42,6 +42,21 @@ namespace CajaBancoAPI.Controllers
             try
             {
                 var result = await this._authAplicacion.SpTraeMenuxPerfil(codigoPerfil, codModulo);
+       return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpTraeEmpresasxModulo")]
+        public async Task<ActionResult> SpTraeEmpresasxModulo(string codigomodulo)
+        {
+            try
+            {
+                var result = await this._authAplicacion.SpTraeEmpresasxModulo(codigomodulo);
+            
                 return Ok(result);
             }
             catch (Exception ex)

@@ -10,10 +10,9 @@ namespace CajaBanco.Abstractions.IService
 {
     public interface IAutenticacionService
     {
-        public Task<ResultDto<AccesoUsuarioResponseDTO>> SpAccesoUsuario(string nombreusuario,
-            string claveUsuario, string codigoempresa);
+        public Task<ResultDto<AccesoUsuarioResponseDTO>> SpAccesoUsuario(AccesoRequest request);
 
         public Task<ResultDto<PermisosListResponseDTO>> SpTraeMenuxPerfil(string codigoPerfil, string codModulo);
-
+		public Task<ResultDto<TraeEmpresasxModuloDTO>> SpTraeEmpresasxModulo(string codigomodulo);	
     }
 }
