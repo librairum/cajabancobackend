@@ -32,7 +32,7 @@ namespace CajaBanco.Repository.Autenticacion
 
                     parametros.Add("@NombreUsuario", nombreusuario);
                     parametros.Add("@ClaveUsuario", claveUsuario);
-                    parametros.Add("@codigoEmpresa", codigoempresa);
+                    parametros.Add("@codigoEmpresa", "00001");
 
                     list = (List<AccesoUsuarioResponseDTO>)await cn.QueryAsync<AccesoUsuarioResponseDTO>("Spu_Seg_Trae_AutenticacionUsuario",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
