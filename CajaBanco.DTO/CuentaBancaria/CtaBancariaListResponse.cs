@@ -14,9 +14,9 @@ namespace CajaBanco.DTO.CuentaBancaria
 
         public string ID { get; set; }
         public string IdCuenta { get; set; }
-            public string Banco { get; set; }
+            public string NombreBanco { get; set; }
             public string Moneda { get; set; }
-            public string CuentaBancaria { get; set; }
+            public string NombreCuentaBancaria { get; set; }
      
         public string CtaContable { get; set; }
         public string CtaITF { get; set; }

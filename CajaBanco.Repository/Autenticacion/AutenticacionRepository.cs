@@ -34,7 +34,7 @@ namespace CajaBanco.Repository.Autenticacion
                     parametros.Add("@ClaveUsuario", claveUsuario);
                     parametros.Add("@codigoEmpresa", codigoempresa);
 
-                    list = (List<AccesoUsuarioResponseDTO>)await cn.QueryAsync<AccesoUsuarioResponseDTO>("Spu_Seg_Trae_menuxperfil",
+                    list = (List<AccesoUsuarioResponseDTO>)await cn.QueryAsync<AccesoUsuarioResponseDTO>("Spu_Seg_Trae_AutenticacionUsuario",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     res.IsSuccess = list.Count > 0 ? true : false;
                     res.Message = list.Count > 0 ? "Informacion encontrada": "No se encontro informacion";

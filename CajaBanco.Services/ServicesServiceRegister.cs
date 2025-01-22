@@ -18,6 +18,7 @@ namespace CajaBanco.Services
         { 
             services.AddScoped<IBancoService, BancoService>();
             services.AddScoped<IAutenticacionService,AutenticacionService>();
+            services.AddScoped<ICtaBancariaService, CtaBancariaService>();
             return services;
         }
 

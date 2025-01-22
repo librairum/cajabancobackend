@@ -17,6 +17,8 @@ namespace CajaBanco.Repository
         { 
             services.AddScoped<IBancoRepository, BancoRepository>();
             services.AddScoped<IAutenticacionRepository, AutenticacionRepository>();
+            services.AddScoped<ICtaBancariaRepository, CtaBancariaRepository>();
+
             return services;
         }
 
