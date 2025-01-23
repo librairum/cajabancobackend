@@ -1,0 +1,18 @@
+# Ignorar archivos y carpetas de Visual Studio
+.vs/
+*.vsix
+
+# Ignorar archivos binarios y de compilación
+*.dll
+*.pdb
+*.exe
+*.obj
+
+# Ignorar archivos temporales de Visual Studio
+.vs/*
+
+# Ignorar archivos de configuración de NuGet
+*.nuget
+
+# Archivos de sistema
+Thumbs.db
