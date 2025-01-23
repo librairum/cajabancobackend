@@ -1324,5 +1324,288 @@ namespace CajaBanco.Repository.Pago
             return res;
         }
 
+        public async Task<ResultDto<string>> SpInsertaAprobacion(AprobacionCreateRequestDTO request)
+        {
+            ResultDto<string> result = new ResultDto<string>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Ins_Aprobacion", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Num", request.Num);
+                cmd.Parameters.AddWithValue("@Ban01Numero", request.Ban01Numero);
+                cmd.Parameters.AddWithValue("@Ban01Empresa", request.Ban01Empresa);
+                cmd.Parameters.AddWithValue("@Ban01Tipo", request.Ban01Tipo);
+                cmd.Parameters.AddWithValue("@Ban01Codigo", request.Ban01Codigo);
+                cmd.Parameters.AddWithValue("@Ban02Ruc", request.Ban02Ruc);
+                cmd.Parameters.AddWithValue("@Ban02Tipodoc", request.Ban02Tipodoc);
+                cmd.Parameters.AddWithValue("@Ban02NroDoc", request.Ban02NroDoc);
+                cmd.Parameters.AddWithValue("@Ban01ImporteSoles", request.Ban01ImporteSoles);
+                cmd.Parameters.AddWithValue("@Ban01ImporteDolares", request.Ban01ImporteDolares);
+                cmd.Parameters.AddWithValue("@Ban01Observacion", request.Ban01Observacion);
+                cmd.Parameters.AddWithValue("@Ban01Usuario", request.Ban01Usuario);
+                cmd.Parameters.AddWithValue("@Ban01Pc", request.Ban01Pc);
+                cmd.Parameters.AddWithValue("@Ban01Fecha", request.Ban01Fecha);
+                cmd.Parameters.AddWithValue("@Ban01TipoCambio", request.Ban01TipoCambio);
+
+                var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
+                parMensaje.Direction = ParameterDirection.Output;
+
+                var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                parFlag.Direction = ParameterDirection.Output;
+
+
+                cn.Open();
+                var respuesta = await cmd.ExecuteNonQueryAsync();
+                cn.Close();
+
+                //result.Item = request.Ban01IdCuenta;
+
+                result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
+                result.Message = parMensaje.Value.ToString();
+
+            }
+            catch (Exception ex)
+            {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
+        }
+        public async Task<ResultDto<AprobacionesDetalleListResponseDTO>> SpListaAprobacionPagosDetalle(int flag,string empresa, int numero)
+        {
+            ResultDto<AprobacionesDetalleListResponseDTO> res = new ResultDto<AprobacionesDetalleListResponseDTO>();
+            List<AprobacionesDetalleListResponseDTO> list = new List<AprobacionesDetalleListResponseDTO>();
+
+            try
+            {
+                using (var cn = new SqlConnection(_connectionString))
+                {
+
+                    DynamicParameters parametros = new DynamicParameters();
+
+                    parametros.Add("@Flag", flag);
+                    parametros.Add("@Empresa", empresa);
+                    parametros.Add("@Numero", numero);
+
+                    list = (List<AprobacionesDetalleListResponseDTO>)await cn.QueryAsync<AprobacionesDetalleListResponseDTO>("Spu_Ban_Trae_AprobacionNroPagos",
+                        parametros, commandType: System.Data.CommandType.StoredProcedure);
+                    res.IsSuccess = list.Count > 0 ? true : false;
+                    res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
+                    res.Data = list.ToList();
+                    //res.Total = list.Count > 0 ? list[0].totalRecords : 0;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
+        public async Task<ResultDto<AprobacionesResumenListResponseDTO>> SpListaAprobacionPagosResumen(int flag, string empresa, int numero)
+        {
+            ResultDto<AprobacionesResumenListResponseDTO> res = new ResultDto<AprobacionesResumenListResponseDTO>();
+            List<AprobacionesResumenListResponseDTO> list = new List<AprobacionesResumenListResponseDTO>();
+
+            try
+            {
+                using (var cn = new SqlConnection(_connectionString))
+                {
+
+                    DynamicParameters parametros = new DynamicParameters();
+
+                    parametros.Add("@Flag", flag);
+                    parametros.Add("@Empresa", empresa);
+                    parametros.Add("@Numero", numero);
+
+                    list = (List<AprobacionesResumenListResponseDTO>)await cn.QueryAsync<AprobacionesResumenListResponseDTO>("Spu_Ban_Trae_AprobacionNroPagos",
+                        parametros, commandType: System.Data.CommandType.StoredProcedure);
+                    res.IsSuccess = list.Count > 0 ? true : false;
+                    res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
+                    res.Data = list.ToList();
+                    //res.Total = list.Count > 0 ? list[0].totalRecords : 0;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
+        public async Task<ResultDto<DetraccionDetalleListResponseDTO>> SpListaDetraccionDetalle(string empresa,string tipo, string numero,string ruc)
+        {
+            ResultDto<DetraccionDetalleListResponseDTO> res = new ResultDto<DetraccionDetalleListResponseDTO>();
+            List<DetraccionDetalleListResponseDTO> list = new List<DetraccionDetalleListResponseDTO>();
+
+            try
+            {
+                using (var cn = new SqlConnection(_connectionString))
+                {
+
+                    DynamicParameters parametros = new DynamicParameters();
+
+                    parametros.Add("@Empresa", empresa);
+                    parametros.Add("@Tipo", tipo);
+                    parametros.Add("@Numero", numero);
+                    parametros.Add("@Ruc", ruc);
+
+                    list = (List<DetraccionDetalleListResponseDTO>)await cn.QueryAsync<DetraccionDetalleListResponseDTO>("Spu_Ban_Trae_DetraccionDetalle",
+                        parametros, commandType: System.Data.CommandType.StoredProcedure);
+                    res.IsSuccess = list.Count > 0 ? true : false;
+                    res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
+                    res.Data = list.ToList();
+                    //res.Total = list.Count > 0 ? list[0].totalRecords : 0;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
+
+        public async Task<ResultDto<RetencionBuscarListResponseDTO>> SpListaRetencionBuscar(string empresa, string numero, string ruc)
+        {
+            ResultDto<RetencionBuscarListResponseDTO> res = new ResultDto<RetencionBuscarListResponseDTO>();
+            List<RetencionBuscarListResponseDTO> list = new List<RetencionBuscarListResponseDTO>();
+
+            try
+            {
+                using (var cn = new SqlConnection(_connectionString))
+                {
+
+                    DynamicParameters parametros = new DynamicParameters();
+
+                    parametros.Add("@Empresa", empresa);
+                    parametros.Add("@Numero", numero);
+                    parametros.Add("@Ruc", ruc);
+
+                    list = (List<RetencionBuscarListResponseDTO>)await cn.QueryAsync<RetencionBuscarListResponseDTO>("Spu_Ban_Trae_RetencionBuscar",
+                        parametros, commandType: System.Data.CommandType.StoredProcedure);
+                    res.IsSuccess = list.Count > 0 ? true : false;
+                    res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
+                    res.Data = list.ToList();
+                    //res.Total = list.Count > 0 ? list[0].totalRecords : 0;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
+        public async Task<ResultDto<RetencionFechaEmisionListResponseDTO>> SpListaRetencionFechaEmision(string empresa, string numero, string ruc)
+        {
+            ResultDto<RetencionFechaEmisionListResponseDTO> res = new ResultDto<RetencionFechaEmisionListResponseDTO>();
+            List<RetencionFechaEmisionListResponseDTO> list = new List<RetencionFechaEmisionListResponseDTO>();
+
+            try
+            {
+                using (var cn = new SqlConnection(_connectionString))
+                {
+
+                    DynamicParameters parametros = new DynamicParameters();
+
+                    parametros.Add("@Empresa", empresa);
+                    parametros.Add("@Numero", numero);
+                    parametros.Add("@Ruc", ruc);
+
+                    list = (List<RetencionFechaEmisionListResponseDTO>)await cn.QueryAsync<RetencionFechaEmisionListResponseDTO>("Spu_Ban_Trae_RetencionFechaEmision",
+                        parametros, commandType: System.Data.CommandType.StoredProcedure);
+                    res.IsSuccess = list.Count > 0 ? true : false;
+                    res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
+                    res.Data = list.ToList();
+                    //res.Total = list.Count > 0 ? list[0].totalRecords : 0;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
+        public async Task<ResultDto<RetencionDetalleListResponseDTO>> SpListaRetencionDetalle(string empresa, string numero, string ruc)
+        {
+            ResultDto<RetencionDetalleListResponseDTO> res = new ResultDto<RetencionDetalleListResponseDTO>();
+            List<RetencionDetalleListResponseDTO> list = new List<RetencionDetalleListResponseDTO>();
+
+            try
+            {
+                using (var cn = new SqlConnection(_connectionString))
+                {
+
+                    DynamicParameters parametros = new DynamicParameters();
+
+                    parametros.Add("@Empresa", empresa);
+                    parametros.Add("@Numero", numero);
+                    parametros.Add("@Ruc", ruc);
+
+                    list = (List<RetencionDetalleListResponseDTO>)await cn.QueryAsync<RetencionDetalleListResponseDTO>("Spu_Ban_Trae_RetencionDetalle",
+                        parametros, commandType: System.Data.CommandType.StoredProcedure);
+                    res.IsSuccess = list.Count > 0 ? true : false;
+                    res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
+                    res.Data = list.ToList();
+                    //res.Total = list.Count > 0 ? list[0].totalRecords : 0;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
+        public async Task<ResultDto<string>> SpInsertaRetencionTotal(RetencionTotalCreateRequestDTO request)
+        {
+            ResultDto<string> result = new ResultDto<string>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Ins_RetencionTotal", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Empresa", request.Empresa);
+                cmd.Parameters.AddWithValue("@NumeroLote", request.NumeroLote);
+                cmd.Parameters.AddWithValue("@FechaEmi", request.FechaEmi);
+                cmd.Parameters.AddWithValue("@Ruc", request.Ruc);
+                cmd.Parameters.AddWithValue("@Usuario", request.Usuario);
+                cmd.Parameters.AddWithValue("@Pc", request.Pc);
+
+                var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
+                parMensaje.Direction = ParameterDirection.Output;
+
+                var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                parFlag.Direction = ParameterDirection.Output;
+
+
+                cn.Open();
+                var respuesta = await cmd.ExecuteNonQueryAsync();
+                cn.Close();
+
+                //result.Item = request.Ban01IdCuenta;
+
+                result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
+                result.Message = parMensaje.Value.ToString();
+
+            }
+            catch (Exception ex)
+            {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
+        }
     }
 }

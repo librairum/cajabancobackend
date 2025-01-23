@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CajaBanco.Application.Pago
 {
@@ -186,6 +187,39 @@ namespace CajaBanco.Application.Pago
         {
             return await this._pagoService.SpListaEstados();
         }
+        public async Task<ResultDto<string>> SpInsertaAprobacion(AprobacionCreateRequestDTO request)
+        {
+            return await this._pagoService.SpInsertaAprobacion(request);
+        }
+        public async Task<ResultDto<AprobacionesDetalleListResponseDTO>> SpListaAprobacionPagosDetalle(int flag, string empresa, int numero)
+        {
+            return await this._pagoService.SpListaAprobacionPagosDetalle(flag,empresa,numero);
+        }
+        public async Task<ResultDto<AprobacionesResumenListResponseDTO>> SpListaAprobacionPagosResumen(int flag, string empresa, int numero)
+        {
+            return await this._pagoService.SpListaAprobacionPagosResumen(flag, empresa, numero);
+        }
+        public async Task<ResultDto<DetraccionDetalleListResponseDTO>> SpListaDetraccionDetalle(string empresa, string tipo, string numero, string ruc)
+        {
+            return await this._pagoService.SpListaDetraccionDetalle(empresa,tipo,numero,ruc);
+        }
+        public async Task<ResultDto<RetencionBuscarListResponseDTO>> SpListaRetencionBuscar(string empresa, string numero, string ruc)
+        {
+            return await this._pagoService.SpListaRetencionBuscar(empresa, numero, ruc);
+        }
+        public async Task<ResultDto<RetencionFechaEmisionListResponseDTO>> SpListaRetencionFechaEmision(string empresa, string numero, string ruc)
+        {
+            return await this._pagoService.SpListaRetencionFechaEmision(empresa, numero, ruc);
+        }
+        public async Task<ResultDto<RetencionDetalleListResponseDTO>> SpListaRetencionDetalle(string empresa, string numero, string ruc)
+        {
+            return await this._pagoService.SpListaRetencionDetalle(empresa, numero, ruc);
+        }
+        public async Task<ResultDto<string>> SpInsertaRetencionTotal(RetencionTotalCreateRequestDTO request)
+        {
+            return await this._pagoService.SpInsertaRetencionTotal(request);
+        }
+
 
 
 

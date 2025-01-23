@@ -52,6 +52,15 @@ namespace CajaBanco.Abstractions.IApplication
         public Task<ResultDto<TipoCambioListResponseDTO>> SpListaTipoCambioxFecha(string fecha);
         public Task<ResultDto<TipoDocumentoListResponseDTO>> SpListaTipoDocumentosCodigo();
         public Task<ResultDto<EstadosListResponseDTO>> SpListaEstados();
+        public Task<ResultDto<string>> SpInsertaAprobacion(AprobacionCreateRequestDTO request);
+        public Task<ResultDto<AprobacionesDetalleListResponseDTO>> SpListaAprobacionPagosDetalle(int flag, string empresa, int numero);
+        public Task<ResultDto<AprobacionesResumenListResponseDTO>> SpListaAprobacionPagosResumen(int flag, string empresa, int numero);
+        public Task<ResultDto<DetraccionDetalleListResponseDTO>> SpListaDetraccionDetalle(string empresa, string tipo, string numero, string ruc);
+        public Task<ResultDto<RetencionBuscarListResponseDTO>> SpListaRetencionBuscar(string empresa, string numero, string ruc);
+        public Task<ResultDto<RetencionFechaEmisionListResponseDTO>> SpListaRetencionFechaEmision(string empresa, string numero, string ruc);
+        public Task<ResultDto<RetencionDetalleListResponseDTO>> SpListaRetencionDetalle(string empresa, string numero, string ruc);
+        public Task<ResultDto<string>> SpInsertaRetencionTotal(RetencionTotalCreateRequestDTO request);
+
 
 
 

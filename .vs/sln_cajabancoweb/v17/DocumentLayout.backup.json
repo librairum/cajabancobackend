@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|solutionrelative:cajabanco.services\\pago\\pagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|c:\\users\\juan\\documents\\prac\\github\\backend\\cajabancobackend\\cajabanco.repository\\pago\\pagorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\pago\\pagorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|c:\\users\\juan\\documents\\prac\\github\\backend\\cajabancobackend\\cajabanco.application\\pago\\pagoapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|solutionrelative:cajabanco.application\\pago\\pagoapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,40 +31,8 @@
       "RelativeMoniker": "D:0:0:{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}|CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj|solutionrelative:cajabanco.abstractions\\iapplication\\ipagoapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|c:\\users\\juan\\documents\\prac\\github\\backend\\cajabancobackend\\cajabanco.repository\\pago\\pagorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\pago\\pagorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{059E282C-6831-4AEF-A569-8EB41C161013}|CajaBanco.DTO\\CajaBanco.DTO.csproj|c:\\users\\juan\\documents\\prac\\github\\backend\\cajabancobackend\\cajabanco.dto\\pago\\estadoslistresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{059E282C-6831-4AEF-A569-8EB41C161013}|CajaBanco.DTO\\CajaBanco.DTO.csproj|solutionrelative:cajabanco.dto\\pago\\estadoslistresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{059E282C-6831-4AEF-A569-8EB41C161013}|CajaBanco.DTO\\CajaBanco.DTO.csproj|c:\\users\\juan\\documents\\prac\\github\\backend\\cajabancobackend\\cajabanco.dto\\pago\\tipodocumentolistresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{059E282C-6831-4AEF-A569-8EB41C161013}|CajaBanco.DTO\\CajaBanco.DTO.csproj|solutionrelative:cajabanco.dto\\pago\\tipodocumentolistresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|c:\\users\\juan\\documents\\prac\\github\\backend\\cajabancobackend\\cajabancoapi\\controllers\\bancocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\controllers\\bancocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|c:\\users\\juan\\documents\\prac\\github\\backend\\cajabancobackend\\cajabanco.application\\banco\\bancoapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|solutionrelative:cajabanco.application\\banco\\bancoapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}|CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj|c:\\users\\juan\\documents\\prac\\github\\backend\\cajabancobackend\\cajabanco.abstractions\\irepository\\ibancorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}|CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj|solutionrelative:cajabanco.abstractions\\irepository\\ibancorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|c:\\users\\juan\\documents\\prac\\github\\backend\\cajabancobackend\\cajabanco.repository\\banco\\bancorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\banco\\bancorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|c:\\users\\juan\\documents\\prac\\github\\backend\\cajabancobackend\\cajabanco.application\\cajabanco.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|solutionrelative:cajabanco.application\\cajabanco.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{059E282C-6831-4AEF-A569-8EB41C161013}|CajaBanco.DTO\\CajaBanco.DTO.csproj|c:\\users\\juan\\documents\\prac\\github\\backend\\cajabancobackend\\cajabanco.dto\\pago\\numerochequelistresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{059E282C-6831-4AEF-A569-8EB41C161013}|CajaBanco.DTO\\CajaBanco.DTO.csproj|solutionrelative:cajabanco.dto\\pago\\numerochequelistresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{059E282C-6831-4AEF-A569-8EB41C161013}|CajaBanco.DTO\\CajaBanco.DTO.csproj|c:\\users\\juan\\documents\\prac\\github\\backend\\cajabancobackend\\cajabanco.dto\\pago\\retenciontotalcreaterequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{059E282C-6831-4AEF-A569-8EB41C161013}|CajaBanco.DTO\\CajaBanco.DTO.csproj|solutionrelative:cajabanco.dto\\pago\\retenciontotalcreaterequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{059E282C-6831-4AEF-A569-8EB41C161013}|CajaBanco.DTO\\CajaBanco.DTO.csproj|c:\\users\\juan\\documents\\prac\\github\\backend\\cajabancobackend\\cajabanco.dto\\pago\\pagonumlistresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,15 +50,67 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IPagoService.cs",
+              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Abstractions\\IService\\IPagoService.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Abstractions\\IService\\IPagoService.cs",
+              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Abstractions\\IService\\IPagoService.cs*",
+              "RelativeToolTip": "CajaBanco.Abstractions\\IService\\IPagoService.cs*",
+              "ViewState": "AgIAADMAAAAAAAAAAAA7wD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T15:35:30.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IPagoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Abstractions\\IRepository\\IPagoRepository.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Abstractions\\IRepository\\IPagoRepository.cs",
+              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Abstractions\\IRepository\\IPagoRepository.cs*",
+              "RelativeToolTip": "CajaBanco.Abstractions\\IRepository\\IPagoRepository.cs*",
+              "ViewState": "AgIAADIAAAAAAAAAAAAgwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T15:35:21.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "IPagoApplication.cs",
+              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Abstractions\\IApplication\\IPagoApplication.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Abstractions\\IApplication\\IPagoApplication.cs",
+              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Abstractions\\IApplication\\IPagoApplication.cs*",
+              "RelativeToolTip": "CajaBanco.Abstractions\\IApplication\\IPagoApplication.cs*",
+              "ViewState": "AgIAADMAAAAAAAAAAAA7wD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T15:35:07.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PagoRepository.cs",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Repository\\Pago\\PagoRepository.cs",
               "RelativeDocumentMoniker": "CajaBanco.Repository\\Pago\\PagoRepository.cs",
-              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Repository\\Pago\\PagoRepository.cs",
-              "RelativeToolTip": "CajaBanco.Repository\\Pago\\PagoRepository.cs",
-              "ViewState": "AgIAAAwFAAAAAAAAAAAwwBIFAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Repository\\Pago\\PagoRepository.cs*",
+              "RelativeToolTip": "CajaBanco.Repository\\Pago\\PagoRepository.cs*",
+              "ViewState": "AgIAAAAGAAAAAAAAAAAcwCEGAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T15:06:53.352Z",
+              "WhenOpened": "2025-01-23T15:32:26.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PagoApplication.cs",
+              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Application\\Pago\\PagoApplication.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Application\\Pago\\PagoApplication.cs",
+              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Application\\Pago\\PagoApplication.cs*",
+              "RelativeToolTip": "CajaBanco.Application\\Pago\\PagoApplication.cs*",
+              "ViewState": "AgIAAMgAAAAAAAAAAAAcwNkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T15:35:41.785Z",
               "EditorCaption": ""
             },
             {
@@ -95,63 +119,11 @@
               "Title": "PagoService.cs",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Services\\Pago\\PagoService.cs",
               "RelativeDocumentMoniker": "CajaBanco.Services\\Pago\\PagoService.cs",
-              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Services\\Pago\\PagoService.cs",
-              "RelativeToolTip": "CajaBanco.Services\\Pago\\PagoService.cs",
-              "ViewState": "AgIAAKkAAAAAAAAAAAAkwLkAAAAoAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Services\\Pago\\PagoService.cs*",
+              "RelativeToolTip": "CajaBanco.Services\\Pago\\PagoService.cs*",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAAwNcAAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T15:09:28.616Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IPagoApplication.cs",
-              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Abstractions\\IApplication\\IPagoApplication.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Abstractions\\IApplication\\IPagoApplication.cs",
-              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Abstractions\\IApplication\\IPagoApplication.cs",
-              "RelativeToolTip": "CajaBanco.Abstractions\\IApplication\\IPagoApplication.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAADgvzUAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T15:08:34.846Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IPagoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Abstractions\\IRepository\\IPagoRepository.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Abstractions\\IRepository\\IPagoRepository.cs",
-              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Abstractions\\IRepository\\IPagoRepository.cs",
-              "RelativeToolTip": "CajaBanco.Abstractions\\IRepository\\IPagoRepository.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAuwDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T15:08:16.638Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IPagoService.cs",
-              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Abstractions\\IService\\IPagoService.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Abstractions\\IService\\IPagoService.cs",
-              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Abstractions\\IService\\IPagoService.cs",
-              "RelativeToolTip": "CajaBanco.Abstractions\\IService\\IPagoService.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAWwDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T15:08:41.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PagoApplication.cs",
-              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Application\\Pago\\PagoApplication.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Application\\Pago\\PagoApplication.cs",
-              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Application\\Pago\\PagoApplication.cs",
-              "RelativeToolTip": "CajaBanco.Application\\Pago\\PagoApplication.cs",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAqwLgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T15:08:48.382Z",
+              "WhenOpened": "2025-01-23T15:36:22.308Z",
               "EditorCaption": ""
             },
             {
@@ -162,124 +134,33 @@
               "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\PagoController.cs",
               "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBancoAPI\\Controllers\\PagoController.cs",
               "RelativeToolTip": "CajaBancoAPI\\Controllers\\PagoController.cs",
-              "ViewState": "AgIAAF4CAAAAAAAAAAAcwHACAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAKgCAAAAAAAAAAAmwLgCAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T15:09:44.723Z",
+              "WhenOpened": "2025-01-23T15:36:44.281Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "EstadosListResponseDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.DTO\\Pago\\EstadosListResponseDTO.cs",
-              "RelativeDocumentMoniker": "CajaBanco.DTO\\Pago\\EstadosListResponseDTO.cs",
-              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.DTO\\Pago\\EstadosListResponseDTO.cs",
-              "RelativeToolTip": "CajaBanco.DTO\\Pago\\EstadosListResponseDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
+              "Title": "RetencionTotalCreateRequestDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.DTO\\Pago\\RetencionTotalCreateRequestDTO.cs",
+              "RelativeDocumentMoniker": "CajaBanco.DTO\\Pago\\RetencionTotalCreateRequestDTO.cs",
+              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.DTO\\Pago\\RetencionTotalCreateRequestDTO.cs",
+              "RelativeToolTip": "CajaBanco.DTO\\Pago\\RetencionTotalCreateRequestDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T19:34:47.1Z",
+              "WhenOpened": "2025-01-23T17:04:16.7Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "TipoDocumentoListResponseDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.DTO\\Pago\\TipoDocumentoListResponseDTO.cs",
-              "RelativeDocumentMoniker": "CajaBanco.DTO\\Pago\\TipoDocumentoListResponseDTO.cs",
-              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.DTO\\Pago\\TipoDocumentoListResponseDTO.cs",
-              "RelativeToolTip": "CajaBanco.DTO\\Pago\\TipoDocumentoListResponseDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T19:15:34.448Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BancoApplication.cs",
-              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Application\\Banco\\BancoApplication.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Application\\Banco\\BancoApplication.cs",
-              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Application\\Banco\\BancoApplication.cs",
-              "RelativeToolTip": "CajaBanco.Application\\Banco\\BancoApplication.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T16:28:37.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BancoController.cs",
-              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBancoAPI\\Controllers\\BancoController.cs",
-              "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\BancoController.cs",
-              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBancoAPI\\Controllers\\BancoController.cs",
-              "RelativeToolTip": "CajaBancoAPI\\Controllers\\BancoController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAkwEkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T16:31:19.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IBancoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Abstractions\\IRepository\\IBancoRepository.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Abstractions\\IRepository\\IBancoRepository.cs",
-              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Abstractions\\IRepository\\IBancoRepository.cs",
-              "RelativeToolTip": "CajaBanco.Abstractions\\IRepository\\IBancoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T16:27:22.303Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "BancoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Repository\\Banco\\BancoRepository.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Repository\\Banco\\BancoRepository.cs",
-              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Repository\\Banco\\BancoRepository.cs",
-              "RelativeToolTip": "CajaBanco.Repository\\Banco\\BancoRepository.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAgwJEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T15:10:37.998Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CajaBanco.Application",
-              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Application\\CajaBanco.Application.csproj",
-              "RelativeDocumentMoniker": "CajaBanco.Application\\CajaBanco.Application.csproj",
-              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.Application\\CajaBanco.Application.csproj",
-              "RelativeToolTip": "CajaBanco.Application\\CajaBanco.Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-22T15:08:40.222Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "NumeroChequeListResponseDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.DTO\\Pago\\NumeroChequeListResponseDTO.cs",
-              "RelativeDocumentMoniker": "CajaBanco.DTO\\Pago\\NumeroChequeListResponseDTO.cs",
-              "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.DTO\\Pago\\NumeroChequeListResponseDTO.cs",
-              "RelativeToolTip": "CajaBanco.DTO\\Pago\\NumeroChequeListResponseDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T15:05:45.121Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "PagoNumListResponseDTO.cs",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.DTO\\Pago\\PagoNumListResponseDTO.cs",
               "RelativeDocumentMoniker": "CajaBanco.DTO\\Pago\\PagoNumListResponseDTO.cs",
               "ToolTip": "C:\\Users\\Juan\\Documents\\prac\\Github\\backend\\cajabancobackend\\CajaBanco.DTO\\Pago\\PagoNumListResponseDTO.cs",
               "RelativeToolTip": "CajaBanco.DTO\\Pago\\PagoNumListResponseDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-22T15:05:01.245Z",
               "EditorCaption": ""

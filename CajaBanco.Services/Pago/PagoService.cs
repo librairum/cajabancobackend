@@ -185,6 +185,39 @@ namespace CajaBanco.Services.Pago
         {
             return await _pagoRepository.SpListaEstados();
         }
+        public async Task<ResultDto<string>> SpInsertaAprobacion(AprobacionCreateRequestDTO request)
+        {
+            return await _pagoRepository.SpInsertaAprobacion(request);
+        }
+        public async Task<ResultDto<AprobacionesDetalleListResponseDTO>> SpListaAprobacionPagosDetalle(int flag, string empresa, int numero)
+        {
+            return await _pagoRepository.SpListaAprobacionPagosDetalle(flag, empresa, numero);
+        }
+        public async Task<ResultDto<AprobacionesResumenListResponseDTO>> SpListaAprobacionPagosResumen(int flag, string empresa, int numero)
+        {
+            return await _pagoRepository.SpListaAprobacionPagosResumen(flag, empresa, numero);
+        }
+        public async Task<ResultDto<DetraccionDetalleListResponseDTO>> SpListaDetraccionDetalle(string empresa, string tipo, string numero, string ruc)
+        {
+            return await _pagoRepository.SpListaDetraccionDetalle(empresa, tipo, numero, ruc);
+        }
+        public async Task<ResultDto<RetencionBuscarListResponseDTO>> SpListaRetencionBuscar(string empresa, string numero, string ruc)
+        {
+            return await _pagoRepository.SpListaRetencionBuscar(empresa, numero, ruc);
+        }
+        public async Task<ResultDto<RetencionFechaEmisionListResponseDTO>> SpListaRetencionFechaEmision(string empresa, string numero, string ruc)
+        {
+            return await _pagoRepository.SpListaRetencionFechaEmision(empresa, numero, ruc);
+        }
+        public async Task<ResultDto<RetencionDetalleListResponseDTO>> SpListaRetencionDetalle(string empresa, string numero, string ruc)
+        {
+            return await _pagoRepository.SpListaRetencionDetalle(empresa, numero, ruc);
+        }
+        public async Task<ResultDto<string>> SpInsertaRetencionTotal(RetencionTotalCreateRequestDTO request)
+        {
+            return await _pagoRepository.SpInsertaRetencionTotal(request);
+        }
+
 
 
     }

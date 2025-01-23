@@ -19,6 +19,7 @@ namespace CajaPagoAPI.Controllers
         }
 
 
+        // --------------------------LIST-----------------------
         [HttpGet]
         [Route("SpList/PagosGeneradoProcesoAprobado")]
         public async Task<ActionResult> ObtenerListaPagosGeneradoProcesoAprobado(string anio, string mes)
@@ -423,6 +424,7 @@ namespace CajaPagoAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
         [HttpGet]
         [Route("SpList/NumeroPagosPayCaja")]
         public async Task<ActionResult> ObtenerListaNumeroPagosPayCaja(string empresa, string idpago, string numerop)
@@ -569,7 +571,93 @@ namespace CajaPagoAPI.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("SpList/AprobacionPagos")]
+        public async Task<ActionResult> ObtenerListaAprobacionPagos(int flag, string empresa, int numero)
+        {
+            try
+            {
+                if (flag == 1)
+                {
+                    var result = await this._pagoAplicacion.SpListaAprobacionPagosDetalle(flag, empresa, numero);
+                    return Ok(result);
 
+                }
+                else if (flag == 2)
+                {
+                    var result = await this._pagoAplicacion.SpListaAprobacionPagosResumen(flag, empresa, numero);
+                    return Ok(result);
+
+                }
+                else
+                {
+                    return BadRequest("flag incorecto");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpList/DetraccionDetalle")]
+        public async Task<ActionResult> ObtenerDetraccionDetalle(string empresa, string tipo, string numero, string ruc)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaDetraccionDetalle(empresa,tipo,numero,ruc);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpList/RetencionBuscar")]
+        public async Task<ActionResult> ObtenerRetencionBuscar(string empresa, string numero, string ruc)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaRetencionBuscar(empresa, numero, ruc);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpList/RetencionFechaEmision")]
+        public async Task<ActionResult> ObtenerRetencionFechaEmision(string empresa, string numero, string ruc)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaRetencionFechaEmision(empresa, numero, ruc);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpList/RetencionDetalle")]
+        public async Task<ActionResult> ObtenerRetencionDetalle(string empresa, string numero, string ruc)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpListaRetencionDetalle(empresa, numero, ruc);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        // --------------------------CREATE-----------------------
         [HttpPost]
         [Route("SpCreate/NumeroPagosPayCaja")]
         public async Task<ActionResult> InsertaNumeroPagosPayCaja(NumeroPagosPayCajaCreateRequestDTO request)
@@ -584,6 +672,38 @@ namespace CajaPagoAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpPost]
+        [Route("SpCreate/Aprobacion")]
+        public async Task<ActionResult> InsertaAprobacion(AprobacionCreateRequestDTO request)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpInsertaAprobacion(request);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost]
+        [Route("SpCreate/RetencionTotal")]
+        public async Task<ActionResult> InsertaRetencionTotal(RetencionTotalCreateRequestDTO request)
+        {
+            try
+            {
+                var result = await this._pagoAplicacion.SpInsertaRetencionTotal(request);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        // --------------------------DELETE-----------------------
         [HttpDelete]
         [Route("SpDelete/PagosComprobReten")]
         public async Task<ActionResult> EliminaPagosComprobReten(string empresa, string numero)

@@ -122,6 +122,22 @@
   },
   {
     "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "InsertaAprobacion",
+    "RelativePath": "Pago/SpCreate/Aprobacion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Pago.AprobacionCreateRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
     "Method": "InsertaNumeroPagosPayCaja",
     "RelativePath": "Pago/SpCreate/NumeroPagosPayCaja",
     "HttpMethod": "POST",
@@ -131,6 +147,22 @@
       {
         "Name": "request",
         "Type": "CajaBanco.DTO.Pago.NumeroPagosPayCajaCreateRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "InsertaRetencionTotal",
+    "RelativePath": "Pago/SpCreate/RetencionTotal",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Pago.RetencionTotalCreateRequestDTO",
         "IsRequired": true
       }
     ],
@@ -194,6 +226,32 @@
       {
         "Name": "numero",
         "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerListaAprobacionPagos",
+    "RelativePath": "Pago/SpList/AprobacionPagos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "flag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],
@@ -464,6 +522,37 @@
       },
       {
         "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerDetraccionDetalle",
+    "RelativePath": "Pago/SpList/DetraccionDetalle",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ruc",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -804,6 +893,84 @@
     "Parameters": [
       {
         "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerRetencionBuscar",
+    "RelativePath": "Pago/SpList/RetencionBuscar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ruc",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerRetencionDetalle",
+    "RelativePath": "Pago/SpList/RetencionDetalle",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ruc",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaPagoAPI.Controllers.PagoController",
+    "Method": "ObtenerRetencionFechaEmision",
+    "RelativePath": "Pago/SpList/RetencionFechaEmision",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ruc",
         "Type": "System.String",
         "IsRequired": false
       }
