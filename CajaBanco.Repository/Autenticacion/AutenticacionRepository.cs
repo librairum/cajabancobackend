@@ -56,6 +56,7 @@ namespace CajaBanco.Repository.Autenticacion
 
         public async Task<ResultDto<PermisosListResponseDTO>> SpTraeMenuxPerfil(string codigoPerfil, string codModulo)
         {
+            
             ResultDto<PermisosListResponseDTO> res = new ResultDto<PermisosListResponseDTO>();
             List<PermisosListResponseDTO> list = new List<PermisosListResponseDTO>();
             try
