@@ -350,5 +350,60 @@ namespace CajaBanco.Repository.Presupuesto
             }
             return res;
         }
+
+
+        public async Task<ResultDto<DocPendienteResponse>> SpListaDocPendientes(string empresa, string fechavencimiento , string ruc)
+        {
+            ResultDto<DocPendienteResponse> res = new ResultDto<DocPendienteResponse>();
+            List<DocPendienteResponse> list = new List<DocPendienteResponse>();
+
+            try
+            {
+                SqlConnection cnx = new SqlConnection(_connectionString);
+                DynamicParameters parametros = new DynamicParameters();
+                parametros.Add("@empresa", empresa);
+                parametros.Add("@ruc", ruc);
+                parametros.Add("@fechavencimiento", fechavencimiento);
+                list = (List<DocPendienteResponse>)await cnx.QueryAsync<DocPendienteResponse>("Spu_Ban_Trae_DocPendiente",
+                    parametros, commandType: System.Data.CommandType.StoredProcedure);
+                res.IsSuccess = list.Count > 0 ? true : false;
+                res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
+                res.Data = list.ToList();
+                //this._cnx.conexion.QueryAsync<PresupuestoListResponse>
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
+
+        public async Task<ResultDto<ProveedorResponse>> SpTraeProveedores(string empresa)
+        {
+            ResultDto<ProveedorResponse> res = new ResultDto<ProveedorResponse>();
+            List<ProveedorResponse> list = new List<ProveedorResponse>();
+
+            try
+            {
+                SqlConnection cnx = new SqlConnection(_connectionString);
+                DynamicParameters parametros = new DynamicParameters();
+                parametros.Add("@empresa", empresa);
+             
+                list = (List<ProveedorResponse>)await cnx.QueryAsync<ProveedorResponse>("Spu_Ban_Trae_ProveedoresConDocPendiente",
+                    parametros, commandType: System.Data.CommandType.StoredProcedure);
+                res.IsSuccess = list.Count > 0 ? true : false;
+                res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
+                res.Data = list.ToList();
+              
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+            // public Task<ResultDto<Proveedor>> SpTraeProveedores(string empresa);
+        }
     }
 }

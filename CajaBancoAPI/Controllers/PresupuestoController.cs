@@ -18,6 +18,38 @@ namespace CajaBancoAPI.Controllers
             this._app = aplicacion;
         }
 
+
+        [HttpGet]
+        [Route("SpTraeProveedores")]
+        public async Task<ActionResult> ObtenerListProveedores(string empresa)
+        {
+            try
+            {
+                var result = await this._app.SpTraeProveedores(empresa);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("SpListaDocPendientes")]
+        public async Task<ActionResult> ObtenerListDocPendientes(string empresa,  string fechavencimiento, string ruc = "")
+        {
+            try
+            {
+                var result = await this._app.SpListaDocPendientes(empresa, fechavencimiento , ruc);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
         [HttpGet]
         [Route("SpList")]
         public async Task<ActionResult> ObtenerLista(string empresa, string anio, string mes)
@@ -78,6 +110,8 @@ namespace CajaBancoAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+
 
         #region "Detalle"
         [HttpPost]

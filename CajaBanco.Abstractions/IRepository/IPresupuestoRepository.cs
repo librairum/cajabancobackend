@@ -26,6 +26,8 @@ namespace CajaBanco.Abstractions.IRepository
 
         public Task<ResultDto<PresupuestoDetResponse>> SpListaDet(string empresa, string numerodocumento, string fechapresupuesto);
 
+        public Task<ResultDto<DocPendienteResponse>> SpListaDocPendientes(string empresa, string fechavencimiento , string ruc);
 
+        public Task<ResultDto<ProveedorResponse>> SpTraeProveedores(string empresa);
     }
 }
