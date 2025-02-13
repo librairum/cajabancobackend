@@ -24,9 +24,10 @@ namespace CajaBanco.Services.Presupuesto
            return await _repository.Inserta(request);
         }
 
-        public async Task<ResultDto<string>> InsertaDet(PresupuestoDetRequest request)
+        public async Task<ResultDto<string>> InsertaDet(string Empresa,
+            string numeropresupuesto, string tipoaplicacion, string fechapresupuesto, string bcoliquidacion, string xmlDetalle)
         {
-           return await (_repository.InsertaDet(request));
+           return await (_repository.InsertaDet(Empresa, numeropresupuesto, tipoaplicacion, fechapresupuesto, bcoliquidacion, xmlDetalle));
         }
 
         public async Task<ResultDto<string>> SpActualiza(PresupuestoRequest request)
@@ -43,9 +44,9 @@ namespace CajaBanco.Services.Presupuesto
             return await _repository.SpElimina(Ban01Empresa, Ban01Numero);
         }
 
-        public async Task<ResultDto<string>> SpEliminaDet(string Ban02Empresa, string Ban02Ruc, string Ban02Tipodoc, string Ban02NroDoc, string Ban02Codigo)
+        public async Task<ResultDto<string>> SpEliminaDet(string Ban02Empresa,  string Ban02Codigo, string Ban02Numero)
         {
-            return await _repository.SpEliminaDet(Ban02Empresa, Ban02Ruc, Ban02Tipodoc, Ban02NroDoc, Ban02Codigo);
+            return await _repository.SpEliminaDet(Ban02Empresa,  Ban02Codigo, Ban02Numero);
         }
 
         public async Task<ResultDto<PresupuestoListResponse>> SpLista(string empresa, string mes, string anio)
@@ -53,9 +54,9 @@ namespace CajaBanco.Services.Presupuesto
            return await _repository.SpLista(empresa, mes, anio);
         }
 
-        public async Task<ResultDto<PresupuestoDetResponse>> SpListaDet(string empresa, string numerodocumento, string fechapresupuesto)
+        public async Task<ResultDto<PresupuestoDetResponse>> SpListaDet(string empresa, string numerodocumento)
         {
-            return await _repository.SpListaDet(empresa, numerodocumento, fechapresupuesto);
+            return await _repository.SpListaDet(empresa, numerodocumento);
         }
 
         public async Task<ResultDto<DocPendienteResponse>> SpListaDocPendientes(string empresa, string fechavencimiento , string ruc)

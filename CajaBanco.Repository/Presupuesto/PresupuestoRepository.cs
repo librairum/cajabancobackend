@@ -73,43 +73,17 @@ namespace CajaBanco.Repository.Presupuesto
             return result;
         }
 
-        public async Task<ResultDto<string>> InsertaDet(PresupuestoDetRequest request)
+        public async Task<ResultDto<string>> SpElimina(string Ban01Empresa, string Ban01Numero)
         {
             ResultDto<string> result = new ResultDto<string>();
             try
             {
-
                 SqlConnection cnx = new SqlConnection(_connectionString);
-                SqlCommand cmd = new SqlCommand("Spu_Ban_Ins_PresupuestoDetalle", cnx);
-
-           
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Del_PrepuestoPago", cnx);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Ban02Empresa", request.Ban02Empresa);
-                cmd.Parameters.AddWithValue("@Ban02Ruc", request.Ban02Ruc);
-               
-                cmd.Parameters.AddWithValue("@Ban02Tipodoc", request.Ban02Tipodoc);
-                cmd.Parameters.AddWithValue("@Ban02NroDoc", request.Ban02NroDoc);
-                cmd.Parameters.AddWithValue("@Ban02Codigo", request.Ban02Codigo);
-                cmd.Parameters.AddWithValue("@Ban02Numero", request.Ban02Numero);
+                cmd.Parameters.AddWithValue("@Ban01Empresa", Ban01Empresa);
+                cmd.Parameters.AddWithValue("@Ban01Numero", Ban01Numero);
 
-                cmd.Parameters.AddWithValue("@Ban02Fecha", request.Ban02Fecha);
-                cmd.Parameters.AddWithValue("@Ban02TipoCambio", request.Ban02TipoCambio);
-                cmd.Parameters.AddWithValue("Ban02TipoAplic", request.@Ban02TipoAplic);
-                cmd.Parameters.AddWithValue("@Ban02Moneda", request.Ban02Moneda);
-
-                cmd.Parameters.AddWithValue("@Ban02Soles", request.Ban02Soles);
-                cmd.Parameters.AddWithValue("@Ban02Dolares", request.Ban02Dolares);
-                cmd.Parameters.AddWithValue("@Ban02SolesVale", request.Ban02SolesVale);
-                cmd.Parameters.AddWithValue("@Ban02DolaresVale", request.Ban02DolaresVale);
-                cmd.Parameters.AddWithValue("@Ban02Concepto", request.Ban02Concepto);
-                cmd.Parameters.AddWithValue("@Ban02GiroOrden", request.Ban02GiroOrden);
-                cmd.Parameters.AddWithValue("@Ban02BcoLiquidacion", request.Ban02BcoLiquidacion);
-                cmd.Parameters.AddWithValue("@Ban02Redondeo", request.Ban02Redondeo);
-                cmd.Parameters.AddWithValue("@Ban02Usuario", request.Ban02Usuario);
-                cmd.Parameters.AddWithValue("@Ban02Pc", request.Ban02Pc);
-                cmd.Parameters.AddWithValue("@Ban02FechaRegistro", request.Ban02FechaRegistro);
-                cmd.Parameters.AddWithValue("@Ban02Estado", request.Ban02Estado);
-                cmd.Parameters.AddWithValue("@Ban02EstadoTemp", request.Ban02EstadoTemp); 
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
                 parMensaje.Direction = ParameterDirection.Output;
 
@@ -119,9 +93,11 @@ namespace CajaBanco.Repository.Presupuesto
                 cnx.Open();
                 var respuesta = await cmd.ExecuteNonQueryAsync();
                 cnx.Close();
+
                 result.Item = "1";
                 result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
                 result.Message = parMensaje.Value.ToString();
+
             }
             catch (Exception ex)
             {
@@ -129,6 +105,33 @@ namespace CajaBanco.Repository.Presupuesto
                 result.IsSuccess = false;
             }
             return result;
+        }
+
+        public async Task<ResultDto<PresupuestoListResponse>> SpLista(string empresa, string anio, string mes)
+        {
+            ResultDto<PresupuestoListResponse> res = new ResultDto<PresupuestoListResponse>();
+            List<PresupuestoListResponse> list = new List<PresupuestoListResponse>();
+
+            try
+            {
+                SqlConnection cnx = new SqlConnection(_connectionString);
+                DynamicParameters parametros = new DynamicParameters();
+                parametros.Add("@empresa", empresa);
+                parametros.Add("@mes", mes);
+                parametros.Add("@anio", anio);
+                list = (List<PresupuestoListResponse>)await cnx.QueryAsync<PresupuestoListResponse>("Spu_Ban_Trae_ResumenPrespuesto",
+                    parametros, commandType: System.Data.CommandType.StoredProcedure);
+                res.IsSuccess = list.Count > 0 ? true : false;
+                res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
+                res.Data = list.ToList();
+                //this._cnx.conexion.QueryAsync<PresupuestoListResponse>
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
         }
 
         public async Task<ResultDto<string>> SpActualiza(PresupuestoRequest request)
@@ -141,7 +144,7 @@ namespace CajaBanco.Repository.Presupuesto
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Ban01Empresa", request.Ban01Empresa);
                 cmd.Parameters.AddWithValue("@Ban01Numero", request.Ban01Numero);
-              
+
                 cmd.Parameters.AddWithValue("@Ban01Anio", request.Ban01Anio);
                 cmd.Parameters.AddWithValue("@Ban01Mes", request.Ban01Mes);
                 cmd.Parameters.AddWithValue("@Ban01Descripcion", request.Ban01Descripcion);
@@ -170,7 +173,105 @@ namespace CajaBanco.Repository.Presupuesto
             }
             return result;
         }
+        public async Task<ResultDto<string>> InsertaDet(string Empresa,
+            string numeropresupuesto, string tipoaplicacion, string fechapresupuesto, string bcoliquidacion, string xmlDetalle) {
+            //
+            ResultDto<string> result = new ResultDto<string>();
+            try
+            {
+                SqlConnection cnx = new SqlConnection(_connectionString);
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Ins_PresupuestoPagoDetTemporal", cnx);
+                cmd.CommandType = CommandType.StoredProcedure;
+      
+                cmd.Parameters.AddWithValue("@Empresa", Empresa);
+                cmd.Parameters.AddWithValue("@NumeroPresupuesto", numeropresupuesto);
+                cmd.Parameters.AddWithValue("@TipoAplicacion", tipoaplicacion); // valor por importe total 00
+                cmd.Parameters.AddWithValue("@FechaPresupuesto", fechapresupuesto); //fecha del documento cabecera de prespupesto
+                cmd.Parameters.AddWithValue("@BcoLiquidacion", bcoliquidacion); // dejar en blanco
+                cmd.Parameters.AddWithValue("@xmlDetalle", xmlDetalle); // traer del docpendiente general ese valor de xsml
 
+                var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
+                parMensaje.Direction = ParameterDirection.Output;
+
+                var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                parFlag.Direction = ParameterDirection.Output;
+
+                cnx.Open();
+                var respuesta = await cmd.ExecuteNonQueryAsync();
+                cnx.Close();
+                result.Item = "1";
+                result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
+                result.Message = parMensaje.Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
+        }
+        
+        //public async Task<ResultDto<string>> InsertaDet(PresupuestoDetRequest request, string xmlDetalle)
+        //{
+        //    ResultDto<string> result = new ResultDto<string>();
+        //    try
+        //    {
+
+        //        SqlConnection cnx = new SqlConnection(_connectionString);
+        //        SqlCommand cmd = new SqlCommand("Spu_Ban_Ins_PresupuestoDetalle", cnx);
+
+           
+        //        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+        //        cmd.Parameters.AddWithValue("@Ban02Empresa", request.Ban02Empresa);
+        //        cmd.Parameters.AddWithValue("@Ban02Ruc", request.Ban02Ruc);
+               
+        //        cmd.Parameters.AddWithValue("@Ban02Tipodoc", request.Ban02Tipodoc);
+        //        cmd.Parameters.AddWithValue("@Ban02NroDoc", request.Ban02NroDoc);
+        //        cmd.Parameters.AddWithValue("@Ban02Codigo", request.Ban02Codigo);
+        //        cmd.Parameters.AddWithValue("@Ban02Numero", request.Ban02Numero);
+
+        //        cmd.Parameters.AddWithValue("@Ban02Fecha", request.Ban02Fecha);
+        //        cmd.Parameters.AddWithValue("@Ban02TipoCambio", request.Ban02TipoCambio);
+        //        cmd.Parameters.AddWithValue("Ban02TipoAplic", request.@Ban02TipoAplic);
+        //        cmd.Parameters.AddWithValue("@Ban02Moneda", request.Ban02Moneda);
+
+        //        cmd.Parameters.AddWithValue("@Ban02Soles", request.Ban02Soles);
+        //        cmd.Parameters.AddWithValue("@Ban02Dolares", request.Ban02Dolares);
+        //        cmd.Parameters.AddWithValue("@Ban02SolesVale", request.Ban02SolesVale);
+        //        cmd.Parameters.AddWithValue("@Ban02DolaresVale", request.Ban02DolaresVale);
+        //        cmd.Parameters.AddWithValue("@Ban02Concepto", request.Ban02Concepto);
+        //        cmd.Parameters.AddWithValue("@Ban02GiroOrden", request.Ban02GiroOrden);
+        //        cmd.Parameters.AddWithValue("@Ban02BcoLiquidacion", request.Ban02BcoLiquidacion);
+        //        cmd.Parameters.AddWithValue("@Ban02Redondeo", request.Ban02Redondeo);
+        //        cmd.Parameters.AddWithValue("@Ban02Usuario", request.Ban02Usuario);
+        //        cmd.Parameters.AddWithValue("@Ban02Pc", request.Ban02Pc);
+        //        cmd.Parameters.AddWithValue("@Ban02FechaRegistro", request.Ban02FechaRegistro);
+        //        cmd.Parameters.AddWithValue("@Ban02Estado", request.Ban02Estado);
+        //        cmd.Parameters.AddWithValue("@Ban02EstadoTemp", request.Ban02EstadoTemp); 
+        //        var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
+        //        parMensaje.Direction = ParameterDirection.Output;
+
+        //        var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+        //        parFlag.Direction = ParameterDirection.Output;
+
+        //        cnx.Open();
+        //        var respuesta = await cmd.ExecuteNonQueryAsync();
+        //        cnx.Close();
+        //        result.Item = "1";
+        //        result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
+        //        result.Message = parMensaje.Value.ToString();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        result.MessageException = ex.Message;
+        //        result.IsSuccess = false;
+        //    }
+        //    return result;
+        //}
+
+        
+
+     
         public async Task<ResultDto<string>> SpActualizaDet(PresupuestoDetRequest request)
         {
             ResultDto<string> result = new ResultDto<string>();
@@ -229,40 +330,8 @@ namespace CajaBanco.Repository.Presupuesto
             return result;
         }
 
-        public async Task<ResultDto<string>> SpElimina(string Ban01Empresa, string Ban01Numero)
-        {
-            ResultDto<string> result = new ResultDto<string>();
-            try
-            {
-                SqlConnection cnx = new SqlConnection(_connectionString);
-                SqlCommand cmd = new SqlCommand("Spu_Ban_Del_PrepuestoPago", cnx);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Ban01Empresa", Ban01Empresa);
-                cmd.Parameters.AddWithValue("@Ban01Numero", Ban01Numero);
-                
-                var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
-                parMensaje.Direction = ParameterDirection.Output;
 
-                var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
-                parFlag.Direction = ParameterDirection.Output;
-
-                cnx.Open();
-                var respuesta = await cmd.ExecuteNonQueryAsync();
-                cnx.Close();
-
-                result.Item = "1";
-                result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
-                result.Message = parMensaje.Value.ToString();
-
-            }
-            catch (Exception ex) {
-                result.MessageException = ex.Message;
-                result.IsSuccess = false;
-            }
-            return result;
-        }
-
-        public async Task<ResultDto<string>> SpEliminaDet(string Ban02Empresa, string Ban02Ruc, string Ban02Tipodoc, string Ban02NroDoc, string Ban02Codigo)
+        public async Task<ResultDto<string>> SpEliminaDet(string Ban02Empresa,string Ban02Codigo, string ban02Numero)
         {
             ResultDto<string> result = new ResultDto<string>();
             try
@@ -271,9 +340,10 @@ namespace CajaBanco.Repository.Presupuesto
                 SqlCommand cmd = new SqlCommand("Spu_Ban_Del_PresupuestoDetalle", cnx);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Ban02Empresa", Ban02Empresa);
-                cmd.Parameters.AddWithValue("@Ban02Ruc", Ban02Ruc);
-                cmd.Parameters.AddWithValue("@Ban02Tipodoc", Ban02Tipodoc);
-                cmd.Parameters.AddWithValue("@Ban02NroDoc", Ban02NroDoc);
+                //cmd.Parameters.AddWithValue("@Ban02Ruc", Ban02Ruc);
+                //cmd.Parameters.AddWithValue("@Ban02Tipodoc", Ban02Tipodoc);
+                //cmd.Parameters.AddWithValue("@Ban02NroDoc", Ban02NroDoc);
+                cmd.Parameters.AddWithValue("@Ban02Numero", ban02Numero);
                 cmd.Parameters.AddWithValue("@Ban02Codigo", Ban02Codigo);
 
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
@@ -297,34 +367,9 @@ namespace CajaBanco.Repository.Presupuesto
             return result;
         }
 
-        public async Task<ResultDto<PresupuestoListResponse>> SpLista(string empresa, string anio,string mes )
-        {
-            ResultDto<PresupuestoListResponse> res = new ResultDto<PresupuestoListResponse>();
-            List<PresupuestoListResponse> list = new List<PresupuestoListResponse>();
+        
 
-            try
-            {
-                SqlConnection cnx = new SqlConnection(_connectionString);
-                DynamicParameters parametros = new DynamicParameters();
-                parametros.Add("@empresa", empresa);
-                parametros.Add("@mes", mes);
-                parametros.Add("@anio", anio);
-                list = (List<PresupuestoListResponse>)await cnx.QueryAsync<PresupuestoListResponse>("Spu_Ban_Trae_ResumenPrespuesto",
-                    parametros, commandType: System.Data.CommandType.StoredProcedure);
-                res.IsSuccess = list.Count > 0 ? true : false;
-                res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
-                res.Data = list.ToList();
-                //this._cnx.conexion.QueryAsync<PresupuestoListResponse>
-            }
-            catch (Exception ex)
-            {
-                res.IsSuccess = false;
-                res.MessageException = ex.Message;
-            }
-            return res;
-        }
-
-        public async Task<ResultDto<PresupuestoDetResponse>> SpListaDet(string empresa, string numerodocumento, string fechapresupuesto)
+        public async Task<ResultDto<PresupuestoDetResponse>> SpListaDet(string empresa, string numeropresupuesto)
         {
             ResultDto<PresupuestoDetResponse> res = new ResultDto<PresupuestoDetResponse>();
             List<PresupuestoDetResponse> list = new List<PresupuestoDetResponse>();
@@ -334,9 +379,10 @@ namespace CajaBanco.Repository.Presupuesto
                 SqlConnection cnx = new SqlConnection(_connectionString);
                 DynamicParameters parametros = new DynamicParameters();
                 parametros.Add("@empresa", empresa);
-                parametros.Add("@numerodocumento", numerodocumento);
-                parametros.Add("@fechaprespuesto", fechapresupuesto);
-                list = (List<PresupuestoDetResponse>)await cnx.QueryAsync<PresupuestoDetResponse>("Spu_Ban_Trae_DetallePrespuesto",
+                parametros.Add("@numeropresupuesto", numeropresupuesto);
+                //parametros.Add("@fechaprespuesto", fechapresupuesto);
+                                                                                               
+                list = (List<PresupuestoDetResponse>)await cnx.QueryAsync<PresupuestoDetResponse>("Spu_Ban_Trae_DetallePresupuestoTemporal",
                     parametros, commandType: System.Data.CommandType.StoredProcedure);
                 res.IsSuccess = list.Count > 0 ? true : false;
                 res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";

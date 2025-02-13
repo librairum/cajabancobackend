@@ -17,13 +17,13 @@ namespace CajaBanco.Abstractions.IService
         public Task<ResultDto<PresupuestoListResponse>> SpLista(string empresa, string anio, string mes );
 
         //detalle
-        public Task<ResultDto<string>> InsertaDet(PresupuestoDetRequest request);
-        public Task<ResultDto<string>> SpEliminaDet(string Ban02Empresa,
-            string Ban02Ruc, string Ban02Tipodoc, string Ban02NroDoc, string Ban02Codigo);
+        public Task<ResultDto<string>> InsertaDet(string Empresa,
+            string numeropresupuesto, string tipoaplicacion, string fechapresupuesto, string bcoliquidacion, string xmlDetalle);
+        public Task<ResultDto<string>> SpEliminaDet(string Ban02Empresa, string Ban02Codigo, string Ban02Numero);
 
         public Task<ResultDto<string>> SpActualizaDet(PresupuestoDetRequest request);
 
-        public Task<ResultDto<PresupuestoDetResponse>> SpListaDet(string empresa, string numerodocumento, string fechapresupuesto);
+        public Task<ResultDto<PresupuestoDetResponse>> SpListaDet(string empresa, string numeropresupuesto);
 
         public Task<ResultDto<DocPendienteResponse>> SpListaDocPendientes(string empresa, string fechavencimiento, string ruc );
 

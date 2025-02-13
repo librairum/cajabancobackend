@@ -116,11 +116,12 @@ namespace CajaBancoAPI.Controllers
         #region "Detalle"
         [HttpPost]
         [Route("SpInsertaDet")]
-        public async Task<ActionResult> InsertaDet(PresupuestoDetRequest request)
+        public async Task<ActionResult> InsertaDet(string Empresa,
+            string numeropresupuesto, string tipoaplicacion, string fechapresupuesto, string bcoliquidacion, string xmlDetalle)
         {
             try
             {
-                var result = await this._app.InsertaDet(request);
+                var result = await this._app.InsertaDet(Empresa, numeropresupuesto, tipoaplicacion, fechapresupuesto, bcoliquidacion, xmlDetalle);
                 return Ok(result);
             }catch(Exception ex)
             {
@@ -129,12 +130,11 @@ namespace CajaBancoAPI.Controllers
         }
         [HttpDelete]
         [Route("SpEliminaDet")]
-        public async Task<ActionResult> SpEliminaDet(string empresa, string ruc, string tipodoc,
-            string nrodoc, string codigo)
+        public async Task<ActionResult> SpEliminaDet(string empresa, string codigoDetallePresupuesto, string numeroPresupuesto)
         {
             try
             {
-                var result = await this._app.SpEliminaDet(empresa, ruc, tipodoc, nrodoc, codigo);
+                var result = await this._app.SpEliminaDet(empresa, codigoDetallePresupuesto, numeroPresupuesto);
                 return Ok(result);
 
             }
@@ -161,11 +161,11 @@ namespace CajaBancoAPI.Controllers
         [HttpGet]
         [Route("SpListaDet")]
         public async Task<ActionResult> SpListaDet(string empresa, 
-            string numerodocumento, string fechapresupuesto)
+            string numerodocumento)
         {
             try
             {
-                var result = await this._app.SpListaDet(empresa, numerodocumento, fechapresupuesto);
+                var result = await this._app.SpListaDet(empresa, numerodocumento);
                 return Ok(result);
             }
             catch (Exception ex)
