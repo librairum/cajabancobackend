@@ -52,3 +52,21 @@ C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.App
 C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\refint\CajaBanco.Application.dll
 C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.pdb
 C:\Users\ivan\Documents\Visual Studio 2022\Webapi\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\ref\CajaBanco.Application.dll
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.Application.deps.json
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.Application.dll
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.Application.pdb
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.Abstractions.dll
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.DTO.dll
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.Abstractions.pdb
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.DTO.pdb
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.csproj.AssemblyReference.cache
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.AssemblyInfoInputs.cache
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.AssemblyInfo.cs
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.csproj.CoreCompileInputs.cache
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.sourcelink.json
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanc.208C4748.Up2Date
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.dll
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\refint\CajaBanco.Application.dll
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.pdb
+D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\ref\CajaBanco.Application.dll

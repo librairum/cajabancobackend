@@ -14,6 +14,9 @@ namespace CajaBanco.DTO.Presupuesto
         public string Ban02NroDoc { get; set; } 
         public string Ban02Codigo { get; set; }
 
+        public string RazonSocial { get; set; }
+        public string nombreMoneda { get; set; }
+        public string NombreTipoDocumento { get; set; }
         //Numero presupuesto
         public string Ban02Numero { get; set; }
 
@@ -40,6 +43,19 @@ namespace CajaBanco.DTO.Presupuesto
         public string Ban02FechaRegistro { get; set; }
         public string Ban02Estado { get; set; }
         public string Ban02EstadoTemp { get; set; }
+
+        public double ban02pagosoles { get; set; }
+        public double ban02PagoDolares { get; set; }
+        public double Ban02TasaDetraccion { get; set; }
+        public double Ban02ImporteDetraccionSoles { get; set; }
+        public double Ban02ImporteDetraccionDolares { get; set; }
+        public double Ban02TasaRetencion { get; set; }
+        public double Ban02ImporteRetencionSoles { get; set; }
+        public double Ban02ImporteRetencionDolares { get; set; }
+        public double Ban02TasaPercepcion { get; set; }
+        public double Ban02ImportePercepcionSoles { get; set; }
+        public double Ban02ImportePercepcionDolares { get; set; }
+
 
 
     }

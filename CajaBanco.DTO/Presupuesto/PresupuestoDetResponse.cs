@@ -15,7 +15,7 @@ namespace CajaBanco.DTO.Presupuesto
         //       //ImporteDetraccionSoles ImporteDetraccionDolares    TipoDetraccion ImporteRetencionSoles
         //       //ImportePercepcionSoles NetoPagarSoles  NetoPagarDolares razonsocial NombreTipDoc
 
-        int Item { get; set; }
+        public int Item { get; set; }
         public string Ban02Empresa { get; set; }
         
         public string Ban02Codigo { get; set; }
@@ -46,5 +46,24 @@ namespace CajaBanco.DTO.Presupuesto
         public string NombreTipDoc { get; set; }
 
         public string razonsocial { get; set; }
+
+        public string NombreTipoDocumento { get; set; }
+        public string nombremoneda { get; set; }
+        public string Ban02TipoDetraccion{ get; set; }
+
+        public double ban02Tasadetraccion { get; set; }
+        public double Ban02ImporteDetraccionSoles { get; set; }
+        public double Ban02ImporteDetraccionDolares { get; set; }
+        public double Ban02TasaRetencion { get; set; }
+        public double Ban02ImporteRetencionSoles { get; set; }
+        public double Ban02ImporteRetencionDolares { get; set; }
+        public double Ban02TasaPercepcion { get; set; }
+        public double Ban02ImportePercepcionSoles { get; set; }
+        public double Ban02ImportePercepcionDolares { get; set; }
+        public double Ban02NetoSoles { get; set; }
+        public double Ban02NetoDolares { get; set; }
+
+
+
     }
 }

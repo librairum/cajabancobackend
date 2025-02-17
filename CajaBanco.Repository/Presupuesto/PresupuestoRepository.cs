@@ -207,65 +207,7 @@ namespace CajaBanco.Repository.Presupuesto
             return result;
         }
         
-        //public async Task<ResultDto<string>> InsertaDet(PresupuestoDetRequest request, string xmlDetalle)
-        //{
-        //    ResultDto<string> result = new ResultDto<string>();
-        //    try
-        //    {
-
-        //        SqlConnection cnx = new SqlConnection(_connectionString);
-        //        SqlCommand cmd = new SqlCommand("Spu_Ban_Ins_PresupuestoDetalle", cnx);
-
-           
-        //        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-        //        cmd.Parameters.AddWithValue("@Ban02Empresa", request.Ban02Empresa);
-        //        cmd.Parameters.AddWithValue("@Ban02Ruc", request.Ban02Ruc);
-               
-        //        cmd.Parameters.AddWithValue("@Ban02Tipodoc", request.Ban02Tipodoc);
-        //        cmd.Parameters.AddWithValue("@Ban02NroDoc", request.Ban02NroDoc);
-        //        cmd.Parameters.AddWithValue("@Ban02Codigo", request.Ban02Codigo);
-        //        cmd.Parameters.AddWithValue("@Ban02Numero", request.Ban02Numero);
-
-        //        cmd.Parameters.AddWithValue("@Ban02Fecha", request.Ban02Fecha);
-        //        cmd.Parameters.AddWithValue("@Ban02TipoCambio", request.Ban02TipoCambio);
-        //        cmd.Parameters.AddWithValue("Ban02TipoAplic", request.@Ban02TipoAplic);
-        //        cmd.Parameters.AddWithValue("@Ban02Moneda", request.Ban02Moneda);
-
-        //        cmd.Parameters.AddWithValue("@Ban02Soles", request.Ban02Soles);
-        //        cmd.Parameters.AddWithValue("@Ban02Dolares", request.Ban02Dolares);
-        //        cmd.Parameters.AddWithValue("@Ban02SolesVale", request.Ban02SolesVale);
-        //        cmd.Parameters.AddWithValue("@Ban02DolaresVale", request.Ban02DolaresVale);
-        //        cmd.Parameters.AddWithValue("@Ban02Concepto", request.Ban02Concepto);
-        //        cmd.Parameters.AddWithValue("@Ban02GiroOrden", request.Ban02GiroOrden);
-        //        cmd.Parameters.AddWithValue("@Ban02BcoLiquidacion", request.Ban02BcoLiquidacion);
-        //        cmd.Parameters.AddWithValue("@Ban02Redondeo", request.Ban02Redondeo);
-        //        cmd.Parameters.AddWithValue("@Ban02Usuario", request.Ban02Usuario);
-        //        cmd.Parameters.AddWithValue("@Ban02Pc", request.Ban02Pc);
-        //        cmd.Parameters.AddWithValue("@Ban02FechaRegistro", request.Ban02FechaRegistro);
-        //        cmd.Parameters.AddWithValue("@Ban02Estado", request.Ban02Estado);
-        //        cmd.Parameters.AddWithValue("@Ban02EstadoTemp", request.Ban02EstadoTemp); 
-        //        var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
-        //        parMensaje.Direction = ParameterDirection.Output;
-
-        //        var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
-        //        parFlag.Direction = ParameterDirection.Output;
-
-        //        cnx.Open();
-        //        var respuesta = await cmd.ExecuteNonQueryAsync();
-        //        cnx.Close();
-        //        result.Item = "1";
-        //        result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
-        //        result.Message = parMensaje.Value.ToString();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        result.MessageException = ex.Message;
-        //        result.IsSuccess = false;
-        //    }
-        //    return result;
-        //}
-
-        
+    
 
      
         public async Task<ResultDto<string>> SpActualizaDet(PresupuestoDetRequest request)
@@ -280,31 +222,22 @@ namespace CajaBanco.Repository.Presupuesto
 
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Ban02Empresa", request.Ban02Empresa);
-                cmd.Parameters.AddWithValue("@Ban02Ruc", request.Ban02Ruc);
-
-                cmd.Parameters.AddWithValue("@Ban02Tipodoc", request.Ban02Tipodoc);
-                cmd.Parameters.AddWithValue("@Ban02NroDoc", request.Ban02NroDoc);
+                cmd.Parameters.AddWithValue("@Ban02Ruc", request.Ban02Numero);
                 cmd.Parameters.AddWithValue("@Ban02Codigo", request.Ban02Codigo);
-                cmd.Parameters.AddWithValue("@Ban02Numero", request.Ban02Numero);
+                cmd.Parameters.AddWithValue("@Ban02PagoSoles", request.ban02pagosoles);
+                cmd.Parameters.AddWithValue("@Ban02PagoDolares", request.ban02PagoDolares);
+                
+                cmd.Parameters.AddWithValue("@Ban02TasaDetraccion", request.Ban02TasaDetraccion);
+                cmd.Parameters.AddWithValue("@Ban02ImporteDetraccionSoles", request.Ban02ImporteDetraccionSoles);
+                cmd.Parameters.AddWithValue("@Ban02ImporteDetraccionDolares", request.Ban02ImporteDetraccionDolares);
+                cmd.Parameters.AddWithValue("@Ban02TasaRetencion", request.Ban02TasaRetencion);
+                cmd.Parameters.AddWithValue("@Ban02ImporteRetencionSoles", request.Ban02ImporteRetencionSoles);
+                cmd.Parameters.AddWithValue("@Ban02ImporteRetencionDolares", request.Ban02ImporteRetencionDolares);
+                cmd.Parameters.AddWithValue("@Ban02TasaPercepcion", request.Ban02TasaPercepcion);
+                cmd.Parameters.AddWithValue("@Ban02ImportePercepcionSoles", request.Ban02ImportePercepcionSoles);
+                cmd.Parameters.AddWithValue("@Ban02ImportePercepcionDolares", request.Ban02ImportePercepcionDolares);
 
-                cmd.Parameters.AddWithValue("@Ban02Fecha", request.Ban02Fecha);
-                cmd.Parameters.AddWithValue("@Ban02TipoCambio", request.Ban02TipoCambio);
-                cmd.Parameters.AddWithValue("Ban02TipoAplic", request.@Ban02TipoAplic);
-                cmd.Parameters.AddWithValue("@Ban02Moneda", request.Ban02Moneda);
 
-                cmd.Parameters.AddWithValue("@Ban02Soles", request.Ban02Soles);
-                cmd.Parameters.AddWithValue("@Ban02Dolares", request.Ban02Dolares);
-                cmd.Parameters.AddWithValue("@Ban02SolesVale", request.Ban02SolesVale);
-                cmd.Parameters.AddWithValue("@Ban02DolaresVale", request.Ban02DolaresVale);
-                cmd.Parameters.AddWithValue("@Ban02Concepto", request.Ban02Concepto);
-                cmd.Parameters.AddWithValue("@Ban02GiroOrden", request.Ban02GiroOrden);
-                cmd.Parameters.AddWithValue("@Ban02BcoLiquidacion", request.Ban02BcoLiquidacion);
-                cmd.Parameters.AddWithValue("@Ban02Redondeo", request.Ban02Redondeo);
-                cmd.Parameters.AddWithValue("@Ban02Usuario", request.Ban02Usuario);
-                cmd.Parameters.AddWithValue("@Ban02Pc", request.Ban02Pc);
-                cmd.Parameters.AddWithValue("@Ban02FechaRegistro", request.Ban02FechaRegistro);
-                cmd.Parameters.AddWithValue("@Ban02Estado", request.Ban02Estado);
-                cmd.Parameters.AddWithValue("@Ban02EstadoTemp", request.Ban02EstadoTemp);
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
                 parMensaje.Direction = ParameterDirection.Output;
 
@@ -376,6 +309,7 @@ namespace CajaBanco.Repository.Presupuesto
                 DynamicParameters parametros = new DynamicParameters();
                 parametros.Add("@empresa", empresa);
                 parametros.Add("@numeropresupuesto", numeropresupuesto);
+                
                 //parametros.Add("@fechaprespuesto", fechapresupuesto);
                                                                                                
                 list = (List<PresupuestoDetResponse>)await cnx.QueryAsync<PresupuestoDetResponse>("Spu_Ban_Trae_DetallePresupuestoTemporal",
