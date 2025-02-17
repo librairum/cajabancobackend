@@ -207,7 +207,7 @@ namespace CajaBanco.Repository.Presupuesto
             return result;
         }
         
-      
+
 
      
         public async Task<ResultDto<string>> SpActualizaDet(PresupuestoDetRequest request)
@@ -222,6 +222,7 @@ namespace CajaBanco.Repository.Presupuesto
 
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Ban02Empresa", request.Ban02Empresa);
+
 
           
                 cmd.Parameters.AddWithValue("@Ban02Numero", request.Ban02Numero);
@@ -269,13 +270,9 @@ namespace CajaBanco.Repository.Presupuesto
                 SqlConnection cnx = new SqlConnection(_connectionString);
                 SqlCommand cmd = new SqlCommand("Spu_Ban_Del_PresupuestoDetalle", cnx);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Ban02Empresa", Ban02Empresa);
-                //cmd.Parameters.AddWithValue("@Ban02Ruc", Ban02Ruc);
-                //cmd.Parameters.AddWithValue("@Ban02Tipodoc", Ban02Tipodoc);
-                //cmd.Parameters.AddWithValue("@Ban02NroDoc", Ban02NroDoc);
+                cmd.Parameters.AddWithValue("@Ban02Empresa", Ban02Empresa);                
                 cmd.Parameters.AddWithValue("@Ban02Numero", ban02Numero);
                 cmd.Parameters.AddWithValue("@Ban02Codigo", Ban02Codigo);
-
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
                 parMensaje.Direction = ParameterDirection.Output;
 
@@ -310,6 +307,7 @@ namespace CajaBanco.Repository.Presupuesto
                 DynamicParameters parametros = new DynamicParameters();
                 parametros.Add("@empresa", empresa);
                 parametros.Add("@numeropresupuesto", numeropresupuesto);
+                
                 //parametros.Add("@fechaprespuesto", fechapresupuesto);
                                                                                                
                 list = (List<PresupuestoDetResponse>)await cnx.QueryAsync<PresupuestoDetResponse>("Spu_Ban_Trae_DetallePresupuestoTemporal",

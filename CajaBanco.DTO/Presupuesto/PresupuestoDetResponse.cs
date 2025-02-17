@@ -15,7 +15,7 @@ namespace CajaBanco.DTO.Presupuesto
         //       //ImporteDetraccionSoles ImporteDetraccionDolares    TipoDetraccion ImporteRetencionSoles
         //       //ImportePercepcionSoles NetoPagarSoles  NetoPagarDolares razonsocial NombreTipDoc
 
-        int Item { get; set; }
+        public int Item { get; set; }
         public string Ban02Empresa { get; set; }
         
         public string Ban02Codigo { get; set; }
@@ -47,41 +47,22 @@ namespace CajaBanco.DTO.Presupuesto
 
         public string razonsocial { get; set; }
 
+        public string NombreTipoDocumento { get; set; }
+        public string nombremoneda { get; set; }
+        public string Ban02TipoDetraccion{ get; set; }
 
-        /*
-         Ban02Empresa	varchar
-Ban02Ruc	varchar
-Ban02Tipodoc	varchar
-Ban02NroDoc	varchar
-Ban02Codigo	varchar
-Ban02Numero	varchar
-Ban02Fecha	datetime
-Ban02TipoCambio	decimal
-Ban02TipoAplic	varchar
-Ban02Moneda	varchar
-Ban02Soles	decimal
-Ban02Dolares	decimal
-Ban02SolesVale	decimal
-Ban02DolaresVale	decimal
-Ban02Concepto	varchar
-Ban02GiroOrden	varchar
-Ban02BcoLiquidacion	varchar
-Ban02Redondeo	varchar
-Ban02FechaRegistro	datetime
-Ban02Estado	varchar
-Ban02PagoSoles	decimal
-Ban02PagoDolares	decimal
-Ban02TasaAfectacion	decimal
-Ban02ImporteAfectacionSoles	decimal
-Ban02ImporteAfectacionDolares	decimal
-Ban02TasaRetencion	decimal
-Ban02ImporteRetencionSoles	decimal
-Ban02ImporteRetencionDolares	decimal
-Ban02TasaPercepcion	decimal
-Ban02ImportePercepcionSoles	decimal
-Ban02ImportePercepcionDolares	decimal
-Ban02NetoSoles	decimal
-Ban02NetoDolares	decimal
-         */
+        public double ban02Tasadetraccion { get; set; }
+        public double Ban02ImporteDetraccionSoles { get; set; }
+        public double Ban02ImporteDetraccionDolares { get; set; }
+        public double Ban02TasaRetencion { get; set; }
+        public double Ban02ImporteRetencionSoles { get; set; }
+        public double Ban02ImporteRetencionDolares { get; set; }
+        public double Ban02TasaPercepcion { get; set; }
+        public double Ban02ImportePercepcionSoles { get; set; }
+        public double Ban02ImportePercepcionDolares { get; set; }
+        public double Ban02NetoSoles { get; set; }
+        public double Ban02NetoDolares { get; set; }
+
+
     }
 }

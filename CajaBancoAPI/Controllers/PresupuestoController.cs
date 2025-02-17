@@ -130,7 +130,9 @@ namespace CajaBancoAPI.Controllers
         }
         [HttpDelete]
         [Route("SpEliminaDet")]
-        public async Task<ActionResult> SpEliminaDet(string empresa, string codigoDetallePresupuesto, string numeroPresupuesto)
+        public async Task<ActionResult> SpEliminaDet(string empresa, 
+            string codigoDetallePresupuesto, 
+            string numeroPresupuesto)
         {
             try
             {
