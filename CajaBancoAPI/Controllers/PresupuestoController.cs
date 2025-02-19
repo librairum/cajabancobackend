@@ -36,11 +36,11 @@ namespace CajaBancoAPI.Controllers
 
         [HttpGet]
         [Route("SpListaDocPendientes")]
-        public async Task<ActionResult> ObtenerListDocPendientes(string empresa,  string fechavencimiento, string ruc = "")
+        public async Task<ActionResult> ObtenerListDocPendientes(string empresa,  string ruc , string numerodocumento)
         {
             try
             {
-                var result = await this._app.SpListaDocPendientes(empresa, fechavencimiento , ruc);
+                var result = await this._app.SpListaDocPendientes(empresa,  ruc, numerodocumento);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -111,7 +111,19 @@ namespace CajaBancoAPI.Controllers
             }
         }
 
-
+        [HttpGet]
+        [Route("SpTraeTipoPago")]
+        public async Task<ActionResult> SpTraeTipoPago(string empresa)
+        {
+            try
+            {
+                var result = await  this._app.SpTraeTipoPago(empresa);
+                return Ok(result);
+            }
+            catch (Exception ex) {
+                return BadRequest(ex.Message);
+            }
+        }
 
         #region "Detalle"
         [HttpPost]

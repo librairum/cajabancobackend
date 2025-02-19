@@ -59,14 +59,19 @@ namespace CajaBanco.Services.Presupuesto
             return await _repository.SpListaDet(empresa, numerodocumento);
         }
 
-        public async Task<ResultDto<DocPendienteResponse>> SpListaDocPendientes(string empresa, string fechavencimiento , string ruc)
+        public async Task<ResultDto<DocPendienteResponse>> SpListaDocPendientes(string empresa,  string ruc, string numerodocumento)
         {
-           return await _repository.SpListaDocPendientes(empresa, fechavencimiento, ruc );
+           return await _repository.SpListaDocPendientes(empresa, ruc, numerodocumento );
         }
 
         public async Task<ResultDto<ProveedorResponse>> SpTraeProveedores(string empresa )
         {
             return await _repository.SpTraeProveedores(empresa );
+        }
+
+        public async Task<ResultDto<TipoPago>> SpTraeTipoPago(string empresa)
+        {
+            return await _repository.SpTraeTipoPago(empresa);
         }
     }
 }

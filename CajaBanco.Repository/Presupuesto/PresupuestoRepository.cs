@@ -227,17 +227,17 @@ namespace CajaBanco.Repository.Presupuesto
           
                 cmd.Parameters.AddWithValue("@Ban02Numero", request.Ban02Numero);
                 cmd.Parameters.AddWithValue("@Ban02Codigo", request.Ban02Codigo);
-                cmd.Parameters.AddWithValue("@Ban02PagoSoles", request.Ban02Empresa);
-                cmd.Parameters.AddWithValue("@Ban02PagoDolares", request.Ban02Empresa);
-                cmd.Parameters.AddWithValue("@Ban02TasaDetraccion", request.Ban02Empresa);
-                cmd.Parameters.AddWithValue("@Ban02ImporteDetraccionSoles", request.Ban02Empresa);
-                cmd.Parameters.AddWithValue("@Ban02ImporteDetraccionDolares", request.Ban02Empresa);
-                cmd.Parameters.AddWithValue("@Ban02TasaRetencion", request.Ban02Empresa);
-                cmd.Parameters.AddWithValue("@Ban02ImporteRetencionSoles", request.Ban02Empresa);
-                cmd.Parameters.AddWithValue("@Ban02ImporteRetencionDolares", request.Ban02Empresa);
-                cmd.Parameters.AddWithValue("@Ban02TasaPercepcion", request.Ban02Empresa);
-                cmd.Parameters.AddWithValue("@Ban02ImportePercepcionSoles", request.Ban02Empresa);
-                cmd.Parameters.AddWithValue("@Ban02ImportePercepcionDolares", request.Ban02Empresa);
+                cmd.Parameters.AddWithValue("@Ban02PagoSoles", request.ban02pagosoles);
+                cmd.Parameters.AddWithValue("@Ban02PagoDolares", request.ban02PagoDolares);
+                cmd.Parameters.AddWithValue("@Ban02TasaDetraccion", request.Ban02TasaDetraccion);
+                cmd.Parameters.AddWithValue("@Ban02ImporteDetraccionSoles", request.Ban02ImporteDetraccionSoles);
+                cmd.Parameters.AddWithValue("@Ban02ImporteDetraccionDolares", request.Ban02ImporteDetraccionSoles);
+                cmd.Parameters.AddWithValue("@Ban02TasaRetencion", request.Ban02TasaRetencion);
+                cmd.Parameters.AddWithValue("@Ban02ImporteRetencionSoles", request.Ban02ImporteRetencionSoles);
+                cmd.Parameters.AddWithValue("@Ban02ImporteRetencionDolares", request.Ban02ImporteRetencionDolares);
+                cmd.Parameters.AddWithValue("@Ban02TasaPercepcion", request.Ban02TasaPercepcion);
+                cmd.Parameters.AddWithValue("@Ban02ImportePercepcionSoles", request.Ban02ImportePercepcionSoles);
+                cmd.Parameters.AddWithValue("@Ban02ImportePercepcionDolares", request.Ban02ImportePercepcionDolares);
          
 
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
@@ -326,7 +326,7 @@ namespace CajaBanco.Repository.Presupuesto
         }
 
 
-        public async Task<ResultDto<DocPendienteResponse>> SpListaDocPendientes(string empresa, string fechavencimiento , string ruc)
+        public async Task<ResultDto<DocPendienteResponse>> SpListaDocPendientes(string empresa, string ruc, string numerodocumento)
         {
             ResultDto<DocPendienteResponse> res = new ResultDto<DocPendienteResponse>();
             List<DocPendienteResponse> list = new List<DocPendienteResponse>();
@@ -337,7 +337,8 @@ namespace CajaBanco.Repository.Presupuesto
                 DynamicParameters parametros = new DynamicParameters();
                 parametros.Add("@empresa", empresa);
                 parametros.Add("@ruc", ruc);
-                parametros.Add("@fechavencimiento", fechavencimiento);
+                parametros.Add("@@numeroDocumento", numerodocumento);
+                //parametros.Add("@fechavencimiento", fechavencimiento);
                 list = (List<DocPendienteResponse>)await cnx.QueryAsync<DocPendienteResponse>("Spu_Ban_Trae_DocPendiente",
                     parametros, commandType: System.Data.CommandType.StoredProcedure);
                 res.IsSuccess = list.Count > 0 ? true : false;
@@ -378,6 +379,34 @@ namespace CajaBanco.Repository.Presupuesto
             }
             return res;
             // public Task<ResultDto<Proveedor>> SpTraeProveedores(string empresa);
+        }
+
+      
+
+        public async Task<ResultDto<TipoPago>> SpTraeTipoPago(string empresa)
+        {
+            ResultDto<TipoPago> res = new ResultDto<TipoPago>();
+            List<TipoPago> list = new List<TipoPago>();
+
+            try
+            {
+                SqlConnection cnx = new SqlConnection(_connectionString);
+                DynamicParameters parametros = new DynamicParameters();
+                parametros.Add("@empresa", empresa);
+
+                list = (List<TipoPago>)await cnx.QueryAsync<TipoPago>("Spu_Ban_Trae_TipoPago",
+                    parametros, commandType: System.Data.CommandType.StoredProcedure);
+                res.IsSuccess = list.Count > 0 ? true : false;
+                res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
+                res.Data = list.ToList();
+
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
         }
     }
 }

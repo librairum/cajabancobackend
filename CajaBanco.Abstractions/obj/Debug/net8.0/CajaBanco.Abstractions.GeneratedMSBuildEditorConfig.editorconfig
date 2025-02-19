@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CajaBanco.Abstractions
-build_property.ProjectDir = D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Abstractions\
+build_property.ProjectDir = D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Abstractions\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

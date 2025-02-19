@@ -25,8 +25,10 @@ namespace CajaBanco.Abstractions.IService
 
         public Task<ResultDto<PresupuestoDetResponse>> SpListaDet(string empresa, string numeropresupuesto);
 
-        public Task<ResultDto<DocPendienteResponse>> SpListaDocPendientes(string empresa, string fechavencimiento, string ruc );
+        public Task<ResultDto<DocPendienteResponse>> SpListaDocPendientes(string empresa, string ruc, string numerodocumento);
 
         public Task<ResultDto<ProveedorResponse>> SpTraeProveedores(string empresa);
+
+        public Task<ResultDto<TipoPago>> SpTraeTipoPago(string empresa);
     }
 }

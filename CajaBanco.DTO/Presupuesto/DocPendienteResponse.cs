@@ -21,6 +21,9 @@ namespace CajaBanco.DTO.Presupuesto
         public string FechaEmision { get; set; }
         public string FechaVencimiento { get; set; }
         public int DiasAtrazo { get; set; }
+        public string AfectoDetraccion { get; set; }
+        public string AfectoRetencion { get; set; }
+
 
     }
 }

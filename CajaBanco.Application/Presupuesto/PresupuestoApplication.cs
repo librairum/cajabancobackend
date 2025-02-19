@@ -60,15 +60,20 @@ namespace CajaBanco.Application.Presupuesto
             return await this._service.SpListaDet(empresa, numerodocumento);
         }
 
-        public async Task<ResultDto<DocPendienteResponse>> SpListaDocPendientes(string empresa, string fechavencimiento , string ruc)
+        public async Task<ResultDto<DocPendienteResponse>> SpListaDocPendientes(string empresa,  string ruc, string numerodocumento)
         {
-            return await this._service.SpListaDocPendientes(empresa, fechavencimiento,  ruc);
+            return await this._service.SpListaDocPendientes(empresa, ruc, numerodocumento);
         }
 
 
         public async Task<ResultDto<ProveedorResponse>> SpTraeProveedores(string empresa)
         {
             return await _service.SpTraeProveedores(empresa);
+        }
+
+        public async Task<ResultDto<TipoPago>> SpTraeTipoPago(string empresa)
+        {
+            return await _service.SpTraeTipoPago(empresa);
         }
     }
 }
