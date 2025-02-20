@@ -32,7 +32,10 @@ Ban01FechaRegistro	datetime	no	8
 
         public string Ban01Pc { get; set; }
         public string Ban01FechaRegistro { get; set; }
-  
+
+        public string Ban01MedioPago { get; set; }
+
+
 
 
     }

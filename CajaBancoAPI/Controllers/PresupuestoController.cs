@@ -36,7 +36,7 @@ namespace CajaBancoAPI.Controllers
 
         [HttpGet]
         [Route("SpListaDocPendientes")]
-        public async Task<ActionResult> ObtenerListDocPendientes(string empresa,  string ruc , string numerodocumento)
+        public async Task<ActionResult> ObtenerListDocPendientes(string empresa,  string ruc="" , string numerodocumento = "")
         {
             try
             {

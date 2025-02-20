@@ -53,6 +53,7 @@ namespace CajaBanco.Repository.Presupuesto
                 cmd.Parameters.AddWithValue("@Ban01Usuario", request.Ban01Usuario);
                 cmd.Parameters.AddWithValue("@Ban01Pc", request.Ban01Pc);
                 cmd.Parameters.AddWithValue("@Ban01FechaRegistro", request.Ban01FechaRegistro);
+                cmd.Parameters.AddWithValue("@Ban01MedioPago", request.Ban01MedioPago);
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
                 parMensaje.Direction = ParameterDirection.Output;
 
@@ -148,7 +149,8 @@ namespace CajaBanco.Repository.Presupuesto
                 cmd.Parameters.AddWithValue("@Ban01Anio", request.Ban01Anio);
                 cmd.Parameters.AddWithValue("@Ban01Mes", request.Ban01Mes);
                 cmd.Parameters.AddWithValue("@Ban01Descripcion", request.Ban01Descripcion);
-                cmd.Parameters.AddWithValue("@Ban01Fecha", request.Ban01Fecha);           
+                cmd.Parameters.AddWithValue("@Ban01Fecha", request.Ban01Fecha);
+                cmd.Parameters.AddWithValue("@Ban01MedioPago", request.Ban01MedioPago);
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
                 parMensaje.Direction = ParameterDirection.Output;
 
@@ -326,7 +328,7 @@ namespace CajaBanco.Repository.Presupuesto
         }
 
 
-        public async Task<ResultDto<DocPendienteResponse>> SpListaDocPendientes(string empresa, string ruc, string numerodocumento)
+        public async Task<ResultDto<DocPendienteResponse>> SpListaDocPendientes(string empresa, string ruc = "", string numerodocumento = "")
         {
             ResultDto<DocPendienteResponse> res = new ResultDto<DocPendienteResponse>();
             List<DocPendienteResponse> list = new List<DocPendienteResponse>();
