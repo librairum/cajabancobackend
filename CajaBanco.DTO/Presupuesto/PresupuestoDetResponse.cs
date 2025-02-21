@@ -63,6 +63,11 @@ namespace CajaBanco.DTO.Presupuesto
         public double Ban02NetoSoles { get; set; }
         public double Ban02NetoDolares { get; set; }
 
+        public string? Ban02FechaEmision { get; set; }
+        public string? Ban02FechaVencimiento { get; set; }
+         
+
+
 
     }
 }

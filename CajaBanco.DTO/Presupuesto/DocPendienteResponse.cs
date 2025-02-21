@@ -24,6 +24,8 @@ namespace CajaBanco.DTO.Presupuesto
         public string? AfectoDetraccion { get; set; }
         public string? AfectoRetencion { get; set; }
 
+        public string clave { get; set; }
+
 
     }
 }
