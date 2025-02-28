@@ -410,5 +410,10 @@ namespace CajaBanco.Repository.Presupuesto
             }
             return res;
         }
+
+        Task<ResultDto<string>> IPresupuestoRepository.SpActualizaComprobante(string empresa, string anio, string mes, string numeropresupuesto, string fechapago, string numerooperacion, string enlacepago, string flagOperacion)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

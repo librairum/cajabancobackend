@@ -27,5 +27,9 @@ namespace CajaBanco.DTO.Pago
         public string EnlaceComprobante { get; set; }   
 
         public string NombreMedioPago { get; set; }
+        public string Ban01FechaEjecucionPago { get; set; }
+        public string Ban01NroOperacion { get; set; }
+        public string Ban01EnlacePago { get; set; }
+
     }
 }

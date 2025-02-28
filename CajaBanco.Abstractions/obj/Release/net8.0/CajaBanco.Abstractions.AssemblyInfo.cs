@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CajaBanco.Abstractions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d96ea1460550de0bc5a578e525a7015a3e4a449")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+581c000f49485e0ec1ecb1bb07b5ee17c05d4414")]
 [assembly: System.Reflection.AssemblyProductAttribute("CajaBanco.Abstractions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CajaBanco.Abstractions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
