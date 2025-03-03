@@ -7832,26 +7832,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ivan\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\sistemas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\trabajo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\CajaBancoAPI.csproj",
+      "projectUniqueName": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBancoAPI\\CajaBancoAPI.csproj",
       "projectName": "CajaBancoAPI",
-      "projectPath": "D:\\trabajo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\CajaBancoAPI.csproj",
-      "packagesPath": "C:\\Users\\ivan\\.nuget\\packages\\",
-      "outputPath": "D:\\trabajo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\obj\\",
+      "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBancoAPI\\CajaBancoAPI.csproj",
+      "packagesPath": "C:\\Users\\sistemas\\.nuget\\packages\\",
+      "outputPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBancoAPI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\sistemas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7866,20 +7859,20 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\trabajo\\cajabanco\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj": {
-              "projectPath": "D:\\trabajo\\cajabanco\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj"
+            "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj": {
+              "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj"
             },
-            "D:\\trabajo\\cajabanco\\cajabancobackend\\CajaBanco.Application\\CajaBanco.Application.csproj": {
-              "projectPath": "D:\\trabajo\\cajabanco\\cajabancobackend\\CajaBanco.Application\\CajaBanco.Application.csproj"
+            "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Application\\CajaBanco.Application.csproj": {
+              "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Application\\CajaBanco.Application.csproj"
             },
-            "D:\\trabajo\\cajabanco\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj": {
-              "projectPath": "D:\\trabajo\\cajabanco\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj"
+            "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj": {
+              "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj"
             },
-            "D:\\trabajo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\CajaBanco.Repository.csproj": {
-              "projectPath": "D:\\trabajo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\CajaBanco.Repository.csproj"
+            "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Repository\\CajaBanco.Repository.csproj": {
+              "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Repository\\CajaBanco.Repository.csproj"
             },
-            "D:\\trabajo\\cajabanco\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj": {
-              "projectPath": "D:\\trabajo\\cajabanco\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj"
+            "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj": {
+              "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj"
             }
           }
         }
@@ -7935,7 +7928,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

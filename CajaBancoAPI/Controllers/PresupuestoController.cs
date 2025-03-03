@@ -128,12 +128,13 @@ namespace CajaBancoAPI.Controllers
         [HttpPut]
         [Route("SpActualizaComprobante")]
         public async Task<ActionResult> SpActualizaComprobante(string empresa, string anio,
-            string mes, string numeropresupuesto, string fechapago, string numerooperacion,
-            string enlacepago, string flagOperacion)
+            string mes, string numeropresupuesto, string fechapago ="", string numerooperacion="",
+            string enlacepago="", string flagOperacion="")
         {
             try
             {
-                var result = await this._app.SpTraeTipoPago(empresa);
+                var result = await this._app.SpActualizaComprobante(empresa, anio, mes, numeropresupuesto, 
+                    fechapago, numerooperacion, enlacepago, flagOperacion);
                 return Ok(result);
             }
             catch (Exception ex) {

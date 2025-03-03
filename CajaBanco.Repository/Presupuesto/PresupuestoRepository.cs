@@ -405,19 +405,21 @@ namespace CajaBanco.Repository.Presupuesto
             return res;
         }
 
-        public async Task<ResultDto<string>> SpActualizaComprobante(string empresa, string anio, string mes, 
+        public async Task<ResultDto<string>> SpActualizaComprobante(string empresa, string anio, 
+            string mes, 
             string numeropresupuesto, string fechapago, string numerooperacion, 
             string enlacepago, string flagOperacion)
         {
             ResultDto<string> result = new ResultDto<string>();
             try {
                 SqlConnection cn = new SqlConnection(_connectionString);
-                SqlCommand cmd = new SqlCommand("", cn);
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Upd_ComprobantePago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@empresa", empresa);
                 cmd.Parameters.AddWithValue("@anio", anio);
                 cmd.Parameters.AddWithValue("@mes", mes);
                 cmd.Parameters.AddWithValue("@numeropresupuesto", numeropresupuesto);
+                cmd.Parameters.AddWithValue("@fechapago", fechapago);
                 cmd.Parameters.AddWithValue("@numerooperacion", numerooperacion);                
                 cmd.Parameters.AddWithValue("@enlacepago", enlacepago);
                 cmd.Parameters.AddWithValue("@flagOperacion", flagOperacion);

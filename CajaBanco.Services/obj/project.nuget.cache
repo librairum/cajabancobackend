@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "J8RiYbgIR/uXYR6ELiDoq2IOV2Tg4foHwC1VypclgSRh+ZL+lJHoWUmhSIDMvIIIxLNwPkDIXIlYxFEjjHExkg==",
+  "dgSpecHash": "pHKSZmMdeT0=",
   "success": true,
-  "projectFilePath": "D:\\trabajo\\cajabanco\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj",
+  "projectFilePath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ivan\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.0\\microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512",
-    "C:\\Users\\ivan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
+    "C:\\Users\\sistemas\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.0\\microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512",
+    "C:\\Users\\sistemas\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
   ],
   "logs": []
 }
