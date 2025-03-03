@@ -34,7 +34,9 @@ namespace CajaBanco.Abstractions.IRepository
         public Task<ResultDto<TipoPago>> SpTraeTipoPago(string empresa);
 
 
-        public Task<ResultDto<string>> SpActualizaComprobante(string empresa,string anio,string mes,string numeropresupuesto,string fechapago,string numerooperacion, string enlacepago, string flagOperacion);
+        public Task<ResultDto<string>> SpActualizaComprobante(string empresa,string anio,string mes,
+            string numeropresupuesto,string fechapago,string numerooperacion, 
+            string enlacepago, string flagOperacion);
 
     }
 }

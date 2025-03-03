@@ -125,6 +125,101 @@ namespace CajaBancoAPI.Controllers
             }
         }
 
+        [HttpPut]
+        [Route("SpActualizaComprobante")]
+        public async Task<ActionResult> SpActualizaComprobante(string empresa, string anio,
+            string mes, string numeropresupuesto, string fechapago, string numerooperacion,
+            string enlacepago, string flagOperacion)
+        {
+            try
+            {
+                var result = await this._app.SpTraeTipoPago(empresa);
+                return Ok(result);
+            }
+            catch (Exception ex) {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost]
+        [Route("upload")]
+        public IActionResult SubirArchivo(IFormFile archivo)
+        {
+            try {
+                if (archivo == null || archivo.Length == 0)
+                {
+                    return BadRequest("Archivo no válido.");
+                }
+
+                string destinationPath = Path.Combine("/ruta/del/destino/en/el/servidor", archivo.FileName); // Reemplaza con tu ruta
+
+                using (var stream = new FileStream(destinationPath, FileMode.Create))
+                {
+                    archivo.CopyTo(stream);
+                }
+
+                return Ok("Archivo subido con éxito.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error al subir el archivo: {ex.Message}");
+            }
+        }
+
+        [HttpPost]
+        [Route("Copiar")]
+        public IActionResult CopiaArchivo([FromQuery] string rutaOrigen, [FromQuery] string rutaDestino)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(rutaOrigen) || string.IsNullOrEmpty(rutaDestino))
+                {
+                    return BadRequest("Rutas de origen y destino no pueden estar vacías.");
+                }
+
+                if (!System.IO.File.Exists(rutaOrigen))
+                {
+                    return BadRequest("El archivo de origen no existe.");
+                }
+
+                System.IO.File.Copy(rutaOrigen, rutaDestino, true); // El tercer parámetro 'true' permite sobrescribir el archivo de destino si ya existe.
+
+                return Ok("Archivo copiado con éxito.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error al copiar el archivo: {ex.Message}");
+            }
+        }
+
+        [HttpPost]
+        [Route("SubirArchivo")]
+        public IActionResult Post(IFormFile file, [FromForm] string destinationPath)
+        {
+            try
+            {
+                if (file == null || file.Length == 0)
+                {
+                    return BadRequest("Archivo no válido.");
+                }
+
+                string fullDestinationPath = Path.Combine(destinationPath, file.FileName);
+
+                using (var stream = new FileStream(fullDestinationPath, FileMode.Create))
+                {
+                    file.CopyTo(stream);
+                }
+
+                return Ok("Archivo subido con éxito.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error al subir el archivo: {ex.Message}");
+            }
+        }
+
+
+
         #region "Detalle"
         [HttpPost]
         [Route("SpInsertaDet")]

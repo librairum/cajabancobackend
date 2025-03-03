@@ -238,6 +238,27 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
+    "Method": "CopiaArchivo",
+    "RelativePath": "Presupuesto/Copiar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rutaOrigen",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "rutaDestino",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
     "Method": "SpActualiza",
     "RelativePath": "Presupuesto/SpActualiza",
     "HttpMethod": "PUT",
@@ -248,6 +269,57 @@
         "Name": "request",
         "Type": "CajaBanco.DTO.Pago.PresupuestoRequest",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
+    "Method": "SpActualizaComprobante",
+    "RelativePath": "Presupuesto/SpActualizaComprobante",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numeropresupuesto",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechapago",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numerooperacion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "enlacepago",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "flagOperacion",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -472,6 +544,43 @@
       {
         "Name": "empresa",
         "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
+    "Method": "Post",
+    "RelativePath": "Presupuesto/SubirArchivo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "destinationPath",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
+    "Method": "SubirArchivo",
+    "RelativePath": "Presupuesto/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "archivo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       }
     ],

@@ -75,5 +75,13 @@ namespace CajaBanco.Application.Presupuesto
         {
             return await _service.SpTraeTipoPago(empresa);
         }
+
+        public async Task<ResultDto<string>> SpActualizaComprobante(string empresa, string anio, 
+            string mes, string numeropresupuesto, string fechapago, string numerooperacion, 
+            string enlacepago, string flagOperacion)
+        {
+            return await _service.SpActualizaComprobante(empresa, anio, mes, numeropresupuesto,
+                fechapago, numerooperacion, enlacepago, flagOperacion);
+        }
     }
 }

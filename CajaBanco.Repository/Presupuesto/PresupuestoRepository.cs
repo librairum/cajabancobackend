@@ -295,9 +295,7 @@ namespace CajaBanco.Repository.Presupuesto
             }
             return result;
         }
-
         
-
         public async Task<ResultDto<PresupuestoDetResponse>> SpListaDet(string empresa, string numeropresupuesto)
         {
             ResultDto<PresupuestoDetResponse> res = new ResultDto<PresupuestoDetResponse>();
@@ -326,7 +324,6 @@ namespace CajaBanco.Repository.Presupuesto
             }
             return res;
         }
-
 
         public async Task<ResultDto<DocPendienteResponse>> SpListaDocPendientes(string empresa, string ruc = "", string numerodocumento = "")
         {
@@ -381,10 +378,7 @@ namespace CajaBanco.Repository.Presupuesto
             }
             return res;
             // public Task<ResultDto<Proveedor>> SpTraeProveedores(string empresa);
-        }
-
-      
-
+        }        
         public async Task<ResultDto<TipoPago>> SpTraeTipoPago(string empresa)
         {
             ResultDto<TipoPago> res = new ResultDto<TipoPago>();
@@ -411,9 +405,43 @@ namespace CajaBanco.Repository.Presupuesto
             return res;
         }
 
-        Task<ResultDto<string>> IPresupuestoRepository.SpActualizaComprobante(string empresa, string anio, string mes, string numeropresupuesto, string fechapago, string numerooperacion, string enlacepago, string flagOperacion)
+        public async Task<ResultDto<string>> SpActualizaComprobante(string empresa, string anio, string mes, 
+            string numeropresupuesto, string fechapago, string numerooperacion, 
+            string enlacepago, string flagOperacion)
         {
-            throw new NotImplementedException();
+            ResultDto<string> result = new ResultDto<string>();
+            try {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                SqlCommand cmd = new SqlCommand("", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@empresa", empresa);
+                cmd.Parameters.AddWithValue("@anio", anio);
+                cmd.Parameters.AddWithValue("@mes", mes);
+                cmd.Parameters.AddWithValue("@numeropresupuesto", numeropresupuesto);
+                cmd.Parameters.AddWithValue("@numerooperacion", numerooperacion);                
+                cmd.Parameters.AddWithValue("@enlacepago", enlacepago);
+                cmd.Parameters.AddWithValue("@flagOperacion", flagOperacion);
+                var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
+                parMensaje.Direction = ParameterDirection.Output;
+
+                var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                parFlag.Direction = ParameterDirection.Output;
+
+                cn.Open();
+                var respuesta = await cmd.ExecuteNonQueryAsync();
+                cn.Close();
+                result.Item = "1";
+                result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
+                result.Message = parMensaje.Value.ToString();
+           
+
+            }
+            catch (Exception ex)
+            {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
         }
     }
 }
