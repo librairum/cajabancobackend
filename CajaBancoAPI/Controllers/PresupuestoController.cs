@@ -5,17 +5,23 @@ using CajaBanco.DTO.Pago;
 using CajaBanco.DTO.Presupuesto;
 using CajaBanco.Repository.Presupuesto;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.Extensions.Configuration;
 namespace CajaBancoAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class PresupuestoController : Controller
     {
+        
         private IPresupuestoApplication _app;
-        public PresupuestoController(IPresupuestoApplication aplicacion)
+        private string rutaDestinoGlobal = "";
+        private IConfiguration _configuracion;
+        public PresupuestoController(IPresupuestoApplication aplicacion,
+            IConfiguration configuracion)
         {
             this._app = aplicacion;
+            this._configuracion = configuracion;
+            
         }
 
 
@@ -135,6 +141,21 @@ namespace CajaBancoAPI.Controllers
             {
                 var result = await this._app.SpActualizaComprobante(empresa, anio, mes, numeropresupuesto, 
                     fechapago, numerooperacion, enlacepago, flagOperacion);
+                if (flagOperacion.Equals("E"))
+                {
+                    string ruta = _configuracion["rutaDocumentos"];
+                    string nombrearchivo = "";
+
+                    int posicionRecorte = enlacepago.IndexOf("documentos") + 11;
+                    string[] cadenas =  enlacepago.Split('/');
+                    int ultimaCadena = cadenas.Length-1;
+                    string nombreArchivo = cadenas[ultimaCadena];
+                    string rutaCompleta = Path.Combine(ruta, nombreArchivo);
+                    //string rutaFormateada = rutaCompleta.Replace('/', '\\');
+                    //                    string nombreArchivo = enlacepago.Substring(posicionRecorte, enlacepago.Length - (posicionRecorte-1));
+                    //Console.WriteLine(rutaCompleta);
+                    EliminarArchivo(rutaCompleta);
+                }
                 return Ok(result);
             }
             catch (Exception ex) {
@@ -142,56 +163,7 @@ namespace CajaBancoAPI.Controllers
             }
         }
 
-        [HttpPost]
-        [Route("upload")]
-        public IActionResult SubirArchivo(IFormFile archivo)
-        {
-            try {
-                if (archivo == null || archivo.Length == 0)
-                {
-                    return BadRequest("Archivo no válido.");
-                }
-
-                string destinationPath = Path.Combine("/ruta/del/destino/en/el/servidor", archivo.FileName); // Reemplaza con tu ruta
-
-                using (var stream = new FileStream(destinationPath, FileMode.Create))
-                {
-                    archivo.CopyTo(stream);
-                }
-
-                return Ok("Archivo subido con éxito.");
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Error al subir el archivo: {ex.Message}");
-            }
-        }
-
-        [HttpPost]
-        [Route("Copiar")]
-        public IActionResult CopiaArchivo([FromQuery] string rutaOrigen, [FromQuery] string rutaDestino)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(rutaOrigen) || string.IsNullOrEmpty(rutaDestino))
-                {
-                    return BadRequest("Rutas de origen y destino no pueden estar vacías.");
-                }
-
-                if (!System.IO.File.Exists(rutaOrigen))
-                {
-                    return BadRequest("El archivo de origen no existe.");
-                }
-
-                System.IO.File.Copy(rutaOrigen, rutaDestino, true); // El tercer parámetro 'true' permite sobrescribir el archivo de destino si ya existe.
-
-                return Ok("Archivo copiado con éxito.");
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Error al copiar el archivo: {ex.Message}");
-            }
-        }
+      
 
         [HttpPost]
         [Route("SubirArchivo")]
@@ -206,7 +178,7 @@ namespace CajaBancoAPI.Controllers
 
                 string fullDestinationPath = Path.Combine(destinationPath, file.FileName);
 
-                using (var stream = new FileStream(fullDestinationPath, FileMode.Create))
+                using (var stream = new FileStream(fullDestinationPath, FileMode.CreateNew))
                 {
                     file.CopyTo(stream);
                 }
@@ -219,7 +191,31 @@ namespace CajaBancoAPI.Controllers
             }
         }
 
+        [HttpDelete]
+        [Route("EliminarArchivo")]
+        public IActionResult EliminarArchivo([FromQuery] string rutaArchivo)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(rutaArchivo))
+                {
+                    return BadRequest("La ruta del archivo no puede estar vacía.");
+                }
 
+                if (!System.IO.File.Exists(rutaArchivo))
+                {
+                    return NotFound("El archivo no existe.");
+                }
+
+                System.IO.File.Delete(rutaArchivo);
+
+                return Ok("Archivo eliminado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error al eliminar el archivo: {ex.Message}");
+            }
+        }
 
         #region "Detalle"
         [HttpPost]

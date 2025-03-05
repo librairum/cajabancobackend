@@ -233,14 +233,15 @@ namespace CajaBanco.Repository.Presupuesto
                 cmd.Parameters.AddWithValue("@Ban02PagoDolares", request.ban02PagoDolares);
                 cmd.Parameters.AddWithValue("@Ban02TasaDetraccion", request.Ban02TasaDetraccion);
                 cmd.Parameters.AddWithValue("@Ban02ImporteDetraccionSoles", request.Ban02ImporteDetraccionSoles);
-                cmd.Parameters.AddWithValue("@Ban02ImporteDetraccionDolares", request.Ban02ImporteDetraccionSoles);
+                cmd.Parameters.AddWithValue("@Ban02ImporteDetraccionDolares", request.Ban02ImporteDetraccionDolares);
                 cmd.Parameters.AddWithValue("@Ban02TasaRetencion", request.Ban02TasaRetencion);
                 cmd.Parameters.AddWithValue("@Ban02ImporteRetencionSoles", request.Ban02ImporteRetencionSoles);
                 cmd.Parameters.AddWithValue("@Ban02ImporteRetencionDolares", request.Ban02ImporteRetencionDolares);
                 cmd.Parameters.AddWithValue("@Ban02TasaPercepcion", request.Ban02TasaPercepcion);
                 cmd.Parameters.AddWithValue("@Ban02ImportePercepcionSoles", request.Ban02ImportePercepcionSoles);
                 cmd.Parameters.AddWithValue("@Ban02ImportePercepcionDolares", request.Ban02ImportePercepcionDolares);
-         
+                cmd.Parameters.AddWithValue("@Ban02NetoSoles", request.Ban02NetoSoles);
+                cmd.Parameters.AddWithValue("@Ban02NetoDolares", request.Ban02NetoDolares);
 
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
                 parMensaje.Direction = ParameterDirection.Output;

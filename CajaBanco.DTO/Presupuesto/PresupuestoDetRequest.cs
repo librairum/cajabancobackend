@@ -55,7 +55,8 @@ namespace CajaBanco.DTO.Presupuesto
         public double Ban02TasaPercepcion { get; set; }
         public double Ban02ImportePercepcionSoles { get; set; }
         public double Ban02ImportePercepcionDolares { get; set; }
-
+        public double Ban02NetoSoles { get; set; }
+        public double Ban02NetoDolares { get; set; }
 
 
     }
