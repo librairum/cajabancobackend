@@ -33,6 +33,8 @@ D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\Microsoft.Extensions.DependencyInjection.dll
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\Microsoft.Extensions.DependencyModel.dll
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\Microsoft.Extensions.Logging.Abstractions.dll
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\Microsoft.Extensions.Options.dll
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\Microsoft.Identity.Client.dll
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\Microsoft.Identity.Client.Extensions.Msal.dll
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\Microsoft.IdentityModel.Abstractions.dll

@@ -139,6 +139,7 @@ namespace CajaBancoAPI.Controllers
         {
             try
             {
+
                 var result = await this._app.SpActualizaComprobante(empresa, anio, mes, numeropresupuesto, 
                     fechapago, numerooperacion, enlacepago, flagOperacion);
                 if (flagOperacion.Equals("E"))
@@ -175,7 +176,7 @@ namespace CajaBancoAPI.Controllers
                 {
                     return BadRequest("Archivo no válido.");
                 }
-
+              
                 string fullDestinationPath = Path.Combine(destinationPath, file.FileName);
 
                 using (var stream = new FileStream(fullDestinationPath, FileMode.CreateNew))

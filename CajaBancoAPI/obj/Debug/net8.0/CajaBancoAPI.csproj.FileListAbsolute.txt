@@ -1839,3 +1839,5 @@ D:\trabajo\cajabanco\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\scopedcss\bu
 D:\trabajo\cajabanco\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\CajaBanc.1118D73D.Up2Date
 D:\trabajo\cajabanco\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\CajaBancoAPI.genruntimeconfig.cache
 D:\trabajo\cajabanco\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\ref\CajaBancoAPI.dll
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
