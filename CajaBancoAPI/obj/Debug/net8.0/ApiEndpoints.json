@@ -238,19 +238,14 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
-    "Method": "CopiaArchivo",
-    "RelativePath": "Presupuesto/Copiar",
-    "HttpMethod": "POST",
+    "Method": "EliminarArchivo",
+    "RelativePath": "Presupuesto/EliminarArchivo",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "rutaOrigen",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "rutaDestino",
+        "Name": "rutaArchivo",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -565,22 +560,6 @@
       {
         "Name": "destinationPath",
         "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
-    "Method": "SubirArchivo",
-    "RelativePath": "Presupuesto/upload",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "archivo",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       }
     ],

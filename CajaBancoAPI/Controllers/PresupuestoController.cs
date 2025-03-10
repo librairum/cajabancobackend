@@ -176,8 +176,8 @@ namespace CajaBancoAPI.Controllers
                 {
                     return BadRequest("Archivo no válido.");
                 }
-              
-                string fullDestinationPath = Path.Combine(destinationPath, file.FileName);
+                string rutaDestino = "C:\\inetpub\\wwwroot\\cajabancofront\\assets\\documentos";
+                string fullDestinationPath = Path.Combine(rutaDestino, file.FileName);
 
                 using (var stream = new FileStream(fullDestinationPath, FileMode.CreateNew))
                 {

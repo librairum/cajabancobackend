@@ -6,33 +6,29 @@
   },
   "paths": {
     "/Autenticacion/SpList": {
-      "get": {
+      "post": {
         "tags": [
           "Autenticacion"
         ],
-        "parameters": [
-          {
-            "name": "nombreusuario",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "claveusuario",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "codigoempresa",
-            "in": "query",
-            "schema": {
-              "type": "string"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccesoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccesoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccesoRequest"
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -55,6 +51,27 @@
           },
           {
             "name": "codModulo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Autenticacion/SpTraeEmpresasxModulo": {
+      "get": {
+        "tags": [
+          "Autenticacion"
+        ],
+        "parameters": [
+          {
+            "name": "codigomodulo",
             "in": "query",
             "schema": {
               "type": "string"
@@ -187,75 +204,26 @@
         }
       }
     },
-    "/Detracciones/SpListPagoDetalle": {
-      "get": {
-        "tags": [
-          "Detracciones"
-        ],
-        "parameters": [
-          {
-            "name": "empresa",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "ruc",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/Detracciones/SpListPago": {
-      "get": {
-        "tags": [
-          "Detracciones"
-        ],
-        "parameters": [
-          {
-            "name": "empresa",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/Detracciones/SpUpdatePago": {
+    "/CtaBancaria/SpUpdate": {
       "put": {
         "tags": [
-          "Detracciones"
+          "CtaBancaria"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DetraccionPagoUpdateRequestDTO"
+                "$ref": "#/components/schemas/CtaBancariaRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DetraccionPagoUpdateRequestDTO"
+                "$ref": "#/components/schemas/CtaBancariaRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DetraccionPagoUpdateRequestDTO"
+                "$ref": "#/components/schemas/CtaBancariaRequest"
               }
             }
           }
@@ -267,21 +235,87 @@
         }
       }
     },
-    "/Detracciones/SpTraePagoDetraccion": {
-      "get": {
+    "/CtaBancaria/SpDelete": {
+      "delete": {
         "tags": [
-          "Detracciones"
+          "CtaBancaria"
         ],
         "parameters": [
           {
-            "name": "empresa",
+            "name": "codigoempresa",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "codigo",
+            "name": "idbanco",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idnro",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CtaBancaria/SpCreate": {
+      "post": {
+        "tags": [
+          "CtaBancaria"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CtaBancariaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CtaBancariaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CtaBancariaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CtaBancaria/SpList": {
+      "get": {
+        "tags": [
+          "CtaBancaria"
+        ],
+        "parameters": [
+          {
+            "name": "idempresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idbanco",
             "in": "query",
             "schema": {
               "type": "string"
@@ -351,10 +385,10 @@
         }
       }
     },
-    "/Reportes/SpListarMontoVale": {
+    "/Presupuesto/SpTraeProveedores": {
       "get": {
         "tags": [
-          "Reportes"
+          "Presupuesto"
         ],
         "parameters": [
           {
@@ -372,21 +406,459 @@
         }
       }
     },
-    "/Reportes/SpListarFactPendientes": {
+    "/Presupuesto/SpListaDocPendientes": {
       "get": {
         "tags": [
-          "Reportes"
+          "Presupuesto"
         ],
         "parameters": [
           {
-            "name": "usuario",
+            "name": "empresa",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "valor",
+            "name": "ruc",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "numerodocumento",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Presupuesto/SpList": {
+      "get": {
+        "tags": [
+          "Presupuesto"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "anio",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "mes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Presupuesto/SpInsert": {
+      "post": {
+        "tags": [
+          "Presupuesto"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PresupuestoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PresupuestoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PresupuestoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Presupuesto/SpActualiza": {
+      "put": {
+        "tags": [
+          "Presupuesto"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PresupuestoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PresupuestoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PresupuestoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Presupuesto/SpElimina": {
+      "delete": {
+        "tags": [
+          "Presupuesto"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "numero",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Presupuesto/SpTraeTipoPago": {
+      "get": {
+        "tags": [
+          "Presupuesto"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Presupuesto/SpActualizaComprobante": {
+      "put": {
+        "tags": [
+          "Presupuesto"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "anio",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "mes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "numeropresupuesto",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fechapago",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "numerooperacion",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "enlacepago",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "flagOperacion",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Presupuesto/SubirArchivo": {
+      "post": {
+        "tags": [
+          "Presupuesto"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "destinationPath": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                },
+                "destinationPath": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Presupuesto/EliminarArchivo": {
+      "delete": {
+        "tags": [
+          "Presupuesto"
+        ],
+        "parameters": [
+          {
+            "name": "rutaArchivo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Presupuesto/SpInsertaDet": {
+      "post": {
+        "tags": [
+          "Presupuesto"
+        ],
+        "parameters": [
+          {
+            "name": "Empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "numeropresupuesto",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tipoaplicacion",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fechapresupuesto",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bcoliquidacion",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "xmlDetalle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Presupuesto/SpEliminaDet": {
+      "delete": {
+        "tags": [
+          "Presupuesto"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "codigoDetallePresupuesto",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "numeroPresupuesto",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Presupuesto/SpActualizaDet": {
+      "put": {
+        "tags": [
+          "Presupuesto"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PresupuestoDetRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PresupuestoDetRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PresupuestoDetRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Presupuesto/SpListaDet": {
+      "get": {
+        "tags": [
+          "Presupuesto"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "numerodocumento",
             "in": "query",
             "schema": {
               "type": "string"
@@ -403,6 +875,24 @@
   },
   "components": {
     "schemas": {
+      "AccesoRequest": {
+        "type": "object",
+        "properties": {
+          "nombreusuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "claveusuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoempresa": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "BancoCreateRequestDTO": {
         "required": [
           "ban01Empresa",
@@ -429,37 +919,52 @@
         },
         "additionalProperties": false
       },
-      "DetraccionPagoUpdateRequestDTO": {
+      "CtaBancariaRequest": {
         "required": [
-          "empresa",
-          "ruc",
-          "tipo"
+          "ban01Empresa",
+          "ban01IdBanco",
+          "ban01IdCuenta"
         ],
         "type": "object",
         "properties": {
-          "empresa": {
+          "ban01Empresa": {
             "type": "string",
             "nullable": true
           },
-          "ruc": {
+          "ban01IdBanco": {
             "type": "string",
             "nullable": true
           },
-          "tipo": {
+          "ban01IdCuenta": {
             "type": "string",
             "nullable": true
           },
-          "nrodoc": {
+          "ban01IdNro": {
             "type": "string",
             "nullable": true
           },
-          "nroAuto": {
+          "ban01Moneda": {
             "type": "string",
             "nullable": true
           },
-          "fechaPago": {
+          "ban01Descripcion": {
             "type": "string",
-            "format": "date-time",
+            "nullable": true
+          },
+          "ban01CuentaContable": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01Itf": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01Prefijo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01CtaDet": {
+            "type": "string",
             "nullable": true
           }
         },
@@ -497,6 +1002,218 @@
             "nullable": true
           },
           "nomPerfil": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PresupuestoDetRequest": {
+        "type": "object",
+        "properties": {
+          "ban02Empresa": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02Ruc": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02Tipodoc": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02NroDoc": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02Codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "razonSocial": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreMoneda": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreTipoDocumento": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02Numero": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02Fecha": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02TipoCambio": {
+            "type": "number",
+            "format": "double"
+          },
+          "ban02TipoAplic": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02Moneda": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02Soles": {
+            "type": "number",
+            "format": "double"
+          },
+          "ban02Dolares": {
+            "type": "number",
+            "format": "double"
+          },
+          "ban02SolesVale": {
+            "type": "number",
+            "format": "double"
+          },
+          "ban02DolaresVale": {
+            "type": "number",
+            "format": "double"
+          },
+          "ban02Concepto": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02GiroOrden": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02BcoLiquidacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02Redondeo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02Usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02Pc": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02FechaRegistro": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02Estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02EstadoTemp": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban02pagosoles": {
+            "type": "number",
+            "format": "double"
+          },
+          "ban02PagoDolares": {
+            "type": "number",
+            "format": "double"
+          },
+          "ban02TasaDetraccion": {
+            "type": "number",
+            "format": "double"
+          },
+          "ban02ImporteDetraccionSoles": {
+            "type": "number",
+            "format": "double"
+          },
+          "ban02ImporteDetraccionDolares": {
+            "type": "number",
+            "format": "double"
+          },
+          "ban02TasaRetencion": {
+            "type": "number",
+            "format": "double"
+          },
+          "ban02ImporteRetencionSoles": {
+            "type": "number",
+            "format": "double"
+          },
+          "ban02ImporteRetencionDolares": {
+            "type": "number",
+            "format": "double"
+          },
+          "ban02TasaPercepcion": {
+            "type": "number",
+            "format": "double"
+          },
+          "ban02ImportePercepcionSoles": {
+            "type": "number",
+            "format": "double"
+          },
+          "ban02ImportePercepcionDolares": {
+            "type": "number",
+            "format": "double"
+          },
+          "ban02NetoSoles": {
+            "type": "number",
+            "format": "double"
+          },
+          "ban02NetoDolares": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PresupuestoRequest": {
+        "type": "object",
+        "properties": {
+          "ban01Empresa": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01Numero": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01Anio": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01Mes": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01Descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01Fecha": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01Estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01Usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01Pc": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01FechaRegistro": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01MedioPago": {
             "type": "string",
             "nullable": true
           }

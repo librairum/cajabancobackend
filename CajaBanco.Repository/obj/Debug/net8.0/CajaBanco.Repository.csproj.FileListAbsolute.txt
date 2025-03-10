@@ -70,3 +70,21 @@ D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Repository\bin\Debug\net8.0\Caja
 D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Repository\bin\Debug\net8.0\CajaBanco.DTO.pdb
 D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanc.0F00ECDE.Up2Date
 D:\trabajo\cajabanco\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\ref\CajaBanco.Repository.dll
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\bin\Debug\net8.0\CajaBanco.Repository.deps.json
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\bin\Debug\net8.0\CajaBanco.Repository.dll
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\bin\Debug\net8.0\CajaBanco.Repository.pdb
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\bin\Debug\net8.0\CajaBanco.Abstractions.dll
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\bin\Debug\net8.0\CajaBanco.DTO.dll
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\bin\Debug\net8.0\CajaBanco.Abstractions.pdb
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\bin\Debug\net8.0\CajaBanco.DTO.pdb
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanco.Repository.csproj.AssemblyReference.cache
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanco.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanco.Repository.AssemblyInfoInputs.cache
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanco.Repository.AssemblyInfo.cs
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanco.Repository.csproj.CoreCompileInputs.cache
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanco.Repository.sourcelink.json
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanc.0F00ECDE.Up2Date
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanco.Repository.dll
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\refint\CajaBanco.Repository.dll
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanco.Repository.pdb
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\ref\CajaBanco.Repository.dll
