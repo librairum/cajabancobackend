@@ -170,13 +170,17 @@ namespace CajaBancoAPI.Controllers
         [Route("SubirArchivo")]
         public IActionResult Post(IFormFile file, [FromForm] string destinationPath)
         {
+            string rutaDestino = _configuracion["rutaDocumentos"];
             try
             {
                 if (file == null || file.Length == 0)
                 {
                     return BadRequest("Archivo no válido.");
                 }
-                string rutaDestino = "C:\\inetpub\\wwwroot\\cajabancofront\\assets\\documentos";
+                //string ruta = _configuracion["rutaDocumentos"];
+                //string rutaDestino = "C:\\inetpub\\wwwroot\\cajabancofront\\assets\\documentos";
+             
+                
                 string fullDestinationPath = Path.Combine(rutaDestino, file.FileName);
 
                 using (var stream = new FileStream(fullDestinationPath, FileMode.CreateNew))
@@ -188,7 +192,7 @@ namespace CajaBancoAPI.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Error al subir el archivo: {ex.Message}");
+                return StatusCode(500, $"Error al subir el archivo: {ex.Message} , ruta destino desde appseting: {rutaDestino}" );
             }
         }
 

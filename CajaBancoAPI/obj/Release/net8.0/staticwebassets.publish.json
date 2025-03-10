@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "aNvkeUo4KwQmpQLToFwq31pUjM7HVarHzhGst0K+TxQ=",
+  "Hash": "Arqeb50zWsouTWSfY2sWFHX6U0ZQ99DHqukCv9+yTVA=",
   "Source": "CajaBancoAPI",
   "BasePath": "_content/CajaBancoAPI",
   "Mode": "Default",
   "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

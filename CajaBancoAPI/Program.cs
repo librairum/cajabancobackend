@@ -18,16 +18,21 @@ builder.Services.AddRepositoryServices();
 builder.Services.AddServiceServices();
 builder.Services.AddApplicationServices();
 
-var origenesPermitidos = builder.Configuration.GetValue<string>("OrigenesPermitidos")!.Split(",");
-
+//var origenesPermitidos = builder.Configuration.GetValue<string>("OrigenesPermitidos")!.Split(",");
+//opciones.AddDefaultPolicy(politica =>
+//{
+//    politica.WithOrigins(origenesPermitidos).
+//    AllowAnyHeader().
+//    AllowAnyMethod();
+//});
 builder.Services.AddCors(opciones =>
 {
-    opciones.AddDefaultPolicy(politica =>
+    opciones.AddPolicy("MiPoliticaCORS", policy =>
     {
-        politica.WithOrigins(origenesPermitidos).
-        AllowAnyHeader().
-        AllowAnyMethod();
+        policy.WithOrigins("http://192.168.1.44:4200", "http://localhost:4200")
+        .AllowAnyMethod().AllowAnyHeader();
     });
+   
 });
 var app = builder.Build();
 
@@ -43,7 +48,7 @@ if (app.Environment.IsDevelopment())
 // Configure the HTTP request pipeline.
 
 app.UseHttpsRedirection();
-app.UseCors();
+app.UseCors("MiPoliticaCORS");
 app.UseAuthorization();
 
 app.MapControllers();
