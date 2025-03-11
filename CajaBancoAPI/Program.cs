@@ -29,8 +29,12 @@ builder.Services.AddCors(opciones =>
 {
     opciones.AddPolicy("MiPoliticaCORS", policy =>
     {
-        policy.WithOrigins("http://192.168.1.44:4200", "http://localhost:4200")
+        //policy.WithOrigins("http://192.168.1.44:4200", "http://localhost:4200")
+        //.AllowAnyMethod().AllowAnyHeader();
+
+        policy.WithOrigins("http://localhost:4200")
         .AllowAnyMethod().AllowAnyHeader();
+
     });
    
 });
