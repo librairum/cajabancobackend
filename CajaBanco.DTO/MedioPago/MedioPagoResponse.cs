@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CajaBanco.DTO.MedioPago
 {
-    public class MedioPagoRequest
+    public class MedioPagoResponse
     {
         public string Ban01Empresa { get; set; }
         public string Ban01IdTipoPago { get; set; }

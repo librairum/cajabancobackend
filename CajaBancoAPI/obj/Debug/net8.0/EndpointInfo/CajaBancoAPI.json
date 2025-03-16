@@ -329,6 +329,117 @@
         }
       }
     },
+    "/MedioPago/SpActualiza": {
+      "put": {
+        "tags": [
+          "MedioPago"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MedioPagoUpdateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MedioPagoUpdateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MedioPagoUpdateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/MedioPago/SpElimina": {
+      "delete": {
+        "tags": [
+          "MedioPago"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idtipopago",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/MedioPago/SpInserta": {
+      "post": {
+        "tags": [
+          "MedioPago"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MedioPagoInsertDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MedioPagoInsertDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MedioPagoInsertDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/MedioPago/SpTrae": {
+      "get": {
+        "tags": [
+          "MedioPago"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/PermisosxPerfil/{codigoPerfil}/{cCodModulo}": {
       "get": {
         "tags": [
@@ -964,6 +1075,66 @@
             "nullable": true
           },
           "ban01CtaDet": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MedioPagoInsertDTO": {
+        "type": "object",
+        "properties": {
+          "ban01Empresa": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01IdTipoPago": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01Descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01AsiConPrefijo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01AsiConCtaBanco": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01AsiConCtaITF": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MedioPagoUpdateDTO": {
+        "type": "object",
+        "properties": {
+          "ban01Empresa": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01IdTipoPago": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01Descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01AsiConPrefijo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01AsiConCtaBanco": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01AsiConCtaITF": {
             "type": "string",
             "nullable": true
           }

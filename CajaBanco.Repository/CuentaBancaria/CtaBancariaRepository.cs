@@ -61,10 +61,7 @@ namespace CajaBanco.Repository.CuentaBancaria
                 result.Item = request.Ban01IdBanco;
                 result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
                 result.Message = parMensaje.Value.ToString();
-                /*
-                 @Ban01Descripcion varchar(400),  
-varchar(10)  
-                 */
+                
             }
             catch (Exception ex)
             {

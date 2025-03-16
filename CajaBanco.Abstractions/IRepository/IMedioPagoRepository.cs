@@ -8,12 +8,15 @@ using System.Threading.Tasks;
 
 namespace CajaBanco.Abstractions.IRepository
 {
-    public class IMedioPagoRepository
+    public interface IMedioPagoRepository
     {
-        private string _connectionString = ''
-            //public MedioPago()
-        //public Task<ResultDto>
-        
+
+        public Task<ResultDto<string>> SpInserta(MedioPagoInsertDTO request);
+
+        public Task<ResultDto<string>> SpActualiza(MedioPagoUpdateDTO request);
+        public Task<ResultDto<string>> SpElimina(string empresa,
+            string idtipopago);
+        public Task<ResultDto<MedioPagoResponse>> SpTrae(string empresa);
 
     }
 }

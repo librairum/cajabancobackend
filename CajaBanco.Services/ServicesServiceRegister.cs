@@ -9,6 +9,7 @@ using CajaBanco.Abstractions.IService;
 using CajaBanco.Services.Autenticacion;
 using CajaBanco.Services.CuentaBancaria;
 using CajaBanco.Services.Presupuesto;
+using CajaBanco.Services.MedioPago;
 
 namespace CajaBanco.Services
 {
@@ -21,6 +22,8 @@ namespace CajaBanco.Services
             services.AddScoped<IAutenticacionService,AutenticacionService>();
             services.AddScoped<ICtaBancariaService, CtaBancariaService>();
             services.AddScoped<IPresupuestoService, PresupuestoService>();
+            
+            services.AddScoped<IMedioPagoService, MedioPagoService>();
             return services;
         }
 
