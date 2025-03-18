@@ -3,113 +3,111 @@
   "WorkspaceRootPath": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabanco.repository\\mediopago\\mediopagorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\mediopago\\mediopagorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabanco.repository\\ctactable\\ctactablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\ctactable\\ctactablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabanco.services\\mediopago\\mediopagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|solutionrelative:cajabanco.services\\mediopago\\mediopagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabanco.repository\\banco\\bancorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\banco\\bancorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabancoapi\\controllers\\mediopagocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\controllers\\mediopagocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}|CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabanco.abstractions\\iservice\\imediopagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}|CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj|solutionrelative:cajabanco.abstractions\\iservice\\imediopagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabanco.application\\applicationserviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|solutionrelative:cajabanco.application\\applicationserviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabancoapi\\controllers\\ctactablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\controllers\\ctactablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabanco.services\\servicesserviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|solutionrelative:cajabanco.services\\servicesserviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabancoapi\\controllers\\bancocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\controllers\\bancocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabanco.repository\\repositoryserviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\repositoryserviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabanco.application\\ctactable\\ctactableapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|solutionrelative:cajabanco.application\\ctactable\\ctactableapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ApplicationServiceRegister.cs",
-              "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Application\\ApplicationServiceRegister.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Application\\ApplicationServiceRegister.cs",
-              "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Application\\ApplicationServiceRegister.cs",
-              "RelativeToolTip": "CajaBanco.Application\\ApplicationServiceRegister.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T21:09:25.709Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MedioPagoService.cs",
-              "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Services\\MedioPago\\MedioPagoService.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Services\\MedioPago\\MedioPagoService.cs",
-              "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Services\\MedioPago\\MedioPagoService.cs",
-              "RelativeToolTip": "CajaBanco.Services\\MedioPago\\MedioPagoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA1AAAAAAAAAA==",
+              "Title": "BancoRepository.cs",
+              "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Banco\\BancoRepository.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Repository\\Banco\\BancoRepository.cs",
+              "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Banco\\BancoRepository.cs",
+              "RelativeToolTip": "CajaBanco.Repository\\Banco\\BancoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T21:08:46.484Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ServicesServiceRegister.cs",
-              "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Services\\ServicesServiceRegister.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Services\\ServicesServiceRegister.cs",
-              "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Services\\ServicesServiceRegister.cs",
-              "RelativeToolTip": "CajaBanco.Services\\ServicesServiceRegister.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T21:08:14.468Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RepositoryServiceRegister.cs",
-              "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\RepositoryServiceRegister.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Repository\\RepositoryServiceRegister.cs",
-              "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\RepositoryServiceRegister.cs",
-              "RelativeToolTip": "CajaBanco.Repository\\RepositoryServiceRegister.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T21:07:42Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MedioPagoController.cs",
-              "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\MedioPagoController.cs",
-              "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\MedioPagoController.cs",
-              "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\MedioPagoController.cs",
-              "RelativeToolTip": "CajaBancoAPI\\Controllers\\MedioPagoController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAkwBUAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T21:01:16.26Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T23:06:16.658Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MedioPagoRepository.cs",
-              "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\MedioPago\\MedioPagoRepository.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Repository\\MedioPago\\MedioPagoRepository.cs",
-              "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\MedioPago\\MedioPagoRepository.cs",
-              "RelativeToolTip": "CajaBanco.Repository\\MedioPago\\MedioPagoRepository.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAIwI0AAABOAAAAAAAAAA==",
+              "Title": "CtaCtableRepository.cs",
+              "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\CtaCtable\\CtaCtableRepository.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Repository\\CtaCtable\\CtaCtableRepository.cs",
+              "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\CtaCtable\\CtaCtableRepository.cs",
+              "RelativeToolTip": "CajaBanco.Repository\\CtaCtable\\CtaCtableRepository.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T20:46:13.701Z",
+              "WhenOpened": "2025-03-18T23:06:07.016Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CtaCtableController.cs",
+              "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\CtaCtableController.cs",
+              "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\CtaCtableController.cs",
+              "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\CtaCtableController.cs",
+              "RelativeToolTip": "CajaBancoAPI\\Controllers\\CtaCtableController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwC4AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T22:58:48.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CtaCtableApplication.cs",
+              "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Application\\CtaCtable\\CtaCtableApplication.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Application\\CtaCtable\\CtaCtableApplication.cs",
+              "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Application\\CtaCtable\\CtaCtableApplication.cs",
+              "RelativeToolTip": "CajaBanco.Application\\CtaCtable\\CtaCtableApplication.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBUAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T23:03:19.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BancoController.cs",
+              "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\BancoController.cs",
+              "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\BancoController.cs",
+              "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\BancoController.cs",
+              "RelativeToolTip": "CajaBancoAPI\\Controllers\\BancoController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T22:59:02.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IMedioPagoService.cs",
+              "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Abstractions\\IService\\IMedioPagoService.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Abstractions\\IService\\IMedioPagoService.cs",
+              "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Abstractions\\IService\\IMedioPagoService.cs",
+              "RelativeToolTip": "CajaBanco.Abstractions\\IService\\IMedioPagoService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T18:13:24.981Z"
             }
           ]
         }

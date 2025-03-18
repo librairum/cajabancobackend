@@ -329,6 +329,62 @@
         }
       }
     },
+    "/CtaCtable/SpTraeDetalle": {
+      "get": {
+        "tags": [
+          "CtaCtable"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "numero",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CtaCtable/SpTraeCabecera": {
+      "get": {
+        "tags": [
+          "CtaCtable"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "numero",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/MedioPago/SpActualiza": {
       "put": {
         "tags": [

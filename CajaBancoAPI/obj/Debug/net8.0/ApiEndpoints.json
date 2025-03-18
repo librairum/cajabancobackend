@@ -206,6 +206,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CajaBancoAPI.Controllers.CtaCtableController",
+    "Method": "SpTraeCabecera",
+    "RelativePath": "CtaCtable/SpTraeCabecera",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.CtaCtableController",
+    "Method": "SpTraeDetalle",
+    "RelativePath": "CtaCtable/SpTraeDetalle",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numero",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CajaBancoAPI.Controllers.MedioPagoController",
     "Method": "SpActualiza",
     "RelativePath": "MedioPago/SpActualiza",

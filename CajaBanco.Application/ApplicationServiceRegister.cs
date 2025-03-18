@@ -10,6 +10,7 @@ using CajaBanco.Application.Autenticacion;
 using CajaBanco.Application.CuentaBancaria;
 using CajaBanco.Application.Presupuesto;
 using CajaBanco.Application.MedioPago;
+using CajaBanco.Application.CtaCtable;
 namespace CajaBanco.Application
 {
     public static class ApplicationServiceRegister
@@ -21,6 +22,7 @@ namespace CajaBanco.Application
             services.AddScoped<ICtaBancariaApplication, CtaBancariaApplication>();
             services.AddScoped<IPresupuestoApplication, PresupuestoApplication>();
             services.AddScoped<IMedioPagoApplication, MedioPagoApplication>();
+            services.AddScoped<ICtaCtableApplication, CtaCtableApplication>();
             return services;
         }
 

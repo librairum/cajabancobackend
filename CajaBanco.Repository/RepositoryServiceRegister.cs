@@ -10,6 +10,7 @@ using CajaBanco.Repository.Autenticacion;
 using CajaBanco.Repository.CuentaBancaria;
 using CajaBanco.Repository.Presupuesto;
 using CajaBanco.Repository.MedioPago;
+using CajaBanco.Repository.CtaCtable;
 namespace CajaBanco.Repository
 {
     public static class RepositoryServiceRegister
@@ -22,6 +23,7 @@ namespace CajaBanco.Repository
             services.AddScoped<ICtaBancariaRepository, CtaBancariaRepository>();
             services.AddScoped<IPresupuestoRepository, PresupuestoRepository>();
             services.AddScoped<IMedioPagoRepository, MedioPagoRepository>();
+            services.AddScoped<ICtaCtableRepository, CtaCtableRepository>();
             return services;
         }
 
