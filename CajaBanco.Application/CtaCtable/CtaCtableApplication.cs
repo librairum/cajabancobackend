@@ -28,5 +28,26 @@ namespace CajaBanco.Application.CtaCtable
         {
             return await this._servicio.SpTraeDetalle(empresa, numero);
         }
+
+        public async Task<ResultDto<RegContableDetResponse>> SpTraeRegContableDet(string empresa, string anio, 
+            string mes, string libro, string voucher, double nroOrden)
+        {
+            return await this._servicio.SpTraeRegContableDet(empresa, anio, mes, libro, voucher, nroOrden);
+        }
+
+        public async Task<ResultDto<AyudaCuentaHabMov>> SpTraeAyudaHabyMov(string empresa, string anio)
+        {
+            return await this._servicio.SpTraeAyudaHabyMov(empresa, anio);
+        }
+
+        public async Task<ResultDto<AyudaProveedor>> SpTraeAyudaPRoveedor(string empresa, string tipoAnalisis)
+        {
+            return await this._servicio.SpTraeAyudaPRoveedor(empresa, tipoAnalisis);
+        }
+
+        public async Task<ResultDto<AyudaTipoDcoumento>> SpTraeAyudaTipoDocumentos(string empresa)
+        {
+            return await this._servicio.SpTraeAyudaTipoDocumentos(empresa);
+        }
     }
 }

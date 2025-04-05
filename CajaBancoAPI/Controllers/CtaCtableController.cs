@@ -41,6 +41,21 @@ namespace CajaBancoAPI.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("SpTraeRegContableDet")]
+        public async Task<ActionResult> SpTraeRegContableDet(string empresa, string anio,
+            string mes, string libro, string voucher, double nroOrden)
+        {
+            try
+            {
+                var result = await this._aplicacion.SpTraeRegContableDet(empresa,anio, mes, 
+                    libro, voucher, nroOrden);
+                return Ok(result);
+            }
+            catch (Exception ex) {
+                return BadRequest(ex.Message);
+            }
+        }
         //public IActionResult Index()
         //{
         //    return View();

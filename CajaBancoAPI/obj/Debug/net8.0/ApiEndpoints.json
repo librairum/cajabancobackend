@@ -248,6 +248,47 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CajaBancoAPI.Controllers.CtaCtableController",
+    "Method": "SpTraeRegContableDet",
+    "RelativePath": "CtaCtable/SpTraeRegContableDet",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "libro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "voucher",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "nroOrden",
+        "Type": "System.Double",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CajaBancoAPI.Controllers.MedioPagoController",
     "Method": "SpActualiza",
     "RelativePath": "MedioPago/SpActualiza",

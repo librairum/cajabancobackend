@@ -13,5 +13,13 @@ namespace CajaBanco.Abstractions.IService
         public Task<ResultDto<CtaCtableCabResponse>> SpTraeCabecera(string empresa, string numero);
         public Task<ResultDto<CtaCtableDetResponse>> SpTraeDetalle(string empresa, string numero);
 
+        public Task<ResultDto<RegContableDetResponse>> SpTraeRegContableDet(string empresa, string anio, string mes,
+            string libro, string voucher, double nroOrden);
+
+
+        public Task<ResultDto<AyudaCuentaHabMov>> SpTraeAyudaHabyMov(string empresa, string anio);
+        public Task<ResultDto<AyudaProveedor>> SpTraeAyudaPRoveedor(string empresa, string tipoAnalisis);
+        public Task<ResultDto<AyudaTipoDcoumento>> SpTraeAyudaTipoDocumentos(string empresa );
+
     }
 }
