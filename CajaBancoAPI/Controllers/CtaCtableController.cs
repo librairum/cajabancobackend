@@ -77,8 +77,8 @@ namespace CajaBancoAPI.Controllers
 
 
         [HttpGet]
-        [Route("SpTraeAyudaPRoveedor")]
-        public async Task<ActionResult> SpTraeAyudaPRoveedor(string empresa)
+        [Route("SpTraeAyudaProveedor")]
+        public async Task<ActionResult> SpTraeAyudaProveedor(string empresa)
         {
             try
             {

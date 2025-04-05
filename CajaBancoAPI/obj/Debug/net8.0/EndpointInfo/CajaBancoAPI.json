@@ -470,7 +470,7 @@
         }
       }
     },
-    "/CtaCtable/SpTraeAyudaPRoveedor": {
+    "/CtaCtable/SpTraeAyudaProveedor": {
       "get": {
         "tags": [
           "CtaCtable"

@@ -228,8 +228,8 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.CtaCtableController",
-    "Method": "SpTraeAyudaPRoveedor",
-    "RelativePath": "CtaCtable/SpTraeAyudaPRoveedor",
+    "Method": "SpTraeAyudaProveedor",
+    "RelativePath": "CtaCtable/SpTraeAyudaProveedor",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

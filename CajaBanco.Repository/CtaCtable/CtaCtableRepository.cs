@@ -199,11 +199,11 @@ namespace CajaBanco.Repository.CtaCtable
                 {
                     DynamicParameters parametros = new DynamicParameters();
                     parametros.Add("@cEmpresa", empresa);
-                    parametros.Add("@cCampo", "");
+                    parametros.Add("@cCampo", "ccb02cod");
                     parametros.Add("@cFiltro", "*");
 
 
-                    list = (List<AyudaTipoDcoumento>)await cn.QueryAsync<AyudaTipoDcoumento>("Spu_Ban_Help_Proveedor",
+                    list = (List<AyudaTipoDcoumento>)await cn.QueryAsync<AyudaTipoDcoumento>("Spu_Ban_Trae_ComAyudaTiposDocumentos",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     res.IsSuccess = list.Count > 0 ? true : false;
                     res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontraron registros";
