@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{059E282C-6831-4AEF-A569-8EB41C161013}|CajaBanco.DTO\\CajaBanco.DTO.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabanco.dto\\registrocontable\\regcontabledetresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{059E282C-6831-4AEF-A569-8EB41C161013}|CajaBanco.DTO\\CajaBanco.DTO.csproj|solutionrelative:cajabanco.dto\\registrocontable\\regcontabledetresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{059E282C-6831-4AEF-A569-8EB41C161013}|CajaBanco.DTO\\CajaBanco.DTO.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabanco.dto\\registrocontable\\ctactabledetresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{059E282C-6831-4AEF-A569-8EB41C161013}|CajaBanco.DTO\\CajaBanco.DTO.csproj|solutionrelative:cajabanco.dto\\registrocontable\\ctactabledetresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabanco.repository\\ctactable\\ctactablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\ctactable\\ctactablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabanco.repository\\presupuesto\\presupuestorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\presupuesto\\presupuestorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabanco.application\\ctactable\\ctactableapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|solutionrelative:cajabanco.application\\ctactable\\ctactableapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabanco.services\\ctactable\\ctactableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|solutionrelative:cajabanco.services\\ctactable\\ctactableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{059E282C-6831-4AEF-A569-8EB41C161013}|CajaBanco.DTO\\CajaBanco.DTO.csproj|d:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\cajabanco.dto\\registrocontable\\ayudatipodcoumento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,32 +35,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RegContableDetResponse.cs",
-              "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.DTO\\RegistroContable\\RegContableDetResponse.cs",
-              "RelativeDocumentMoniker": "CajaBanco.DTO\\RegistroContable\\RegContableDetResponse.cs",
-              "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.DTO\\RegistroContable\\RegContableDetResponse.cs",
-              "RelativeToolTip": "CajaBanco.DTO\\RegistroContable\\RegContableDetResponse.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAA1wEMAAAA6AAAAAAAAAA==",
+              "Title": "CtaCtableDetResponse.cs",
+              "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.DTO\\RegistroContable\\CtaCtableDetResponse.cs",
+              "RelativeDocumentMoniker": "CajaBanco.DTO\\RegistroContable\\CtaCtableDetResponse.cs",
+              "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.DTO\\RegistroContable\\CtaCtableDetResponse.cs",
+              "RelativeToolTip": "CajaBanco.DTO\\RegistroContable\\CtaCtableDetResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T07:36:42.935Z",
+              "WhenOpened": "2025-04-05T15:17:31.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CtaCtableRepository.cs",
+              "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\CtaCtable\\CtaCtableRepository.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Repository\\CtaCtable\\CtaCtableRepository.cs",
+              "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\CtaCtable\\CtaCtableRepository.cs",
+              "RelativeToolTip": "CajaBanco.Repository\\CtaCtable\\CtaCtableRepository.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowDgAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T13:11:29.257Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CtaCtableService.cs",
-              "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Services\\CtaCtable\\CtaCtableService.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Services\\CtaCtable\\CtaCtableService.cs",
-              "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Services\\CtaCtable\\CtaCtableService.cs",
-              "RelativeToolTip": "CajaBanco.Services\\CtaCtable\\CtaCtableService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwDEAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T07:27:23.849Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "AyudaTipoDcoumento.cs",
               "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.DTO\\RegistroContable\\AyudaTipoDcoumento.cs",
               "RelativeDocumentMoniker": "CajaBanco.DTO\\RegistroContable\\AyudaTipoDcoumento.cs",
@@ -77,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "AyudaProveedor.cs",
               "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.DTO\\RegistroContable\\AyudaProveedor.cs",
               "RelativeDocumentMoniker": "CajaBanco.DTO\\RegistroContable\\AyudaProveedor.cs",
@@ -91,25 +87,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CtaCtableApplication.cs",
-              "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Application\\CtaCtable\\CtaCtableApplication.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Application\\CtaCtable\\CtaCtableApplication.cs",
-              "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Application\\CtaCtable\\CtaCtableApplication.cs",
-              "RelativeToolTip": "CajaBanco.Application\\CtaCtable\\CtaCtableApplication.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACoAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T01:24:52.831Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "PresupuestoRepository.cs",
               "DocumentMoniker": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
               "RelativeDocumentMoniker": "CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
               "ToolTip": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
               "RelativeToolTip": "CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAgwK4BAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAQwG4AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-05T01:45:00.61Z",
               "EditorCaption": ""

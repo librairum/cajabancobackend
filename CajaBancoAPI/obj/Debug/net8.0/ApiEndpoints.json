@@ -207,6 +207,59 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.CtaCtableController",
+    "Method": "SpTraeAyudaHabyMov",
+    "RelativePath": "CtaCtable/SpTraeAyudaHabyMov",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.CtaCtableController",
+    "Method": "SpTraeAyudaPRoveedor",
+    "RelativePath": "CtaCtable/SpTraeAyudaPRoveedor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.CtaCtableController",
+    "Method": "SpTraeAyudaTipoDocumentos",
+    "RelativePath": "CtaCtable/SpTraeAyudaTipoDocumentos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.CtaCtableController",
     "Method": "SpTraeCabecera",
     "RelativePath": "CtaCtable/SpTraeCabecera",
     "HttpMethod": "GET",

@@ -40,14 +40,15 @@ namespace CajaBanco.Application.CtaCtable
             return await this._servicio.SpTraeAyudaHabyMov(empresa, anio);
         }
 
-        public async Task<ResultDto<AyudaProveedor>> SpTraeAyudaPRoveedor(string empresa, string tipoAnalisis)
+        public async Task<ResultDto<AyudaProveedor>> SpTraeAyudaProveedor(string empresa, string tipoAnalisis)
         {
-            return await this._servicio.SpTraeAyudaPRoveedor(empresa, tipoAnalisis);
+            return await this._servicio.SpTraeAyudaProveedor(empresa, tipoAnalisis);
         }
 
         public async Task<ResultDto<AyudaTipoDcoumento>> SpTraeAyudaTipoDocumentos(string empresa)
         {
             return await this._servicio.SpTraeAyudaTipoDocumentos(empresa);
         }
+
     }
 }

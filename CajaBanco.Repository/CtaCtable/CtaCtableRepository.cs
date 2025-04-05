@@ -104,7 +104,7 @@ namespace CajaBanco.Repository.CtaCtable
                     parametros.Add("@cVoucher", voucher);
                     parametros.Add("@nroOrden", nroOrden);
 
-                    list = (List<RegContableDetResponse>)await cn.QueryAsync<RegContableDetResponse>("Spu_Ban_Trae_VoucherContableDetalle",
+                    list = (List<RegContableDetResponse>)await cn.QueryAsync<RegContableDetResponse>("Spu_Ban_Trae_DetalleVoucher",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     res.IsSuccess = list.Count > 0 ? true : false;
                     res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontraron registros";
@@ -156,7 +156,7 @@ namespace CajaBanco.Repository.CtaCtable
             return res;
         }
 
-        public async Task<ResultDto<AyudaProveedor>> SpTraeAyudaPRoveedor(string empresa, string tipoAnalisis)
+        public async Task<ResultDto<AyudaProveedor>> SpTraeAyudaProveedor(string empresa, string tipoAnalisis)
         {
             ResultDto<string> result = new ResultDto<string>();
 

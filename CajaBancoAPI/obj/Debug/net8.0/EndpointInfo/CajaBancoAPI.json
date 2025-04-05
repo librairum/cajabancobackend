@@ -442,6 +442,76 @@
         }
       }
     },
+    "/CtaCtable/SpTraeAyudaHabyMov": {
+      "get": {
+        "tags": [
+          "CtaCtable"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "anio",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CtaCtable/SpTraeAyudaPRoveedor": {
+      "get": {
+        "tags": [
+          "CtaCtable"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CtaCtable/SpTraeAyudaTipoDocumentos": {
+      "get": {
+        "tags": [
+          "CtaCtable"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/MedioPago/SpActualiza": {
       "put": {
         "tags": [

@@ -40,9 +40,9 @@ namespace CajaBanco.Services.CtaCtable
             return await this._repositorio.SpTraeAyudaHabyMov(empresa, "2024");
         }
 
-        public async Task<ResultDto<AyudaProveedor>> SpTraeAyudaPRoveedor(string empresa, string tipoAnalisis)
+        public async Task<ResultDto<AyudaProveedor>> SpTraeAyudaProveedor(string empresa, string tipoAnalisis)
         {
-            return await this._repositorio.SpTraeAyudaPRoveedor(empresa, tipoAnalisis);
+            return await this._repositorio.SpTraeAyudaProveedor(empresa, tipoAnalisis);
         }
 
         public async Task<ResultDto<AyudaTipoDcoumento>> SpTraeAyudaTipoDocumentos(string empresa)
