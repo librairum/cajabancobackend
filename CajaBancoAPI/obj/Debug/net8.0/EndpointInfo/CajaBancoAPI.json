@@ -512,6 +512,94 @@
         }
       }
     },
+    "/CtaCtable/SpActualiza": {
+      "put": {
+        "tags": [
+          "CtaCtable"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegContableDetRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegContableDetRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegContableDetRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CtaCtable/SpElimina": {
+      "delete": {
+        "tags": [
+          "CtaCtable"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "anio",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "mes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "libro",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "numeroVoucher",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "nroOden",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/MedioPago/SpActualiza": {
       "put": {
         "tags": [
@@ -1568,6 +1656,144 @@
             "nullable": true
           },
           "ban01MedioPago": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegContableDetRequest": {
+        "type": "object",
+        "properties": {
+          "codigoEmpresa": {
+            "type": "string",
+            "nullable": true
+          },
+          "anio": {
+            "type": "string",
+            "nullable": true
+          },
+          "mes": {
+            "type": "string",
+            "nullable": true
+          },
+          "libro": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroVoucher": {
+            "type": "string",
+            "nullable": true
+          },
+          "cuenta": {
+            "type": "string",
+            "nullable": true
+          },
+          "importeDebe": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeHaber": {
+            "type": "number",
+            "format": "double"
+          },
+          "glosa": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoDocumento": {
+            "type": "string",
+            "nullable": true
+          },
+          "numDoc": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaDoc": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaVencimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "cuentaCorriente": {
+            "type": "string",
+            "nullable": true
+          },
+          "moneda": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoCambio": {
+            "type": "number",
+            "format": "double"
+          },
+          "afecto": {
+            "type": "string",
+            "nullable": true
+          },
+          "cenCos": {
+            "type": "string",
+            "nullable": true
+          },
+          "cenGes": {
+            "type": "string",
+            "nullable": true
+          },
+          "asientoTipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "valida": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaVoucher": {
+            "type": "string",
+            "nullable": true
+          },
+          "amarre": {
+            "type": "string",
+            "nullable": true
+          },
+          "importeDebeEquivalencia": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeHaberEquivalencia": {
+            "type": "number",
+            "format": "double"
+          },
+          "transa": {
+            "type": "string",
+            "nullable": true
+          },
+          "orden": {
+            "type": "number",
+            "format": "double"
+          },
+          "nroPago": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaPago": {
+            "type": "string",
+            "nullable": true
+          },
+          "porcentaje": {
+            "type": "string",
+            "nullable": true
+          },
+          "docModTipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "docModNumero": {
+            "type": "string",
+            "nullable": true
+          },
+          "docModFecha": {
             "type": "string",
             "nullable": true
           }

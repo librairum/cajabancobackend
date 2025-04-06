@@ -49,5 +49,15 @@ namespace CajaBanco.Services.CtaCtable
         {
             return await this._repositorio.SpTraeAyudaTipoDocumentos(empresa);
         }
+
+        public async Task<ResultDto<string>> SpActualiza(RegContableDetRequest request)
+        {
+            return await this._repositorio.SpActualiza(request);
+        }
+
+        public async Task<ResultDto<string>> SpElimina(string empresa, string anio, string mes, string libro, string numeroVoucher, double nroOden)
+        {
+            return await this._repositorio.SpElimina(empresa, anio, mes, libro, numeroVoucher, nroOden);
+        }
     }
 }

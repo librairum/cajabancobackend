@@ -207,6 +207,63 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.CtaCtableController",
+    "Method": "SpActualiza",
+    "RelativePath": "CtaCtable/SpActualiza",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.RegistroContable.RegContableDetRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.CtaCtableController",
+    "Method": "SpElimina",
+    "RelativePath": "CtaCtable/SpElimina",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "libro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numeroVoucher",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "nroOden",
+        "Type": "System.Double",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.CtaCtableController",
     "Method": "SpTraeAyudaHabyMov",
     "RelativePath": "CtaCtable/SpTraeAyudaHabyMov",
     "HttpMethod": "GET",

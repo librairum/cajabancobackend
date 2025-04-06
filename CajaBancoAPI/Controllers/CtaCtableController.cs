@@ -104,6 +104,33 @@ namespace CajaBancoAPI.Controllers
             }
         }
 
+        [HttpPut]
+        [Route("SpActualiza")]
+        public async Task<ActionResult> SpActualiza(RegContableDetRequest request)
+        {
+            try
+            {
+                var result = await this._aplicacion.SpActualiza(request);
+                return Ok(result);
+            }
+            catch (Exception ex) {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete]
+        [Route("SpElimina")]
+        public async Task<ActionResult>  SpElimina(string empresa, string anio, string mes, string libro, string numeroVoucher, double nroOden)
+        {
+            try
+            {
+                var result = await this._aplicacion.SpElimina(empresa, anio, mes, libro, numeroVoucher, nroOden);
+                return Ok(result);
+            }
+            catch (Exception ex) {
+                return BadRequest(ex.Message);
+            }
+        }
         //public IActionResult Index()
         //{
         //    return View();

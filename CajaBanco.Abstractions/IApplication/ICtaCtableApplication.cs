@@ -19,5 +19,8 @@ namespace CajaBanco.Abstractions.IApplication
         public Task<ResultDto<AyudaProveedor>> SpTraeAyudaProveedor(string empresa, string tipoAnalisis);
         public Task<ResultDto<AyudaTipoDcoumento>> SpTraeAyudaTipoDocumentos(string empresa);
 
+        public Task<ResultDto<string>> SpActualiza(RegContableDetRequest request);
+        public Task<ResultDto<string>> SpElimina(string empresa, string anio, string mes, string libro, string numeroVoucher, double nroOden);
+
     }
 }

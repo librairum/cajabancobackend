@@ -220,5 +220,135 @@ namespace CajaBanco.Repository.CtaCtable
             }
             return res;
         }
+
+        public async Task<ResultDto<string>> SpActualiza(RegContableDetRequest request)
+        {
+            ResultDto<string> result = new ResultDto<string>();
+            try
+            {
+
+                using (var cn = new SqlConnection(_connectionString))
+                {
+
+                    SqlCommand cmd = new SqlCommand("Spu_Ban_Upd_DetalleVoucher", cn);
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@cEmpresa", request.codigoEmpresa);
+                    cmd.Parameters.AddWithValue("@cAno", request.anio);
+                    cmd.Parameters.AddWithValue("@cMes", request.mes);
+                    cmd.Parameters.AddWithValue("@cLibro", request.libro);
+                    cmd.Parameters.AddWithValue("@cVoucher", request.numeroVoucher);
+                    cmd.Parameters.AddWithValue("@cCuenta", request.cuenta);
+                    cmd.Parameters.AddWithValue("@nDebSol", request.importeDebe);
+                    cmd.Parameters.AddWithValue("@nHabSol", request.importeHaber);
+                    cmd.Parameters.AddWithValue("@cGlosa", request.glosa);
+                    cmd.Parameters.AddWithValue("@cTipDoc", request.tipoDocumento);
+                    cmd.Parameters.AddWithValue("@cNumDoc", request.numDoc);
+                    cmd.Parameters.AddWithValue("@dFecDoc", request.fechaDoc);
+                    cmd.Parameters.AddWithValue("@dFecVen", request.fechaVencimiento);
+                    cmd.Parameters.AddWithValue("@cCtaCte", request.cuentaCorriente);
+                    cmd.Parameters.AddWithValue("@cMoneda", request.moneda);
+                    cmd.Parameters.AddWithValue("@nTipCam", request.tipoCambio);
+                    cmd.Parameters.AddWithValue("@cAfecto", request.afecto);
+                    cmd.Parameters.AddWithValue("@cCenCos", request.cenCos);
+                    cmd.Parameters.AddWithValue("@cCenGes", request.cenGes);
+                    cmd.Parameters.AddWithValue("@cAsiTipo", request.asientoTipo);
+                    cmd.Parameters.AddWithValue("@cValida", request.valida);
+                    cmd.Parameters.AddWithValue("@nDebDol", request.importeDebeEquivalencia);
+                    cmd.Parameters.AddWithValue("@nHabDol", request.importeHaberEquivalencia);
+                    cmd.Parameters.AddWithValue("@cTrans", request.transa);
+                    cmd.Parameters.AddWithValue("@nOrden", request.orden);
+                    cmd.Parameters.AddWithValue("@ccd01NroPago", request.nroPago);
+                    cmd.Parameters.AddWithValue("@ccd01FecPago", request.fechaPago);
+                    cmd.Parameters.AddWithValue("@ccd01porcentaje", request.porcentaje);
+                    cmd.Parameters.AddWithValue("@ccd01cqmtipo", request.docModTipo);
+                    cmd.Parameters.AddWithValue("@ccd01cqmnumero", request.docModNumero);
+                    cmd.Parameters.AddWithValue("@ccd01cqmfecha", request.docModFecha);
+                 
+
+                    var parMensaje = cmd.Parameters.Add("@cMsgRetorno", SqlDbType.VarChar, 200);
+                    parMensaje.Direction = ParameterDirection.Output;
+
+                    var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                    parFlag.Direction = ParameterDirection.Output;
+
+                    cn.Open();
+                    var respuesta = await cmd.ExecuteNonQueryAsync();
+                    cn.Close();
+                    result.Item = request.numeroVoucher;
+
+                    result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
+                    result.Message = parMensaje.Value.ToString();
+
+                    //if (respuesta == 1) {
+
+                    //}                 
+                }
+            }
+            catch (Exception ex)
+            {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
+        }
+
+        public async  Task<ResultDto<string>> SpElimina(string empresa, string anio, string mes,
+            string libro, string numeroVoucher, double nroOden)
+        {
+            ResultDto<string> result = new ResultDto<string>();
+            try
+            {
+
+                using (var cn = new SqlConnection(_connectionString))
+                {
+
+                    SqlCommand cmd = new SqlCommand("Spu_Ban_Del_DetalleVoucher", cn);
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@cEmpresa", empresa);
+                    cmd.Parameters.AddWithValue("@cAno", anio);
+                    cmd.Parameters.AddWithValue("@cMes", mes);
+                    cmd.Parameters.AddWithValue("@cLibro", libro);
+                    cmd.Parameters.AddWithValue("@cVoucher", numeroVoucher);
+                    cmd.Parameters.AddWithValue("@nOrden", nroOden);
+                    /* @cEmpresa varchar(2),        
+@cAno varchar(4),        
+@cMes varchar(2),        
+@cLibro varchar(2),        
+@cVoucher varchar(5),        
+@nOrden float,  *
+                    @flag int output,      
+@cMsgRetorno varchar(100) OUTPUT   
+                     */
+
+                    var parMensaje = cmd.Parameters.Add("@cMsgRetorno", SqlDbType.VarChar, 200);
+                    parMensaje.Direction = ParameterDirection.Output;
+
+                    var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                    parFlag.Direction = ParameterDirection.Output;
+
+
+
+                    cn.Open();
+                    var respuesta = await cmd.ExecuteNonQueryAsync();
+                    cn.Close();
+                    result.Item = numeroVoucher;
+
+                    result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
+                    result.Message = parMensaje.Value.ToString();
+
+                    //if (respuesta == 1) {
+
+                    //}                 
+                }
+            }
+            catch (Exception ex)
+            {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
+        }
     }
 }
