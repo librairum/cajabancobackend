@@ -60,10 +60,13 @@ namespace CajaBanco.Repository.Presupuesto
                 var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
                 parFlag.Direction = ParameterDirection.Output;
 
+                var parCodigoGenerado = cmd.Parameters.Add("@codigoGenerado", SqlDbType.VarChar, 5);
+                parCodigoGenerado.Direction = ParameterDirection.Output;
+
                 cnx.Open();
                 var respuesta = await  cmd.ExecuteNonQueryAsync();
                 cnx.Close();
-                result.Item = "1";
+                result.Item = parCodigoGenerado.Value.ToString();
                 result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
                 result.Message = parMensaje.Value.ToString();
             }
@@ -224,8 +227,6 @@ namespace CajaBanco.Repository.Presupuesto
 
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Ban02Empresa", request.Ban02Empresa);
-
-
           
                 cmd.Parameters.AddWithValue("@Ban02Numero", request.Ban02Numero);
                 cmd.Parameters.AddWithValue("@Ban02Codigo", request.Ban02Codigo);
