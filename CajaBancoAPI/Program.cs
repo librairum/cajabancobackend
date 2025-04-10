@@ -18,7 +18,7 @@ builder.Services.AddRepositoryServices();
 builder.Services.AddServiceServices();
 builder.Services.AddApplicationServices();
 
-//var origenesPermitidos = builder.Configuration.GetValue<string>("OrigenesPermitidos")!.Split(",");
+var origenesPermitidos = builder.Configuration.GetValue<string>("OrigenesPermitidos")!.Split(",");
 //opciones.AddDefaultPolicy(politica =>
 //{
 //    politica.WithOrigins(origenesPermitidos).
@@ -33,6 +33,7 @@ builder.Services.AddCors(opciones =>
         //.AllowAnyMethod().AllowAnyHeader();
 
         policy.WithOrigins("http://localhost:4200")
+        //policy.WithOrigins("OrigenesPermitidos")
         .AllowAnyMethod().AllowAnyHeader();
 
     });
