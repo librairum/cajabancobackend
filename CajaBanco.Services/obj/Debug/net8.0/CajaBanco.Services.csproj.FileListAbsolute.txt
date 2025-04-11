@@ -88,3 +88,21 @@ D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Services\obj\Debug\
 D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Services\obj\Debug\net8.0\refint\CajaBanco.Services.dll
 D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Services\obj\Debug\net8.0\CajaBanco.Services.pdb
 D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Services\obj\Debug\net8.0\ref\CajaBanco.Services.dll
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\bin\Debug\net8.0\CajaBanco.Services.deps.json
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\bin\Debug\net8.0\CajaBanco.Services.dll
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\bin\Debug\net8.0\CajaBanco.Services.pdb
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\bin\Debug\net8.0\CajaBanco.Abstractions.dll
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\bin\Debug\net8.0\CajaBanco.DTO.dll
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\bin\Debug\net8.0\CajaBanco.Abstractions.pdb
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\bin\Debug\net8.0\CajaBanco.DTO.pdb
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\obj\Debug\net8.0\CajaBanco.Services.csproj.AssemblyReference.cache
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\obj\Debug\net8.0\CajaBanco.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\obj\Debug\net8.0\CajaBanco.Services.AssemblyInfoInputs.cache
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\obj\Debug\net8.0\CajaBanco.Services.AssemblyInfo.cs
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\obj\Debug\net8.0\CajaBanco.Services.csproj.CoreCompileInputs.cache
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\obj\Debug\net8.0\CajaBanco.Services.sourcelink.json
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\obj\Debug\net8.0\CajaBanc.0095379D.Up2Date
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\obj\Debug\net8.0\CajaBanco.Services.dll
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\obj\Debug\net8.0\refint\CajaBanco.Services.dll
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\obj\Debug\net8.0\CajaBanco.Services.pdb
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Services\obj\Debug\net8.0\ref\CajaBanco.Services.dll
