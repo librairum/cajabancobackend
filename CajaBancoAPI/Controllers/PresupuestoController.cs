@@ -58,7 +58,8 @@ namespace CajaBancoAPI.Controllers
 
         [HttpGet]
         [Route("SpList")]
-        public async Task<ActionResult> ObtenerLista(string empresa, string anio, string mes)
+        public async Task<ActionResult> ObtenerLista(string empresa, string anio, 
+            string mes)
         {
             try
             {

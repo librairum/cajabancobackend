@@ -14,7 +14,8 @@ namespace CajaBanco.Abstractions.IApplication
         public Task<ResultDto<string>> Inserta(PresupuestoRequest request);
         public Task<ResultDto<string>> SpElimina(string Ban01Empresa, string Ban01Numero);
         public Task<ResultDto<string>> SpActualiza(PresupuestoRequest request);
-        public Task<ResultDto<PresupuestoListResponse>> SpLista(string empresa, string anio, string mes );
+        public Task<ResultDto<PresupuestoListResponse>> SpLista(string empresa, string anio, 
+            string mes );
 
         //detalle
         public Task<ResultDto<string>> InsertaDet(string Empresa,

@@ -49,7 +49,8 @@ namespace CajaBanco.Services.Presupuesto
             return await _repository.SpEliminaDet(Ban02Empresa,  Ban02Codigo, Ban02Numero);
         }
 
-        public async Task<ResultDto<PresupuestoListResponse>> SpLista(string empresa, string mes, string anio)
+        public async Task<ResultDto<PresupuestoListResponse>> SpLista(string empresa, 
+            string mes, string anio)
         {
            return await _repository.SpLista(empresa, mes, anio);
         }

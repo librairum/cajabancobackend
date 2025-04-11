@@ -19,18 +19,17 @@ namespace CajaBanco.Repository.Presupuesto
     public class PresupuestoRepository:IPresupuestoRepository
     {
         private string _connectionString = "";
+        private string _esModoServidor = "";
         private  IConfiguration _configuracion;
         
 
         public PresupuestoRepository(IConfiguration configuracion)
         {
             _connectionString = configuracion.GetConnectionString("conexion");
+            _esModoServidor = configuracion.GetConnectionString("modoServidor");
         }
         
-        //public PresupuestoRepository(ConexionDato conector)
-        //{
-        //    this._cnx = conector;
-        //}
+      
          
         public async Task<ResultDto<string>> Inserta(PresupuestoRequest request)
         {
@@ -111,7 +110,8 @@ namespace CajaBanco.Repository.Presupuesto
             return result;
         }
 
-        public async Task<ResultDto<PresupuestoListResponse>> SpLista(string empresa, string anio, string mes)
+        public async Task<ResultDto<PresupuestoListResponse>> SpLista(string empresa, 
+            string anio, string mes)
         {
             ResultDto<PresupuestoListResponse> res = new ResultDto<PresupuestoListResponse>();
             List<PresupuestoListResponse> list = new List<PresupuestoListResponse>();
@@ -123,6 +123,7 @@ namespace CajaBanco.Repository.Presupuesto
                 parametros.Add("@empresa", empresa);
                 parametros.Add("@mes", mes);
                 parametros.Add("@anio", anio);
+                parametros.Add("@modoServidor", _esModoServidor);
                 list = (List<PresupuestoListResponse>)await cnx.QueryAsync<PresupuestoListResponse>("Spu_Ban_Trae_ResumenPrespuesto",
                     parametros, commandType: System.Data.CommandType.StoredProcedure);
                 res.IsSuccess = list.Count > 0 ? true : false;
