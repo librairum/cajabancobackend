@@ -36,5 +36,8 @@ namespace CajaBanco.Abstractions.IApplication
             string numeropresupuesto, string fechapago, string numerooperacion,
             string enlacepago, string flagOperacion);
 
+        public Task<ResultDto<string>> SpInsertaAsientoContable(string empresa, string numeroPreesupuesto);
+
+
     }
 }

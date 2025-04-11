@@ -25,15 +25,18 @@ builder.Services.AddApplicationServices();
 //    AllowAnyHeader().
 //    AllowAnyMethod();
 //});
+var origenesPermitidos = builder.Configuration.GetValue<string>("OrigenesPermitidos");
 builder.Services.AddCors(opciones =>
 {
     opciones.AddPolicy("MiPoliticaCORS", policy =>
     {
+        policy.WithOrigins(origenesPermitidos)
+        .AllowAnyMethod().AllowAnyHeader();
         //policy.WithOrigins("http://192.168.1.44:4200", "http://localhost:4200")
         //.AllowAnyMethod().AllowAnyHeader();
 
-        policy.WithOrigins("http://localhost:4200")
-        .AllowAnyMethod().AllowAnyHeader();
+        //policy.WithOrigins("http://localhost:4200")
+        
 
     });
    

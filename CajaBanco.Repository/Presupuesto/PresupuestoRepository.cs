@@ -447,5 +447,35 @@ namespace CajaBanco.Repository.Presupuesto
             }
             return result;
         }
+
+        public async Task<ResultDto<string>> SpInsertaAsientoContable(string empresa, string numeroPreesupuesto)
+        {
+            ResultDto<string> result = new ResultDto<string>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Ins_AsientoContable", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Empresa", empresa);
+                cmd.Parameters.AddWithValue("@PresupuestoNumero", numeroPreesupuesto);
+
+              
+
+                cn.Open();
+                var respuesta = await cmd.ExecuteNonQueryAsync();
+                cn.Close();
+                result.Item = "1";
+                result.IsSuccess = "1" == "1" ? true : false;
+                result.Message = "Insercion exitosa";
+
+
+            }
+            catch (Exception ex)
+            {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
+        }
     }
 }

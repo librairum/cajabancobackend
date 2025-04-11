@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CajaBanco.DTO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+993be6081636b4d5833858b4e1f452bf8bae6edb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3b110e7ff65883789a0c8e34c5c972c179add99")]
 [assembly: System.Reflection.AssemblyProductAttribute("CajaBanco.DTO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CajaBanco.DTO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

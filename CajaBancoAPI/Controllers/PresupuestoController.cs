@@ -285,7 +285,17 @@ namespace CajaBancoAPI.Controllers
             }
         }
         #endregion
-
-
+        [HttpPost]
+        [Route("SpInsertaAsientoContable")]
+        public async Task<ActionResult> SpInsertaAsientoContable(string empresa, string numeroPresupuesto) 
+        {
+            try {
+                var result = await this._app.SpInsertaAsientoContable(empresa, numeroPresupuesto);
+                return Ok(result);
+            }catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
