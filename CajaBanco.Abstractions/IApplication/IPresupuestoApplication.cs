@@ -4,6 +4,7 @@ using CajaBanco.DTO.Presupuesto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -39,6 +40,9 @@ namespace CajaBanco.Abstractions.IApplication
 
         public Task<ResultDto<string>> SpInsertaAsientoContable(string empresa, string numeroPreesupuesto);
 
+        public Task<ResultDto<string>> SpInsertaDocumento(string nombreArchivo, byte[] contenidoArchivo);
+
+        public Task<ResultDto<DocumentoPagoResponse>> SpTraeDocumento(string nombreArchivo);
 
     }
 }

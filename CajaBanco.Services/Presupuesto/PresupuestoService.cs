@@ -88,5 +88,14 @@ namespace CajaBanco.Services.Presupuesto
         {
             return await this._repository.SpInsertaAsientoContable(empresa, numeroPreesupuesto);
         }
+        public async Task<ResultDto<string>> SpInsertaDocumento(string nombreArchivo, byte[] contenidoArchivo)
+        {
+            return await this._repository.SpInsertaDocumento(nombreArchivo, contenidoArchivo);
+        }
+
+        public async Task<ResultDto<DocumentoPagoResponse>> SpTraeDocumento(string nombreArchivo)
+        {
+            return await this._repository.SpTraeDocumento(nombreArchivo);
+        }
     }
 }

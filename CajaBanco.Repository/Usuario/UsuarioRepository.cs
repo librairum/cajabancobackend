@@ -91,7 +91,7 @@ namespace CajaBanco.Repository.Usuario
 
         }
 
-        public async Task<ResultDto<string>> SpElimina(string codigo, string codigoPerfil)
+        public async Task<ResultDto<string>> SpElimina(string codigo)
         {
             ResultDto<string> result = new ResultDto<string>();
             try

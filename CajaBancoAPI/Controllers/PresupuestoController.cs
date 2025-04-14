@@ -4,8 +4,10 @@ using CajaBanco.DTO.Common;
 using CajaBanco.DTO.Pago;
 using CajaBanco.DTO.Presupuesto;
 using CajaBanco.Repository.Presupuesto;
+using Microsoft.AspNetCore.Http.Metadata;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using System.Text;
 namespace CajaBancoAPI.Controllers
 {
     [ApiController]
@@ -197,9 +199,39 @@ namespace CajaBancoAPI.Controllers
             }
         }
 
+
+        [HttpPost]
+        [Route("CargarArchivo")]
+        public IActionResult CargarArchivo(IFormFile archivoOriginal)
+        {
+            try
+            {
+                if (archivoOriginal == null || archivoOriginal.Length == 0)
+                {
+                    return BadRequest("Archivo no valido");
+
+                }
+                string nombre =
+                archivoOriginal.FileName;
+                string rutaOrigen = @"C:\Users\sistemas\Downloads\pdf\cv";
+                string rutaCompleta = Path.Combine(rutaOrigen, nombre);
+                byte[] bytesArchivo =System.IO.File.ReadAllBytes(rutaCompleta);
+                string valorBytesLEctura = Encoding.Default.GetString(bytesArchivo);
+                this._app.SpInsertaDocumento(nombre,bytesArchivo);
+                return Ok("Archivo guardaro en base de datos");
+                //return Ok(string.Format("Ruta de archivo:{0}, bytes: {1}", nombre, valorBytesLEctura));
+
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        
         [HttpDelete]
         [Route("EliminarArchivo")]
-        public IActionResult EliminarArchivo([FromQuery] string rutaArchivo)
+        public  IActionResult EliminarArchivo([FromQuery] string rutaArchivo)
         {
             try
             {

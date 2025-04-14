@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using CajaBanco.Abstractions.IApplication;
@@ -88,6 +89,16 @@ namespace CajaBanco.Application.Presupuesto
         public async Task<ResultDto<string>> SpInsertaAsientoContable(string empresa, string numeroPreesupuesto)
         {
             return await this._service.SpInsertaAsientoContable(empresa, numeroPreesupuesto);
+        }
+
+        public async Task<ResultDto<string>> SpInsertaDocumento(string nombreArchivo, byte[] contenidoArchivo)
+        {
+           return await this._service.SpInsertaDocumento(nombreArchivo, contenidoArchivo);    
+        }
+
+        public async Task<ResultDto<DocumentoPagoResponse>> SpTraeDocumento(string nombreArchivo)
+        {
+            return await this._service.SpTraeDocumento(nombreArchivo);    
         }
     }
 }

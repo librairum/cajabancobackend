@@ -41,6 +41,11 @@ namespace CajaBanco.Abstractions.IRepository
 
         public Task<ResultDto<string>> SpInsertaAsientoContable(string empresa, string numeroPreesupuesto);
 
+        public Task<ResultDto<string>> SpInsertaDocumento(string nombreArchivo, byte[] contenidoArchivo);
+
+        public Task<ResultDto<DocumentoPagoResponse>> SpTraeDocumento(string nombreArchivo);
+
+        
 
     }
 }

@@ -478,5 +478,53 @@ namespace CajaBanco.Repository.Presupuesto
             }
             return result;
         }
+        public async Task<ResultDto<string>> SpInsertaDocumento(string nombreArchivo, byte[] contenidoArchivo)
+        {
+            ResultDto<string> result = new ResultDto<string>();
+
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Ins_Documento", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@nombreArchivo", nombreArchivo);
+                cmd.Parameters.AddWithValue("@contenido", contenidoArchivo);
+                cn.Open();
+                var respuesta = await cmd.ExecuteNonQueryAsync();
+                cn.Close();
+                result.Item = "";
+                result.IsSuccess = "1" == "1" ? true : false;
+                result.Message = "Insercion exitosa";
+            }
+            catch (Exception ex) {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
+        }
+
+        public async Task<ResultDto<DocumentoPagoResponse>> SpTraeDocumento(string nombreArchivo)
+        {
+            ResultDto<DocumentoPagoResponse> result = new ResultDto<DocumentoPagoResponse>();
+            List<DocumentoPagoResponse> lista = new List<DocumentoPagoResponse>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                DynamicParameters par = new DynamicParameters();
+                par.Add("@nombreArchivo", nombreArchivo);
+                lista = (List<DocumentoPagoResponse>)await cn.QueryAsync<DocumentoPagoResponse>("Spu_Ban_Trae_Documento",
+                    par, commandType: CommandType.StoredProcedure);
+                result.IsSuccess = lista.Count > 0 ? true : false;
+                result.Message = lista.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
+                result.Data = lista.ToList();
+                //return File(arregloBytes, "application/pdf", "estadocuenta.pdf");
+            }
+            catch (Exception ex) {
+                result.IsSuccess = false;
+                result.MessageException = ex.Message;
+            }
+            
+            return result;
+        }
     }
 }

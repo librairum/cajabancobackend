@@ -14,7 +14,7 @@ namespace CajaBanco.Abstractions.IService
         public Task<ResultDto<string>> SpInserta(UsuarioRequest request);
         public Task<ResultDto<string>> SpActualiza(UsuarioRequest request);
 
-        public Task<ResultDto<string>> SpElimina(string nombreuUsario, string codigoPerfil);
+        public Task<ResultDto<string>> SpElimina(string codigo);
         public Task<ResultDto<UsuarioListResponse>> SpTraer(string codigo);
 
 
