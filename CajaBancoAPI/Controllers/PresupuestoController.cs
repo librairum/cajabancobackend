@@ -330,5 +330,19 @@ namespace CajaBancoAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [HttpGet]
+        [Route("SpTraeDocumento")]
+        public async Task<ActionResult> SpTraeDocumento(string nombreArchivo)
+        {
+            try
+            {
+                var result = await this._app.SpTraeDocumento(nombreArchivo);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
