@@ -154,6 +154,8 @@ varchar(10)
 
             try
             {
+
+
                 using (var cn = new SqlConnection(_connectionString))
                 {
                     //SqlCommand cmd = new SqlCommand("Spu_Ban01_Trae_CuentaNumeros", cn);
