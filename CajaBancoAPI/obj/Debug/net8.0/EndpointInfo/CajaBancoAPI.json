@@ -1253,6 +1253,34 @@
           }
         }
       }
+    },
+    "/Presupuesto/SpInsertaAsientoContable": {
+      "post": {
+        "tags": [
+          "Presupuesto"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "numeroPresupuesto",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1691,11 +1719,13 @@
           },
           "importeDebe": {
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "nullable": true
           },
           "importeHaber": {
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "nullable": true
           },
           "glosa": {
             "type": "string",
@@ -1727,7 +1757,8 @@
           },
           "tipoCambio": {
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "nullable": true
           },
           "afecto": {
             "type": "string",
@@ -1759,11 +1790,13 @@
           },
           "importeDebeEquivalencia": {
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "nullable": true
           },
           "importeHaberEquivalencia": {
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "nullable": true
           },
           "transa": {
             "type": "string",
@@ -1771,7 +1804,8 @@
           },
           "orden": {
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "nullable": true
           },
           "nroPago": {
             "type": "string",

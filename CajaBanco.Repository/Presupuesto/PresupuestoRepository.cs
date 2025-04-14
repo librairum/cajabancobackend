@@ -190,7 +190,7 @@ namespace CajaBanco.Repository.Presupuesto
                 cmd.Parameters.AddWithValue("@TipoAplicacion", tipoaplicacion); // valor por importe total 00
                 cmd.Parameters.AddWithValue("@FechaPresupuesto", fechapresupuesto); //fecha del documento cabecera de prespupesto
                 cmd.Parameters.AddWithValue("@BcoLiquidacion", bcoliquidacion); // dejar en blanco
-                cmd.Parameters.AddWithValue("@xmlDetalle", xmlDetalle); // traer del docpendiente general ese valor de xsml
+                 cmd.Parameters.AddWithValue("@xmlDetalle", xmlDetalle); // traer del docpendiente general ese valor de xsml
 
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
                 parMensaje.Direction = ParameterDirection.Output;

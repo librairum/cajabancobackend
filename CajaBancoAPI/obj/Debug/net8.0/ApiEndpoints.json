@@ -662,6 +662,27 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
+    "Method": "SpInsertaAsientoContable",
+    "RelativePath": "Presupuesto/SpInsertaAsientoContable",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numeroPresupuesto",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
     "Method": "InsertaDet",
     "RelativePath": "Presupuesto/SpInsertaDet",
     "HttpMethod": "POST",

@@ -15,7 +15,7 @@ namespace CajaBanco.Abstractions.IRepository
         public Task<ResultDto<string>> SpEliminaBanco(string idempresa, string idbanco);
         public Task<ResultDto<string>> SpActualizaBanco(BancoCreateRequestDTO request);
         public Task<ResultDto<BancoListResponseDTO>> SpListaBanco(string empresa, string descripcion);
-
+        
     }
 }
 
