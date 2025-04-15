@@ -517,6 +517,9 @@ namespace CajaBanco.Repository.Presupuesto
                 result.IsSuccess = lista.Count > 0 ? true : false;
                 result.Message = lista.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
                 result.Data = lista.ToList();
+                byte[] datos = lista[0].contenido;
+
+                //var cuerpoArchivo = lista.FirstOrDefault(x => x.contenido);
                 //return File(arregloBytes, "application/pdf", "estadocuenta.pdf");
             }
             catch (Exception ex) {
@@ -526,5 +529,6 @@ namespace CajaBanco.Repository.Presupuesto
             
             return result;
         }
+       
     }
 }

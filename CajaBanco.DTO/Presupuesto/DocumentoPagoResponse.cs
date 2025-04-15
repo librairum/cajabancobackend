@@ -11,7 +11,11 @@ namespace CajaBanco.DTO.Presupuesto
 
         public int id { get; set; }
         public string nombreArchivo { get; set; }
-        public byte[] contenidoArchivo { get; set; }
+        public byte[]  contenido { get; set; }
 
+        public static explicit operator DocumentoPagoResponse(List<DocumentoPagoResponse> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

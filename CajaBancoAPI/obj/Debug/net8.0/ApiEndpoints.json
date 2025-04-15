@@ -500,6 +500,22 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
+    "Method": "CargarArchivo",
+    "RelativePath": "Presupuesto/CargarArchivo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "archivoOriginal",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
     "Method": "EliminarArchivo",
     "RelativePath": "Presupuesto/EliminarArchivo",
     "HttpMethod": "DELETE",
@@ -797,6 +813,22 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
+    "Method": "SpTraeDocumento",
+    "RelativePath": "Presupuesto/SpTraeDocumento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombreArchivo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
     "Method": "ObtenerListProveedores",
     "RelativePath": "Presupuesto/SpTraeProveedores",
     "HttpMethod": "GET",
@@ -842,6 +874,70 @@
       },
       {
         "Name": "destinationPath",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.UsuarioController",
+    "Method": "SpActualiza",
+    "RelativePath": "Usuario/SpActualiza",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Usuario.UsuarioRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.UsuarioController",
+    "Method": "SpElimina",
+    "RelativePath": "Usuario/SpElimina",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.UsuarioController",
+    "Method": "SpInserta",
+    "RelativePath": "Usuario/SpInserta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Usuario.UsuarioRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.UsuarioController",
+    "Method": "SpLista",
+    "RelativePath": "Usuario/SpLista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
         "Type": "System.String",
         "IsRequired": false
       }

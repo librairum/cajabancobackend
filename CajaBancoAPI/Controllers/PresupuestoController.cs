@@ -7,7 +7,9 @@ using CajaBanco.Repository.Presupuesto;
 using Microsoft.AspNetCore.Http.Metadata;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using System.Configuration;
 using System.Text;
+using System.Text.Json;
 namespace CajaBancoAPI.Controllers
 {
     [ApiController]
@@ -213,7 +215,7 @@ namespace CajaBancoAPI.Controllers
                 }
                 string nombre =
                 archivoOriginal.FileName;
-                string rutaOrigen = @"C:\Users\sistemas\Downloads\pdf\cv";
+                string rutaOrigen = @"C:\Users\sistemas\Downloads\pdf";
                 string rutaCompleta = Path.Combine(rutaOrigen, nombre);
                 byte[] bytesArchivo =System.IO.File.ReadAllBytes(rutaCompleta);
                 string valorBytesLEctura = Encoding.Default.GetString(bytesArchivo);
@@ -337,7 +339,29 @@ namespace CajaBancoAPI.Controllers
             try
             {
                 var result = await this._app.SpTraeDocumento(nombreArchivo);
-                return Ok(result);
+                ResultDto<DocumentoPagoResponse> registro = (ResultDto<DocumentoPagoResponse>)result;
+
+                List<DocumentoPagoResponse> listaDocResponse = ((List<DocumentoPagoResponse>)registro.Data);
+                byte[] contenidoBytesArchivo = listaDocResponse[0].contenido;
+                string extension = listaDocResponse[0].nombreArchivo.Split('.')[1];
+                string cabeceraHtml = "";
+                switch (extension)
+                {
+                    case "pdf":
+                        cabeceraHtml = "application/pdf";
+                        break;
+                    case "jpg":
+                        cabeceraHtml = "image/jpeg";
+                        break;
+                    case "png":
+                        cabeceraHtml = "image/png";
+                        break;
+                    default:
+                        BadRequest("Solo puede subir documentos pdf o imagen");
+                        break;
+                }
+                return File(contenidoBytesArchivo, cabeceraHtml, nombreArchivo);
+                //return Ok(nombreArchivoSeleccionado);
             }
             catch (Exception ex)
             {
