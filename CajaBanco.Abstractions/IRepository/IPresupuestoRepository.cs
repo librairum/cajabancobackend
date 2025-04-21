@@ -37,7 +37,7 @@ namespace CajaBanco.Abstractions.IRepository
 
         public Task<ResultDto<string>> SpActualizaComprobante(string empresa,string anio,string mes,
             string numeropresupuesto,string fechapago,string numerooperacion, 
-            string enlacepago, string flagOperacion);
+            string enlacepago,string nombreArchivo, byte[] contenidoArchivo, string flagOperacion);
 
         public Task<ResultDto<string>> SpInsertaAsientoContable(string empresa, string numeroPreesupuesto);
 

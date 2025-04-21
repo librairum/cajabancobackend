@@ -65,6 +65,8 @@ namespace CajaBanco.Repository.MedioPago
             return result;
         }
 
+       
+
         public async Task<ResultDto<string>> SpElimina(string empresa, 
             string idtipopago)
         {
@@ -100,7 +102,7 @@ namespace CajaBanco.Repository.MedioPago
             }
             return result;
         }
-
+       
         public async Task<ResultDto<string>> SpInserta(MedioPagoInsertDTO request)
         {
             ResultDto<string> result = new ResultDto<string>();
@@ -161,5 +163,10 @@ namespace CajaBanco.Repository.MedioPago
             }
             return res;
         }
+
+       
+
+
+
     }
 }

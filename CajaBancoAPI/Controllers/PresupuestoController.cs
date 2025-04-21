@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using System.Configuration;
 using System.Text;
 using System.Text.Json;
+using System.Threading.Tasks;
 namespace CajaBancoAPI.Controllers
 {
     [ApiController]
@@ -77,7 +78,7 @@ namespace CajaBancoAPI.Controllers
         }
 
         [HttpPost]
-        [Route("SpInsert")]
+        [Route("SpInserta")]
         public async Task<ActionResult> SpInserta(PresupuestoRequest request)
         {
             try
@@ -139,14 +140,37 @@ namespace CajaBancoAPI.Controllers
         [HttpPut]
         [Route("SpActualizaComprobante")]
         public async Task<ActionResult> SpActualizaComprobante(string empresa, string anio,
-            string mes, string numeropresupuesto, string fechapago ="", string numerooperacion="",
+            string mes, string numeropresupuesto, IFormFile archivoOriginal = null, string fechapago ="", string numerooperacion="",
             string enlacepago="", string flagOperacion="")
         {
+            
             try
             {
+                var archivoSeleccionado = Request.Form.Files[0];
+                if (archivoOriginal == null || archivoOriginal.Length == 0)
+                {
+                    return BadRequest("Archivo no valido");
 
-                var result = await this._app.SpActualizaComprobante(empresa, anio, mes, numeropresupuesto, 
-                    fechapago, numerooperacion, enlacepago, flagOperacion);
+                }
+                string nombreArchivo =
+                archivoOriginal.FileName;
+                string rutaCompleta = "";
+                //string rutaOrigen = @"C:\Users\sistemas\Downloads\pdf";
+                rutaCompleta = Path.GetFullPath(archivoOriginal.FileName);
+                MemoryStream ms = new MemoryStream();
+
+                await archivoOriginal.CopyToAsync(ms);
+                byte[] bytesArchivo = ms.ToArray();
+
+                //guardar el archivo en base de datos
+
+                var result = await this._app.SpActualizaComprobante(empresa, anio, mes, numeropresupuesto,
+                    fechapago, numerooperacion, enlacepago, nombreArchivo, bytesArchivo, flagOperacion);
+                
+                
+
+
+                //metodo para limpiar el archivo de base de datos 
                 if (flagOperacion.Equals("E"))
                 {
                     string ruta = _configuracion["rutaDocumentos"];
@@ -155,11 +179,11 @@ namespace CajaBancoAPI.Controllers
                     int posicionRecorte = enlacepago.IndexOf("documentos") + 11;
                     string[] cadenas =  enlacepago.Split('/');
                     int ultimaCadena = cadenas.Length-1;
-                    string nombreArchivo = cadenas[ultimaCadena];
-                    string rutaCompleta = Path.Combine(ruta, nombreArchivo);
-                    //string rutaFormateada = rutaCompleta.Replace('/', '\\');
-                    //                    string nombreArchivo = enlacepago.Substring(posicionRecorte, enlacepago.Length - (posicionRecorte-1));
-                    //Console.WriteLine(rutaCompleta);
+                    nombreArchivo = "";
+                     nombreArchivo = cadenas[ultimaCadena];
+                    rutaCompleta = "";
+                     rutaCompleta = Path.Combine(ruta, nombreArchivo);
+                    
                     EliminarArchivo(rutaCompleta);
                 }
                 return Ok(result);
@@ -204,10 +228,12 @@ namespace CajaBancoAPI.Controllers
 
         [HttpPost]
         [Route("CargarArchivo")]
-        public IActionResult CargarArchivo(IFormFile archivoOriginal)
+        public async Task<IActionResult> CargarArchivo(IFormFile archivoOriginal)
         {
             try
             {
+
+                var archivoSeleccionado = Request.Form.Files[0];
                 if (archivoOriginal == null || archivoOriginal.Length == 0)
                 {
                     return BadRequest("Archivo no valido");
@@ -215,11 +241,19 @@ namespace CajaBancoAPI.Controllers
                 }
                 string nombre =
                 archivoOriginal.FileName;
-                string rutaOrigen = @"C:\Users\sistemas\Downloads\pdf";
-                string rutaCompleta = Path.Combine(rutaOrigen, nombre);
-                byte[] bytesArchivo =System.IO.File.ReadAllBytes(rutaCompleta);
-                string valorBytesLEctura = Encoding.Default.GetString(bytesArchivo);
-                this._app.SpInsertaDocumento(nombre,bytesArchivo);
+                //string rutaOrigen = @"C:\Users\sistemas\Downloads\pdf";
+                string rutaCompleta = Path.GetFullPath(archivoOriginal.FileName);
+                MemoryStream ms = new MemoryStream();
+                
+               await archivoOriginal.CopyToAsync(ms);
+               byte[] bytesArchivo = ms.ToArray();
+
+                
+
+                    //string valorBytesLEctura = Encoding.Default.GetString(bytesArchivo);
+               this._app.SpInsertaDocumento(nombre, bytesArchivo);
+                    //byte[] bytesArchivo = System.IO.File.ReadAllBytes(archivoOriginal.FileName);                                                    
+                //string rutaCompleta = Path.Combine(rutaOrigen, nombre);                                                
                 return Ok("Archivo guardaro en base de datos");
                 //return Ok(string.Format("Ruta de archivo:{0}, bytes: {1}", nombre, valorBytesLEctura));
 
@@ -360,6 +394,8 @@ namespace CajaBancoAPI.Controllers
                         BadRequest("Solo puede subir documentos pdf o imagen");
                         break;
                 }
+                FileContentResult archivoCreado = File(contenidoBytesArchivo, cabeceraHtml, nombreArchivo);
+                
                 return File(contenidoBytesArchivo, cabeceraHtml, nombreArchivo);
                 //return Ok(nombreArchivoSeleccionado);
             }

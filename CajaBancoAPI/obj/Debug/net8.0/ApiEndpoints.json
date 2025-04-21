@@ -468,6 +468,70 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CajaBancoAPI.Controllers.PerfilController",
+    "Method": "SpActualiza",
+    "RelativePath": "Perfil/SpActualiza",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Perfil.PerfilUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PerfilController",
+    "Method": "SpElimina",
+    "RelativePath": "Perfil/SpElimina",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PerfilController",
+    "Method": "SpInserta",
+    "RelativePath": "Perfil/SpInserta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Perfil.PerfilInsertDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PerfilController",
+    "Method": "SpTrae",
+    "RelativePath": "Perfil/SpLista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CajaBancoAPI.Controllers.PermisosxPerfilController",
     "Method": "GetMenuPerfiles",
     "RelativePath": "PermisosxPerfil/{codigoPerfil}/{cCodModulo}",
@@ -663,7 +727,7 @@
   {
     "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
     "Method": "SpInserta",
-    "RelativePath": "Presupuesto/SpInsert",
+    "RelativePath": "Presupuesto/SpInserta",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

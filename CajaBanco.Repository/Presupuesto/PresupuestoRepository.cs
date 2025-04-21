@@ -411,7 +411,7 @@ namespace CajaBanco.Repository.Presupuesto
         public async Task<ResultDto<string>> SpActualizaComprobante(string empresa, string anio, 
             string mes, 
             string numeropresupuesto, string fechapago, string numerooperacion, 
-            string enlacepago, string flagOperacion)
+            string enlacepago, string nombreArchivo,byte[] contenidoArchivo, string flagOperacion)
         {
             ResultDto<string> result = new ResultDto<string>();
             try {
@@ -425,6 +425,8 @@ namespace CajaBanco.Repository.Presupuesto
                 cmd.Parameters.AddWithValue("@fechapago", fechapago);
                 cmd.Parameters.AddWithValue("@numerooperacion", numerooperacion);                
                 cmd.Parameters.AddWithValue("@enlacepago", enlacepago);
+                cmd.Parameters.AddWithValue("@nombreArchivo", nombreArchivo);
+                cmd.Parameters.AddWithValue("@contenidoArchivo", nombreArchivo);
                 cmd.Parameters.AddWithValue("@flagOperacion", flagOperacion);
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
                 parMensaje.Direction = ParameterDirection.Output;
