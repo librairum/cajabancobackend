@@ -30,6 +30,8 @@ namespace CajaBanco.DTO.Pago
         public string Ban01FechaEjecucionPago { get; set; }
         public string Ban01NroOperacion { get; set; }
         public string Ban01EnlacePago { get; set; }
+        public string Ban01nombreArchivo { get; set; }
+        public  byte[] Ban01contenidoArchivo { get; set; }
 
     }
 }

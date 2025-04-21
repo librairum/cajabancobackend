@@ -43,6 +43,7 @@ namespace CajaBanco.Abstractions.IService
 
         //public Task<ResultDto<string>> SpTraeDocumento(string nombreArchivo);
 
-        public Task<ResultDto<DocumentoPagoResponse>> SpTraeDocumento(string nombreArchivo);
+        public Task<ResultDto<PresupuestoListResponse>> SpTraeDocumento(string empresa, string anio, string mes,
+            string numeroPresupuesto);
     }
 }

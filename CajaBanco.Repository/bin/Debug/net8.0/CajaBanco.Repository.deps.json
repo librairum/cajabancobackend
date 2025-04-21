@@ -427,18 +427,12 @@
           "CajaBanco.DTO": "1.0.0"
         },
         "runtime": {
-          "CajaBanco.Abstractions.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "CajaBanco.Abstractions.dll": {}
         }
       },
       "CajaBanco.DTO/1.0.0": {
         "runtime": {
-          "CajaBanco.DTO.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "CajaBanco.DTO.dll": {}
         }
       }
     }

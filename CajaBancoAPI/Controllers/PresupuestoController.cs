@@ -140,7 +140,8 @@ namespace CajaBancoAPI.Controllers
         [HttpPut]
         [Route("SpActualizaComprobante")]
         public async Task<ActionResult> SpActualizaComprobante(string empresa, string anio,
-            string mes, string numeropresupuesto, IFormFile archivoOriginal = null, string fechapago ="", string numerooperacion="",
+            string mes, string numeropresupuesto, IFormFile archivoOriginal = null, 
+            string fechapago ="", string numerooperacion="",
             string enlacepago="", string flagOperacion="")
         {
             
@@ -184,7 +185,7 @@ namespace CajaBancoAPI.Controllers
                     rutaCompleta = "";
                      rutaCompleta = Path.Combine(ruta, nombreArchivo);
                     
-                    EliminarArchivo(rutaCompleta);
+                    //EliminarArchivo(rutaCompleta);
                 }
                 return Ok(result);
             }
@@ -368,16 +369,18 @@ namespace CajaBancoAPI.Controllers
         }
         [HttpGet]
         [Route("SpTraeDocumento")]
-        public async Task<ActionResult> SpTraeDocumento(string nombreArchivo)
+        public async Task<ActionResult> SpTraeDocumento(string empresa, string anio, string mes,
+             string numeroPresupuesto)
         {
             try
             {
-                var result = await this._app.SpTraeDocumento(nombreArchivo);
-                ResultDto<DocumentoPagoResponse> registro = (ResultDto<DocumentoPagoResponse>)result;
+                var result = await this._app.SpTraeDocumento(empresa, anio, mes, numeroPresupuesto);
+                ResultDto<PresupuestoListResponse> registro = result;
 
-                List<DocumentoPagoResponse> listaDocResponse = ((List<DocumentoPagoResponse>)registro.Data);
-                byte[] contenidoBytesArchivo = listaDocResponse[0].contenido;
-                string extension = listaDocResponse[0].nombreArchivo.Split('.')[1];
+                List<PresupuestoListResponse> listaDocResponse =registro.Data;
+                byte[] contenidoBytesArchivo = listaDocResponse[0].Ban01contenidoArchivo;
+                string nombreArchivo = listaDocResponse[0].Ban01nombreArchivo;
+                string extension = listaDocResponse[0].Ban01nombreArchivo.Split('.')[1];
                 string cabeceraHtml = "";
                 switch (extension)
                 {
@@ -385,6 +388,9 @@ namespace CajaBancoAPI.Controllers
                         cabeceraHtml = "application/pdf";
                         break;
                     case "jpg":
+                        cabeceraHtml = "image/jpeg";
+                        break;
+                    case "jpeg":
                         cabeceraHtml = "image/jpeg";
                         break;
                     case "png":

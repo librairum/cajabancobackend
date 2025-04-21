@@ -96,9 +96,10 @@ namespace CajaBanco.Application.Presupuesto
            return await this._service.SpInsertaDocumento(nombreArchivo, contenidoArchivo);    
         }
 
-        public async Task<ResultDto<DocumentoPagoResponse>> SpTraeDocumento(string nombreArchivo)
+        public async Task<ResultDto<PresupuestoListResponse>> SpTraeDocumento(string empresa, string anio, string mes,
+             string numeroPresupuesto)
         {
-            return await this._service.SpTraeDocumento(nombreArchivo);    
+            return await this._service.SpTraeDocumento(empresa, anio, mes, numeroPresupuesto);    
         }
     }
 }

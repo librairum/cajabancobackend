@@ -426,7 +426,7 @@ namespace CajaBanco.Repository.Presupuesto
                 cmd.Parameters.AddWithValue("@numerooperacion", numerooperacion);                
                 cmd.Parameters.AddWithValue("@enlacepago", enlacepago);
                 cmd.Parameters.AddWithValue("@nombreArchivo", nombreArchivo);
-                cmd.Parameters.AddWithValue("@contenidoArchivo", nombreArchivo);
+                cmd.Parameters.AddWithValue("@contenidoArchivo", contenidoArchivo);
                 cmd.Parameters.AddWithValue("@flagOperacion", flagOperacion);
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
                 parMensaje.Direction = ParameterDirection.Output;
@@ -505,21 +505,26 @@ namespace CajaBanco.Repository.Presupuesto
             return result;
         }
 
-        public async Task<ResultDto<DocumentoPagoResponse>> SpTraeDocumento(string nombreArchivo)
+        public async Task<ResultDto<PresupuestoListResponse>> SpTraeDocumento(string empresa, string anio, string mes, string numeroPresupuestoo)
         {
-            ResultDto<DocumentoPagoResponse> result = new ResultDto<DocumentoPagoResponse>();
-            List<DocumentoPagoResponse> lista = new List<DocumentoPagoResponse>();
+            ResultDto<PresupuestoListResponse> result = new ResultDto<PresupuestoListResponse>();
+            List<PresupuestoListResponse> lista = new List<PresupuestoListResponse>();
             try
             {
                 SqlConnection cn = new SqlConnection(_connectionString);
                 DynamicParameters par = new DynamicParameters();
-                par.Add("@nombreArchivo", nombreArchivo);
-                lista = (List<DocumentoPagoResponse>)await cn.QueryAsync<DocumentoPagoResponse>("Spu_Ban_Trae_Documento",
+                par.Add("@Ban01Empresa", empresa);
+                par.Add("@Ban01Anio", anio);
+                par.Add("@Ban01Mes", mes);
+                par.Add("@Ban01Numero", numeroPresupuestoo);
+
+            
+                lista = (List<PresupuestoListResponse>)await cn.QueryAsync<PresupuestoListResponse>("Spu_Ban_Trae_Documento",
                     par, commandType: CommandType.StoredProcedure);
                 result.IsSuccess = lista.Count > 0 ? true : false;
                 result.Message = lista.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
                 result.Data = lista.ToList();
-                byte[] datos = lista[0].contenido;
+                byte[] datos = lista[0].Ban01contenidoArchivo;
 
                 //var cuerpoArchivo = lista.FirstOrDefault(x => x.contenido);
                 //return File(arregloBytes, "application/pdf", "estadocuenta.pdf");

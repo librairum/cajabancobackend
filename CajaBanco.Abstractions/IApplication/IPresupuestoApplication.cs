@@ -42,7 +42,8 @@ namespace CajaBanco.Abstractions.IApplication
 
         public Task<ResultDto<string>> SpInsertaDocumento(string nombreArchivo, byte[] contenidoArchivo);
 
-        public Task<ResultDto<DocumentoPagoResponse>> SpTraeDocumento(string nombreArchivo);
+        public Task<ResultDto<PresupuestoListResponse>> SpTraeDocumento(string empresa, string anio, string mes,
+             string numeroPresupuesto);
 
     }
 }
