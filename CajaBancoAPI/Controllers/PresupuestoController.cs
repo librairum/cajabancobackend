@@ -171,22 +171,22 @@ namespace CajaBancoAPI.Controllers
                 
 
 
-                //metodo para limpiar el archivo de base de datos 
-                if (flagOperacion.Equals("E"))
-                {
-                    string ruta = _configuracion["rutaDocumentos"];
-                    string nombrearchivo = "";
+                ////metodo para limpiar el archivo de base de datos 
+                //if (flagOperacion.Equals("E"))
+                //{
+                //    string ruta = _configuracion["rutaDocumentos"];
+                //    string nombrearchivo = "";
 
-                    int posicionRecorte = enlacepago.IndexOf("documentos") + 11;
-                    string[] cadenas =  enlacepago.Split('/');
-                    int ultimaCadena = cadenas.Length-1;
-                    nombreArchivo = "";
-                     nombreArchivo = cadenas[ultimaCadena];
-                    rutaCompleta = "";
-                     rutaCompleta = Path.Combine(ruta, nombreArchivo);
+                //    int posicionRecorte = enlacepago.IndexOf("documentos") + 11;
+                //    string[] cadenas =  enlacepago.Split('/');
+                //    int ultimaCadena = cadenas.Length-1;
+                //    nombreArchivo = "";
+                //     nombreArchivo = cadenas[ultimaCadena];
+                //    rutaCompleta = "";
+                //     rutaCompleta = Path.Combine(ruta, nombreArchivo);
                     
-                    //EliminarArchivo(rutaCompleta);
-                }
+                //    //EliminarArchivo(rutaCompleta);
+                //}
                 return Ok(result);
             }
             catch (Exception ex) {
