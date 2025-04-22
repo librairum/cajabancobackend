@@ -33,8 +33,9 @@ namespace CajaBanco.Repository.Usuario
                 SqlCommand cmd = new SqlCommand("Spu_Ban_Insertar_Usuario", cn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Codigo", request.Codigo);
-                cmd.Parameters.AddWithValue("@Codigo", request.Codigo);
-                cmd.Parameters.AddWithValue("@Codigo", request.Codigo);
+                cmd.Parameters.AddWithValue("@NombreUsuario", request.NombreUsuario);
+                cmd.Parameters.AddWithValue("@ClaveUsuario", request.ClaveUsuario);
+                cmd.Parameters.AddWithValue("@CodigoPerfil", request.CodigoPerfil);
                 
 
                 var parMensaje = cmd.Parameters.Add("@msj", System.Data.SqlDbType.VarChar, 200);
