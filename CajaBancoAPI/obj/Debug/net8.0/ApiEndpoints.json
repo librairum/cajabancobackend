@@ -563,6 +563,64 @@
     ]
   },
   {
+    "ContainingType": "CajaBancoAPI.Controllers.PermisosxPerfilController",
+    "Method": "SpInsertaMenuxPerfil",
+    "RelativePath": "PermisosxPerfil/SpInsertaMenuxPerfil",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Permisos.PermisosRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PermisosxPerfilController",
+    "Method": "SpTodoMenuxPerfil",
+    "RelativePath": "PermisosxPerfil/SpTodoMenuxPerfil",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoPerfil",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codModulo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PermisosxPerfilController",
+    "Method": "SpTraeMenuxPerfil",
+    "RelativePath": "PermisosxPerfil/SpTraeMenuxPerfil",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoPerfil",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codModulo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
     "Method": "CargarArchivo",
     "RelativePath": "Presupuesto/CargarArchivo",
