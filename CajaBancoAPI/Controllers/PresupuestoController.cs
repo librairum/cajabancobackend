@@ -382,7 +382,7 @@ namespace CajaBancoAPI.Controllers
                 string nombreArchivo = listaDocResponse[0].Ban01nombreArchivo;
                 string extension = listaDocResponse[0].Ban01nombreArchivo.Split('.')[1];
                 string cabeceraHtml = "";
-                switch (extension)
+                switch (extension.ToLower())
                 {
                     case "pdf":
                         cabeceraHtml = "application/pdf";
