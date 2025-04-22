@@ -639,6 +639,11 @@
         "IsRequired": false
       },
       {
+        "Name": "archivoOriginal",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
         "Name": "fechapago",
         "Type": "System.String",
         "IsRequired": false
@@ -673,6 +678,37 @@
         "Name": "request",
         "Type": "CajaBanco.DTO.Presupuesto.PresupuestoDetRequest",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
+    "Method": "SpAnulaComprobante",
+    "RelativePath": "Presupuesto/SpAnulaComprobante",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numeroPresupuesto",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -884,7 +920,22 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "nombreArchivo",
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numeroPresupuesto",
         "Type": "System.String",
         "IsRequired": false
       }

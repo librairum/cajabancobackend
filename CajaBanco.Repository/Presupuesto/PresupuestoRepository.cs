@@ -450,7 +450,7 @@ namespace CajaBanco.Repository.Presupuesto
             }
             return result;
         }
-
+        
         public async Task<ResultDto<string>> SpInsertaAsientoContable(string empresa, string numeroPreesupuesto)
         {
             ResultDto<string> result = new ResultDto<string>();
@@ -536,6 +536,27 @@ namespace CajaBanco.Repository.Presupuesto
             
             return result;
         }
-       
+
+        //public async Task<ResultDto<string>> SpAnulaComprobante(string empresa, string anio, string mes, string numeroPresupuesto)
+        //{
+        //    ResultDto<string> result = new ResultDto<string>();
+        //    try
+        //    {
+        //        SqlConnection cn = new SqlConnection(_connectionString);
+        //        SqlCommand cmd = new SqlCommand("Spu_Ban_Upd_ComprobantePago", cn);
+        //        cmd.CommandType = CommandType.StoredProcedure;
+        //        cmd.Parameters.AddWithValue("@empresa", empresa);
+        //        cmd.Parameters.AddWithValue("@anio", empresa);
+        //        cmd.Parameters.AddWithValue("@mes", empresa);
+        //        cmd.Parameters.AddWithValue("@@numeropresupuesto", empresa);
+        //        result.Item = "1";
+                
+        //    }
+        //    catch (Exception ex) {
+        //        result.MessageException = ex.Message;
+        //        result.IsSuccess = false;
+        //    }
+        //    return result;
+        //}
     }
 }

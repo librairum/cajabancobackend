@@ -193,8 +193,23 @@ namespace CajaBancoAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [HttpPut]
+        [Route("SpAnulaComprobante")]
+        public async Task<ActionResult> SpAnulaComprobante(string empresa, string anio, string mes, string numeroPresupuesto)
+        {
 
-      
+            
+            try
+            {
+                var result = await this._app.SpActualizaComprobante(empresa, anio, mes, numeroPresupuesto, 
+                    DateTime.Now.ToShortDateString(), "", "", "", new byte[0], "E");
+                return Ok(result);
+            }
+            catch (Exception ex) {
+                return BadRequest(ex.Message);
+            }
+
+        }
 
         [HttpPost]
         [Route("SubirArchivo")]
