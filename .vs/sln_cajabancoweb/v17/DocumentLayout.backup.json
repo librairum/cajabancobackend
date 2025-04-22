@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.repository\\usuario\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\usuario\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabancoapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.services\\servicesserviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|solutionrelative:cajabanco.services\\servicesserviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.repository\\repositoryserviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\repositoryserviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.application\\applicationserviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|solutionrelative:cajabanco.application\\applicationserviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabancoapi\\controllers\\permisosxperfilcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\controllers\\permisosxperfilcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.repository\\perfil\\perfilrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\perfil\\perfilrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}|CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.abstractions\\iapplication\\iusuarioapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}|CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj|solutionrelative:cajabanco.abstractions\\iapplication\\iusuarioapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 347,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,80 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ServicesServiceRegister.cs",
-              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Services\\ServicesServiceRegister.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Services\\ServicesServiceRegister.cs",
-              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Services\\ServicesServiceRegister.cs",
-              "RelativeToolTip": "CajaBanco.Services\\ServicesServiceRegister.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\UsuarioController.cs",
+              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "CajaBancoAPI\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAApwCIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T05:57:44.815Z",
+              "WhenOpened": "2025-04-22T13:36:02.195Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RepositoryServiceRegister.cs",
-              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\RepositoryServiceRegister.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Repository\\RepositoryServiceRegister.cs",
-              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\RepositoryServiceRegister.cs",
-              "RelativeToolTip": "CajaBanco.Repository\\RepositoryServiceRegister.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABKAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Usuario\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Repository\\Usuario\\UsuarioRepository.cs",
+              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Usuario\\UsuarioRepository.cs",
+              "RelativeToolTip": "CajaBanco.Repository\\Usuario\\UsuarioRepository.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAIwJAAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T05:57:22.007Z",
+              "WhenOpened": "2025-04-22T13:34:30.497Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ApplicationServiceRegister.cs",
-              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Application\\ApplicationServiceRegister.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Application\\ApplicationServiceRegister.cs",
-              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Application\\ApplicationServiceRegister.cs",
-              "RelativeToolTip": "CajaBanco.Application\\ApplicationServiceRegister.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABMAAAAAAAAAA==",
+              "Title": "ServicesServiceRegister.cs",
+              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Services\\ServicesServiceRegister.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Services\\ServicesServiceRegister.cs",
+              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Services\\ServicesServiceRegister.cs",
+              "RelativeToolTip": "CajaBanco.Services\\ServicesServiceRegister.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T05:56:42.48Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PermisosxPerfilController.cs",
-              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\PermisosxPerfilController.cs",
-              "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\PermisosxPerfilController.cs",
-              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\PermisosxPerfilController.cs",
-              "RelativeToolTip": "CajaBancoAPI\\Controllers\\PermisosxPerfilController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAwwEgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T05:39:53.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PerfilRepository.cs",
-              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Perfil\\PerfilRepository.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Repository\\Perfil\\PerfilRepository.cs",
-              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Perfil\\PerfilRepository.cs",
-              "RelativeToolTip": "CajaBanco.Repository\\Perfil\\PerfilRepository.cs",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAIwHYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T05:37:38.976Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IUsuarioApplication.cs",
-              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Abstractions\\IApplication\\IUsuarioApplication.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Abstractions\\IApplication\\IUsuarioApplication.cs",
-              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Abstractions\\IApplication\\IUsuarioApplication.cs",
-              "RelativeToolTip": "CajaBanco.Abstractions\\IApplication\\IUsuarioApplication.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T05:35:55.713Z",
+              "WhenOpened": "2025-04-22T13:29:24.019Z",
               "EditorCaption": ""
             }
           ]

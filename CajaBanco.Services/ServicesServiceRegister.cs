@@ -13,6 +13,7 @@ using CajaBanco.Services.MedioPago;
 using CajaBanco.Services.CtaCtable;
 using CajaBanco.Services.Perfil;
 using CajaBanco.Services.Permisos;
+using CajaBanco.Services.Usuario;
 
 namespace CajaBanco.Services
 {
@@ -30,6 +31,7 @@ namespace CajaBanco.Services
             services.AddScoped<ICtaCtableService, CtaCtableService>();
             services.AddScoped<IPerfilService, PerfilService>();
             services.AddScoped<IPermisosService, PermisosService>();
+            services.AddScoped<IUsuarioService, UsuarioService>();
             return services;
         }
 

@@ -30,6 +30,7 @@ namespace CajaBanco.Repository
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<IPerfilRepository, PerfilRepository>();
             services.AddScoped<IPermisosRepository, PermisosRepository>();
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             return services;
         }
 
