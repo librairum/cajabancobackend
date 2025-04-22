@@ -3,79 +3,69 @@
   "WorkspaceRootPath": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabancoapi\\controllers\\presupuestocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\controllers\\presupuestocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.repository\\usuario\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\usuario\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.application\\presupuesto\\presupuestoapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|solutionrelative:cajabanco.application\\presupuesto\\presupuestoapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabancoapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.services\\presupuesto\\presupuestoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|solutionrelative:cajabanco.services\\presupuesto\\presupuestoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.repository\\presupuesto\\presupuestorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\presupuesto\\presupuestorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.services\\servicesserviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|solutionrelative:cajabanco.services\\servicesserviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 1,
+      "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 785,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 347,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PresupuestoController.cs",
-              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\PresupuestoController.cs",
-              "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\PresupuestoController.cs",
-              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\PresupuestoController.cs",
-              "RelativeToolTip": "CajaBancoAPI\\Controllers\\PresupuestoController.cs",
-              "ViewState": "AgIAAJcAAAAAAAAAAAAYwL4AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T21:07:06.881Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PresupuestoApplication.cs",
-              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Application\\Presupuesto\\PresupuestoApplication.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Application\\Presupuesto\\PresupuestoApplication.cs",
-              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Application\\Presupuesto\\PresupuestoApplication.cs",
-              "RelativeToolTip": "CajaBanco.Application\\Presupuesto\\PresupuestoApplication.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAkwEwAAAAJAAAAAAAAAA==",
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\UsuarioController.cs",
+              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "CajaBancoAPI\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAApwCIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T21:00:23.911Z"
+              "WhenOpened": "2025-04-22T13:36:02.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Usuario\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Repository\\Usuario\\UsuarioRepository.cs",
+              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Usuario\\UsuarioRepository.cs",
+              "RelativeToolTip": "CajaBanco.Repository\\Usuario\\UsuarioRepository.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAIwJAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T13:34:30.497Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PresupuestoService.cs",
-              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Services\\Presupuesto\\PresupuestoService.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Services\\Presupuesto\\PresupuestoService.cs",
-              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Services\\Presupuesto\\PresupuestoService.cs",
-              "RelativeToolTip": "CajaBanco.Services\\Presupuesto\\PresupuestoService.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAYwFAAAABMAAAAAAAAAA==",
+              "Title": "ServicesServiceRegister.cs",
+              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Services\\ServicesServiceRegister.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Services\\ServicesServiceRegister.cs",
+              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Services\\ServicesServiceRegister.cs",
+              "RelativeToolTip": "CajaBanco.Services\\ServicesServiceRegister.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T20:59:49.473Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PresupuestoRepository.cs",
-              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
-              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
-              "RelativeToolTip": "CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
-              "ViewState": "AgIAAJcBAAAAAAAAAAAAAJ0BAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T18:46:54.36Z"
+              "WhenOpened": "2025-04-22T13:29:24.019Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -871,6 +871,93 @@
         }
       }
     },
+    "/PermisosxPerfil/SpTraeMenuxPerfil": {
+      "get": {
+        "tags": [
+          "PermisosxPerfil"
+        ],
+        "parameters": [
+          {
+            "name": "codigoPerfil",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "codModulo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/PermisosxPerfil/SpTodoMenuxPerfil": {
+      "get": {
+        "tags": [
+          "PermisosxPerfil"
+        ],
+        "parameters": [
+          {
+            "name": "codigoPerfil",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "codModulo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/PermisosxPerfil/SpInsertaMenuxPerfil": {
+      "post": {
+        "tags": [
+          "PermisosxPerfil"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermisosRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermisosRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermisosRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Presupuesto/SpTraeProveedores": {
       "get": {
         "tags": [
@@ -1139,6 +1226,68 @@
             "schema": {
               "type": "string",
               "default": ""
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "archivoOriginal": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "archivoOriginal": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Presupuesto/SpAnulaComprobante": {
+      "put": {
+        "tags": [
+          "Presupuesto"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "anio",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "mes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "numeroPresupuesto",
+            "in": "query",
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -1425,7 +1574,28 @@
         ],
         "parameters": [
           {
-            "name": "nombreArchivo",
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "anio",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "mes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "numeroPresupuesto",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1728,6 +1898,24 @@
             "nullable": true
           },
           "descripcion": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermisosRequest": {
+        "type": "object",
+        "properties": {
+          "codmodulo": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoperfil": {
+            "type": "string",
+            "nullable": true
+          },
+          "xmlpermisos": {
             "type": "string",
             "nullable": true
           }

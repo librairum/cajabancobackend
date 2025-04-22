@@ -563,6 +563,64 @@
     ]
   },
   {
+    "ContainingType": "CajaBancoAPI.Controllers.PermisosxPerfilController",
+    "Method": "SpInsertaMenuxPerfil",
+    "RelativePath": "PermisosxPerfil/SpInsertaMenuxPerfil",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Permisos.PermisosRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PermisosxPerfilController",
+    "Method": "SpTodoMenuxPerfil",
+    "RelativePath": "PermisosxPerfil/SpTodoMenuxPerfil",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoPerfil",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codModulo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PermisosxPerfilController",
+    "Method": "SpTraeMenuxPerfil",
+    "RelativePath": "PermisosxPerfil/SpTraeMenuxPerfil",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoPerfil",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codModulo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
     "Method": "CargarArchivo",
     "RelativePath": "Presupuesto/CargarArchivo",
@@ -639,6 +697,11 @@
         "IsRequired": false
       },
       {
+        "Name": "archivoOriginal",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
         "Name": "fechapago",
         "Type": "System.String",
         "IsRequired": false
@@ -673,6 +736,37 @@
         "Name": "request",
         "Type": "CajaBanco.DTO.Presupuesto.PresupuestoDetRequest",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
+    "Method": "SpAnulaComprobante",
+    "RelativePath": "Presupuesto/SpAnulaComprobante",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numeroPresupuesto",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -884,7 +978,22 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "nombreArchivo",
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numeroPresupuesto",
         "Type": "System.String",
         "IsRequired": false
       }

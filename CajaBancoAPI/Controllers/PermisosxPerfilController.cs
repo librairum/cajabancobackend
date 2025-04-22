@@ -1,4 +1,6 @@
-﻿using CajaBancoAPI.Context;
+﻿using CajaBanco.Abstractions.IApplication;
+using CajaBanco.DTO.Permisos;
+using CajaBancoAPI.Context;
 using CajaBancoAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -11,10 +13,11 @@ namespace CajaBancoAPI.Controllers
     public class PermisosxPerfilController : Controller
     {
         private readonly AppDbContext _context;
-
-        public PermisosxPerfilController(AppDbContext context)
+        private IPermisosApplication _permisosApplication;
+        public PermisosxPerfilController(AppDbContext context, IPermisosApplication permisosApplication)
         {
            this._context = context;
+            this._permisosApplication = permisosApplication;
         }
 
         [HttpGet("{codigoPerfil}/{cCodModulo}")]
@@ -39,6 +42,50 @@ namespace CajaBancoAPI.Controllers
             }
 
             return menuPerfiles;
+        }
+        [HttpGet]
+        [Route("SpTraeMenuxPerfil")]
+        public async Task<ActionResult> SpTraeMenuxPerfil(string codigoPerfil, string codModulo)
+        {
+            try
+            {
+                var result = await this._permisosApplication.SpTraeMenuxPerfil(codigoPerfil, codModulo);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpTodoMenuxPerfil")]
+        public async Task<ActionResult> SpTodoMenuxPerfil(string codigoPerfil, string codModulo)
+        {
+            try
+            {
+                var result = await this._permisosApplication.SpTodoMenuxPerfil(codigoPerfil, codModulo);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost]
+        [Route("SpInsertaMenuxPerfil")]
+        public async Task<ActionResult> SpInsertaMenuxPerfil(PermisosRequest request)
+        {
+            try
+            {
+
+                var result = await this._permisosApplication.SpInsertaMenuxPerfil(request);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

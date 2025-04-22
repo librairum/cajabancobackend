@@ -131,7 +131,7 @@ namespace CajaBanco.Repository.Usuario
                 DynamicParameters parametros = new DynamicParameters();
 
                 parametros.Add("@codigousuario", codigo);
-                lista = (List<UsuarioListResponse>)await cn.QueryAsync<UsuarioListResponse>("",
+                lista = (List<UsuarioListResponse>)await cn.QueryAsync<UsuarioListResponse>("Spu_Ban_Trae_Usuarios",
                     parametros, commandType: CommandType.StoredProcedure);
                 res.IsSuccess = true;
                 res.Message = lista.Count > 0 ? "informacion encontrada" : "informacion no encontrada";

@@ -13,6 +13,7 @@ using CajaBanco.Repository.MedioPago;
 using CajaBanco.Repository.CtaCtable;
 using CajaBanco.Repository.Usuario;
 using CajaBanco.Repository.Perfil;
+using CajaBanco.Repository.Permisos;
 namespace CajaBanco.Repository
 {
     public static class RepositoryServiceRegister
@@ -28,6 +29,8 @@ namespace CajaBanco.Repository
             services.AddScoped<ICtaCtableRepository, CtaCtableRepository>();
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<IPerfilRepository, PerfilRepository>();
+            services.AddScoped<IPermisosRepository, PermisosRepository>();
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             return services;
         }
 
