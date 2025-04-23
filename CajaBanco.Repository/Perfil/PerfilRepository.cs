@@ -126,7 +126,7 @@ namespace CajaBanco.Repository.Perfil
         }
 
 
-        public async Task<ResultDto<PerfilResponse>> SpLista(string codigo)
+        public async Task<ResultDto<PerfilResponse>> SpLista()
         {
             ResultDto<PerfilResponse> res = new ResultDto<PerfilResponse>();
             List<PerfilResponse> list = new List<PerfilResponse>();
@@ -134,12 +134,9 @@ namespace CajaBanco.Repository.Perfil
             {
                 SqlConnection cn = new SqlConnection(_connectionString);
                 DynamicParameters parametros = new DynamicParameters();
-                if( codigo == null)
-                {
-                    codigo = "";
-                }
-                parametros.Add("@codigo", codigo);
-                list = (List<PerfilResponse>)await cn.QueryAsync<PerfilResponse>("Spu_Ban_Trae_SegPerfil",
+               
+                //parametros.Add("@codigo", codigo);
+                list = (List<PerfilResponse>)await cn.QueryAsync<PerfilResponse>("Spu_Ban_Trae_Perfiles",
                 parametros, commandType: System.Data.CommandType.StoredProcedure);
                 res.IsSuccess = list.Count > 0 ? true : false;
                 res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";

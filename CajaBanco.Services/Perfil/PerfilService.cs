@@ -34,9 +34,9 @@ namespace CajaBanco.Services.Perfil
             return await this._repositorio.SpInserta(request);
         }
 
-        public async Task<ResultDto<PerfilResponse>> SpLista(string? codigo)
+        public async Task<ResultDto<PerfilResponse>> SpLista()
         {
-            return await this._repositorio.SpLista(codigo);
+            return await this._repositorio.SpLista();
         }
     }
 }

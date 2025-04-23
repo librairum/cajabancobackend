@@ -60,10 +60,10 @@ namespace CajaBancoAPI.Controllers
 
         [HttpGet]
         [Route("SpLista")]
-        public async Task<ActionResult> SpTrae(string? codigo)
+        public async Task<ActionResult> SpTrae()
         {
             try {
-                var result = await this._aplicacion.SpLista(codigo);
+                var result = await this._aplicacion.SpLista();
                 return Ok(result);
             }catch(Exception ex)
             {

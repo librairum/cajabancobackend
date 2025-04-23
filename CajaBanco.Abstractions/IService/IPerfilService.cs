@@ -13,6 +13,6 @@ namespace CajaBanco.Abstractions.IService
         public Task<ResultDto<string>> SpInserta(PerfilInsertDTO request);
         public Task<ResultDto<string>> SpActualiza(PerfilUpdateDTO request);
         public Task<ResultDto<string>> SpElimina(string codigo);
-        public Task<ResultDto<PerfilResponse>> SpLista(string? codigo);
+        public Task<ResultDto<PerfilResponse>> SpLista();
     }
 }
