@@ -104,6 +104,7 @@ namespace CajaBanco.Repository.Perfil
                 SqlConnection cn = new SqlConnection(_connectionString);
                 SqlCommand cmd = new SqlCommand("Spu_Ban_Ins_Perfil", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@codigo", request.codigo);
                 cmd.Parameters.AddWithValue("@nombre", request.nombre);
                 cmd.Parameters.AddWithValue("@descripcion", request.descripcion);
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
