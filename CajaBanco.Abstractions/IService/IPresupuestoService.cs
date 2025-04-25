@@ -46,6 +46,8 @@ namespace CajaBanco.Abstractions.IService
         public Task<ResultDto<PresupuestoListResponse>> SpTraeDocumento(string empresa, string anio, string mes,
             string numeroPresupuesto);
 
+        public Task<ResultDto<ConsultaDocPagarResponse>> SpTraeDocPorPagarConsulta(string empresa, string filtro);
+
         //public Task<ResultDto<string>> SpAnulaComprobante(string empresa, string anio, string mes, string numeroPresupuesto);
     }
 }

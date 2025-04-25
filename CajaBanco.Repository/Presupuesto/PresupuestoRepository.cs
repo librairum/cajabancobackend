@@ -537,6 +537,35 @@ namespace CajaBanco.Repository.Presupuesto
             return result;
         }
 
+        public async Task<ResultDto<ConsultaDocPagarResponse>> SpTraeDocPorPagarConsulta(string empresa, string filtro)
+        {
+            ResultDto<ConsultaDocPagarResponse> result = new ResultDto<ConsultaDocPagarResponse>();
+            List<ConsultaDocPagarResponse> lista = new List<ConsultaDocPagarResponse>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                DynamicParameters par = new DynamicParameters();
+                par.Add("@codigoEmpresa", empresa);
+                par.Add("@filtro", filtro);
+                
+
+                lista = (List<ConsultaDocPagarResponse>)await  cn.QueryAsync<ConsultaDocPagarResponse>("Spu_Ban_Trae_DocumentoPorPagarConsulta",
+                    par, commandType: CommandType.StoredProcedure);
+                result.IsSuccess = lista.Count > 0 ? true : false;
+                result.Message = lista.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
+                result.Data = lista.ToList();
+             
+            }
+            catch (Exception ex)
+            {
+                result.IsSuccess = false;
+                result.MessageException = ex.Message;
+            }
+
+            return result;
+        }
+
+
         //public async Task<ResultDto<string>> SpAnulaComprobante(string empresa, string anio, string mes, string numeroPresupuesto)
         //{
         //    ResultDto<string> result = new ResultDto<string>();
@@ -550,7 +579,7 @@ namespace CajaBanco.Repository.Presupuesto
         //        cmd.Parameters.AddWithValue("@mes", empresa);
         //        cmd.Parameters.AddWithValue("@@numeropresupuesto", empresa);
         //        result.Item = "1";
-                
+
         //    }
         //    catch (Exception ex) {
         //        result.MessageException = ex.Message;
