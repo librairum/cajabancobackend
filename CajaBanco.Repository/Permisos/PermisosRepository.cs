@@ -28,7 +28,7 @@ namespace CajaBanco.Repository.Permisos
             try
             {
                 SqlConnection cn = new SqlConnection(this._connectionString);
-                string nombreprocedimiento = "Spu_Int_Ins_PermisosxPerfil";
+                string nombreprocedimiento = "Spu_Ban_Ins_PermisosxPerfil";
                 SqlCommand cmd = new SqlCommand(nombreprocedimiento, cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@codmodulo", request.codmodulo);
@@ -65,7 +65,7 @@ namespace CajaBanco.Repository.Permisos
                 DynamicParameters parametros = new DynamicParameters();
                 parametros.Add("@codigoperfil", codigoperfil);
                 parametros.Add("@codmodulo", codigoperfil);
-                lista = (List<TodoPermisosResponse>)await cn.QueryAsync<TodoPermisosResponse>("Spu_Int_Trae_TodoPermisosxPerfil",
+                lista = (List<TodoPermisosResponse>)await cn.QueryAsync<TodoPermisosResponse>("Spu_Ban_Trae_TodoPermisosxPerfil",
                     parametros, commandType: CommandType.StoredProcedure);
                 res.IsSuccess = lista.Count > 0 ? true : false;
                 res.Message = lista.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
