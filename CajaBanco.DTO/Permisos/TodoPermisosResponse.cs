@@ -15,6 +15,6 @@ namespace CajaBanco.DTO.Permisos
         public string nivel3 { get; set; }
         public string TipoMenu { get; set; }
         public string GrupoMenu { get; set; }
-        public string Habilitado { get; set; }
+        public string habilitado { get; set; }
     }
 }
