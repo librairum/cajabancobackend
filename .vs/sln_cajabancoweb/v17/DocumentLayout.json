@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|d:\\proyectos_29082024\\cajabanco\\cajabancobackend\\cajabanco.repository\\autenticacion\\autenticacionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\autenticacion\\autenticacionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|d:\\proyectos_29082024\\cajabanco\\cajabancobackend\\cajabancoapi\\controllers\\presupuestocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\controllers\\presupuestocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -54,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 347,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,20 +66,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IPresupuestoService.cs",
-              "DocumentMoniker": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\IService\\IPresupuestoService.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Abstractions\\IService\\IPresupuestoService.cs",
-              "ToolTip": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\IService\\IPresupuestoService.cs",
-              "RelativeToolTip": "CajaBanco.Abstractions\\IService\\IPresupuestoService.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAADwvzEAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "AutenticacionRepository.cs",
+              "DocumentMoniker": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Repository\\Autenticacion\\AutenticacionRepository.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Repository\\Autenticacion\\AutenticacionRepository.cs",
+              "ToolTip": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Repository\\Autenticacion\\AutenticacionRepository.cs",
+              "RelativeToolTip": "CajaBanco.Repository\\Autenticacion\\AutenticacionRepository.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAowEcAAACBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T17:37:24.906Z",
+              "WhenOpened": "2025-04-25T18:01:21.479Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "IPresupuestoApplication.cs",
               "DocumentMoniker": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\IApplication\\IPresupuestoApplication.cs",
               "RelativeDocumentMoniker": "CajaBanco.Abstractions\\IApplication\\IPresupuestoApplication.cs",
@@ -83,12 +87,11 @@
               "RelativeToolTip": "CajaBanco.Abstractions\\IApplication\\IPresupuestoApplication.cs",
               "ViewState": "AQIAACEAAAAAAAAAAAAkwC4AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T17:22:40.396Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T17:22:40.396Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PresupuestoRepository.cs",
               "DocumentMoniker": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
               "RelativeDocumentMoniker": "CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
@@ -96,12 +99,11 @@
               "RelativeToolTip": "CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
               "ViewState": "AQIAABUCAAAAAAAAAAAwwBsCAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T16:59:04.639Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T16:59:04.639Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PresupuestoService.cs",
               "DocumentMoniker": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Services\\Presupuesto\\PresupuestoService.cs",
               "RelativeDocumentMoniker": "CajaBanco.Services\\Presupuesto\\PresupuestoService.cs",
@@ -109,12 +111,11 @@
               "RelativeToolTip": "CajaBanco.Services\\Presupuesto\\PresupuestoService.cs",
               "ViewState": "AQIAAFcAAAAAAAAAAAAAwGUAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T16:58:46.873Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T16:58:46.873Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PresupuestoApplication.cs",
               "DocumentMoniker": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Application\\Presupuesto\\PresupuestoApplication.cs",
               "RelativeDocumentMoniker": "CajaBanco.Application\\Presupuesto\\PresupuestoApplication.cs",
@@ -122,25 +123,36 @@
               "RelativeToolTip": "CajaBanco.Application\\Presupuesto\\PresupuestoApplication.cs",
               "ViewState": "AQIAAFYAAAAAAAAAAADwv2cAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T16:58:34.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T16:58:34.184Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PresupuestoController.cs",
               "DocumentMoniker": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBancoAPI\\Controllers\\PresupuestoController.cs",
               "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\PresupuestoController.cs",
               "ToolTip": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBancoAPI\\Controllers\\PresupuestoController.cs",
               "RelativeToolTip": "CajaBancoAPI\\Controllers\\PresupuestoController.cs",
-              "ViewState": "AQIAAHcBAAAAAAAAAAAwwIIBAABgAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-25T16:58:18.881Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
+              "Title": "IPresupuestoService.cs",
+              "DocumentMoniker": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\IService\\IPresupuestoService.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Abstractions\\IService\\IPresupuestoService.cs",
+              "ToolTip": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\IService\\IPresupuestoService.cs",
+              "RelativeToolTip": "CajaBanco.Abstractions\\IService\\IPresupuestoService.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAADwvzEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T17:37:24.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ConsultaDocPagarResponse.cs",
               "DocumentMoniker": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\Presupuesto\\ConsultaDocPagarResponse.cs",
               "RelativeDocumentMoniker": "CajaBanco.DTO\\Presupuesto\\ConsultaDocPagarResponse.cs",
@@ -148,12 +160,11 @@
               "RelativeToolTip": "CajaBanco.DTO\\Presupuesto\\ConsultaDocPagarResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T17:23:30.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T17:23:30.713Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "AutenticacionController.cs",
               "DocumentMoniker": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBancoAPI\\Controllers\\AutenticacionController.cs",
               "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\AutenticacionController.cs",
@@ -161,12 +172,11 @@
               "RelativeToolTip": "CajaBancoAPI\\Controllers\\AutenticacionController.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAgwCsAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T16:23:56.456Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T16:23:56.456Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "PermisosxPerfilController.cs",
               "DocumentMoniker": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBancoAPI\\Controllers\\PermisosxPerfilController.cs",
               "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\PermisosxPerfilController.cs",
@@ -179,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBancoAPI\\appsettings.json",
               "RelativeDocumentMoniker": "CajaBancoAPI\\appsettings.json",
@@ -187,12 +197,11 @@
               "RelativeToolTip": "CajaBancoAPI\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-23T16:43:59.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T16:43:59.578Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "PermisosRepository.cs",
               "DocumentMoniker": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Repository\\Permisos\\PermisosRepository.cs",
               "RelativeDocumentMoniker": "CajaBanco.Repository\\Permisos\\PermisosRepository.cs",
