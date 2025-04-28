@@ -20,7 +20,7 @@ public string  moneda { get; set; }
 public double importeDocumento { get;set; }
 public double importePago { get; set; }
 public string fechaPago { get;set;}
-
+public string numeroPresupuesto { get; set; }
 
 
 

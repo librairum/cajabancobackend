@@ -1600,6 +1600,34 @@
         }
       }
     },
+    "/Presupuesto/SpTraeDocPorPagarConsulta": {
+      "get": {
+        "tags": [
+          "Presupuesto"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtro",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Usuario/SpLista": {
       "get": {
         "tags": [

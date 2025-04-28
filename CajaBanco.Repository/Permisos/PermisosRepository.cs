@@ -64,7 +64,7 @@ namespace CajaBanco.Repository.Permisos
                 SqlConnection cn = new SqlConnection(this._connectionString);
                 DynamicParameters parametros = new DynamicParameters();
                 parametros.Add("@codigoperfil", codigoperfil);
-                parametros.Add("@codmodulo", codigoperfil);
+                parametros.Add("@codmodulo", codmodulo);
                 lista = (List<TodoPermisosResponse>)await cn.QueryAsync<TodoPermisosResponse>("Spu_Ban_Trae_TodoPermisosxPerfil",
                     parametros, commandType: CommandType.StoredProcedure);
                 res.IsSuccess = lista.Count > 0 ? true : false;
