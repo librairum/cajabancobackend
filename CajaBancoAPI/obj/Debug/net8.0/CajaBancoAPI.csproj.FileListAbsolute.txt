@@ -2389,3 +2389,5 @@ D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\refi
 D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\CajaBancoAPI.pdb
 D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\CajaBancoAPI.genruntimeconfig.cache
 D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\ref\CajaBancoAPI.dll
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBancoAPI\bin\Debug\net8.0\System.Text.Encoding.CodePages.dll
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBancoAPI\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Text.Encoding.CodePages.dll

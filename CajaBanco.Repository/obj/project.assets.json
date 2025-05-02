@@ -1944,7 +1944,8 @@
       "Dapper >= 2.1.35",
       "Microsoft.Data.SqlClient >= 5.2.2",
       "Microsoft.Extensions.Configuration.Abstractions >= 8.0.0",
-      "Microsoft.Extensions.DependencyInjection >= 9.0.0"
+      "Microsoft.Extensions.DependencyInjection >= 9.0.0",
+      "System.Text.Encoding >= 4.3.0"
     ]
   },
   "packageFolders": {
@@ -2016,6 +2017,10 @@
           "Microsoft.Extensions.DependencyInjection": {
             "target": "Package",
             "version": "[9.0.0, )"
+          },
+          "System.Text.Encoding": {
+            "target": "Package",
+            "version": "[4.3.0, )"
           }
         },
         "imports": [

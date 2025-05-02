@@ -5,6 +5,8 @@ using CajaBanco.Repository;
 using CajaBanco.Services;
 using Microsoft.AspNetCore.Http.Features;
 
+System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+
 var builder = WebApplication.CreateBuilder(args);
 var connecionString = builder.Configuration.GetConnectionString("conexion");
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connecionString));
@@ -40,6 +42,8 @@ builder.Services.AddCors(opciones =>
     });
    
 });
+
+
 var app = builder.Build();
 
 

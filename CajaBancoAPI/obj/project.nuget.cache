@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Bv5ZKsbXCrE=",
+  "dgSpecHash": "P5GXQK/nArw=",
   "success": true,
   "projectFilePath": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\CajaBancoAPI.csproj",
   "expectedPackageFiles": [
@@ -164,6 +164,7 @@
     "C:\\Users\\sistemas\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
     "C:\\Users\\sistemas\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\sistemas\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\sistemas\\.nuget\\packages\\system.text.encoding.codepages\\9.0.4\\system.text.encoding.codepages.9.0.4.nupkg.sha512",
     "C:\\Users\\sistemas\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\sistemas\\.nuget\\packages\\system.text.json\\7.0.3\\system.text.json.7.0.3.nupkg.sha512",
     "C:\\Users\\sistemas\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",

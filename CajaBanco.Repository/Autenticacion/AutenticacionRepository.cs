@@ -117,6 +117,28 @@ namespace CajaBanco.Repository.Autenticacion
 
             return cRetorno + cClave.Substring(cClave.Length - 1, 1);
         }
+
+        public string Desencriptado(string cClaveEncriptada)
+        {
+            if (string.IsNullOrEmpty(cClaveEncriptada) || cClaveEncriptada.Length < 2)
+            {
+                return cClaveEncriptada; // No se puede desencriptar una cadena vacía o de un solo carácter
+            }
+
+            string cOriginal = "";
+            cOriginal += cClaveEncriptada.Substring(cClaveEncriptada.Length - 1, 1); // El último carácter es el último original
+
+            for (int i = cClaveEncriptada.Length - 2; i >= 0; i--)
+            {
+                int nEncriptado = Asc(cClaveEncriptada[i]);
+                int nSiguienteOriginal = Asc(cOriginal[0]);
+                int nOriginal = nEncriptado - nSiguienteOriginal;
+                cOriginal = Chr(nOriginal) + cOriginal;
+            }
+
+            return cOriginal;
+        }
+
         public async Task<ResultDto<AccesoUsuarioResponseDTO>> SpAccesoUsuario(AccesoRequest request)
         {
             ResultDto<AccesoUsuarioResponseDTO> res = new ResultDto<AccesoUsuarioResponseDTO> ();
@@ -125,17 +147,20 @@ namespace CajaBanco.Repository.Autenticacion
             try
             {
                 using (var cn = new SqlConnection(_connectionString)) {
+
+                    
                     DynamicParameters parametros = new DynamicParameters();
                     string claveEncriptada = Encripta(request.claveusuario);
+                    //string claveDesencriptada = Desencriptado(claveEncriptada);
                     parametros.Add("@NombreUsuario", request.nombreusuario);
                     parametros.Add("@ClaveUsuario", claveEncriptada);
                     parametros.Add("@codigoEmpresa", request.codigoempresa);
-                    list = (List<AccesoUsuarioResponseDTO>)await cn.QueryAsync<AccesoUsuarioResponseDTO>("Spu_Seg_Trae_Autenticacion_Usuario",
+                    list = (List<AccesoUsuarioResponseDTO>)await cn.QueryAsync<AccesoUsuarioResponseDTO>("Spu_Seg_Trae_AutenticacionUsuario",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
-                    
+
                     //list = (List<AccesoUsuarioResponseDTO>)await cn.QueryAsync<AccesoUsuarioResponseDTO>("Spu_Seg_Trae_AutenticacionUsuario",
                     //    parametros, commandType: System.Data.CommandType.StoredProcedure);
-                    //res.IsSuccess = list.Count > 0 ? true : false;
+                    res.IsSuccess = list.Count > 0 ? true : false;
                     res.Message = list.Count > 0 ? "Informacion encontrada": "No se encontro informacion";
                     res.Data = list.ToList();
                     res.Total = list.Count;
