@@ -257,21 +257,17 @@ namespace CajaBancoAPI.Controllers
                 }
                 string nombre =
                 archivoOriginal.FileName;
-                //string rutaOrigen = @"C:\Users\sistemas\Downloads\pdf";
+                
                 string rutaCompleta = Path.GetFullPath(archivoOriginal.FileName);
                 MemoryStream ms = new MemoryStream();
                 
                await archivoOriginal.CopyToAsync(ms);
                byte[] bytesArchivo = ms.ToArray();
-
-                
-
-                    //string valorBytesLEctura = Encoding.Default.GetString(bytesArchivo);
+                                
                this._app.SpInsertaDocumento(nombre, bytesArchivo);
-                    //byte[] bytesArchivo = System.IO.File.ReadAllBytes(archivoOriginal.FileName);                                                    
-                //string rutaCompleta = Path.Combine(rutaOrigen, nombre);                                                
+                                                            
                 return Ok("Archivo guardaro en base de datos");
-                //return Ok(string.Format("Ruta de archivo:{0}, bytes: {1}", nombre, valorBytesLEctura));
+                
 
 
             }
@@ -281,6 +277,7 @@ namespace CajaBancoAPI.Controllers
             }
         }
         
+        //metodo para eliminar ya que no esta siendo utiliado en frontend
         [HttpDelete]
         [Route("EliminarArchivo")]
         public  IActionResult EliminarArchivo([FromQuery] string rutaArchivo)
@@ -322,6 +319,8 @@ namespace CajaBancoAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        //metodo para eliminar , puesto que no se utilizar en el frontend
         [HttpDelete]
         [Route("SpEliminaDet")]
         public async Task<ActionResult> SpEliminaDet(string empresa, 
