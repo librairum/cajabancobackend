@@ -228,7 +228,7 @@ namespace CajaBanco.Repository.Autenticacion
                     res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
                     res.Data = list.ToList();
                     res.Total = list.Count;
-                    cn.Open();
+                    //cn.Open();
                 }
             }
             catch (Exception ex)

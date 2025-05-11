@@ -43,6 +43,14 @@ namespace CajaBanco.Repository.MedioPago
                 cmd.Parameters.AddWithValue("@Ban01AsiConPrefijo", request.Ban01AsiConPrefijo);
                 cmd.Parameters.AddWithValue("@Ban01AsiConCtaITF", request.Ban01AsiConCtaITF);
 
+                cmd.Parameters.AddWithValue("@Ban01AsiConDiario", request.Ban01AsiConDiario);
+                cmd.Parameters.AddWithValue("@Ban01Moneda", request.Ban01Moneda);
+                cmd.Parameters.AddWithValue("@Ban01AsiConCtaComiOtrosBancos", request.Ban01AsiConCtaComiOtrosBancos);
+                cmd.Parameters.AddWithValue("@Ban01AsiConFlagITF", request.Ban01AsiConFlagITF);
+                //@Ban01AsiConDiario varchar(2),
+//@Ban01Moneda    char(1),
+//@Ban01AsiConCtaComiOtrosBancos varchar(20),
+//@Ban01AsiConFlagITF char(1),
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
                 parMensaje.Direction = ParameterDirection.Output;
 
@@ -119,6 +127,12 @@ namespace CajaBanco.Repository.MedioPago
 
                 cmd.Parameters.AddWithValue("@Ban01AsiConPrefijo", request.Ban01AsiConPrefijo);
                 cmd.Parameters.AddWithValue("@Ban01AsiConCtaITF", request.Ban01AsiConCtaITF);
+
+
+                cmd.Parameters.AddWithValue("@Ban01AsiConDiario", request.Ban01AsiConDiario);
+                cmd.Parameters.AddWithValue("@Ban01Moneda", request.Ban01Moneda);
+                cmd.Parameters.AddWithValue("@Ban01AsiConCtaComiOtrosBancos", request.Ban01AsiConCtaComiOtrosBancos);
+                cmd.Parameters.AddWithValue("@Ban01AsiConFlagITF", request.Ban01AsiConFlagITF);
 
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
                 parMensaje.Direction = ParameterDirection.Output;

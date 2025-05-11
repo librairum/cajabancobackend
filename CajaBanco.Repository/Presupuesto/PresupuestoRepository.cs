@@ -123,7 +123,8 @@ namespace CajaBanco.Repository.Presupuesto
                 parametros.Add("@empresa", empresa);
                 parametros.Add("@mes", mes);
                 parametros.Add("@anio", anio);
-                parametros.Add("@modoServidor", _esModoServidor);
+                parametros.Add("@modoServidor", "S");
+                //parametros.Add("@modoServidor", _esModoServidor);
                 list = (List<PresupuestoListResponse>)await cnx.QueryAsync<PresupuestoListResponse>("Spu_Ban_Trae_ResumenPrespuesto",
                     parametros, commandType: System.Data.CommandType.StoredProcedure);
                 res.IsSuccess = list.Count > 0 ? true : false;
