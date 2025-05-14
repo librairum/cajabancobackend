@@ -49,7 +49,7 @@
               "RelativeDocumentMoniker": "CajaBancoAPI\\appsettings.json",
               "ToolTip": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBancoAPI\\appsettings.json",
               "RelativeToolTip": "CajaBancoAPI\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA1AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-05-09T20:55:16.748Z",
               "EditorCaption": ""
@@ -64,8 +64,7 @@
               "RelativeToolTip": "CajaBanco.Repository\\MedioPago\\MedioPagoRepository.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAowBgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T15:30:08.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T15:30:08.339Z"
             }
           ]
         }
