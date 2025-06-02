@@ -18,5 +18,7 @@ namespace CajaBanco.Abstractions.IApplication
             string idtipopago);
         public Task<ResultDto<MedioPagoResponse>> SpTrae(string empresa);
 
+        
+
     }
 }

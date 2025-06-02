@@ -24,6 +24,7 @@ namespace CajaBanco.DTO.CuentaBancaria
         public string CtaGastos { get; set; }
 
 
+
         //public required string Ban01Empresa { get; set; }
         //public required string Ban01IdBanco { get; set; }
         //public required string Ban01IdCuenta { get; set; }

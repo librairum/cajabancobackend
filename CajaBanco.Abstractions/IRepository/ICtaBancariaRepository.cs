@@ -16,6 +16,6 @@ namespace CajaBanco.Abstractions.IRepository
 
         public Task<ResultDto<string>> SpActualiza(CtaBancariaRequest request);
         public Task<ResultDto<CtaBancariaListResponse>> SpLista(string idempresa, string idnro);
-
+        public Task<ResultDto<CtaBancariaListAyuda>> SpListaAyuda(string codigoempresa);
     }
 }

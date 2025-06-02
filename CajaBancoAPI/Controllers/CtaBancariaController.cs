@@ -81,5 +81,21 @@ namespace CajaBancoAPI.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("SpListaAyuda")]
+        public async Task<ActionResult> SpListaAyuda(string codigoEmpresa)
+        {
+
+            try { 
+                var result = await this._ctaBancariaApplication.SpListaAyuda(codigoEmpresa);
+                return Ok(result);
+            }catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+
+
     }
 }

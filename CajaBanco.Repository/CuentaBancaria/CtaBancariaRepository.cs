@@ -200,5 +200,32 @@ namespace CajaBanco.Repository.CuentaBancaria
             return res;
         }
 
+        public async Task<ResultDto<CtaBancariaListAyuda>> SpListaAyuda(string codigoempresa)
+        {
+            ResultDto<CtaBancariaListAyuda> res = new ResultDto<CtaBancariaListAyuda>();
+            List<CtaBancariaListAyuda> list = new List<CtaBancariaListAyuda>();
+
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(_connectionString))
+                {
+                    DynamicParameters parametros = new DynamicParameters();
+                    parametros.Add("@CodigoEmpresa", codigoempresa);
+                    list = (List<CtaBancariaListAyuda>)await cn.QueryAsync<CtaBancariaListAyuda>("Spu_Ban_Trae_CtaBancaria",
+                        parametros, commandType: CommandType.StoredProcedure);
+                    res.IsSuccess = list.Count > 0 ? true : false;
+                    res.Message = list.Count > 0 ? "Infromacion encontrada" : "No se encontro informacion";
+                    res.Data = list.ToList();
+                    res.Total = 0;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
     }
 }

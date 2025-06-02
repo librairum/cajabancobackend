@@ -7,6 +7,7 @@ using Dapper;
 using Microsoft.Data.SqlClient;
 using System.Data.SqlClient;
 using System.Data;
+using CajaBanco.DTO.CuentaBancaria;
 
 namespace CajaBanco.Repository.Banco
 {
@@ -165,7 +166,7 @@ varchar(10)
 
                     parametros.Add("@Ban01Empresa", empresa);
                     parametros.Add("@Ban01Descripcion", descripcion);
-
+                     
                     list = (List<BancoListResponseDTO>)await cn.QueryAsync<BancoListResponseDTO>("Spu_Ban_Trae_Bancos",
                         parametros, commandType: System.Data.CommandType.StoredProcedure);
                     res.IsSuccess = list.Count > 0 ? true : false;
@@ -182,5 +183,6 @@ varchar(10)
             }
             return res;
         }
+       
     }
 }

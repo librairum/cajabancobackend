@@ -38,5 +38,10 @@ namespace CajaBanco.Application.CuentaBancaria
         {
             return await this._ctabancariaService.SpLista(idempresa, idbanco); 
         }
+
+        public async Task<ResultDto<CtaBancariaListAyuda>> SpListaAyuda(string codigoempresa)
+        {
+            return await this._ctabancariaService.SpListaAyuda(codigoempresa);
+        }
     }
 }
