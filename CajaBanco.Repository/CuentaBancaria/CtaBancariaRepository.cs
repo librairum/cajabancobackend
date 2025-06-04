@@ -41,10 +41,10 @@ namespace CajaBanco.Repository.CuentaBancaria
                 
                 cmd.Parameters.AddWithValue("@Ban01Moneda", request.Ban01Moneda);
                 cmd.Parameters.AddWithValue("@Ban01Descripcion", request.Ban01Descripcion);
-                cmd.Parameters.AddWithValue("@Ban01CuentaContable", request.Ban01CuentaContable);
-                cmd.Parameters.AddWithValue("@Ban01Itf", request.Ban01Itf);
-                cmd.Parameters.AddWithValue("@Ban01Prefijo", request.Ban01Prefijo);
-                cmd.Parameters.AddWithValue("@Ban01CtaDet", request.Ban01CtaDet);
+                //cmd.Parameters.AddWithValue("@Ban01CuentaContable", request.Ban01CuentaContable);
+                //cmd.Parameters.AddWithValue("@Ban01Itf", request.Ban01Itf);
+                //cmd.Parameters.AddWithValue("@Ban01Prefijo", request.Ban01Prefijo);
+                //cmd.Parameters.AddWithValue("@Ban01CtaDet", request.Ban01CtaDet);
 
 
 
@@ -88,10 +88,10 @@ namespace CajaBanco.Repository.CuentaBancaria
 
                 cmd.Parameters.AddWithValue("@Ban01Moneda", request.Ban01Moneda);
                 cmd.Parameters.AddWithValue("@Ban01Descripcion", request.Ban01Descripcion);
-                cmd.Parameters.AddWithValue("@Ban01CuentaContable", request.Ban01CuentaContable);
-                cmd.Parameters.AddWithValue("@Ban01Itf", request.Ban01Itf);
-                cmd.Parameters.AddWithValue("@Ban01Prefijo", request.Ban01Prefijo);
-                cmd.Parameters.AddWithValue("@Ban01CtaDet", request.Ban01CtaDet);
+                //cmd.Parameters.AddWithValue("@Ban01CuentaContable", request.Ban01CuentaContable);
+                //cmd.Parameters.AddWithValue("@Ban01Itf", request.Ban01Itf);
+                //cmd.Parameters.AddWithValue("@Ban01Prefijo", request.Ban01Prefijo);
+                //cmd.Parameters.AddWithValue("@Ban01CtaDet", request.Ban01CtaDet);
 
 
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);

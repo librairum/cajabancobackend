@@ -20,10 +20,10 @@ namespace CajaBanco.DTO.CuentaBancaria
         public string Ban01IdNro { get; set; } = null!;
         public string Ban01Moneda { get; set; } = null!;
         public string? Ban01Descripcion { get; set; }
-        public string? Ban01CuentaContable { get; set; }
-        public string? Ban01Itf { get; set; }
-        public string? Ban01Prefijo { get; set; }
-        public string? Ban01CtaDet { get; set; }
+        //public string? Ban01CuentaContable { get; set; }
+        //public string? Ban01Itf { get; set; }
+        //public string? Ban01Prefijo { get; set; }
+        //public string? Ban01CtaDet { get; set; }
 
    }
 }

@@ -18,7 +18,8 @@ namespace CajaBanco.DTO.MedioPago
         public string Ban01Moneda { get; set; }
         public string Ban01AsiConCtaComiOtrosBancos { get; set; }
         public string Ban01AsiConFlagITF { get; set; }
-
+        public string Ban01CtaBanBancoCod { get; set; }
+        public string Ban01CtaBanCod { get; set; }
 
     }
 }
