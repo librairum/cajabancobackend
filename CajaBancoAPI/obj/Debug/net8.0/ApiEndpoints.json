@@ -191,6 +191,22 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.CtaBancariaController",
+    "Method": "SpListaAyuda",
+    "RelativePath": "CtaBancaria/SpListaAyuda",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoEmpresa",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.CtaBancariaController",
     "Method": "SpActualiza",
     "RelativePath": "CtaBancaria/SpUpdate",
     "HttpMethod": "PUT",
@@ -957,6 +973,27 @@
       },
       {
         "Name": "numerodocumento",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
+    "Method": "ObtenerListDocPendientesReporte",
+    "RelativePath": "Presupuesto/SpListaDocPendientesReporte",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filtro",
         "Type": "System.String",
         "IsRequired": false
       }

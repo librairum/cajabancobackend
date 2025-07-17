@@ -329,6 +329,27 @@
         }
       }
     },
+    "/CtaBancaria/SpListaAyuda": {
+      "get": {
+        "tags": [
+          "CtaBancaria"
+        ],
+        "parameters": [
+          {
+            "name": "codigoEmpresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/CtaCtable/SpTraeDetalle": {
       "get": {
         "tags": [
@@ -1628,6 +1649,35 @@
         }
       }
     },
+    "/Presupuesto/SpListaDocPendientesReporte": {
+      "get": {
+        "tags": [
+          "Presupuesto"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtro",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Usuario/SpLista": {
       "get": {
         "tags": [
@@ -1811,22 +1861,6 @@
           "ban01Descripcion": {
             "type": "string",
             "nullable": true
-          },
-          "ban01CuentaContable": {
-            "type": "string",
-            "nullable": true
-          },
-          "ban01Itf": {
-            "type": "string",
-            "nullable": true
-          },
-          "ban01Prefijo": {
-            "type": "string",
-            "nullable": true
-          },
-          "ban01CtaDet": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1857,6 +1891,30 @@
           "ban01AsiConCtaITF": {
             "type": "string",
             "nullable": true
+          },
+          "ban01AsiConDiario": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01Moneda": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01AsiConCtaComiOtrosBancos": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01AsiConFlagITF": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01CtaBanBancoCod": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01CtaBanCod": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1885,6 +1943,30 @@
             "nullable": true
           },
           "ban01AsiConCtaITF": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01AsiConDiario": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01Moneda": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01AsiConCtaComiOtrosBancos": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01AsiConFlagITF": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01CtaBanBancoCod": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban01CtaBanCod": {
             "type": "string",
             "nullable": true
           }
