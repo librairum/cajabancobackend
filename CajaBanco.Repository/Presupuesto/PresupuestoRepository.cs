@@ -4,6 +4,7 @@ using CajaBanco.DTO.Common;
 using CajaBanco.DTO.CuentaBancaria;
 using CajaBanco.DTO.Pago;
 using CajaBanco.DTO.Presupuesto;
+using CajaBanco.DTO.RegistroContable;
 using Dapper;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
@@ -340,7 +341,7 @@ namespace CajaBanco.Repository.Presupuesto
                 DynamicParameters parametros = new DynamicParameters();
                 parametros.Add("@empresa", empresa);
                 parametros.Add("@ruc", ruc);
-                parametros.Add("@@numeroDocumento", numerodocumento);
+                parametros.Add("@numeroDocumento", numerodocumento);
                 //parametros.Add("@fechavencimiento", fechavencimiento);
                 list = (List<DocPendienteResponse>)await cnx.QueryAsync<DocPendienteResponse>("Spu_Ban_Trae_DocPendiente",
                     parametros, commandType: System.Data.CommandType.StoredProcedure);
@@ -548,14 +549,14 @@ namespace CajaBanco.Repository.Presupuesto
                 DynamicParameters par = new DynamicParameters();
                 par.Add("@codigoEmpresa", empresa);
                 par.Add("@filtro", filtro);
-                
 
-                lista = (List<ConsultaDocPagarResponse>)await  cn.QueryAsync<ConsultaDocPagarResponse>("Spu_Ban_Trae_DocumentoPorPagarConsulta",
+
+                lista = (List<ConsultaDocPagarResponse>)await cn.QueryAsync<ConsultaDocPagarResponse>("Spu_Ban_Trae_DocumentoPorPagarConsulta",
                     par, commandType: CommandType.StoredProcedure);
                 result.IsSuccess = lista.Count > 0 ? true : false;
                 result.Message = lista.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
                 result.Data = lista.ToList();
-             
+
             }
             catch (Exception ex)
             {
@@ -566,27 +567,33 @@ namespace CajaBanco.Repository.Presupuesto
             return result;
         }
 
+        public async Task<ResultDto<DocPendienteResponse>> SpListaDocPendienteReporte(string empresa, string filtro)
+        {
+            ResultDto<DocPendienteResponse> res = new ResultDto<DocPendienteResponse>();
+            List<DocPendienteResponse> list = new List<DocPendienteResponse>();
 
-        //public async Task<ResultDto<string>> SpAnulaComprobante(string empresa, string anio, string mes, string numeroPresupuesto)
-        //{
-        //    ResultDto<string> result = new ResultDto<string>();
-        //    try
-        //    {
-        //        SqlConnection cn = new SqlConnection(_connectionString);
-        //        SqlCommand cmd = new SqlCommand("Spu_Ban_Upd_ComprobantePago", cn);
-        //        cmd.CommandType = CommandType.StoredProcedure;
-        //        cmd.Parameters.AddWithValue("@empresa", empresa);
-        //        cmd.Parameters.AddWithValue("@anio", empresa);
-        //        cmd.Parameters.AddWithValue("@mes", empresa);
-        //        cmd.Parameters.AddWithValue("@@numeropresupuesto", empresa);
-        //        result.Item = "1";
+            try
+            {
+                SqlConnection cnx = new SqlConnection(_connectionString);
+                DynamicParameters parametros = new DynamicParameters();
+                parametros.Add("@empresa", empresa);
+                parametros.Add("@filtro", filtro);                
+                //parametros.Add("@fechavencimiento", fechavencimiento);
+                list = (List<DocPendienteResponse>)await cnx.QueryAsync<DocPendienteResponse>("Spu_Ban_Trae_DocPendienteReporte",
+                    parametros, commandType: System.Data.CommandType.StoredProcedure);
+                res.IsSuccess = list.Count > 0 ? true : false;
+                res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
+                res.Data = list.ToList();
+                //this._cnx.conexion.QueryAsync<PresupuestoListResponse>
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
 
-        //    }
-        //    catch (Exception ex) {
-        //        result.MessageException = ex.Message;
-        //        result.IsSuccess = false;
-        //    }
-        //    return result;
-        //}
+        
     }
 }

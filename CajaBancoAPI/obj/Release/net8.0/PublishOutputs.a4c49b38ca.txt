@@ -81,6 +81,7 @@ D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\System.Reflection.MetadataLoadContext.dll
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\System.Runtime.Caching.dll
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\System.Text.Encoding.CodePages.dll
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\af\Humanizer.resources.dll
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\ar\Humanizer.resources.dll
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\az\Humanizer.resources.dll
@@ -237,6 +238,7 @@ D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\net8.0\System.Text.Encoding.CodePages.dll
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\CajaBanco.Abstractions.dll
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\CajaBanco.Application.dll
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Release\net8.0\PubTmp\Out\CajaBanco.DTO.dll

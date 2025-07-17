@@ -46,6 +46,9 @@ namespace CajaBanco.Abstractions.IApplication
              string numeroPresupuesto);
         public Task<ResultDto<ConsultaDocPagarResponse>> SpTraeDocPorPagarConsulta(string empresa, string filtro);
 
+        public Task<ResultDto<DocPendienteResponse>> SpListaDocPendienteReporte(string empresa, string filtro);
+
+
         //public Task<ResultDto<string>> SpAnulaComprobante(string empresa, string anio, string mes, string numeroPresupuesto);
 
     }

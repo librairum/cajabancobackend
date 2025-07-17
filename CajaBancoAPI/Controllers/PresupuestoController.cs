@@ -439,5 +439,22 @@ namespace CajaBancoAPI.Controllers
             }
         }
 
+
+        [HttpGet]
+        [Route("SpListaDocPendientesReporte")]
+        public async Task<ActionResult> ObtenerListDocPendientesReporte(string empresa, string filtro= "")
+        {
+            try
+            {
+                
+                var result = await this._app.SpListaDocPendienteReporte(empresa, filtro);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }

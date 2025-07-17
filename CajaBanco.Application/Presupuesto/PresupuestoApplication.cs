@@ -106,5 +106,10 @@ namespace CajaBanco.Application.Presupuesto
 
             return await this._service.SpTraeDocPorPagarConsulta(empresa, filtro);
         }
+
+        public async Task<ResultDto<DocPendienteResponse>> SpListaDocPendienteReporte(string empresa, string filtro)
+        {
+            return await this._service.SpListaDocPendienteReporte(empresa, filtro);
+        }
     }
 }
