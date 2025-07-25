@@ -6,6 +6,7 @@ using CajaBanco.DTO.Presupuesto;
 using CajaBanco.Repository.Presupuesto;
 using Microsoft.AspNetCore.Http.Metadata;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.Elfie.Serialization;
 using Microsoft.Extensions.Configuration;
 using System.Configuration;
 using System.Text;
@@ -448,6 +449,37 @@ namespace CajaBancoAPI.Controllers
             {
                 
                 var result = await this._app.SpListaDocPendienteReporte(empresa, filtro);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("SpListaInterbankArchivoCab")]
+        public async Task<ActionResult> SpListaInterbankArchivoCab(string empresa, string nombreLote, string numeroPresupuesto)
+        {
+            try
+            {
+
+                var result = await this._app.SpListaInterbankArchivoCab(empresa, nombreLote, numeroPresupuesto);
+                return Ok(result);
+            }
+            catch (Exception ex) {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("SpListaInterbankArchivoDet")]
+        public async Task<ActionResult> SpListaInterbankArchivoDet(string empresa,  string numeroPresupuesto)
+        {
+            try
+            {
+
+                var result = await this._app.SpListaInterbankArchivoDet(empresa,  numeroPresupuesto);
                 return Ok(result);
             }
             catch (Exception ex)

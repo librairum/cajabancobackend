@@ -1,5 +1,6 @@
 ﻿using Azure.Core;
 using CajaBanco.Abstractions.IRepository;
+using CajaBanco.DTO.ArchivoExportable;
 using CajaBanco.DTO.Common;
 using CajaBanco.DTO.CuentaBancaria;
 using CajaBanco.DTO.Pago;
@@ -14,6 +15,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace CajaBanco.Repository.Presupuesto
 {
@@ -594,6 +596,55 @@ namespace CajaBanco.Repository.Presupuesto
             return res;
         }
 
-        
+        public async Task<ResultDto<InterbankArchivoCab>> SpListaInterbankArchivoCab(string empresa, string nombreLote, string numeroPresupuesto)
+        {
+            ResultDto<InterbankArchivoCab> result = new ResultDto<InterbankArchivoCab>();
+            List<InterbankArchivoCab> lista = new List<InterbankArchivoCab>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                DynamicParameters par = new DynamicParameters();
+                par.Add("@codigoEmpresa", empresa);
+                par.Add("@nombreLote", nombreLote);
+                par.Add("@numeroPresupuesto", numeroPresupuesto);
+                lista = (List<InterbankArchivoCab>)await cn.QueryAsync<InterbankArchivoCab>("Spu_ban_trae_InterbankCabArchivo", 
+                    par, commandType: CommandType.StoredProcedure);
+                result.IsSuccess = lista.Count > 0 ? true : false;
+                result.Message = lista.Count > 0 ? "Informacion encontrada" : "NO se encontro informacion";
+                result.Data = lista.ToList();
+
+            }
+            catch (Exception ex) {
+                result.IsSuccess = false;
+                result.MessageException = ex.Message;
+            }
+            return result;
+        }
+
+        public async Task<ResultDto<InterbankArchivoDet>> SpListaInterbankArchivoDet(string empresa, string numeroPresupuesto)
+        {
+            ResultDto<InterbankArchivoDet> result = new ResultDto<InterbankArchivoDet>();
+            List<InterbankArchivoDet> lista = new List<InterbankArchivoDet>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                DynamicParameters par = new DynamicParameters();
+                par.Add("@codigoEmpresa", empresa);
+              
+                par.Add("@numeroPresupuesto", numeroPresupuesto);
+                lista = (List<InterbankArchivoDet>)await cn.QueryAsync<InterbankArchivoDet>("Spu_Ban_Trae_InterbankDetArchivo",
+                    par, commandType: CommandType.StoredProcedure);
+                result.IsSuccess = lista.Count > 0 ? true : false;
+                result.Message = lista.Count > 0 ? "Informacion encontrada" : "NO se encontro informacion";
+                result.Data = lista.ToList();
+
+            }
+            catch (Exception ex)
+            {
+                result.IsSuccess = false;
+                result.MessageException = ex.Message;
+            }
+            return result;
+        }
     }
 }

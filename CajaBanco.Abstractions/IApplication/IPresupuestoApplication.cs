@@ -1,4 +1,5 @@
-﻿using CajaBanco.DTO.Common;
+﻿using CajaBanco.DTO.ArchivoExportable;
+using CajaBanco.DTO.Common;
 using CajaBanco.DTO.Pago;
 using CajaBanco.DTO.Presupuesto;
 using System;
@@ -48,8 +49,11 @@ namespace CajaBanco.Abstractions.IApplication
 
         public Task<ResultDto<DocPendienteResponse>> SpListaDocPendienteReporte(string empresa, string filtro);
 
-
+        //public Task<ResultDt>
         //public Task<ResultDto<string>> SpAnulaComprobante(string empresa, string anio, string mes, string numeroPresupuesto);
+        public Task<ResultDto<InterbankArchivoCab>> SpListaInterbankArchivoCab(string empresa, string nombreLote, string numeroPresupuesto);
+        public Task<ResultDto<InterbankArchivoDet>> SpListaInterbankArchivoDet(string empresa, string numeroPresupuesto);
+
 
     }
 }

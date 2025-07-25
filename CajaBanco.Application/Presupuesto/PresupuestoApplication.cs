@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CajaBanco.Abstractions.IApplication;
 using CajaBanco.Abstractions.IService;
+using CajaBanco.DTO.ArchivoExportable;
 using CajaBanco.DTO.Common;
 using CajaBanco.DTO.Pago;
 using CajaBanco.DTO.Presupuesto;
@@ -110,6 +111,16 @@ namespace CajaBanco.Application.Presupuesto
         public async Task<ResultDto<DocPendienteResponse>> SpListaDocPendienteReporte(string empresa, string filtro)
         {
             return await this._service.SpListaDocPendienteReporte(empresa, filtro);
+        }
+
+        public async Task<ResultDto<InterbankArchivoCab>> SpListaInterbankArchivoCab(string empresa, string nombreLote, string numeroPresupuesto)
+        {
+            return await this._service.SpListaInterbankArchivoCab(empresa, nombreLote, numeroPresupuesto);
+        }
+
+        public async Task<ResultDto<InterbankArchivoDet>>  SpListaInterbankArchivoDet(string empresa, string numeroPresupuesto)
+        {
+            return await this._service.SpListaInterbankArchivoDet(empresa, numeroPresupuesto);
         }
     }
 }
