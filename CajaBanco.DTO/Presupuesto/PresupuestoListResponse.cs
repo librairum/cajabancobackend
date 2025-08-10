@@ -33,5 +33,7 @@ namespace CajaBanco.DTO.Pago
         public string Ban01nombreArchivo { get; set; }
         public  byte[] Ban01contenidoArchivo { get; set; }
 
+        public string BancoCodMedioPago { get; set; }
+
     }
 }

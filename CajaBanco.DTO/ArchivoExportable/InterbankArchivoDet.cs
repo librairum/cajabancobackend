@@ -16,7 +16,7 @@ namespace CajaBanco.DTO.ArchivoExportable
             public string monedaAbono { get; set; }
             public string montoAbono { get; set; }
             public string indicadorBanco { get; set; }
-            public string tipoAbaono { get; set; }
+            public string tipoAbono { get; set; }
             public string tipoCuenta { get; set; }
             public string monedaCuenta { get; set; }
             public string oficinaCuenta { get; set; }
