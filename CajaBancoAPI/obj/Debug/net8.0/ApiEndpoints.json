@@ -415,6 +415,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CajaBancoAPI.Controllers.DetraccionController",
+    "Method": "ListaDetraccionMasiva",
+    "RelativePath": "Detraccion/SpListMasivo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CajaBancoAPI.Controllers.MedioPagoController",
     "Method": "SpActualiza",
     "RelativePath": "MedioPago/SpActualiza",
@@ -994,6 +1020,53 @@
       },
       {
         "Name": "filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
+    "Method": "SpListaInterbankArchivoCab",
+    "RelativePath": "Presupuesto/SpListaInterbankArchivoCab",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "nombreLote",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numeroPresupuesto",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
+    "Method": "SpListaInterbankArchivoDet",
+    "RelativePath": "Presupuesto/SpListaInterbankArchivoDet",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numeroPresupuesto",
         "Type": "System.String",
         "IsRequired": false
       }
