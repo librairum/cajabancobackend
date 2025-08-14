@@ -416,6 +416,27 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.DetraccionController",
+    "Method": "SpInserta",
+    "RelativePath": "Detraccion/SpInsertaPresupuestoDetraMasiva",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CajaBanco.DTO.Detraccion.DetraccionMasivaRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "archivo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.DetraccionController",
     "Method": "ListaDetraccionMasiva",
     "RelativePath": "Detraccion/SpListMasivo",
     "HttpMethod": "GET",
@@ -434,6 +455,32 @@
       },
       {
         "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "motivoPago",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.DetraccionController",
+    "Method": "ListaDetraccionMasivaDet",
+    "RelativePath": "Detraccion/SpListMasivoDet",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numeroLote",
         "Type": "System.String",
         "IsRequired": false
       }

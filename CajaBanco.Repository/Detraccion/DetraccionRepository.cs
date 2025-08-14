@@ -20,7 +20,7 @@ namespace CajaBanco.Repository.Detraccion
         {
             _connectionString = configuracion.GetConnectionString("conexion");
         }
-        public async Task<ResultDto<DetraccionMasivoCabResponse>> SpTrae(string empresa, string anio, string mes)
+        public async Task<ResultDto<DetraccionMasivoCabResponse>> SpTrae(string empresa, string anio, string mes, string motivoPago)
         {
 
             ResultDto<DetraccionMasivoCabResponse> res = new ResultDto<DetraccionMasivoCabResponse>();
@@ -33,8 +33,10 @@ namespace CajaBanco.Repository.Detraccion
                     parametros.Add("@empresa", empresa);
                     parametros.Add("@anio", anio);
                     parametros.Add("@mes", mes);
+                    parametros.Add("@motivopago", motivoPago);
 
-                    lista = (List<DetraccionMasivoCabResponse>)await cn.QueryAsync<DetraccionMasivoCabResponse>("Spu_Ban_Trae_DetraccionIndividualCab", parametros, commandType: CommandType.StoredProcedure);
+                    lista = (List<DetraccionMasivoCabResponse>)await cn.QueryAsync<DetraccionMasivoCabResponse>("Spu_Ban_Trae_DetraccionMasivaCab", 
+                        parametros, commandType: CommandType.StoredProcedure);
 
                     res.IsSuccess = lista.Count > 0 ? true: false;
                     res.Message = lista.Count > 0 ? "Informacion encontrada" : "No se enconetro informacion";

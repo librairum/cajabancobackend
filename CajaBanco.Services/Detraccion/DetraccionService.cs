@@ -20,9 +20,9 @@ namespace CajaBanco.Services.Detraccion
             _repositorio = repositorio;
         }
 
-        public async Task<ResultDto<DetraccionMasivoCabResponse>> SpTrae(string empresa, string anio, string mes)
+        public async Task<ResultDto<DetraccionMasivoCabResponse>> SpTrae(string empresa, string anio, string mes, string motivoPago)
         {
-            return await  this._repositorio.SpTrae(empresa, anio, mes);
+            return await  this._repositorio.SpTrae(empresa, anio, mes, motivoPago);
         }
 
         public async Task<ResultDto<DetraccionMasivaDetResponse>> SpTraeMaswivaDetalle(string empresa, string numeroLote)

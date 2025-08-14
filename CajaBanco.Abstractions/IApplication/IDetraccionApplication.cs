@@ -12,7 +12,7 @@ namespace CajaBanco.Abstractions.IApplication
     public  interface IDetraccionApplication
     {
 
-        public Task<ResultDto<DetraccionMasivoCabResponse>> SpTrae(string empresa, string anio, string mes);
+        public Task<ResultDto<DetraccionMasivoCabResponse>> SpTrae(string empresa, string anio, string mes,string motivoPago);
         public Task<ResultDto<DetraccionMasivaDetResponse>> SpTraeMaswivaDetalle(string empresa, string numeroLote);
         public Task<ResultDto<string>> SpInsertaPresupuestoDetraMasiva(DetraccionMasivaRequest entidad);
 

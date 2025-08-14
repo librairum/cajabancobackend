@@ -23,11 +23,11 @@ namespace CajaBancoAPI.Controllers
 
         [HttpGet]
         [Route("SpListMasivo")]
-        public async Task<ActionResult> ListaDetraccionMasiva(string empresa, string anio, string mes)
+        public async Task<ActionResult> ListaDetraccionMasiva(string empresa, string anio, string mes, string motivoPago)
         {
             try
             {
-                var result = await this._aplicacion.SpTrae(empresa, anio, mes);
+                var result = await this._aplicacion.SpTrae(empresa, anio, mes, motivoPago);
                 return Ok(result);
             }
             catch (Exception ex) { 
@@ -55,9 +55,18 @@ namespace CajaBancoAPI.Controllers
 
         [HttpPost]
         [Route("SpInsertaPresupuestoDetraMasiva")]
-        public async Task<ActionResult> SpInserta(DetraccionMasivaRequest request)
+        public async Task<ActionResult> SpInserta(DetraccionMasivaRequest request, IFormFile archivo= null)
         {
             try {
+                if(archivo== null || archivo.Length == 0)
+                {
+                    return BadRequest("archivo no valido");
+                }
+
+                MemoryStream ms = new MemoryStream();
+                await archivo.CopyToAsync(ms);
+                byte[] bytesArchivo = ms.ToArray();
+                request.contenidoArchivo = bytesArchivo;
                 var result = await this._aplicacion.SpInsertaPresupuestoDetraMasiva(request);
                 return Ok(result);
             }catch(Exception ex)

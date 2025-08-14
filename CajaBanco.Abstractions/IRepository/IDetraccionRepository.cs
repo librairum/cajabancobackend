@@ -10,9 +10,9 @@ namespace CajaBanco.Abstractions.IRepository
 {
     public interface IDetraccionRepository
     {
-        public Task<ResultDto<DetraccionMasivoCabResponse>> SpTrae(string empresa, string anio, string mes);
+        public Task<ResultDto<DetraccionMasivoCabResponse>> SpTrae(string empresa, string anio, string mes, string motivoPago);
         public Task<ResultDto<DetraccionMasivaDetResponse>> SpTraeMaswivaDetalle(string empresa, string numeroLote);
-        public Task<ResultDto<string>> SpInsertaPresupuestoDetraMasiva(DetraccionMasivaRequest entidad, byte[] contenidoArchivo);
+        public Task<ResultDto<string>> SpInsertaPresupuestoDetraMasiva(DetraccionMasivaRequest entidad);
 
     }
 }
