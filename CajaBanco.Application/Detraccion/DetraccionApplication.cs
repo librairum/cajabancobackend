@@ -17,9 +17,19 @@ namespace CajaBanco.Application.Detraccion
         public DetraccionApplication(IDetraccionService servicio) { 
             this._servicio = servicio;  
         }
-        public async Task<ResultDto<DetraccionMasivaResponse>> SpTrae(string empresa, string anio, string mes)
+        public async Task<ResultDto<DetraccionMasivoCabResponse>> SpTrae(string empresa, string anio, string mes)
         {
             return await _servicio.SpTrae(empresa, anio, mes);
+        }
+
+        public async Task<ResultDto<DetraccionMasivaDetResponse>> SpTraeMaswivaDetalle(string empresa, string numeroLote)
+        {
+            return await _servicio.SpTraeMaswivaDetalle(empresa, numeroLote);
+        }
+
+        public async Task<ResultDto<string>> SpInsertaPresupuestoDetraMasiva(DetraccionMasivaRequest entidad)
+        {
+            return await _servicio.SpInsertaPresupuestoDetraMasiva(entidad);
         }
     }
 }

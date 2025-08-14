@@ -9,7 +9,7 @@ namespace CajaBanco.DTO.Detraccion
     public class DetraccionMasivaResponse
     {
         public string co26numlote { get; set; }
-        public string co02fecha { get; set; }
+        public string co26fecha { get; set; }
         
         public string co26ranfecini { get; set; }
 
