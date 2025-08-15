@@ -6,6 +6,8 @@ using CajaBancoAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query.Internal;
+using Newtonsoft.Json;
 using System.Reflection.Metadata;
 
 namespace CajaBancoAPI.Controllers
@@ -55,19 +57,22 @@ namespace CajaBancoAPI.Controllers
 
         [HttpPost]
         [Route("SpInsertaPresupuestoDetraMasiva")]
-        public async Task<ActionResult> SpInserta(DetraccionMasivaRequest request, IFormFile archivo= null)
+        public async Task<ActionResult> SpInserta([FromForm] string request, IFormFile archivoOriginal = null)
         {
             try {
-                if(archivo== null || archivo.Length == 0)
+                if(archivoOriginal == null || archivoOriginal.Length == 0)
                 {
                     return BadRequest("archivo no valido");
                 }
 
+                //deserealizar
+                var objeRequest = JsonConvert.DeserializeObject<DetraccionMasivaRequest>(request);
+
                 MemoryStream ms = new MemoryStream();
-                await archivo.CopyToAsync(ms);
+                await archivoOriginal.CopyToAsync(ms);
                 byte[] bytesArchivo = ms.ToArray();
-                request.contenidoArchivo = bytesArchivo;
-                var result = await this._aplicacion.SpInsertaPresupuestoDetraMasiva(request);
+                objeRequest.contenidoArchivo = bytesArchivo;
+                var result = await this._aplicacion.SpInsertaPresupuestoDetraMasiva(objeRequest);
                 return Ok(result);
             }catch(Exception ex)
             {
