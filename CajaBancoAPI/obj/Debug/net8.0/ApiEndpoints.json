@@ -424,11 +424,11 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "CajaBanco.DTO.Detraccion.DetraccionMasivaRequest",
-        "IsRequired": true
+        "Type": "System.String",
+        "IsRequired": false
       },
       {
-        "Name": "archivo",
+        "Name": "archivoOriginal",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       }

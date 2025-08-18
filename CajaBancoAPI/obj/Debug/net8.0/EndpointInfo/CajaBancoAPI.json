@@ -700,7 +700,24 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/DetraccionMasivaRequest"
+                "type": "object",
+                "properties": {
+                  "request": {
+                    "type": "string"
+                  },
+                  "archivoOriginal": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "request": {
+                  "style": "form"
+                },
+                "archivoOriginal": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -2013,81 +2030,6 @@
             "nullable": true
           },
           "ban01Descripcion": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "DetraccionMasivaRequest": {
-        "type": "object",
-        "properties": {
-          "ban01Empresa": {
-            "type": "string",
-            "nullable": true
-          },
-          "ban01Anio": {
-            "type": "string",
-            "nullable": true
-          },
-          "ban01mes": {
-            "type": "string",
-            "nullable": true
-          },
-          "ban01Descripcion": {
-            "type": "string",
-            "nullable": true
-          },
-          "ban01Fecha": {
-            "type": "string",
-            "nullable": true
-          },
-          "ban01Estado": {
-            "type": "string",
-            "nullable": true
-          },
-          "ban01Usuario": {
-            "type": "string",
-            "nullable": true
-          },
-          "ban01Pc": {
-            "type": "string",
-            "nullable": true
-          },
-          "ban01FechaRegistro": {
-            "type": "string",
-            "nullable": true
-          },
-          "ban01MedioPago": {
-            "type": "string",
-            "nullable": true
-          },
-          "detraccionLote": {
-            "type": "string",
-            "nullable": true
-          },
-          "ban01motivopagoCod": {
-            "type": "string",
-            "nullable": true
-          },
-          "numerooperacion": {
-            "type": "string",
-            "nullable": true
-          },
-          "enlacePago": {
-            "type": "string",
-            "nullable": true
-          },
-          "nombreArchivo": {
-            "type": "string",
-            "nullable": true
-          },
-          "contenidoArchivo": {
-            "type": "string",
-            "format": "byte",
-            "nullable": true
-          },
-          "flagOperacion": {
             "type": "string",
             "nullable": true
           }

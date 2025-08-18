@@ -93,7 +93,7 @@ namespace CajaBanco.Repository.Detraccion
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Ban01Empresa", entidad.ban01Empresa);
                 cmd.Parameters.AddWithValue("@Ban01Anio", entidad.ban01Anio);
-                cmd.Parameters.AddWithValue("@@Ban01Mes", entidad.ban01mes);
+                cmd.Parameters.AddWithValue("@Ban01Mes", entidad.ban01mes);
                 cmd.Parameters.AddWithValue("@Ban01Descripcion", entidad.ban01Descripcion);
                 cmd.Parameters.AddWithValue("@Ban01Fecha", entidad.ban01Fecha);
                 cmd.Parameters.AddWithValue("@Ban01Estado", entidad.ban01Estado);
@@ -114,6 +114,9 @@ namespace CajaBanco.Repository.Detraccion
 
                 var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
                 parFlag.Direction = ParameterDirection.Output;
+
+                var parCodigoGenerado = cmd.Parameters.Add("@codigoGenerado", SqlDbType.VarChar, 5);
+                parCodigoGenerado.Direction = ParameterDirection.Output;
 
                 cn.Open();
                 var respuesta = await cmd.ExecuteNonQueryAsync();

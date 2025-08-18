@@ -31,5 +31,7 @@ namespace CajaBanco.Application.Detraccion
         {
             return await _servicio.SpInsertaPresupuestoDetraMasiva(entidad);
         }
+
+
     }
 }
