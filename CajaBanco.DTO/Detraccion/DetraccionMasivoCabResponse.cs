@@ -17,5 +17,12 @@ namespace CajaBanco.DTO.Detraccion
         public double facturaImporteSol { get;set; }
         public double detraccionImporteSol { get; set; }
 
+        public string fecha { get; set; }
+        public string motivo { get; set; }
+        public string medio { get; set; }
+        public string nombreMedioPago { get; set; }
+        public string bancoCodMedioPago { get; set; }
+        public string bancoMedioPago { get; set; }
+
     }
 }
