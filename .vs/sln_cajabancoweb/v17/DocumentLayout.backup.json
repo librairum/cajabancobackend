@@ -72,8 +72,7 @@
               "RelativeToolTip": "CajaBanco.DTO\\Detraccion\\DetraccionMasivoCabResponse.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T04:43:47.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T04:43:47.537Z"
             },
             {
               "$type": "Document",
@@ -85,8 +84,7 @@
               "RelativeToolTip": "CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
               "ViewState": "AgIAAB0BAAAAAAAAAAASwCwBAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T17:40:52.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T17:40:52.568Z"
             },
             {
               "$type": "Document",
@@ -132,7 +130,7 @@
               "RelativeDocumentMoniker": "CajaBancoAPI\\appsettings.json",
               "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\appsettings.json",
               "RelativeToolTip": "CajaBancoAPI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-08-16T05:12:47.854Z",
               "EditorCaption": ""

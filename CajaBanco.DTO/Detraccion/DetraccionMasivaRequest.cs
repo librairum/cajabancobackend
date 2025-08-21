@@ -26,6 +26,7 @@ namespace CajaBanco.DTO.Detraccion
         public string nombreArchivo { get;set; }
         public byte[] contenidoArchivo { get; set;}
         public string flagOperacion { get; set; }
+           
 
         
         /*
