@@ -9,14 +9,27 @@ namespace CajaBanco.DTO.Detraccion
     public class DetraccionIndividualResponse
     {
 
-        public string ban01Numero { get; set; }
-        public string ban01EMpresa { get; set; }
-        public string ban01Anio { get; set; }
-        public string ban01Mes { get; set; }
-        public string ban01Descripcion { get; set; }
-        public DateTime ban01Fecha { get;set; }
+        public string ban01numero { get; set; }
+        public string ban01empresa { get; set; }
+        public string ban01anio { get; set; }
+        public string ban01mes { get; set; }
+        public string ban01descripcion { get; set; }
+        public DateTime ban01fecha { get;set; }
 
+        public string ban02ruc { get; set; }
+        public string ban02tipodoc { get; set; }
+        public string ban02nrodoc { get; set; }
+        public string co05moneda { get; set; }
+        public DateTime co05fecha { get; set; }
+        public DateTime co05fecven { get; set; }
+        public double importebrutosoles { get; set; }
+        public double importebrutodolares { get; set; }
+        public string ban02tipodetraccion { get; set; }
+        public string ban02tasadetraccion { get; set; }
 
+        public double pagodetracionsoles { get; set; }
+        public double pagodetraciondolares { get; set; }
+        public string nombreproveedor { get; set; }
         /*
          Select pc.Ban01Numero, -- string
 pc.Ban01Empresa, -- string

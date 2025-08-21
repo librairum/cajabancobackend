@@ -416,6 +416,27 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.DetraccionController",
+    "Method": "SpInsertaDetraIndividual",
+    "RelativePath": "Detraccion/SpInsertaDetraIndividual",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "archivoOriginal",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.DetraccionController",
     "Method": "SpInserta",
     "RelativePath": "Detraccion/SpInsertaPresupuestoDetraMasiva",
     "HttpMethod": "POST",
@@ -481,6 +502,63 @@
       },
       {
         "Name": "numeroLote",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.DetraccionController",
+    "Method": "TraeDocPendiente",
+    "RelativePath": "Detraccion/SpTraeDocPendiente",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ruc",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numeroDocumento",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.DetraccionController",
+    "Method": "TraeDeTraccionIndividual",
+    "RelativePath": "Detraccion/SpTraeIndividual",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "motivoPagoCod",
         "Type": "System.String",
         "IsRequired": false
       }

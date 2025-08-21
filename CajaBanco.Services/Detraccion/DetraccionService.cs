@@ -35,5 +35,20 @@ namespace CajaBanco.Services.Detraccion
             return await this._repositorio.SpInsertaPresupuestoDetraMasiva(entidad);
 
         }
+
+        public async Task<ResultDto<DetraccionIndividualResponse>> SpTraeIndividual(string empresa, string anio, string mes, string motivoPagoCod)
+        {
+            return await this._repositorio.SpTraeIndividual(empresa, anio, mes, motivoPagoCod);
+        }
+
+        public async Task<ResultDto<DetraIndividualDocPenResponse>> SpTraeDocPendiente(string empresa, string ruc, string numeroDocumento)
+        {
+            return await this._repositorio.SpTraeDocPendiente(empresa, ruc, numeroDocumento);
+        }
+
+        public async Task<ResultDto<string>> SpInsertaPresupuestoDetraIndividual(DetraccionIndividualRequest entidad)
+        {
+            return await this._repositorio.SpInsertaPresupuestoDetraIndividual(entidad);
+        }
     }
 }

@@ -79,6 +79,60 @@ namespace CajaBancoAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [HttpGet]
+        [Route("SpTraeIndividual")]
+
+        public async Task<ActionResult> TraeDeTraccionIndividual(string empresa,
+            string anio, string mes, string motivoPagoCod)
+        {
+            try {
+                var result = await this._aplicacion.SpTraeIndividual(empresa, anio, mes, motivoPagoCod);
+                return Ok(result);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("SpTraeDocPendiente")]
+        public async Task<ActionResult> TraeDocPendiente(string empresa, string ruc="", string numeroDocumento = "")
+        {
+            try
+            {
+                var result = await this._aplicacion.SpTraeDocPendiente(empresa, ruc, numeroDocumento);
+                return Ok(result);
+            }
+            catch (Exception ex) {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpPost]
+        [Route("SpInsertaDetraIndividual")]
+        public async Task<ActionResult> SpInsertaDetraIndividual([FromForm] string request, IFormFile archivoOriginal = null)
+        {
+            try {
+                if (archivoOriginal == null || archivoOriginal.Length == 0)
+                {
+                    return BadRequest("archivo no valido");
+                }
+                //deserealizar
+                var objeRequest = JsonConvert.DeserializeObject<DetraccionIndividualRequest>(request);
+
+                MemoryStream ms = new MemoryStream();
+                await archivoOriginal.CopyToAsync(ms);
+                byte[] bytesArchivo = ms.ToArray();
+                objeRequest.contenidoArchivo = bytesArchivo;
+                
+                var result = await this._aplicacion.SpInsertaPresupuestoDetraIndividual(objeRequest); ;
+                return Ok(result);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
 
     }
 }
