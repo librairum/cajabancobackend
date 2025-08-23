@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P5GXQK/nArw=",
+  "dgSpecHash": "8kMp+aWX1TU=",
   "success": true,
-  "projectFilePath": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\CajaBancoAPI.csproj",
+  "projectFilePath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBancoAPI\\CajaBancoAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sistemas\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\sistemas\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
