@@ -46,8 +46,7 @@
               "RelativeToolTip": "CajaBancoAPI\\Controllers\\DetraccionController.cs",
               "ViewState": "AgIAAFUAAAAAAAAAAAAcwGYAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T16:59:59.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T16:59:59.005Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "CajaBancoAPI\\Controllers\\PresupuestoController.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAgwDYAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T16:59:10.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T16:59:10.183Z"
             },
             {
               "$type": "Document",
@@ -70,7 +68,7 @@
               "RelativeDocumentMoniker": "CajaBanco.Repository\\Detraccion\\DetraccionRepository.cs",
               "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Detraccion\\DetraccionRepository.cs",
               "RelativeToolTip": "CajaBanco.Repository\\Detraccion\\DetraccionRepository.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAAAKEAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-21T16:58:18.738Z",
               "EditorCaption": ""
@@ -85,8 +83,7 @@
               "RelativeToolTip": "CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
               "ViewState": "AgIAADkBAAAAAAAAAAAgwE4BAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T13:19:19.846Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T13:19:19.846Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "CajaBanco.Services\\Detraccion\\DetraccionService.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAA1wC0AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T07:01:18.781Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T07:01:18.781Z"
             }
           ]
         }
