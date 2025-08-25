@@ -122,7 +122,7 @@ namespace CajaBancoAPI.Controllers
                 MemoryStream ms = new MemoryStream();
                 await archivoOriginal.CopyToAsync(ms);
                 byte[] bytesArchivo = ms.ToArray();
-                objeRequest.contenidoArchivo = bytesArchivo;
+                objeRequest.contenidoarchivo = bytesArchivo;
                 
                 var result = await this._aplicacion.SpInsertaPresupuestoDetraIndividual(objeRequest); ;
                 return Ok(result);

@@ -34,9 +34,9 @@ public double ban02importedetracciondolares { get; set; }
 
 public string numerooperacion { get; set; }
 public string enlacepago { get; set; }
-public string nombreArchivo { get; set; }      
-public byte[] contenidoArchivo { get; set; }
-public string flagOperacion { get; set; }
+public string nombrearchivo { get; set; }      
+public byte[] contenidoarchivo { get; set; }
+public string flagoperacion { get; set; }
   
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CajaBancoAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8da8d1d617996f9e0486e1ac3228aa5a00a8fa19")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe16bc19cfc802c07a3458cb8d1142a0b3eadf0f")]
 [assembly: System.Reflection.AssemblyProductAttribute("CajaBancoAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CajaBancoAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

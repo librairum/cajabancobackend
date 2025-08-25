@@ -222,9 +222,9 @@ namespace CajaBanco.Repository.Detraccion
                 cmd.Parameters.AddWithValue("@Ban02ImporteDetraccionDolares", entidad.ban02importedetracciondolares);
                 cmd.Parameters.AddWithValue("@numerooperacion", entidad.numerooperacion);
                 cmd.Parameters.AddWithValue("@enlacepago", entidad.enlacepago);
-                cmd.Parameters.AddWithValue("@nombreArchivo", entidad.nombreArchivo);
-                cmd.Parameters.AddWithValue("@contenidoArchivo", entidad.contenidoArchivo);
-                cmd.Parameters.AddWithValue("@flagOperacion", entidad.flagOperacion);
+                cmd.Parameters.AddWithValue("@nombreArchivo", entidad.nombrearchivo);
+                cmd.Parameters.AddWithValue("@contenidoArchivo", entidad.contenidoarchivo);
+                cmd.Parameters.AddWithValue("@flagOperacion", entidad.flagoperacion);
 
 
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
