@@ -249,5 +249,37 @@ namespace CajaBanco.Repository.Detraccion
             }
             return result;
         }
+
+        public async Task<ResultDto<string>> SpEliminaPresupuestoDetraccionIndividual(string empresa, string nropresupuesto)
+        {
+            ResultDto<string> result = new ResultDto<string>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Ins_PresupuestoDetraUnitaria", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@empresa", empresa);
+                cmd.Parameters.AddWithValue("@nropresupuesto", nropresupuesto);
+
+                var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
+                parMensaje.Direction = ParameterDirection.Output;
+
+                var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                parFlag.Direction = ParameterDirection.Output;
+
+                cn.Open();
+                var respuesta = await cmd.ExecuteNonQueryAsync();
+                cn.Close();
+                result.Item = "1";
+                result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
+                result.Message = parMensaje.Value.ToString();
+
+            }
+            catch (Exception ex) {
+                result.IsSuccess = false;
+                result.MessageException = ex.Message;
+            }
+            return result;
+        }
     }
 }

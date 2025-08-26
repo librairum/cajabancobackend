@@ -416,6 +416,27 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.DetraccionController",
+    "Method": "SpEliminaPresuDetraIndividual",
+    "RelativePath": "Detraccion/SpEliminaPresuDetraIndividual",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "nropresupuesto",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.DetraccionController",
     "Method": "SpInsertaDetraIndividual",
     "RelativePath": "Detraccion/SpInsertaDetraIndividual",
     "HttpMethod": "POST",

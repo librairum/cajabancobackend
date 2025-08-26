@@ -19,6 +19,7 @@ namespace CajaBanco.Abstractions.IApplication
         public Task<ResultDto<DetraccionIndividualResponse>> SpTraeIndividual(string empresa, string anio, string mes, string motivoPagoCod);
         public Task<ResultDto<DetraIndividualDocPenResponse>> SpTraeDocPendiente(string empresa, string ruc, string numeroDocumento);
         public Task<ResultDto<string>> SpInsertaPresupuestoDetraIndividual(DetraccionIndividualRequest entidad);
+        public Task<ResultDto<string>> SpEliminaPresupuestoDetraccionIndividual(string empresa, string nropresupuesto);
 
     }
 }

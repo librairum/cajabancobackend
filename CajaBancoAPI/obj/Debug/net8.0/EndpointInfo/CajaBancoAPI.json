@@ -846,6 +846,34 @@
         }
       }
     },
+    "/Detraccion/SpEliminaPresuDetraIndividual": {
+      "delete": {
+        "tags": [
+          "Detraccion"
+        ],
+        "parameters": [
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "nropresupuesto",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/MedioPago/SpActualiza": {
       "put": {
         "tags": [

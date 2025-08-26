@@ -48,5 +48,10 @@ namespace CajaBanco.Application.Detraccion
         {
             return await _servicio.SpInsertaPresupuestoDetraIndividual(entidad);
         }
+
+        async Task<ResultDto<string>> IDetraccionApplication.SpEliminaPresupuestoDetraccionIndividual(string empresa, string nropresupuesto)
+        {
+            return await _servicio.SpEliminaPresupuestoDetraccionIndividual(empresa, nropresupuesto);
+        }
     }
 }

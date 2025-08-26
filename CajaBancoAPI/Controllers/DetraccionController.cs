@@ -5,6 +5,7 @@ using CajaBancoAPI.Context;
 using CajaBancoAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using Newtonsoft.Json;
@@ -129,6 +130,19 @@ namespace CajaBancoAPI.Controllers
             }
             catch(Exception ex)
             {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpDelete]
+        [Route("SpEliminaPresuDetraIndividual")]
+        public async Task<ActionResult> SpEliminaPresuDetraIndividual(string empresa, string nropresupuesto)
+        {
+            try
+            {
+                var result = await this._aplicacion.SpEliminaPresupuestoDetraccionIndividual(empresa, nropresupuesto);
+                return Ok(result);
+            }
+            catch (Exception ex) {
                 return BadRequest(ex.Message);
             }
         }

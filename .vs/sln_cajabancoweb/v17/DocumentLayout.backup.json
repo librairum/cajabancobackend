@@ -3,24 +3,44 @@
   "WorkspaceRootPath": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.repository\\presupuesto\\presupuestorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\presupuesto\\presupuestorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.repository\\detraccion\\detraccionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\detraccion\\detraccionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.services\\detraccion\\detraccionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|solutionrelative:cajabanco.services\\detraccion\\detraccionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.application\\detraccion\\detraccionapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D95A43DA-2792-4FE2-8243-5E4C30137DB8}|CajaBanco.Application\\CajaBanco.Application.csproj|solutionrelative:cajabanco.application\\detraccion\\detraccionapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabancoapi\\controllers\\detraccioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\controllers\\detraccioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.repository\\presupuesto\\presupuestorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\presupuesto\\presupuestorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.services\\banco\\bancoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|solutionrelative:cajabanco.services\\banco\\bancoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabancoapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.repository\\banco\\bancorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E4BE2D-A929-49AA-9445-168BEDE3E812}|CajaBanco.Repository\\CajaBanco.Repository.csproj|solutionrelative:cajabanco.repository\\banco\\bancorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.services\\detraccion\\detraccionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B1B937D-1A4D-4F39-81E8-0627D82F83AE}|CajaBanco.Services\\CajaBanco.Services.csproj|solutionrelative:cajabanco.services\\detraccion\\detraccionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}|CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.abstractions\\iservice\\idetraccionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}|CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj|solutionrelative:cajabanco.abstractions\\iservice\\idetraccionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}|CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabanco.abstractions\\irepository\\idetraccionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECB412A2-DD4B-4D9E-8B5A-AC738478B85F}|CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj|solutionrelative:cajabanco.abstractions\\irepository\\idetraccionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|d:\\trabajo\\nivargo\\cajabanco\\cajabancobackend\\cajabancoapi\\controllers\\autenticacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AAD6D63-B54D-43F1-B5ED-BA27E395E4CA}|CajaBancoAPI\\CajaBancoAPI.csproj|solutionrelative:cajabancoapi\\controllers\\autenticacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 320,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,66 +58,130 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "CajaBancoAPI\\appsettings.json",
-              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\appsettings.json",
-              "RelativeToolTip": "CajaBancoAPI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-23T04:30:44.68Z"
+              "DocumentIndex": 2,
+              "Title": "DetraccionService.cs",
+              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Services\\Detraccion\\DetraccionService.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Services\\Detraccion\\DetraccionService.cs",
+              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Services\\Detraccion\\DetraccionService.cs",
+              "RelativeToolTip": "CajaBanco.Services\\Detraccion\\DetraccionService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAIAwwCIAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:01:18.781Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "DetraccionController.cs",
               "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\DetraccionController.cs",
               "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\DetraccionController.cs",
               "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\DetraccionController.cs",
               "RelativeToolTip": "CajaBancoAPI\\Controllers\\DetraccionController.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAASwHcAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAvwEsAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-21T16:59:59.005Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DetraccionRepository.cs",
-              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Detraccion\\DetraccionRepository.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Repository\\Detraccion\\DetraccionRepository.cs",
-              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Detraccion\\DetraccionRepository.cs",
-              "RelativeToolTip": "CajaBanco.Repository\\Detraccion\\DetraccionRepository.cs",
-              "ViewState": "AgIAAM8AAAAAAAAAAAAuwNoAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "DetraccionApplication.cs",
+              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Application\\Detraccion\\DetraccionApplication.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Application\\Detraccion\\DetraccionApplication.cs",
+              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Application\\Detraccion\\DetraccionApplication.cs",
+              "RelativeToolTip": "CajaBanco.Application\\Detraccion\\DetraccionApplication.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAIAwwCAAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T16:58:18.738Z",
+              "WhenOpened": "2025-08-26T06:19:10.473Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "PresupuestoRepository.cs",
               "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
               "RelativeDocumentMoniker": "CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
               "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
               "RelativeToolTip": "CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
-              "ViewState": "AgIAADwBAAAAAAAAAAAgwFsBAAB4AAAAAAAAAA==",
+              "ViewState": "AgIAAGMCAAAAAAAAAAAvwIMCAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-21T13:19:19.846Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DetraccionService.cs",
-              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Services\\Detraccion\\DetraccionService.cs",
-              "RelativeDocumentMoniker": "CajaBanco.Services\\Detraccion\\DetraccionService.cs",
-              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Services\\Detraccion\\DetraccionService.cs",
-              "RelativeToolTip": "CajaBanco.Services\\Detraccion\\DetraccionService.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAA1wC0AAAAwAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "BancoRepository.cs",
+              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Banco\\BancoRepository.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Repository\\Banco\\BancoRepository.cs",
+              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Banco\\BancoRepository.cs",
+              "RelativeToolTip": "CajaBanco.Repository\\Banco\\BancoRepository.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCIAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T07:01:18.781Z"
+              "WhenOpened": "2025-08-26T16:59:42.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AutenticacionController.cs",
+              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\AutenticacionController.cs",
+              "RelativeDocumentMoniker": "CajaBancoAPI\\Controllers\\AutenticacionController.cs",
+              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBancoAPI\\Controllers\\AutenticacionController.cs",
+              "RelativeToolTip": "CajaBancoAPI\\Controllers\\AutenticacionController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T19:14:53.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IDetraccionRepository.cs",
+              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Abstractions\\IRepository\\IDetraccionRepository.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Abstractions\\IRepository\\IDetraccionRepository.cs",
+              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Abstractions\\IRepository\\IDetraccionRepository.cs",
+              "RelativeToolTip": "CajaBanco.Abstractions\\IRepository\\IDetraccionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T06:30:01.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DetraccionRepository.cs",
+              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Detraccion\\DetraccionRepository.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Repository\\Detraccion\\DetraccionRepository.cs",
+              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Repository\\Detraccion\\DetraccionRepository.cs",
+              "RelativeToolTip": "CajaBanco.Repository\\Detraccion\\DetraccionRepository.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAEwJYAAACXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T16:58:18.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BancoService.cs",
+              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Services\\Banco\\BancoService.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Services\\Banco\\BancoService.cs",
+              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Services\\Banco\\BancoService.cs",
+              "RelativeToolTip": "CajaBanco.Services\\Banco\\BancoService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T17:03:01.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IDetraccionService.cs",
+              "DocumentMoniker": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Abstractions\\IService\\IDetraccionService.cs",
+              "RelativeDocumentMoniker": "CajaBanco.Abstractions\\IService\\IDetraccionService.cs",
+              "ToolTip": "D:\\trabajo\\Nivargo\\cajabanco\\cajabancobackend\\CajaBanco.Abstractions\\IService\\IDetraccionService.cs",
+              "RelativeToolTip": "CajaBanco.Abstractions\\IService\\IDetraccionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAB0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T06:30:09.371Z"
             }
           ]
         }
