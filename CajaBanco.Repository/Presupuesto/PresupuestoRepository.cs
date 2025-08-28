@@ -646,6 +646,34 @@ namespace CajaBanco.Repository.Presupuesto
             }
             return result;
         }
-        
+
+        public async Task<ResultDto<PresupuestoDetResponse>> SpLlistaDetPresupuestoDetraIndividual(string empresa, string numeropresupuesto)
+        {
+            ResultDto<PresupuestoDetResponse> res = new ResultDto<PresupuestoDetResponse>();
+            List<PresupuestoDetResponse> list = new List<PresupuestoDetResponse>();
+
+            try
+            {
+                SqlConnection cnx = new SqlConnection(_connectionString);
+                DynamicParameters parametros = new DynamicParameters();
+                parametros.Add("@empresa", empresa);
+                parametros.Add("@numeropresupuesto", numeropresupuesto);
+
+                //parametros.Add("@fechaprespuesto", fechapresupuesto);
+
+                list = (List<PresupuestoDetResponse>)await cnx.QueryAsync<PresupuestoDetResponse>("Spu_Ban_Trae_DetallePresupuestoDetraIndividual",
+                    parametros, commandType: System.Data.CommandType.StoredProcedure);
+                res.IsSuccess = list.Count > 0 ? true : false;
+                res.Message = list.Count > 0 ? "Informacion encontrada" : "No se encontro informacion";
+                res.Data = list.ToList();
+                //this._cnx.conexion.QueryAsync<PresupuestoListResponse>
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
     }
 }

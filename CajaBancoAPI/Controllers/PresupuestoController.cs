@@ -488,5 +488,23 @@ namespace CajaBancoAPI.Controllers
             }
         }
 
+
+        [HttpGet]
+        [Route("SpListaDetPresupuestoDetraIndividual")]
+        public async Task<ActionResult> SpListaDetDetraccion(string empresa,
+            string numerodocumento)
+        {
+            try
+            {
+                var result = await this._app.SpLlistaDetPresupuestoDetraIndividual(empresa, numerodocumento);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
     }
 }

@@ -120,5 +120,10 @@ namespace CajaBanco.Services.Presupuesto
         {
             return await _repository.SpListaInterbankArchivoDet(empresa, numeroPresupuesto);
         }
+
+        public async Task<ResultDto<PresupuestoDetResponse>> SpLlistaDetPresupuestoDetraIndividual(string empresa, string numeropresupuesto)
+        {
+            return await _repository.SpLlistaDetPresupuestoDetraIndividual(empresa, numeropresupuesto);
+        }
     }
 }

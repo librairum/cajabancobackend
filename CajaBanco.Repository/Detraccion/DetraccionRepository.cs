@@ -256,7 +256,7 @@ namespace CajaBanco.Repository.Detraccion
             try
             {
                 SqlConnection cn = new SqlConnection(_connectionString);
-                SqlCommand cmd = new SqlCommand("Spu_Ban_Ins_PresupuestoDetraUnitaria", cn);
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Del_PresupuestoDetraccionIndividual", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@empresa", empresa);
                 cmd.Parameters.AddWithValue("@nropresupuesto", nropresupuesto);
@@ -281,5 +281,9 @@ namespace CajaBanco.Repository.Detraccion
             }
             return result;
         }
+
+        //Spu_Ban_Trae_DetallePresupuestoDetraIndividual
+
+
     }
 }

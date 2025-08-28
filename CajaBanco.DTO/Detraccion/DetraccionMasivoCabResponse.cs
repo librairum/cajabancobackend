@@ -23,6 +23,10 @@ namespace CajaBanco.DTO.Detraccion
         public string nombreMedioPago { get; set; }
         public string bancoCodMedioPago { get; set; }
         public string bancoMedioPago { get; set; }
+        public string moneda { get; set; }
+        public string estadopresupuesto { get; set; }
+        public string fechaejecucionpago { get; set; }
+        public string nrooperacion { get; set; }
 
     }
 }

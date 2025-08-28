@@ -17,7 +17,7 @@ namespace CajaBanco.Abstractions.IRepository
         public Task<ResultDto<DetraIndividualDocPenResponse>> SpTraeDocPendiente(string empresa, string ruc, string numeroDocumento);
         public Task<ResultDto<string>> SpInsertaPresupuestoDetraIndividual(DetraccionIndividualRequest entidad);
         public Task<ResultDto<string>> SpEliminaPresupuestoDetraccionIndividual(string empresa, string nropresupuesto);
-
+        
         /*
              @Ban01Empresa char(2),  
 @Ban01Anio  char(4),  

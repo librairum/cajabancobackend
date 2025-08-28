@@ -67,7 +67,8 @@ namespace CajaBanco.DTO.Presupuesto
         public string? Ban02FechaVencimiento { get; set; }
         public double importeDetraccion { get; set; }
          
-
+        public double importecomprobantedolares { get; set; }
+        public double importecomprobantesoles { get; set; }
 
 
     }
