@@ -152,6 +152,7 @@ namespace CajaBanco.Repository.Autenticacion
                     DynamicParameters parametros = new DynamicParameters();
                     string claveEncriptada = Encripta(request.claveusuario);
                     //string claveDesencriptada = Desencriptado(claveEncriptada);
+                    
                     parametros.Add("@NombreUsuario", request.nombreusuario);
                     parametros.Add("@ClaveUsuario", claveEncriptada);
                     parametros.Add("@codigoEmpresa", request.codigoempresa);
