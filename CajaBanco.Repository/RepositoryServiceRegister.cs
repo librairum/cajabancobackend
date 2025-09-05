@@ -15,6 +15,7 @@ using CajaBanco.Repository.Usuario;
 using CajaBanco.Repository.Perfil;
 using CajaBanco.Repository.Permisos;
 using CajaBanco.Repository.Detraccion;
+using CajaBanco.Repository.Retencion;
 namespace CajaBanco.Repository
 {
     public static class RepositoryServiceRegister
@@ -33,6 +34,7 @@ namespace CajaBanco.Repository
             services.AddScoped<IPermisosRepository, PermisosRepository>();
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<IDetraccionRepository, DetraccionRepository>();
+            services.AddScoped<IRetencionRepository, RetencionRepository>();
             return services;
         }
 

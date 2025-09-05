@@ -33,7 +33,7 @@ public double co26importedetra { get;set; }
 public string co26ctaproveedor { get; set; }
         public string ccm02nom { get; set; }
 public string descTipoDocumento { get; set; }
-
+        public string item { get; set; }
 
 
     }

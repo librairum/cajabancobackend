@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CajaBanco.DTO.Retencion
 {
-    public class RetencioncabResponsecs
+    public class RetencioncabResponse
     {
         public string EmpresaCod { get; set; }
         public string Anio { get; set; }
