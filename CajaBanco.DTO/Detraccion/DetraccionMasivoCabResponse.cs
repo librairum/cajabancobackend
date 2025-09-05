@@ -15,8 +15,8 @@ namespace CajaBanco.DTO.Detraccion
         public string loteDetraccionNro { get; set; }
         public string presupuestoCod { get; set; }
         public double facturaImporteSol { get;set; }
-        public double detraccionImporteSol { get; set; }
-
+        public double detraccionImporteSoles { get; set; }
+        public double detraccionImporteDolares { get; set; }
         public string fecha { get; set; }
         public string motivo { get; set; }
         public string medio { get; set; }

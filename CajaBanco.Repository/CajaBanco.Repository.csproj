@@ -18,4 +18,8 @@
     <ProjectReference Include="..\CajaBanco.Abstractions\CajaBanco.Abstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Retencion\" />
+  </ItemGroup>
+
 </Project>

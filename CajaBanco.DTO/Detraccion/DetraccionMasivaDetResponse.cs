@@ -32,19 +32,9 @@ public double co26importedetra { get;set; }
 //public double co26importedetradol { get; set;}
 public string co26ctaproveedor { get; set; }
         public string ccm02nom { get; set; }
-//public string co26const_consdetra { get; set;}
-//public string co26const_numoperacion { get; set;}
-//public DateTime co26const_fecha { get; set; }
-//public string co26const_numconst { get; set; }
-//public string co26periodotributario { get; set;}
-//public string co26vouchemp { get;set; }
-//public string co26vouchano	{ get; set;  }
-//public string co26vouchmes { get; set;}
-//public string co26vouchsubd { get;set; }
-//public string co26vouchnumer { get;set; }
-//public string co26idbanco { get;set;}
-//public string co26ctabancaria { get; set;}
-         
+public string descTipoDocumento { get; set; }
+
+
 
     }
 }
