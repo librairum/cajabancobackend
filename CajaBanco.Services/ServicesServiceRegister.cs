@@ -15,6 +15,7 @@ using CajaBanco.Services.Perfil;
 using CajaBanco.Services.Permisos;
 using CajaBanco.Services.Usuario;
 using CajaBanco.Services.Detraccion;
+using CajaBanco.Services.Retencion;
 
 namespace CajaBanco.Services
 {
@@ -34,6 +35,7 @@ namespace CajaBanco.Services
             services.AddScoped<IPermisosService, PermisosService>();
             services.AddScoped<IUsuarioService, UsuarioService>();
             services.AddScoped<IDetraccionService, DetraccionService>();
+            services.AddScoped<IRetencionService, RetencionService>();
             return services;
         }
 

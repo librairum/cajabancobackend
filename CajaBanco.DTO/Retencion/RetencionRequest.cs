@@ -31,6 +31,7 @@ namespace CajaBanco.DTO.Retencion
         public string nombrearchivo { get; set; }
         public byte[] contenidoarchivo { get; set; }
         public string flagoperacion { get; set; }
+        
         /*        
             -- Agregar los campos del pago           
             --@fechapago VARCHAR(10),      -- formulario web  frontend parametro del metod actualiza comprobante      
