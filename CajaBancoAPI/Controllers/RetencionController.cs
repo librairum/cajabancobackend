@@ -85,5 +85,22 @@ namespace CajaBancoAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpDelete]
+        [Route("SpElimina")]
+        public async Task<ActionResult> SpElimina(string empresa, string numeroPresupuesto)
+        {
+            try
+            {
+                var result = await this._aplicacion.SpEliminar(empresa, numeroPresupuesto);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
     }
 }

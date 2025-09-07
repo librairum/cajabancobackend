@@ -1127,6 +1127,27 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
+    "Method": "SpListaDetDetraccion",
+    "RelativePath": "Presupuesto/SpListaDetPresupuestoDetraIndividual",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numerodocumento",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
     "Method": "ObtenerListDocPendientes",
     "RelativePath": "Presupuesto/SpListaDocPendientes",
     "HttpMethod": "GET",
@@ -1318,6 +1339,100 @@
       },
       {
         "Name": "destinationPath",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.RetencionController",
+    "Method": "SpElimina",
+    "RelativePath": "Retencion/SpElimina",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numeroPresupuesto",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.RetencionController",
+    "Method": "SpInserta",
+    "RelativePath": "Retencion/SpInserta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "archivoOriginal",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.RetencionController",
+    "Method": "SpTrae",
+    "RelativePath": "Retencion/SpTrae",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.RetencionController",
+    "Method": "SpTraeDetalle",
+    "RelativePath": "Retencion/SpTraeDetalle",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
         "Type": "System.String",
         "IsRequired": false
       }

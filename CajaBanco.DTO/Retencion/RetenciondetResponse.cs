@@ -17,7 +17,7 @@ namespace CajaBanco.DTO.Retencion
         public string ProveedorDescripcion { get; set; }
         public string ProveedorDocTipoTransa { get; set; }
         public string ProveedorDocNroDoc { get; set; }
-        public DateTime ProveedorDocFecha { get; set; }
+        public string ProveedorDocFecha { get; set; }
         public double ProveedorDocImporteTotal { get; set; }
         public double ProveedorDocImporteRetenido { get;set; }
 

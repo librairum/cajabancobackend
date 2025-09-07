@@ -31,5 +31,10 @@ namespace CajaBanco.Services.Retencion
         {
             return await this._repositorio.SpTraeDetalle(empresa, anio, mes);
         }
+
+        public async Task<ResultDto<string>> SpEliminar(string empresa, string numeroPresupuesto)
+        {
+            return await this._repositorio.SpEliminar(empresa, numeroPresupuesto);
+        }
     }
 }

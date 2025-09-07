@@ -16,6 +16,7 @@ namespace CajaBanco.Abstractions.IRepository
         public Task<ResultDto<RetenciondetResponse>> SpTraeDetalle(string empresa, string anio, string mes);
 
         public Task<ResultDto<string>> SpInserta(RetencionRequest registro);
+        public Task<ResultDto<string>> SpEliminar(string empresa, string numeroPresupuesto);
 
     }
 }

@@ -10,6 +10,7 @@ using System.Data;
 using CajaBanco.DTO.CuentaBancaria;
 using CajaBanco.DTO.Retencion;
 using CajaBanco.DTO.Detraccion;
+using Microsoft.Win32;
 
 namespace CajaBanco.Repository.Retencion
 {
@@ -29,21 +30,22 @@ namespace CajaBanco.Repository.Retencion
                 SqlCommand cmd = new SqlCommand("Spu_Ban_Ins_PresupuestoRetencionMensual", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Ban01Empresa", registro.ban01empresa);
-                cmd.Parameters.AddWithValue("@Ban01Anio", registro.ban01empresa);
-                cmd.Parameters.AddWithValue("@Ban01Mes", registro.ban01empresa);
-                cmd.Parameters.AddWithValue("@Ban01Descripcion", registro.ban01empresa);
-                cmd.Parameters.AddWithValue("@Ban01Fecha", registro.ban01empresa);
-                cmd.Parameters.AddWithValue("@Ban01Estado", registro.ban01empresa);
-                cmd.Parameters.AddWithValue("@Ban01Usuario", registro.ban01empresa);
-                cmd.Parameters.AddWithValue("@Ban01FechaRegistro", registro.ban01empresa);
-                cmd.Parameters.AddWithValue("@Ban01MedioPago", registro.ban01empresa);
-                cmd.Parameters.AddWithValue("@RetencionMensualNro", registro.ban01empresa);
-                cmd.Parameters.AddWithValue("@Ban01motivopagoCod", registro.ban01empresa);
-                cmd.Parameters.AddWithValue("@numerooperacion", registro.ban01empresa);
-                cmd.Parameters.AddWithValue("@enlacepago", registro.ban01empresa);
-                cmd.Parameters.AddWithValue("@nombreArchivo", registro.ban01empresa);
-                cmd.Parameters.AddWithValue("@contenidoArchivo", registro.ban01empresa);
-                cmd.Parameters.AddWithValue("@flagOperacion", registro.ban01empresa);
+                cmd.Parameters.AddWithValue("@Ban01Anio", registro.ban01anio);
+                cmd.Parameters.AddWithValue("@Ban01Mes", registro.ban01mes);
+                cmd.Parameters.AddWithValue("@Ban01Descripcion", registro.ban01descripcion);
+                cmd.Parameters.AddWithValue("@Ban01Fecha", registro.ban01fecha);
+                cmd.Parameters.AddWithValue("@Ban01Estado", registro.ban01estado);
+                cmd.Parameters.AddWithValue("@Ban01Usuario", registro.ban01usuario);
+                cmd.Parameters.AddWithValue("@Ban01Pc", registro.ban01pc); 
+                cmd.Parameters.AddWithValue("@Ban01FechaRegistro", registro.ban01fecharegistro);
+                cmd.Parameters.AddWithValue("@Ban01MedioPago", registro.ban01mediopago);
+                cmd.Parameters.AddWithValue("@RetencionMensualNro", registro.retencionMensualNro);
+                cmd.Parameters.AddWithValue("@Ban01motivopagoCod", registro.ban01motivopagocod);
+                cmd.Parameters.AddWithValue("@numerooperacion", registro.numerooperacion);
+                cmd.Parameters.AddWithValue("@enlacepago", registro.enlacepago);
+                cmd.Parameters.AddWithValue("@nombreArchivo", registro.nombrearchivo);
+                cmd.Parameters.AddWithValue("@contenidoArchivo", registro.contenidoarchivo);
+                cmd.Parameters.AddWithValue("@flagOperacion", registro.flagoperacion);
 
                 var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
                 parMensaje.Direction = ParameterDirection.Output;
@@ -133,6 +135,41 @@ namespace CajaBanco.Repository.Retencion
             }
             //Spu_Ban_Trae_DetraccionIndividualCab
             return res;
+        }
+
+        public async Task<ResultDto<string>> SpEliminar(string empresa, string numeroPresupuesto)
+        {
+            ResultDto<string> result = new ResultDto<string>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Del_PresupuestoRetencion", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@empresa", empresa);
+                cmd.Parameters.AddWithValue("@nropresupuesto", numeroPresupuesto);
+                                
+                var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
+                parMensaje.Direction = ParameterDirection.Output;
+
+                var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                parFlag.Direction = ParameterDirection.Output;
+
+                cn.Open();
+                var respuesta = await cmd.ExecuteNonQueryAsync();
+                cn.Close();
+                result.Item = "1";
+                result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
+                result.Message = parMensaje.Value.ToString();
+
+            }
+            catch (Exception ex)
+            {
+
+                result.IsSuccess = false;
+                result.MessageException = ex.Message;
+            }
+            //throw new NotImplementedException();
+            return result;
         }
     }
 }
