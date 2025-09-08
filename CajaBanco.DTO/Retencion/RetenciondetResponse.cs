@@ -8,7 +8,7 @@ namespace CajaBanco.DTO.Retencion
 {
     public  class RetenciondetResponse
     {
-
+        public int item { get; set; }
         public string Ban01Empresa { get; set; }
         public string RetencionNro { get; set; }
         public string RetencionFecha { get; set; }
@@ -20,6 +20,7 @@ namespace CajaBanco.DTO.Retencion
         public string ProveedorDocFecha { get; set; }
         public double ProveedorDocImporteTotal { get; set; }
         public double ProveedorDocImporteRetenido { get;set; }
+
 
     }
 }
