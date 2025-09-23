@@ -58,6 +58,7 @@ namespace CajaBanco.Abstractions.IRepository
         public Task<ResultDto<PresupuestoDetResponse>> SpLlistaDetPresupuestoDetraIndividual(string empresa, string numeropresupuesto);
 
         //public Task<ResultDto<string>> SpAnulaComprobante(string empresa, string anio, string mes, string numeroPresupuesto);
+        public Task<ResultDto<BanbinfArchivoCab>> SpListaBanbifArchivoCab(string empresa, string numeroPresupuesto);
 
 
 

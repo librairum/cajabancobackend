@@ -16,6 +16,7 @@ using CajaBanco.Application.Permisos;
 using CajaBanco.Application.Usuario;
 using CajaBanco.Application.Detraccion;
 using CajaBanco.Application.Retencion;
+using CajaBanco.Application.CobroFactura;
 namespace CajaBanco.Application
 {
     public static class ApplicationServiceRegister
@@ -33,6 +34,7 @@ namespace CajaBanco.Application
             services.AddScoped<IUsuarioApplication, UsuarioApplication>();
             services.AddScoped<IDetraccionApplication, DetraccionApplication>();
             services.AddScoped<IRetencionApplication, RetencionApplication>();
+            services.AddScoped<ICobroFacturaApplication, CobroFacturacionApplication>();
             return services;
         }
 

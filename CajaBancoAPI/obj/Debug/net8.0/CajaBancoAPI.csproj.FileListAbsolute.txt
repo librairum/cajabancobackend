@@ -2376,7 +2376,6 @@ D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\C
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\CajaBancoAPI.AssemblyInfoInputs.cache
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\CajaBancoAPI.AssemblyInfo.cs
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\CajaBancoAPI.csproj.CoreCompileInputs.cache
-D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\CajaBancoAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\CajaBancoAPI.MvcApplicationPartsAssemblyInfo.cache
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\CajaBancoAPI.sourcelink.json
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\staticwebassets.build.json
@@ -2393,3 +2392,4 @@ D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\r
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\CajaBancoAPI.pdb
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\CajaBancoAPI.genruntimeconfig.cache
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\ref\CajaBancoAPI.dll
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBancoAPI\obj\Debug\net8.0\CajaBancoAPI.MvcApplicationPartsAssemblyInfo.cs

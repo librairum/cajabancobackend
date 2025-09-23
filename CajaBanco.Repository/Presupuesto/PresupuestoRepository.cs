@@ -675,5 +675,28 @@ namespace CajaBanco.Repository.Presupuesto
             }
             return res;
         }
+
+        public async Task<ResultDto<BanbinfArchivoCab>> SpListaBanbifArchivoCab(string empresa, string numeroPresupuesto)
+        {
+            ResultDto<BanbinfArchivoCab> result = new ResultDto<BanbinfArchivoCab>();
+            List<BanbinfArchivoCab> lista = new List<BanbinfArchivoCab>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                DynamicParameters par = new DynamicParameters();
+                par.Add("@codigoEmpresa", empresa);                
+                par.Add("@numeroPresupuesto", numeroPresupuesto);
+                lista = (List<BanbinfArchivoCab>)await cn.QueryAsync<BanbinfArchivoCab>("Spu_Ban_Trae_BanBifDetArchivo",
+                    par, commandType: CommandType.StoredProcedure);
+                result.IsSuccess = lista.Count > 0 ? true : false;
+                result.Message = lista.Count > 0 ? "Informacion encontrada" : "NO se encontro informacion";
+                result.Data = lista.ToList();
+            }
+            catch (Exception ex) {
+                result.IsSuccess = false;
+                result.MessageException = ex.Message;
+            }
+            return  result;
+        }
     }
 }

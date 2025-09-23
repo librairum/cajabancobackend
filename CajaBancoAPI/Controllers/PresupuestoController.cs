@@ -491,5 +491,23 @@ namespace CajaBancoAPI.Controllers
         }
 
 
+
+        [HttpGet]
+        [Route("SpListaBanbifArchivoCab")]
+        public async Task<ActionResult> SpListaBanbifArchivoCab(string empresa,  string numeroPresupuesto)
+        {
+            try
+            {
+
+                var result = await this._app.SpListaBanbifArchivoCab(empresa,  numeroPresupuesto);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
     }
 }

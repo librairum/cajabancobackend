@@ -55,5 +55,7 @@ namespace CajaBanco.Abstractions.IApplication
         public Task<ResultDto<InterbankArchivoDet>> SpListaInterbankArchivoDet(string empresa, string numeroPresupuesto);
 
         public Task<ResultDto<PresupuestoDetResponse>> SpLlistaDetPresupuestoDetraIndividual(string empresa, string numeropresupuesto);
+
+        public Task<ResultDto<BanbinfArchivoCab>> SpListaBanbifArchivoCab(string empresa, string numeroPresupuesto);
     }
 }
