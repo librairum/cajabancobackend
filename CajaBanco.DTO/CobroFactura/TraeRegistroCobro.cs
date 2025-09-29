@@ -20,16 +20,21 @@ namespace CajaBanco.DTO.CobroFactura
 		public string MedioPagoCodigo { get; set; }
 		public string MedioPagoDescripcion { get; set; }
 		public string Ban03Motivo { get; set; }
+
+		public string ban03moneda { get; set; }
+
+		public string ban03VoucherLibroCod { get; set; }
+		public string ban03VoucherNumero { get; set; }
     //       ban03empresa, ban03anio, ban03mes
     //, ban03numero 
     //,cliente.ccm02cod as 'clienteCodigo'
     //,cliente.ccm02nom as 'clienteNombre'
     //, Ban03FechaDeposito
- //   ,(case when ban03Moneda = 'S' then 'SOLES' else 'DOLARES' end) as 'MonedaDescripcion' 
-	//, Ban03Importe
-	//,medioPago.Ban01IdTipoPago as 'medioPagoCodigo'
-	//,medioPago.Ban01Descripcion	 as 'medioPagoDescripcion'
-	//, Ban03Motivo
+    //   ,(case when ban03Moneda = 'S' then 'SOLES' else 'DOLARES' end) as 'MonedaDescripcion' 
+    //, Ban03Importe
+    //,medioPago.Ban01IdTipoPago as 'medioPagoCodigo'
+    //,medioPago.Ban01Descripcion	 as 'medioPagoDescripcion'
+    //, Ban03Motivo
 
     }
 }

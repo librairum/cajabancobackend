@@ -39,7 +39,7 @@ namespace CajaBanco.Repository.CobroFactura
                 cmd.Parameters.AddWithValue("@Ban03clientetipoanalisis", registro.Ban03clientetipoanalisis);
                 cmd.Parameters.AddWithValue("@Ban03clienteruc", registro.Ban03clienteruc);
                 cmd.Parameters.AddWithValue("@Ban03Importe", registro.Ban03Importe);
-                cmd.Parameters.AddWithValue("@Ban03Moneda", registro.Ban03Moneda);
+                cmd.Parameters.AddWithValue("@Ban03Moneda", registro.ban03moneda);
                 cmd.Parameters.AddWithValue("@Ban03FechaDeposito", registro.Ban03FechaDeposito);
                 cmd.Parameters.AddWithValue("@Ban03MedioPago", registro.Ban03MedioPago);
                 cmd.Parameters.AddWithValue("@Ban03Motivo", registro.Ban03Motivo);
@@ -120,7 +120,7 @@ namespace CajaBanco.Repository.CobroFactura
                 cmd.Parameters.AddWithValue("@Ban03clientetipoanalisis", registro.Ban03clientetipoanalisis);
                 cmd.Parameters.AddWithValue("@Ban03clienteruc", registro.Ban03clienteruc);
                 cmd.Parameters.AddWithValue("@Ban03Importe", registro.Ban03Importe);
-                cmd.Parameters.AddWithValue("@Ban03Moneda", registro.Ban03Moneda);
+                cmd.Parameters.AddWithValue("@Ban03Moneda", registro.ban03moneda);
                 cmd.Parameters.AddWithValue("@Ban03FechaDeposito", registro.Ban03FechaDeposito);
                 cmd.Parameters.AddWithValue("@Ban03MedioPago", registro.Ban03MedioPago);
                 cmd.Parameters.AddWithValue("@Ban03Motivo", registro.Ban03Motivo);

@@ -17,7 +17,7 @@ namespace CajaBanco.DTO.CobroFactura
         public string Ban03clientetipoanalisis { get; set; }
         public string Ban03clienteruc { get; set; }
         public double Ban03Importe { get; set; }
-        public string Ban03Moneda { get; set; }
+        public string ban03moneda { get; set; }
         public string Ban03FechaDeposito { get; set; }
         public string Ban03MedioPago { get; set; }
         public string Ban03Motivo { get; set; } 
