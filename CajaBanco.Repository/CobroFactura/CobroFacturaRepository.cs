@@ -75,7 +75,7 @@ namespace CajaBanco.Repository.CobroFactura
             ResultDto<string> result = new ResultDto<string>();
             try {
                 SqlConnection cn = new SqlConnection(_connectionString);
-                SqlCommand cmd = new SqlCommand("", cn);
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Del_RegistroCobro", cn);
                 cmd.Parameters.AddWithValue("@Ban03Empresa", empresa);
                 cmd.Parameters.AddWithValue("@Ban03Anio", anio);
                 cmd.Parameters.AddWithValue("@Ban03Mes", mes);
