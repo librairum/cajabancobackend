@@ -21,7 +21,7 @@ namespace CajaBanco.DTO.CobroFactura
 		public string MedioPagoDescripcion { get; set; }
 		public string Ban03Motivo { get; set; }
 
-		public string ban03moneda { get; set; }
+		public string Ban03Moneda { get; set; }
 
 		public string ban03VoucherLibroCod { get; set; }
 		public string ban03VoucherNumero { get; set; }
