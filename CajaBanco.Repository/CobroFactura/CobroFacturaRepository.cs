@@ -69,13 +69,19 @@ namespace CajaBanco.Repository.CobroFactura
             return result;
         }
 
-        public async Task<ResultDto<string>> SpEliminaCabecera(string empresa, 
-            string anio, string mes, string numero)
+        public async Task<ResultDto<string>> SpEliminaCabecera(string empresa,
+    string anio, string mes, string numero)
         {
             ResultDto<string> result = new ResultDto<string>();
-            try {
+            try
+            {
                 SqlConnection cn = new SqlConnection(_connectionString);
                 SqlCommand cmd = new SqlCommand("Spu_Ban_Del_RegistroCobro", cn);
+
+                // ¡CORRECCIÓN CLAVE! Falta especificar que es un SP
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                // Los nombres de los parámetros coinciden con el SP
                 cmd.Parameters.AddWithValue("@Ban03Empresa", empresa);
                 cmd.Parameters.AddWithValue("@Ban03Anio", anio);
                 cmd.Parameters.AddWithValue("@Ban03Mes", mes);
@@ -87,15 +93,17 @@ namespace CajaBanco.Repository.CobroFactura
                 var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
                 parFlag.Direction = ParameterDirection.Output;
 
+
                 cmd.CommandType = CommandType.StoredProcedure;
+
 
                 cn.Open();
                 var respuesta = await cmd.ExecuteNonQueryAsync();
                 cn.Close();
                 result.Item = numero;
 
-                result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
-                result.Message = parMensaje.Value.ToString();
+                result.IsSuccess = parFlag.Value != DBNull.Value && Convert.ToInt32(parFlag.Value) == 1;
+                result.Message = parMensaje.Value != DBNull.Value ? parMensaje.Value.ToString() : "Operación finalizada.";
             }
             catch (Exception ex)
             {
@@ -138,6 +146,7 @@ namespace CajaBanco.Repository.CobroFactura
                 var respuesta = await cmd.ExecuteNonQueryAsync();
                 cn.Close();
                 result.Item = registro.Ban03Numero;
+
                 result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
                 result.Message = parMensaje.Value.ToString();
             }
