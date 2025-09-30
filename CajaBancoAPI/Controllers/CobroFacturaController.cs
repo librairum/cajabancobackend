@@ -76,15 +76,28 @@ namespace CajaBancoAPI.Controllers
 
         [HttpGet]
         [Route("TraeFacturaPorCobrar")]
-        public async Task<ActionResult> TraeFacturaPorCobrar(string empresa, string anio, string mes, string usuario)
+        public async Task<ActionResult> TraeFacturaPorCobrar(string empresa, string anio, string mes, string usuario, string clientecodigo)
         {
             try
             {
-                var result = await this._aplicacion.SpTraeAyudaFacturaPorCobrar(empresa, anio, mes, usuario);
+                var result = await this._aplicacion.SpTraeAyudaFacturaPorCobrar(empresa, anio, mes, usuario, clientecodigo);
                 return Ok(result);
                 
             }
             catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+        
+        [HttpGet]
+        [Route("TraeClienteconFactura")]
+        public async Task<ActionResult> TraeClienteconFactura(string empresa)
+        {
+            try {
+                var result = await this._aplicacion.SpTraeClienteconfactura(empresa );
+                return Ok(result);
+            }catch(Exception ex)
             {
                 return BadRequest(ex.ToString());
             }

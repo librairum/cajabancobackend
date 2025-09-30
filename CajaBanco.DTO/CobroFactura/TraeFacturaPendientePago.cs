@@ -26,4 +26,9 @@ namespace CajaBanco.DTO.CobroFactura
 
 
     }
+    public class TraeClienteconFactura
+    {
+        public string codigoCliente { get; set; }
+        public string nombreCliente { get; set; }
+    }
 }

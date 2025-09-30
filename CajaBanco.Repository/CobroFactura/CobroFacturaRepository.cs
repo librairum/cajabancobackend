@@ -87,7 +87,7 @@ namespace CajaBanco.Repository.CobroFactura
                 var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
                 parFlag.Direction = ParameterDirection.Output;
 
-
+                cmd.CommandType = CommandType.StoredProcedure;
 
                 cn.Open();
                 var respuesta = await cmd.ExecuteNonQueryAsync();
@@ -179,7 +179,7 @@ namespace CajaBanco.Repository.CobroFactura
         }
 
         public async Task<ResultDto<TraeFacturaPendientePago>> SpTraeAyudaFacturaPorCobrar(string empresa, 
-            string anio,string mes, string usuario)
+            string anio,string mes, string usuario,string clientecodigo)
         {
             ResultDto<TraeFacturaPendientePago> res = new ResultDto<TraeFacturaPendientePago>();
             List<TraeFacturaPendientePago> list = new List<TraeFacturaPendientePago>();
@@ -195,6 +195,7 @@ namespace CajaBanco.Repository.CobroFactura
                 parametros.Add("@campo", "FAC04NUMDOC");
                 parametros.Add("@filro", "*");
                 parametros.Add("@NombreUsuario", usuario);
+                parametros.Add("@clientecodigo", clientecodigo);
 
                 list = (List<TraeFacturaPendientePago>)await cn.QueryAsync<TraeFacturaPendientePago>("Spu_Ban_Trae_FacturaPendiente",
                     parametros, commandType: CommandType.StoredProcedure);
@@ -211,6 +212,35 @@ namespace CajaBanco.Repository.CobroFactura
             }
             return res;
         }
+      
 
+        public async Task<ResultDto<TraeClienteconFactura>> SpTraeClienteconfactura(string empresa)
+        {
+            ResultDto<TraeClienteconFactura> res = new ResultDto<TraeClienteconFactura>();
+            List<TraeClienteconFactura> list = new List<TraeClienteconFactura>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                //SqlCommand cmd = new SqlCommand("Spu_Ban_Trae_RegistroCobro", cn);
+                DynamicParameters parametros = new DynamicParameters();
+                parametros.Add("@empresa", empresa);
+
+
+
+                list = (List<TraeClienteconFactura>)await cn.QueryAsync<TraeClienteconFactura>("Spu_ban_Trae_ClienteconFacturas",
+                    parametros, commandType: CommandType.StoredProcedure);
+                res.IsSuccess = list.Count > 0 ? true : false;
+                res.Message = list.Count > 0 ? "informacion encontrar" : "no se encontro informacion";
+                res.Data = list.ToList();
+                res.Total = list.Count;
+
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
     }
 }

@@ -40,9 +40,14 @@ namespace CajaBanco.Services.CobroFactura
         }
 
         public async Task<ResultDto<TraeFacturaPendientePago>> SpTraeAyudaFacturaPorCobrar(string empresa, 
-              string anio, string mes, string usuario)
+              string anio, string mes, string usuario, string clientecodigo)
         {
-            return await _repositorio.SpTraeAyudaFacturaPorCobrar(empresa, anio, mes, usuario);
+            return await _repositorio.SpTraeAyudaFacturaPorCobrar(empresa, anio, mes, usuario, clientecodigo);
+        }
+
+        public async Task<ResultDto<TraeClienteconFactura>> SpTraeClienteconfactura(string empresa)
+        {
+            return await _repositorio.SpTraeClienteconfactura(empresa);
         }
     }
 }
