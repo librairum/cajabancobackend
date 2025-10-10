@@ -1,4 +1,5 @@
-﻿using CajaBanco.DTO.CobroFactura;
+﻿using CajaBanco.DTO.Autenticacion;
+using CajaBanco.DTO.CobroFactura;
 using CajaBanco.DTO.Common;
 using System;
 using System.Collections.Generic;
@@ -27,5 +28,11 @@ namespace CajaBanco.Abstractions.IApplication
 
         public Task<ResultDto<string>> SpEliminaDetalle(string empresa, string numeroRegistroCobroCab, int item,
           string tipodoc, string nroDocumento);
+        /*@Ban04Empresa varchar(2),  
+@Ban04Numero varchar(5),  
+@xmlDetalle xml,  
+@Ban04Observacion varchar(200),  */
+        public Task<ResultDto<string>> SpInsertaDetalle(RegistroCobroDetalle registro);
+
     }
 }

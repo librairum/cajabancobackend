@@ -27,6 +27,8 @@ namespace CajaBanco.Abstractions.IRepository
 
         public Task<ResultDto<string>> SpEliminaDetalle(string empresa, string numeroRegistroCobroCab, int item,
           string tipodoc, string nroDocumento);
+        public Task<ResultDto<string>> SpInsertaDetalle(RegistroCobroDetalle registro);
+
 
 
 

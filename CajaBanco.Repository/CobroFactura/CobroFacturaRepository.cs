@@ -5,6 +5,7 @@ using CajaBanco.DTO.Common;
 using Dapper;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -376,6 +377,44 @@ namespace CajaBanco.Repository.CobroFactura
                 res.MessageException = ex.Message;
             }
             return res;
+        }
+
+        public async Task<ResultDto<string>> SpInsertaDetalle(RegistroCobroDetalle registro)
+        {
+            ResultDto<string> result = new ResultDto<string>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Ins_RegistroCobroDet", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Ban04Empresa  ", registro.Ban04Empresa);
+                cmd.Parameters.AddWithValue("@Ban04Numero", registro.Ban04Numero);
+                cmd.Parameters.AddWithValue("@xmlDetalle", registro.xmlDetalle);
+                cmd.Parameters.AddWithValue("@Ban04Observacion", registro.Ban04Observacion);
+               
+
+                var parMensaje = cmd.Parameters.Add("@msgretorno", SqlDbType.VarChar, 200);
+                parMensaje.Direction = ParameterDirection.Output;
+
+                var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                parFlag.Direction = ParameterDirection.Output;
+
+
+
+                cn.Open();
+                var respuesta = await cmd.ExecuteNonQueryAsync();
+                cn.Close();
+                result.Item = "";
+
+                result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
+                result.Message = parMensaje.Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
         }
     }
 }

@@ -64,5 +64,10 @@ namespace CajaBanco.Services.CobroFactura
         {
             return await _repositorio.SpListaDetalle(empresa, numeroRegistroCobroCab);
         }
+
+        public async Task<ResultDto<string>> SpInsertaDetalle(RegistroCobroDetalle registro)
+        {
+            return await _repositorio.SpInsertaDetalle(registro);
+        }
     }
 }

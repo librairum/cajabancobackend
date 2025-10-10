@@ -156,6 +156,20 @@ namespace CajaBancoAPI.Controllers
             }
 
         }
-    }
 
+        [HttpPost]
+        [Route("InsertaDetalle")]
+        public async Task<ActionResult> InsertaDetalle(RegistroCobroDetalle registro)
+        {
+            try
+            {
+                var result = await this._aplicacion.SpInsertaDetalle(registro);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+    }
 }
