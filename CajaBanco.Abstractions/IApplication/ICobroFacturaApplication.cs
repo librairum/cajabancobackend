@@ -20,6 +20,12 @@ namespace CajaBanco.Abstractions.IApplication
               string usuario, string clientecodigo);
 
         public Task<ResultDto<TraeClienteconFactura>> SpTraeClienteconfactura(string empresa);
-        //public Task<ResultDto<TraeRegistroCobroDetalle>> SpListaDetalle(string empresa, string codigoCliente);
+        public Task<ResultDto<TraeRegistroCobroDetalle>> SpListaDetalle(string empresa, string numeroRegistroCobroCab);
+
+        public Task<ResultDto<string>> SpActualizaDetalle(string empresa, string numeroRegistroCobroCab, int item,
+          string tipodoc, string nroDocumento, double pagoSoles, double pagoDolares, string observacion);
+
+        public Task<ResultDto<string>> SpEliminaDetalle(string empresa, string numeroRegistroCobroCab, int item,
+          string tipodoc, string nroDocumento);
     }
 }

@@ -12,6 +12,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CajaBanco.Repository.CobroFactura
 {
@@ -239,6 +240,129 @@ namespace CajaBanco.Repository.CobroFactura
 
 
                 list = (List<TraeClienteconFactura>)await cn.QueryAsync<TraeClienteconFactura>("Spu_ban_Trae_ClienteconFacturas",
+                    parametros, commandType: CommandType.StoredProcedure);
+                res.IsSuccess = list.Count > 0 ? true : false;
+                res.Message = list.Count > 0 ? "informacion encontrar" : "no se encontro informacion";
+                res.Data = list.ToList();
+                res.Total = list.Count;
+
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
+
+        public async Task<ResultDto<string>> SpActualizaDetalle(string empresa, string numeroRegistroCobroCab, int item, 
+            string tipodoc, string nroDocumento, double pagoSoles, double pagoDolares, string observacion)
+        {
+            ResultDto<string> result = new ResultDto<string>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Upd_RegistroCobroDet", cn);
+
+                // ¡CORRECCIÓN CLAVE! Falta especificar que es un SP
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                // Los nombres de los parámetros coinciden con el SP
+                cmd.Parameters.AddWithValue("@Ban04Empresa", empresa);
+                cmd.Parameters.AddWithValue("@Ban04Numero", numeroRegistroCobroCab);
+                cmd.Parameters.AddWithValue("@Ban04Item", item);
+                cmd.Parameters.AddWithValue("@Ban04Tipodoc", tipodoc);
+                cmd.Parameters.AddWithValue("@Ban04NroDoc", nroDocumento);
+                cmd.Parameters.AddWithValue("@Ban04PagoSoles", pagoSoles);
+                cmd.Parameters.AddWithValue("@Ban04PagoDolares", pagoDolares);
+                cmd.Parameters.AddWithValue("@Ban04Observacion", observacion);
+
+                var parMensaje = cmd.Parameters.Add("@msgretorno", SqlDbType.VarChar, 200);
+                parMensaje.Direction = ParameterDirection.Output;
+
+                var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                parFlag.Direction = ParameterDirection.Output;
+
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+
+                cn.Open();
+                var respuesta = await cmd.ExecuteNonQueryAsync();
+                cn.Close();
+                result.Item = "0";
+
+                result.IsSuccess = parFlag.Value != DBNull.Value && Convert.ToInt32(parFlag.Value) == 1;
+                result.Message = parMensaje.Value != DBNull.Value ? parMensaje.Value.ToString() : "Operación finalizada.";
+            }
+            catch (Exception ex)
+            {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
+        }
+
+        public async  Task<ResultDto<string>> SpEliminaDetalle(string empresa, 
+            string numeroRegistroCobroCab, 
+            int item, 
+            string tipodoc, 
+            string nroDocumento)
+        {
+
+            ResultDto<string> result = new ResultDto<string>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Del_RegistroCobroDet", cn);
+
+                // ¡CORRECCIÓN CLAVE! Falta especificar que es un SP
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                // Los nombres de los parámetros coinciden con el SP
+                cmd.Parameters.AddWithValue("@Ban04Empresa", empresa);
+                cmd.Parameters.AddWithValue("@Ban04Numero", numeroRegistroCobroCab);
+                cmd.Parameters.AddWithValue("@Ban04Item", item);
+                cmd.Parameters.AddWithValue("@Ban04Tipodoc", tipodoc);
+                cmd.Parameters.AddWithValue("@Ban04NroDoc", nroDocumento);
+                
+                var parMensaje = cmd.Parameters.Add("@msgretorno", SqlDbType.VarChar, 200);
+                parMensaje.Direction = ParameterDirection.Output;
+
+                var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                parFlag.Direction = ParameterDirection.Output;
+
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+
+                cn.Open();
+                var respuesta = await cmd.ExecuteNonQueryAsync();
+                cn.Close();
+                result.Item = "0";
+
+                result.IsSuccess = parFlag.Value != DBNull.Value && Convert.ToInt32(parFlag.Value) == 1;
+                result.Message = parMensaje.Value != DBNull.Value ? parMensaje.Value.ToString() : "Operación finalizada.";
+            }
+            catch (Exception ex)
+            {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
+        }
+
+        public async Task<ResultDto<TraeRegistroCobroDetalle>> SpListaDetalle(string empresa, string numeroRegistroCobroCab)
+        {
+            ResultDto<TraeRegistroCobroDetalle> res = new ResultDto<TraeRegistroCobroDetalle>();
+            List<TraeRegistroCobroDetalle> list = new List<TraeRegistroCobroDetalle>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                DynamicParameters parametros = new DynamicParameters();
+                parametros.Add("@empresa", empresa);
+                parametros.Add("@Ban04Numero", numeroRegistroCobroCab);
+                list = (List<TraeRegistroCobroDetalle>)await cn.QueryAsync<TraeRegistroCobroDetalle>("Spu_Ban_Trae_RegistroCobroDetalle",
                     parametros, commandType: CommandType.StoredProcedure);
                 res.IsSuccess = list.Count > 0 ? true : false;
                 res.Message = list.Count > 0 ? "informacion encontrar" : "no se encontro informacion";

@@ -49,5 +49,20 @@ namespace CajaBanco.Services.CobroFactura
         {
             return await _repositorio.SpTraeClienteconfactura(empresa);
         }
+
+        public async Task<ResultDto<string>> SpActualizaDetalle(string empresa, string numeroRegistroCobroCab, int item, string tipodoc, string nroDocumento, double pagoSoles, double pagoDolares, string observacion)
+        {
+            return await _repositorio.SpActualizaDetalle(empresa, numeroRegistroCobroCab, item, tipodoc, nroDocumento, pagoSoles, pagoDolares, observacion);
+        }
+
+        public async Task<ResultDto<string>> SpEliminaDetalle(string empresa, string numeroRegistroCobroCab, int item, string tipodoc, string nroDocumento)
+        {
+            return await _repositorio.SpEliminaDetalle(empresa, numeroRegistroCobroCab, item, tipodoc, nroDocumento);
+        }
+
+        public async Task<ResultDto<TraeRegistroCobroDetalle>> SpListaDetalle(string empresa, string numeroRegistroCobroCab)
+        {
+            return await _repositorio.SpListaDetalle(empresa, numeroRegistroCobroCab);
+        }
     }
 }

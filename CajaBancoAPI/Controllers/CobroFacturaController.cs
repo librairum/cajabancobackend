@@ -9,7 +9,7 @@ namespace CajaBancoAPI.Controllers
     public class CobroFacturaController : Controller
     {
         private ICobroFacturaApplication _aplicacion;
-        
+
         public CobroFacturaController(ICobroFacturaApplication aplicacion)
         {
             this._aplicacion = aplicacion;
@@ -24,7 +24,8 @@ namespace CajaBancoAPI.Controllers
                 var result = await this._aplicacion.SpListaCabecera(empresa, anio, mes);
                 return Ok(result);
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 return BadRequest(ex.Message);
             }
         }
@@ -38,7 +39,8 @@ namespace CajaBancoAPI.Controllers
                 var result = await this._aplicacion.SpInsertaCabecera(registro);
                 return Ok(result);
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 return BadRequest(ex.Message);
             }
         }
@@ -53,7 +55,8 @@ namespace CajaBancoAPI.Controllers
                 return Ok(result);
 
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 return BadRequest(ex.Message);
             }
         }
@@ -80,28 +83,79 @@ namespace CajaBancoAPI.Controllers
         {
             try
             {
-                var result = await this._aplicacion.SpTraeAyudaFacturaPorCobrar(empresa,  usuario, clientecodigo);
+                var result = await this._aplicacion.SpTraeAyudaFacturaPorCobrar(empresa, usuario, clientecodigo);
                 return Ok(result);
-                
+
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.ToString());
             }
         }
-        
+
         [HttpGet]
         [Route("TraeClienteconFactura")]
         public async Task<ActionResult> TraeClienteconFactura(string empresa)
         {
-            try {
-                var result = await this._aplicacion.SpTraeClienteconfactura(empresa );
+            try
+            {
+                var result = await this._aplicacion.SpTraeClienteconfactura(empresa);
                 return Ok(result);
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 return BadRequest(ex.ToString());
             }
         }
 
+        [HttpGet]
+        [Route("ListaDetalle")]
+        public async Task<ActionResult> TraeDetalle(string empresa, string numeroRegistroCobroCab)
+        {
+            try
+            {
+                var result = await this._aplicacion.SpListaDetalle(empresa, numeroRegistroCobroCab);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+
+        [HttpDelete]
+        [Route("EliminaDetalle")]
+        public async Task<ActionResult> EliminaDetalle(string empresa, string numeroRegistroCobroCab, int item, string tipodoc, string nroDocumento)
+        {
+            try
+            {
+                var result = await this._aplicacion.SpEliminaDetalle(empresa, numeroRegistroCobroCab, item, tipodoc, nroDocumento);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+
+
+        [HttpPut]
+        [Route("ActualizaDetalle")]
+        public async Task<ActionResult> ActualizaDetalle(string empresa, string numeroRegistroCobroCab, int item, string tipodoc, string nroDocumento, double pagoSoles,
+            double pagoDolares, string observacion)
+        {
+            try
+            {
+                var result = await this._aplicacion.SpActualizaDetalle(empresa, numeroRegistroCobroCab,
+                    item, tipodoc, nroDocumento, pagoSoles, pagoDolares, observacion);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+
+        }
     }
+
 }
