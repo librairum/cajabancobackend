@@ -17,8 +17,11 @@ namespace CajaBanco.Abstractions.IRepository
         public Task<ResultDto<TraeRegistroCobro>> SpListaCabecera(string empresa, string anio, string mes);
 
         public Task<ResultDto<TraeFacturaPendientePago>> SpTraeAyudaFacturaPorCobrar(string empresa,
-             string anio, string mes, string usuario, string clientecodigo);
+             string usuario, string clientecodigo);
 
         public Task<ResultDto<TraeClienteconFactura>> SpTraeClienteconfactura(string empresa);
+        //public Task<ResultDto<TraeRegistroCobroDetalle>> SpListaDetalle(string empresa, string codigoCliente);
+
+        //public Task<ResultDto<string>> SpInsertaDetalle(string empresa, string numeroRegistro, string xmlDetalle, string observacion)
     }
 }

@@ -21,7 +21,8 @@ namespace CajaBanco.DTO.CobroFactura
             public double TotalDolares { get; set; }
             public string Clave { get; set; }
             public string ClienteNombre { get; set; }
-
+            public string moneda { get; set; }
+            public string clienteCodigo { get; set; }
 
 
 

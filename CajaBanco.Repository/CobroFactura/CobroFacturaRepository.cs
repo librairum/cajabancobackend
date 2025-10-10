@@ -141,11 +141,13 @@ namespace CajaBanco.Repository.CobroFactura
                 var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
                 parFlag.Direction = ParameterDirection.Output;
 
+                var parCodigoGenerado = cmd.Parameters.Add("@codigoGenerado", SqlDbType.VarChar, 5);
+                parCodigoGenerado.Direction = ParameterDirection.Output;
 
                 cn.Open();
                 var respuesta = await cmd.ExecuteNonQueryAsync();
                 cn.Close();
-                result.Item = registro.Ban03Numero;
+                result.Item = parCodigoGenerado.Value.ToString();
 
                 result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
                 result.Message = parMensaje.Value.ToString();
@@ -188,7 +190,7 @@ namespace CajaBanco.Repository.CobroFactura
         }
 
         public async Task<ResultDto<TraeFacturaPendientePago>> SpTraeAyudaFacturaPorCobrar(string empresa, 
-            string anio,string mes, string usuario,string clientecodigo)
+            string usuario,string clientecodigo)
         {
             ResultDto<TraeFacturaPendientePago> res = new ResultDto<TraeFacturaPendientePago>();
             List<TraeFacturaPendientePago> list = new List<TraeFacturaPendientePago>();
@@ -199,8 +201,8 @@ namespace CajaBanco.Repository.CobroFactura
                 DynamicParameters parametros = new DynamicParameters();
                 parametros.Add("@FAC04CODEMP", empresa);
                 parametros.Add("@FAC01COD", "01");
-                parametros.Add("@FAC04AA", anio);
-                parametros.Add("@FAC04MM", mes);
+                //parametros.Add("@FAC04AA", anio);
+                //parametros.Add("@FAC04MM", mes);
                 parametros.Add("@campo", "FAC04NUMDOC");
                 parametros.Add("@filro", "*");
                 parametros.Add("@NombreUsuario", usuario);
