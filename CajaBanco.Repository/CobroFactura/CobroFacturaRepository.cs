@@ -416,5 +416,168 @@ namespace CajaBanco.Repository.CobroFactura
             }
             return result;
         }
+
+        #region "sustento factura por cobrar"
+        public async Task<ResultDto<string>> SpInsertarSustento(RegistroCobroSustento registro)
+        {
+
+            ResultDto<string> result = new ResultDto<string>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Ins_RegCobroSustento", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Ban05Empresa", registro.Ban05Empresa);
+                cmd.Parameters.AddWithValue("@Ban05Numero", registro.Ban05Numero);
+                cmd.Parameters.AddWithValue("@Ban05NombreArchivo", registro.Ban05NombreArchivo);
+                cmd.Parameters.AddWithValue("@Ban05DescripcionArchivo", registro.Ban05DescripcionArchivo);
+                cmd.Parameters.AddWithValue("@Ban05contenidoArchivo", registro.Ban05contenidoArchivo);
+
+                var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
+                parMensaje.Direction = ParameterDirection.Output;
+
+                var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                parFlag.Direction = ParameterDirection.Output;
+
+
+                cn.Open();
+                var respuesta = await cmd.ExecuteNonQueryAsync();
+                cn.Close();
+                result.Item = "";
+
+                result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
+                result.Message = parMensaje.Value.ToString();
+
+            }
+            catch (Exception ex) {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
+        }
+
+        public async Task<ResultDto<string>> SpActualizarSustento(RegistroCobroSustento registro)
+        {
+            ResultDto<string> result = new ResultDto<string>();
+            try {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Upd_RegCobroActualizaSustento", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Ban05Empresa  ", registro.Ban05Empresa);
+                cmd.Parameters.AddWithValue("@Ban05Numero", registro.Ban05Numero);
+                cmd.Parameters.AddWithValue("@Ban05Item", registro.Ban05Item);
+                cmd.Parameters.AddWithValue("@Ban05NombreArchivo", registro.Ban05NombreArchivo);
+                cmd.Parameters.AddWithValue("@Ban05DescripcionArchivo", registro.Ban05DescripcionArchivo);
+                cmd.Parameters.AddWithValue("@Ban05contenidoArchivo", registro.Ban05contenidoArchivo);
+
+                var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
+                parMensaje.Direction = ParameterDirection.Output;
+
+                var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                parFlag.Direction = ParameterDirection.Output;
+
+
+                cn.Open();
+                var respuesta = await cmd.ExecuteNonQueryAsync();
+                cn.Close();
+                result.Item = "";
+
+                result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
+                result.Message = parMensaje.Value.ToString();
+            }
+            catch(Exception ex)
+            {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
+        }
+
+       public async  Task<ResultDto<string>> SpEliminarSustento(string empresa, string numeroRegCobroCab, int item)
+        {
+            ResultDto<string> result = new ResultDto<string>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                SqlCommand cmd = new SqlCommand("Spu_Ban_Del_RegCobroDetalleSustento", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Ban05Empresa", empresa);
+                cmd.Parameters.AddWithValue("@Ban05Numero", numeroRegCobroCab);
+                cmd.Parameters.AddWithValue("@Ban05Item", item);
+                
+
+                var parMensaje = cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 200);
+                parMensaje.Direction = ParameterDirection.Output;
+
+                var parFlag = cmd.Parameters.Add("@flag", SqlDbType.Int);
+                parFlag.Direction = ParameterDirection.Output;
+
+
+                cn.Open();
+                var respuesta = await cmd.ExecuteNonQueryAsync();
+                cn.Close();
+                result.Item = "";
+
+                result.IsSuccess = parFlag.Value.ToString() == "1" ? true : false;
+                result.Message = parMensaje.Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                result.MessageException = ex.Message;
+                result.IsSuccess = false;
+            }
+            return result;
+        }
+
+        public async Task<ResultDto<RegistroCobroSustento>> SpTraeSustento(string empresa, string numeroRegistroCobroCab)
+        {
+            ResultDto<RegistroCobroSustento> res = new ResultDto<RegistroCobroSustento>();
+            List<RegistroCobroSustento> list = new List<RegistroCobroSustento>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                DynamicParameters parametros = new DynamicParameters();
+                parametros.Add("@Ban05Empresa", empresa);
+                parametros.Add("@Ban05Numero", numeroRegistroCobroCab);
+                list = (List<RegistroCobroSustento>)await cn.QueryAsync<RegistroCobroSustento>("Spu_Ban_Trae_RegCobroSustento",
+                    parametros, commandType: CommandType.StoredProcedure);
+                res.IsSuccess = list.Count > 0 ? true : false;
+                res.Message = list.Count > 0 ? "informacion encontrar" : "no se encontro informacion";
+                res.Data = list.ToList();
+                res.Total = list.Count;
+            }
+            catch (Exception ex) {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
+
+        public async Task<ResultDto<RegistroCobroSustento>> SpTraeSustentoDocumento(string empresa, string numeroRegistroCobroCab, int item)
+        {
+            ResultDto<RegistroCobroSustento> res = new ResultDto<RegistroCobroSustento>();
+            List<RegistroCobroSustento> list = new List<RegistroCobroSustento>();
+            try 
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                DynamicParameters parametros = new DynamicParameters();
+                parametros.Add("@Ban05Empresa", empresa);
+                parametros.Add("@Ban05Numero", numeroRegistroCobroCab);
+                parametros.Add("@Ban05item", item);
+                list = (List<RegistroCobroSustento>)await cn.QueryAsync<RegistroCobroSustento>("Spu_Ban_Trae_RegCobroSustentoDocumento",
+                   parametros, commandType: CommandType.StoredProcedure);
+                res.IsSuccess = list.Count > 0 ? true : false;
+                res.Message = list.Count > 0 ? "informacion encontrar" : "no se encontro informacion";
+                res.Data = list.ToList();
+                res.Total = list.Count;
+            }
+            catch(Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
+        #endregion
     }
 }

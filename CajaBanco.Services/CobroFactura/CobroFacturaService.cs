@@ -4,6 +4,7 @@ using CajaBanco.DTO.CobroFactura;
 using CajaBanco.DTO.Common;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,6 +69,32 @@ namespace CajaBanco.Services.CobroFactura
         public async Task<ResultDto<string>> SpInsertaDetalle(RegistroCobroDetalle registro)
         {
             return await _repositorio.SpInsertaDetalle(registro);
+        }
+
+        public async Task<ResultDto<string>> SpInsertarSustento(RegistroCobroSustento registro)
+        {
+            return await _repositorio.SpInsertarSustento(registro);
+        }
+
+        public async Task<ResultDto<string>> SpActualizarSustento(RegistroCobroSustento registro)
+        {
+            return await _repositorio.SpActualizarSustento(registro);
+            
+        }
+
+        public async Task<ResultDto<string>> SpEliminarSustento(string empresa, string numeroRegCobroCab, int item)
+        {
+            return await _repositorio.SpEliminarSustento(empresa, numeroRegCobroCab, item);
+        }
+
+        public async Task<ResultDto<RegistroCobroSustento>> SpTraeSustento(string empresa, string numeroRegistroCobroCab)
+        {
+            return await _repositorio.SpTraeSustento(empresa, numeroRegistroCobroCab);
+        }
+
+        public async Task<ResultDto<RegistroCobroSustento>> SpTraeSustentoDocumento(string empresa, string numeroRegistroCobroCab, int item)
+        {
+            return await _repositorio.SpTraeSustentoDocumento(empresa, numeroRegistroCobroCab, item);
         }
     }
 }

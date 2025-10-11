@@ -16,3 +16,30 @@ D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Application\obj\Debug
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\refint\CajaBanco.Application.dll
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.pdb
 D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\ref\CajaBanco.Application.dll
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.csproj.AssemblyReference.cache
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.AssemblyInfoInputs.cache
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.AssemblyInfo.cs
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.csproj.CoreCompileInputs.cache
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.sourcelink.json
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.dll
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\refint\CajaBanco.Application.dll
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.pdb
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.csproj.AssemblyReference.cache
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.AssemblyInfoInputs.cache
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.AssemblyInfo.cs
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.csproj.CoreCompileInputs.cache
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.sourcelink.json
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.dll
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\refint\CajaBanco.Application.dll
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanco.Application.pdb
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.Application.deps.json
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.Application.dll
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.Application.pdb
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.Abstractions.dll
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.DTO.dll
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.Abstractions.pdb
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\bin\Debug\net8.0\CajaBanco.DTO.pdb
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\CajaBanc.208C4748.Up2Date
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Application\obj\Debug\net8.0\ref\CajaBanco.Application.dll

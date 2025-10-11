@@ -19,40 +19,24 @@ namespace CajaBanco.Abstractions.IService
               string usuario, string clientecodigo);
         public Task<ResultDto<TraeClienteconFactura>> SpTraeClienteconfactura(string empresa);
         public Task<ResultDto<TraeRegistroCobroDetalle>> SpListaDetalle(string empresa, string numeroRegistroCobroCab);
-      
+
+        public Task<ResultDto<string>> SpInsertaDetalle(RegistroCobroDetalle registro);
         public Task<ResultDto<string>> SpActualizaDetalle(string empresa, string numeroRegistroCobroCab, int item,
             string tipodoc, string nroDocumento, double pagoSoles, double pagoDolares, string observacion);
 
         
         public Task<ResultDto<string>> SpEliminaDetalle(string empresa, string numeroRegistroCobroCab, int item,
             string tipodoc, string nroDocumento );
-        public Task<ResultDto<string>> SpInsertaDetalle(RegistroCobroDetalle registro);
-        /*
-         @Ban05Empresa	varchar	(2),
-@Ban05Numero	varchar	(5),
---@Ban05Item	int,
-@Ban05NombreArchivo	varchar(50),
-@Ban05DescripcionArchivo	varchar	(250),
-@Ban05contenidoArchivo	varbinary,
-         */
-        public Task<ResultDto<string>> SpInsertaSustento(string empresa, string numeroRegCobroCab,
-            string nombreArchivo, string descripcionArchivo, byte[] contenidoArchivo);
-
-        public Task<ResultDto<string>> SpActualizaSustento(string empresa, string numeroRegCobroCab, int item,
-            string nombreArchivo, string descripcionArchivo, byte[] contenidoArchivo);
-        /*
-         @Ban05Empresa varchar(2), 
-@Ban05Numero varchar(5) , 
-@Ban05Item int,
-@Ban05NombreArchivo	varchar(250),
-@Ban05DescripcionArchivo	varchar(250),
-@Ban05contenidoArchivo	varbinary,
-         */
+        
 
         public Task<ResultDto<string>> SpInsertarSustento(RegistroCobroSustento registro);
         public Task<ResultDto<string>> SpActualizarSustento(RegistroCobroSustento registro);
-        public Task<ResultDto<string>> SpEliminarSustento(RegistroCobroSustento registro);
+        public Task<ResultDto<string>> SpEliminarSustento(string empresa, string numeroRegCobroCab, int item);
 
-        public Task<ResultDto<RegistroCobroSustento>> SpTraeSustento(string empresa, string nuemroRegistroCobroCab);
+        public Task<ResultDto<RegistroCobroSustento>> SpTraeSustento(string empresa, string numeroRegistroCobroCab);
+
+
+        public Task<ResultDto<RegistroCobroSustento>> SpTraeSustentoDocumento(string empresa, 
+                                                        string numeroRegistroCobroCab,int item);
     }
 }

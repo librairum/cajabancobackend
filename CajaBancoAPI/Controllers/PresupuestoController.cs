@@ -197,98 +197,70 @@ namespace CajaBancoAPI.Controllers
 
         }
 
-        [HttpPost]
-        [Route("SubirArchivo")]
-        public IActionResult Post(IFormFile file, [FromForm] string destinationPath)
-        {
-            string rutaDestino = _configuracion["rutaDocumentos"];
-            try
-            {
-                if (file == null || file.Length == 0)
-                {
-                    return BadRequest("Archivo no válido.");
-                }
-                //string ruta = _configuracion["rutaDocumentos"];
-                //string rutaDestino = "C:\\inetpub\\wwwroot\\cajabancofront\\assets\\documentos";
-             
+        //[HttpPost]
+        //[Route("SubirArchivo")]
+        //public IActionResult Post(IFormFile file, [FromForm] string destinationPath)
+        //{
+        //    string rutaDestino = _configuracion["rutaDocumentos"];
+        //    try
+        //    {
+        //        if (file == null || file.Length == 0)
+        //        {
+        //            return BadRequest("Archivo no válido.");
+        //        }
+                                             
+        //        string fullDestinationPath = Path.Combine(rutaDestino, file.FileName);
+
+        //        using (var stream = new FileStream(fullDestinationPath, FileMode.CreateNew))
+        //        {
+        //            file.CopyTo(stream);
+        //        }
+
+        //        return Ok("Archivo subido con éxito.");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, $"Error al subir el archivo: {ex.Message} , ruta destino desde appseting: {rutaDestino}" );
+        //    }
+        //}
+
+
+        //[HttpPost]
+        //[Route("CargarArchivo")]
+        //public async Task<IActionResult> CargarArchivo(IFormFile archivoOriginal)
+        //{
+        //    try
+        //    {
+
+        //        var archivoSeleccionado = Request.Form.Files[0];
+        //        if (archivoOriginal == null || archivoOriginal.Length == 0)
+        //        {
+        //            return BadRequest("Archivo no valido");
+
+        //        }
+        //        string nombre =
+        //        archivoOriginal.FileName;
                 
-                string fullDestinationPath = Path.Combine(rutaDestino, file.FileName);
-
-                using (var stream = new FileStream(fullDestinationPath, FileMode.CreateNew))
-                {
-                    file.CopyTo(stream);
-                }
-
-                return Ok("Archivo subido con éxito.");
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Error al subir el archivo: {ex.Message} , ruta destino desde appseting: {rutaDestino}" );
-            }
-        }
-
-
-        [HttpPost]
-        [Route("CargarArchivo")]
-        public async Task<IActionResult> CargarArchivo(IFormFile archivoOriginal)
-        {
-            try
-            {
-
-                var archivoSeleccionado = Request.Form.Files[0];
-                if (archivoOriginal == null || archivoOriginal.Length == 0)
-                {
-                    return BadRequest("Archivo no valido");
-
-                }
-                string nombre =
-                archivoOriginal.FileName;
+        //        string rutaCompleta = Path.GetFullPath(archivoOriginal.FileName);
+        //        MemoryStream ms = new MemoryStream();
                 
-                string rutaCompleta = Path.GetFullPath(archivoOriginal.FileName);
-                MemoryStream ms = new MemoryStream();
-                
-               await archivoOriginal.CopyToAsync(ms);
-               byte[] bytesArchivo = ms.ToArray();
+        //       await archivoOriginal.CopyToAsync(ms);
+        //       byte[] bytesArchivo = ms.ToArray();
                                 
-               this._app.SpInsertaDocumento(nombre, bytesArchivo);
+        //       this._app.SpInsertaDocumento(nombre, bytesArchivo);
                                                             
-                return Ok("Archivo guardaro en base de datos");
+        //        return Ok("Archivo guardaro en base de datos");
                 
 
 
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
         
-        //metodo para eliminar ya que no esta siendo utiliado en frontend
-        [HttpDelete]
-        [Route("EliminarArchivo")]
-        public  IActionResult EliminarArchivo([FromQuery] string rutaArchivo)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(rutaArchivo))
-                {
-                    return BadRequest("La ruta del archivo no puede estar vacía.");
-                }
-
-                if (!System.IO.File.Exists(rutaArchivo))
-                {
-                    return NotFound("El archivo no existe.");
-                }
-
-                System.IO.File.Delete(rutaArchivo);
-
-                return Ok("Archivo eliminado correctamente.");
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Error al eliminar el archivo: {ex.Message}");
-            }
-        }
+       
 
         #region "Detalle"
         [HttpPost]
@@ -306,24 +278,7 @@ namespace CajaBancoAPI.Controllers
             }
         }
 
-        //metodo para eliminar , puesto que no se utilizar en el frontend
-        [HttpDelete]
-        [Route("SpEliminaDet")]
-        public async Task<ActionResult> SpEliminaDet(string empresa, 
-            string codigoDetallePresupuesto, 
-            string numeroPresupuesto)
-        {
-            try
-            {
-                var result = await this._app.SpEliminaDet(empresa, codigoDetallePresupuesto, numeroPresupuesto);
-                return Ok(result);
-
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+  
 
         [HttpPut]
         [Route("SpActualizaDet")]
@@ -355,18 +310,18 @@ namespace CajaBancoAPI.Controllers
             }
         }
         #endregion
-        [HttpPost]
-        [Route("SpInsertaAsientoContable")]
-        public async Task<ActionResult> SpInsertaAsientoContable(string empresa, string numeroPresupuesto) 
-        {
-            try {
-                var result = await this._app.SpInsertaAsientoContable(empresa, numeroPresupuesto);
-                return Ok(result);
-            }catch(Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+        //[HttpPost]
+        //[Route("SpInsertaAsientoContable")]
+        //public async Task<ActionResult> SpInsertaAsientoContable(string empresa, string numeroPresupuesto) 
+        //{
+        //    try {
+        //        var result = await this._app.SpInsertaAsientoContable(empresa, numeroPresupuesto);
+        //        return Ok(result);
+        //    }catch(Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
         [HttpGet]
         [Route("SpTraeDocumento")]
         public async Task<ActionResult> SpTraeDocumento(string empresa, string anio, string mes,
@@ -410,20 +365,20 @@ namespace CajaBancoAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
-        [HttpGet]
-        [Route("SpTraeDocPorPagarConsulta")]
-        public async Task<ActionResult> SpTraeDocPorPagarConsulta(string empresa, string filtro)
-        {
-            try
-            {
-                var result = await this._app.SpTraeDocPorPagarConsulta(empresa, filtro);
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+        //[HttpGet]
+        //[Route("SpTraeDocPorPagarConsulta")]
+        //public async Task<ActionResult> SpTraeDocPorPagarConsulta(string empresa, string filtro)
+        //{
+        //    try
+        //    {
+        //        var result = await this._app.SpTraeDocPorPagarConsulta(empresa, filtro);
+        //        return Ok(result);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
 
 
         [HttpGet]
@@ -474,21 +429,21 @@ namespace CajaBancoAPI.Controllers
         }
 
 
-        [HttpGet]
-        [Route("SpListaDetPresupuestoDetraIndividual")]
-        public async Task<ActionResult> SpListaDetDetraccion(string empresa,
-            string numerodocumento)
-        {
-            try
-            {
-                var result = await this._app.SpLlistaDetPresupuestoDetraIndividual(empresa, numerodocumento);
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+        //[HttpGet]
+        //[Route("SpListaDetPresupuestoDetraIndividual")]
+        //public async Task<ActionResult> SpListaDetDetraccion(string empresa,
+        //    string numerodocumento)
+        //{
+        //    try
+        //    {
+        //        var result = await this._app.SpLlistaDetPresupuestoDetraIndividual(empresa, numerodocumento);
+        //        return Ok(result);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
 
 
 

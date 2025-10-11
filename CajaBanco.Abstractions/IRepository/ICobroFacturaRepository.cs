@@ -33,11 +33,11 @@ namespace CajaBanco.Abstractions.IRepository
         //public Task<ResultDto<string>> SpInsertaSustento(string )
         public Task<ResultDto<string>> SpInsertarSustento(RegistroCobroSustento registro);
         public Task<ResultDto<string>> SpActualizarSustento(RegistroCobroSustento registro);
-        public Task<ResultDto<string>> SpEliminarSustento(RegistroCobroSustento registro);
+        public Task<ResultDto<string>> SpEliminarSustento(string empresa, string numeroRegCobroCab, int item);
 
-        public Task<ResultDto<RegistroCobroSustento>> SpTraeSustento(string empresa, string nuemroRegistroCobroCab);
+        public Task<ResultDto<RegistroCobroSustento>> SpTraeSustento(string empresa, string numeroRegistroCobroCab);
 
-
-
+        public Task<ResultDto<RegistroCobroSustento>> SpTraeSustentoDocumento(string empresa,
+                                                        string numeroRegistroCobroCab, int item);
     }
 }

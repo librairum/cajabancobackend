@@ -28,26 +28,18 @@ namespace CajaBanco.Abstractions.IApplication
 
         public Task<ResultDto<string>> SpEliminaDetalle(string empresa, string numeroRegistroCobroCab, int item,
           string tipodoc, string nroDocumento);
-        /*@Ban04Empresa varchar(2),  
-@Ban04Numero varchar(5),  
-@xmlDetalle xml,  
-@Ban04Observacion varchar(200),  */
+ 
         public Task<ResultDto<string>> SpInsertaDetalle(RegistroCobroDetalle registro);
 
-        //public Task<ResultDto<string>> InsertaSustento
-        /*
-         @Ban05Empresa	varchar	(2),
-@Ban05Numero	varchar	(5),
 
-@Ban05NombreArchivo	varchar(50),
-@Ban05DescripcionArchivo	varchar	(250),
-@Ban05contenidoArchivo	varbinary,
-         */
         public Task<ResultDto<string>> SpInsertarSustento(RegistroCobroSustento registro);
         public Task<ResultDto<string>> SpActualizarSustento(RegistroCobroSustento registro);
-        public Task<ResultDto<string>> SpEliminarSustento(RegistroCobroSustento registro);
+        public Task<ResultDto<string>> SpEliminarSustento(string empresa, string numeroRegCobroCab, int item);
 
-        public Task<ResultDto<RegistroCobroSustento>> SpTraeSustento(string empresa, string nuemroRegistroCobroCab);
+        public Task<ResultDto<RegistroCobroSustento>> SpTraeSustento(string empresa, string numeroRegistroCobroCab);
+
+        public Task<ResultDto<RegistroCobroSustento>> SpTraeSustentoDocumento(string empresa,
+                                                        string numeroRegistroCobroCab, int item);
 
     }
 }

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj": {}
+    "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj": {}
   },
   "projects": {
-    "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj": {
+    "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj",
+        "projectUniqueName": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj",
         "projectName": "CajaBanco.Abstractions",
-        "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj",
+        "projectPath": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj",
         "packagesPath": "C:\\Users\\sistemas\\.nuget\\packages\\",
-        "outputPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\obj\\",
+        "outputPath": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Abstractions\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\sistemas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj": {
-                "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj"
+              "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj": {
+                "projectPath": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj"
               }
             }
           }
@@ -44,7 +47,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -65,21 +69,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj": {
+    "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj",
+        "projectUniqueName": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj",
         "projectName": "CajaBanco.DTO",
-        "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj",
+        "projectPath": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj",
         "packagesPath": "C:\\Users\\sistemas\\.nuget\\packages\\",
-        "outputPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\obj\\",
+        "outputPath": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.DTO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\sistemas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,7 +95,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -105,7 +112,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -126,21 +134,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj": {
+    "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj",
+        "projectUniqueName": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj",
         "projectName": "CajaBanco.Services",
-        "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj",
+        "projectPath": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj",
         "packagesPath": "C:\\Users\\sistemas\\.nuget\\packages\\",
-        "outputPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Services\\obj\\",
+        "outputPath": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Services\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\sistemas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -148,18 +160,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj": {
-                "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj"
+              "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj": {
+                "projectPath": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj"
               },
-              "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj": {
-                "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj"
+              "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj": {
+                "projectPath": "D:\\trabajo\\minera deisi\\cajabanco\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj"
               }
             }
           }
@@ -173,7 +184,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -200,7 +212,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

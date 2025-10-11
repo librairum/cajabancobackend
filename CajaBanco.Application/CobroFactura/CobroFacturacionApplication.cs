@@ -67,5 +67,32 @@ namespace CajaBanco.Application.CobroFactura
         {
             return await this._servicio.SpInsertaDetalle(registro);
         }
+
+        #region "mantenimiento sustento"
+        public async Task<ResultDto<string>> SpInsertarSustento(RegistroCobroSustento registro)
+        {
+            return await this._servicio.SpInsertarSustento(registro);
+        }
+
+        public async Task<ResultDto<string>> SpActualizarSustento(RegistroCobroSustento registro)
+        {
+            return await this._servicio.SpActualizarSustento(registro);
+        }
+
+        public async Task<ResultDto<string>> SpEliminarSustento(string empresa, string numeroRegCobroCab, int item)
+        {
+            return await this._servicio.SpEliminarSustento(empresa, numeroRegCobroCab, item);
+        }
+
+        public async Task<ResultDto<RegistroCobroSustento>> SpTraeSustento(string empresa, string numeroRegistroCobroCab)
+        {
+            return await this._servicio.SpTraeSustento(empresa, numeroRegistroCobroCab);
+        }
+
+        public async Task<ResultDto<RegistroCobroSustento>> SpTraeSustentoDocumento(string empresa, string numeroRegistroCobroCab, int item)
+        {
+            return await _servicio.SpTraeSustentoDocumento(empresa, numeroRegistroCobroCab, item);
+        }
+        #endregion
     }
 }

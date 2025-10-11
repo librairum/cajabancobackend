@@ -1,5 +1,6 @@
 ﻿using CajaBanco.Abstractions.IApplication;
 using CajaBanco.DTO.CobroFactura;
+using CajaBanco.DTO.Common;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CajaBancoAPI.Controllers
@@ -171,5 +172,147 @@ namespace CajaBancoAPI.Controllers
                 return BadRequest(ex.ToString());
             }
         }
+
+        #region "mantenimiento sustento"
+
+        [HttpPost]
+        [Route("InsertaSustento")]
+        public async Task<ActionResult> InsertaSustento(RegistroCobroSustento registro)
+        {
+            try
+            {
+                var result = await this._aplicacion.SpInsertarSustento(registro);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+        [HttpPut]
+        [Route("ActualizaSustento")]
+        public async Task<ActionResult> ActualizaSustento(RegistroCobroSustento registro)
+        {
+            try
+            {
+                var result = await this._aplicacion.SpActualizarSustento(registro);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+        [HttpDelete]
+        [Route("EliminaSustento")]
+        public async Task<ActionResult> EliminaSustento(string empresa, string numeroRegCobroCab, int item)
+        {
+            try
+            {
+                var result = await this._aplicacion.SpEliminarSustento(empresa, numeroRegCobroCab, item);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+
+        [HttpGet]
+        [Route("ListaSustento")]
+        public async Task<ActionResult> ListaSustento(string empresa, string numeroRegistroCobroCab)
+        {
+            try
+            {
+                var result = await this._aplicacion.SpTraeSustento(empresa, numeroRegistroCobroCab);
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+
+        [HttpPost]
+        [Route("InsertarSustentoArchivo")]
+        public async Task<ActionResult> SubirArchivoSustento([FromForm]string empresa, [FromForm]string numeroRegCobroCab,            
+            List<IFormFile> archivosOriginales = null)
+        {
+            var resultadosGuardado = new List<object>();
+
+            try
+            {
+                RegistroCobroSustento registroSustento = new RegistroCobroSustento();
+                registroSustento.Ban05Empresa = empresa;
+                registroSustento.Ban05Numero = numeroRegCobroCab;
+                int contadorRegistro = 1;
+                // 1. Validación de archivos
+                if (archivosOriginales == null || archivosOriginales.Count == 0)
+                {
+                    return BadRequest("No se seleccionó ningún archivo o la lista está vacía.");
+                }
+                foreach (var archivoOriginal in archivosOriginales)
+                {
+                    registroSustento.Ban05NombreArchivo = archivoOriginal.FileName;
+                    registroSustento.Ban05DescripcionArchivo = "Descripcion de " + archivoOriginal.FileName;
+                    MemoryStream ms = new MemoryStream();
+                    await archivoOriginal.CopyToAsync(ms);
+                    byte[] bytesArchivo = ms.ToArray();
+                    registroSustento.Ban05contenidoArchivo = bytesArchivo;
+                    
+                 var result = await   InsertaSustento(registroSustento);
+                    contadorRegistro++;
+                    resultadosGuardado.Add(new { NombreArchivo = archivoOriginal.FileName, ResultadoDB = result });
+                }
+                //InsertaSustento()
+            }
+            catch (Exception ex) {
+                return BadRequest(ex.ToString());
+            }
+            return Ok(new { Mensaje = $"Se procesaron {archivosOriginales.Count} archivos.", Resultados = resultadosGuardado });
+        }
+        
+        [HttpGet]
+        [Route("TraeDocumentoSustento")]
+        public async Task<ActionResult> TraeDocumentoSustento(string empresa, string numeroRegistroCobroCab, int item)
+        {
+            try
+            {
+                var result = await this._aplicacion.SpTraeSustentoDocumento(empresa, numeroRegistroCobroCab, item);
+                ResultDto<RegistroCobroSustento> registro = result;
+                List<RegistroCobroSustento> lista = registro.Data;
+                byte[] contenido = lista[0].Ban05contenidoArchivo;
+                string nombreArchivo = lista[0].Ban05NombreArchivo;
+                string extension = lista[0].Ban05NombreArchivo.Split('.')[1];
+                string cabeceraHtml = "";
+                switch (extension.ToLower())
+                {
+                    case "pdf":
+                        cabeceraHtml = "application/pdf";
+                        break;
+                    case "jpg":
+                        cabeceraHtml = "image/jpeg";
+                        break;
+                    case "jpeg":
+                        cabeceraHtml = "image/jpeg";
+                        break;
+                    case "png":
+                        cabeceraHtml = "image/png";
+                        break;
+                    default:
+                        BadRequest("Solo puede subir documentos pdf o imagen");
+                        break;
+                }
+                FileContentResult archivoCreado = File(contenido, cabeceraHtml, nombreArchivo);
+
+                return File(contenido, cabeceraHtml, nombreArchivo);
+                //return Ok(result);
+            }catch(Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+        #endregion
     }
 }
