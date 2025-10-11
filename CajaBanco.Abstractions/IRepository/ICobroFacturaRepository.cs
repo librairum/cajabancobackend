@@ -29,6 +29,13 @@ namespace CajaBanco.Abstractions.IRepository
           string tipodoc, string nroDocumento);
         public Task<ResultDto<string>> SpInsertaDetalle(RegistroCobroDetalle registro);
 
+        //documento sustento
+        //public Task<ResultDto<string>> SpInsertaSustento(string )
+        public Task<ResultDto<string>> SpInsertarSustento(RegistroCobroSustento registro);
+        public Task<ResultDto<string>> SpActualizarSustento(RegistroCobroSustento registro);
+        public Task<ResultDto<string>> SpEliminarSustento(RegistroCobroSustento registro);
+
+        public Task<ResultDto<RegistroCobroSustento>> SpTraeSustento(string empresa, string nuemroRegistroCobroCab);
 
 
 
