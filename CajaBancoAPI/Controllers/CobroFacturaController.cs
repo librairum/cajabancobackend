@@ -236,7 +236,8 @@ namespace CajaBancoAPI.Controllers
 
         [HttpPost]
         [Route("InsertarSustentoArchivo")]
-        public async Task<ActionResult> SubirArchivoSustento([FromForm]string empresa, [FromForm]string numeroRegCobroCab,            
+        public async Task<ActionResult> SubirArchivoSustento([FromForm]string empresa, 
+            [FromForm]string numeroRegCobroCab,            
             List<IFormFile> archivosOriginales = null)
         {
             var resultadosGuardado = new List<object>();
