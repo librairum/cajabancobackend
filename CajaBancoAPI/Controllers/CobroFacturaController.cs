@@ -142,8 +142,9 @@ namespace CajaBancoAPI.Controllers
 
         [HttpPut]
         [Route("ActualizaDetalle")]
-        public async Task<ActionResult> ActualizaDetalle(string empresa, string numeroRegistroCobroCab, int item, string tipodoc, string nroDocumento, double pagoSoles,
-            double pagoDolares, string observacion)
+        public async Task<ActionResult> ActualizaDetalle(string empresa, string numeroRegistroCobroCab, int item, 
+            string tipodoc, string nroDocumento, double pagoSoles,
+            double pagoDolares, string observacion="")
         {
             try
             {
