@@ -316,5 +316,20 @@ namespace CajaBancoAPI.Controllers
             }
         }
         #endregion
+
+        [HttpGet]
+        [Route("ListaHistorico")]
+        public async Task<ActionResult> ListaHistorico(string empresa, string filtro)
+        {
+            try
+            {
+                var result = await this._aplicacion.SpTraeHistorico(empresa, filtro);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
     }
 }

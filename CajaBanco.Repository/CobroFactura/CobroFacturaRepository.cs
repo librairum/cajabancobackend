@@ -578,6 +578,35 @@ namespace CajaBanco.Repository.CobroFactura
             }
             return res;
         }
+
+
         #endregion
+
+        public async Task<ResultDto<TraeHistoricoCtaxCobra>> SpTraeHistorico(string empresa,
+            string filtro)
+        {
+            ResultDto<TraeHistoricoCtaxCobra> res = new ResultDto<TraeHistoricoCtaxCobra>();
+            List<TraeHistoricoCtaxCobra> list = new List<TraeHistoricoCtaxCobra>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                DynamicParameters parametros = new DynamicParameters();
+                parametros.Add("@empresa", empresa);
+                parametros.Add("@filtro", filtro);
+
+                list = (List<TraeHistoricoCtaxCobra>)await cn.QueryAsync<TraeHistoricoCtaxCobra>("Spu_Ban_Trae_ReporteHistoriCtaxCobra",
+                   parametros, commandType: CommandType.StoredProcedure);
+                res.IsSuccess = list.Count > 0 ? true : false;
+                res.Message = list.Count > 0 ? "informacion encontrar" : "no se encontro informacion";
+                res.Data = list.ToList();
+                res.Total = list.Count;
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
     }
 }

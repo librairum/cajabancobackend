@@ -96,5 +96,10 @@ namespace CajaBanco.Services.CobroFactura
         {
             return await _repositorio.SpTraeSustentoDocumento(empresa, numeroRegistroCobroCab, item);
         }
+
+        public async Task<ResultDto<TraeHistoricoCtaxCobra>> SpTraeHistorico(string empresa, string filtro)
+        {
+            return await _repositorio.SpTraeHistorico(empresa, filtro);
+        }
     }
 }

@@ -365,20 +365,20 @@ namespace CajaBancoAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
-        //[HttpGet]
-        //[Route("SpTraeDocPorPagarConsulta")]
-        //public async Task<ActionResult> SpTraeDocPorPagarConsulta(string empresa, string filtro)
-        //{
-        //    try
-        //    {
-        //        var result = await this._app.SpTraeDocPorPagarConsulta(empresa, filtro);
-        //        return Ok(result);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest(ex.Message);
-        //    }
-        //}
+        [HttpGet]
+        [Route("SpTraeDocPorPagarConsulta")]
+        public async Task<ActionResult> SpTraeDocPorPagarConsulta(string empresa, string filtro)
+        {
+            try
+            {
+                var result = await this._app.SpTraeDocPorPagarConsulta(empresa, filtro);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
 
         [HttpGet]

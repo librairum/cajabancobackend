@@ -39,5 +39,7 @@ namespace CajaBanco.Abstractions.IRepository
 
         public Task<ResultDto<RegistroCobroSustento>> SpTraeSustentoDocumento(string empresa,
                                                         string numeroRegistroCobroCab, int item);
+
+        public Task<ResultDto<TraeHistoricoCtaxCobra>> SpTraeHistorico(string empresa, string filtro);
     }
 }
