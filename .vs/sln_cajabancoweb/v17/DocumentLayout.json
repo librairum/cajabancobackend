@@ -58,7 +58,7 @@
               "RelativeDocumentMoniker": "CajaBanco.DTO\\CobroFactura\\TraeHistoricoCtaxCobra.cs",
               "ToolTip": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CobroFactura\\TraeHistoricoCtaxCobra.cs",
               "RelativeToolTip": "CajaBanco.DTO\\CobroFactura\\TraeHistoricoCtaxCobra.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAABJAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-14T21:16:21.024Z",
               "EditorCaption": ""
@@ -73,8 +73,7 @@
               "RelativeToolTip": "CajaBancoAPI\\Controllers\\PresupuestoController.cs",
               "ViewState": "AQIAAHABAAAAAAAAAAAWwIYBAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T21:57:57.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T21:57:57.777Z"
             },
             {
               "$type": "Document",
@@ -86,8 +85,7 @@
               "RelativeToolTip": "CajaBanco.Repository\\Presupuesto\\PresupuestoRepository.cs",
               "ViewState": "AQIAAKACAAAAAAAAAAASwLwCAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T19:52:08.636Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T19:52:08.636Z"
             },
             {
               "$type": "Document",
@@ -99,8 +97,7 @@
               "RelativeToolTip": "CajaBanco.Repository\\CobroFactura\\CobroFacturaRepository.cs",
               "ViewState": "AQIAAGUAAAAAAAAAAAAWwHsAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T19:57:16.295Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T19:57:16.295Z"
             },
             {
               "$type": "Document",
@@ -112,8 +109,7 @@
               "RelativeToolTip": "CajaBanco.Services\\CobroFactura\\CobroFacturaService.cs",
               "ViewState": "AQIAABcAAAAAAAAAAAAlwCUAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T19:57:07.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T19:57:07.031Z"
             },
             {
               "$type": "Document",
@@ -125,8 +121,7 @@
               "RelativeToolTip": "CajaBancoAPI\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-13T18:01:45.551Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T18:01:45.551Z"
             },
             {
               "$type": "Document",

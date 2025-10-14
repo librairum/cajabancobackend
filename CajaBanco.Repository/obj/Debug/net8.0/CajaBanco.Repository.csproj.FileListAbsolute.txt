@@ -43,3 +43,21 @@ D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\obj\Debu
 D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\refint\CajaBanco.Repository.dll
 D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanco.Repository.pdb
 D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\ref\CajaBanco.Repository.dll
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\bin\Debug\net8.0\CajaBanco.Repository.deps.json
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\bin\Debug\net8.0\CajaBanco.Repository.dll
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\bin\Debug\net8.0\CajaBanco.Repository.pdb
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\bin\Debug\net8.0\CajaBanco.Abstractions.dll
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\bin\Debug\net8.0\CajaBanco.DTO.dll
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\bin\Debug\net8.0\CajaBanco.Abstractions.pdb
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\bin\Debug\net8.0\CajaBanco.DTO.pdb
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanco.Repository.csproj.AssemblyReference.cache
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanco.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanco.Repository.AssemblyInfoInputs.cache
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanco.Repository.AssemblyInfo.cs
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanco.Repository.csproj.CoreCompileInputs.cache
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanco.Repository.sourcelink.json
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanc.0F00ECDE.Up2Date
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanco.Repository.dll
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\refint\CajaBanco.Repository.dll
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\CajaBanco.Repository.pdb
+C:\practicas2\backend\cajabancobackend\CajaBanco.Repository\obj\Debug\net8.0\ref\CajaBanco.Repository.dll

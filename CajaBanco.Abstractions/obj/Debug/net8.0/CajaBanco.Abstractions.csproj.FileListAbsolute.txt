@@ -46,3 +46,19 @@ D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\De
 D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Debug\net8.0\refint\CajaBanco.Abstractions.dll
 D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Debug\net8.0\CajaBanco.Abstractions.pdb
 D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Debug\net8.0\ref\CajaBanco.Abstractions.dll
+C:\practicas2\backend\cajabancobackend\CajaBanco.Abstractions\bin\Debug\net8.0\CajaBanco.Abstractions.deps.json
+C:\practicas2\backend\cajabancobackend\CajaBanco.Abstractions\bin\Debug\net8.0\CajaBanco.Abstractions.dll
+C:\practicas2\backend\cajabancobackend\CajaBanco.Abstractions\bin\Debug\net8.0\CajaBanco.Abstractions.pdb
+C:\practicas2\backend\cajabancobackend\CajaBanco.Abstractions\bin\Debug\net8.0\CajaBanco.DTO.dll
+C:\practicas2\backend\cajabancobackend\CajaBanco.Abstractions\bin\Debug\net8.0\CajaBanco.DTO.pdb
+C:\practicas2\backend\cajabancobackend\CajaBanco.Abstractions\obj\Debug\net8.0\CajaBanco.Abstractions.csproj.AssemblyReference.cache
+C:\practicas2\backend\cajabancobackend\CajaBanco.Abstractions\obj\Debug\net8.0\CajaBanco.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+C:\practicas2\backend\cajabancobackend\CajaBanco.Abstractions\obj\Debug\net8.0\CajaBanco.Abstractions.AssemblyInfoInputs.cache
+C:\practicas2\backend\cajabancobackend\CajaBanco.Abstractions\obj\Debug\net8.0\CajaBanco.Abstractions.AssemblyInfo.cs
+C:\practicas2\backend\cajabancobackend\CajaBanco.Abstractions\obj\Debug\net8.0\CajaBanco.Abstractions.csproj.CoreCompileInputs.cache
+C:\practicas2\backend\cajabancobackend\CajaBanco.Abstractions\obj\Debug\net8.0\CajaBanco.Abstractions.sourcelink.json
+C:\practicas2\backend\cajabancobackend\CajaBanco.Abstractions\obj\Debug\net8.0\CajaBanc.87293D80.Up2Date
+C:\practicas2\backend\cajabancobackend\CajaBanco.Abstractions\obj\Debug\net8.0\CajaBanco.Abstractions.dll
+C:\practicas2\backend\cajabancobackend\CajaBanco.Abstractions\obj\Debug\net8.0\refint\CajaBanco.Abstractions.dll
+C:\practicas2\backend\cajabancobackend\CajaBanco.Abstractions\obj\Debug\net8.0\CajaBanco.Abstractions.pdb
+C:\practicas2\backend\cajabancobackend\CajaBanco.Abstractions\obj\Debug\net8.0\ref\CajaBanco.Abstractions.dll
