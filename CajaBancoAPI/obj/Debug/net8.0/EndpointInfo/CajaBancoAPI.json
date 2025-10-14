@@ -539,7 +539,8 @@
             "name": "observacion",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           }
         ],

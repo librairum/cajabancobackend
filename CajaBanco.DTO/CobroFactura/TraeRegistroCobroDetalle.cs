@@ -14,6 +14,9 @@ namespace CajaBanco.DTO.CobroFactura
             public double ImporteOriginalSoles { get;set; }
             public double ImportePagadoDolares { get; set; }
             public double ImportePagadoSoles { get; set; }
+            public int item { get; set; }
+            public string tipodoc { get; set; }
+            public string observacion { get; set; }
 
     }
 }

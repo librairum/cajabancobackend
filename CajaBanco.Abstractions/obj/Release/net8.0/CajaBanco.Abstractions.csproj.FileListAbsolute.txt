@@ -1,0 +1,48 @@
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Abstractions\bin\Release\net8.0\CajaBanco.Abstractions.deps.json
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Abstractions\bin\Release\net8.0\CajaBanco.Abstractions.dll
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Abstractions\bin\Release\net8.0\CajaBanco.Abstractions.pdb
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Abstractions\bin\Release\net8.0\CajaBanco.DTO.dll
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Abstractions\bin\Release\net8.0\CajaBanco.DTO.pdb
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.csproj.AssemblyReference.cache
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.AssemblyInfoInputs.cache
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.AssemblyInfo.cs
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.csproj.CoreCompileInputs.cache
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.sourcelink.json
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanc.87293D80.Up2Date
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.dll
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\refint\CajaBanco.Abstractions.dll
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.pdb
+D:\PROYECTOS_29082024\CAJABANCO\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\ref\CajaBanco.Abstractions.dll
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\bin\Release\net8.0\CajaBanco.Abstractions.deps.json
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\bin\Release\net8.0\CajaBanco.Abstractions.dll
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\bin\Release\net8.0\CajaBanco.Abstractions.pdb
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\bin\Release\net8.0\CajaBanco.DTO.dll
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\bin\Release\net8.0\CajaBanco.DTO.pdb
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.csproj.AssemblyReference.cache
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.AssemblyInfoInputs.cache
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.AssemblyInfo.cs
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.csproj.CoreCompileInputs.cache
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.sourcelink.json
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanc.87293D80.Up2Date
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.dll
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\refint\CajaBanco.Abstractions.dll
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.pdb
+D:\trabajo\minera deisi\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\ref\CajaBanco.Abstractions.dll
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Abstractions\bin\Release\net8.0\CajaBanco.Abstractions.deps.json
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Abstractions\bin\Release\net8.0\CajaBanco.Abstractions.dll
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Abstractions\bin\Release\net8.0\CajaBanco.Abstractions.pdb
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Abstractions\bin\Release\net8.0\CajaBanco.DTO.dll
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Abstractions\bin\Release\net8.0\CajaBanco.DTO.pdb
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.csproj.AssemblyReference.cache
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.AssemblyInfoInputs.cache
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.AssemblyInfo.cs
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.csproj.CoreCompileInputs.cache
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.sourcelink.json
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanc.87293D80.Up2Date
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.dll
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\refint\CajaBanco.Abstractions.dll
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\CajaBanco.Abstractions.pdb
+D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.Abstractions\obj\Release\net8.0\ref\CajaBanco.Abstractions.dll
