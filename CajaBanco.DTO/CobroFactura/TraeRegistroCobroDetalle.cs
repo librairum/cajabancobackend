@@ -17,6 +17,7 @@ namespace CajaBanco.DTO.CobroFactura
             public int item { get; set; }
             public string tipodoc { get; set; }
             public string observacion { get; set; }
+            public string moneda { get; set; }
 
     }
 }
