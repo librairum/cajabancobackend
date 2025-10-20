@@ -96,9 +96,14 @@ namespace CajaBanco.Application.CobroFactura
 
 
         #endregion
-        public async Task<ResultDto<TraeHistoricoCtaxCobra>> SpTraeHistorico(string empresa, string filtro)
+        public async Task<ResultDto<TraeHistoricoCtaxCobra>> SpTraeHistoricoReporte(string empresa, string filtro)
         {
-            return await _servicio.SpTraeHistorico(empresa, filtro);
+            return await _servicio.SpTraeHistoricoReporte(empresa, filtro);
+        }
+
+        public async Task<ResultDto<TraeDocPendienteCtaxCobrar>> SpTraeDocPendienteReporte(string empresa, string filtro)
+        {
+            return await _servicio.SpTraeDocPendienteReporte(empresa, filtro);
         }
     }
 }

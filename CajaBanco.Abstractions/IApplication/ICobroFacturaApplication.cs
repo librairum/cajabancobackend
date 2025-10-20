@@ -41,7 +41,11 @@ namespace CajaBanco.Abstractions.IApplication
         public Task<ResultDto<RegistroCobroSustento>> SpTraeSustentoDocumento(string empresa,
                                                         string numeroRegistroCobroCab, int item);
 
-        public Task<ResultDto<TraeHistoricoCtaxCobra>> SpTraeHistorico(string empresa, string filtro);
+        #region "Reporte"
+        public Task<ResultDto<TraeHistoricoCtaxCobra>> SpTraeHistoricoReporte(string empresa, string filtro);
+        public Task<ResultDto<TraeDocPendienteCtaxCobrar>> SpTraeDocPendienteReporte(string empresa, string filtro);
+
+        #endregion
 
     }
 }

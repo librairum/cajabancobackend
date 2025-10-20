@@ -581,8 +581,8 @@ namespace CajaBanco.Repository.CobroFactura
 
 
         #endregion
-
-        public async Task<ResultDto<TraeHistoricoCtaxCobra>> SpTraeHistorico(string empresa,
+        #region "Reporte"
+        public async Task<ResultDto<TraeHistoricoCtaxCobra>> SpTraeHistoricoReporte(string empresa,
             string filtro)
         {
             ResultDto<TraeHistoricoCtaxCobra> res = new ResultDto<TraeHistoricoCtaxCobra>();
@@ -608,5 +608,33 @@ namespace CajaBanco.Repository.CobroFactura
             }
             return res;
         }
+        public async Task<ResultDto<TraeDocPendienteCtaxCobrar>> SpTraeDocPendienteReporte(string empresa,
+                    string filtro)
+        {
+            ResultDto<TraeDocPendienteCtaxCobrar> res = new ResultDto<TraeDocPendienteCtaxCobrar>();
+            List<TraeDocPendienteCtaxCobrar> list = new List<TraeDocPendienteCtaxCobrar>();
+            try
+            {
+                SqlConnection cn = new SqlConnection(_connectionString);
+                DynamicParameters parametros = new DynamicParameters();
+                parametros.Add("@empresa", empresa);
+                parametros.Add("@filtro", filtro);
+
+                list = (List<TraeDocPendienteCtaxCobrar>)await cn.QueryAsync<TraeDocPendienteCtaxCobrar>("Spu_Ban_Trae_ReporteDocPendienteCtaxCobra",
+                   parametros, commandType: CommandType.StoredProcedure);
+                res.IsSuccess = list.Count > 0 ? true : false;
+                res.Message = list.Count > 0 ? "informacion encontrar" : "no se encontro informacion";
+                res.Data = list.ToList();
+                res.Total = list.Count;
+            }
+            catch (Exception ex)
+            {
+                res.IsSuccess = false;
+                res.MessageException = ex.Message;
+            }
+            return res;
+        }
+        #endregion
+
     }
 }

@@ -548,6 +548,7 @@ namespace CajaBanco.Repository.Presupuesto
             try
             {
                 SqlConnection cn = new SqlConnection(_connectionString);
+                
                 DynamicParameters par = new DynamicParameters();
                 par.Add("@codigoEmpresa", empresa);
                 par.Add("@filtro", filtro);

@@ -318,12 +318,12 @@ namespace CajaBancoAPI.Controllers
         #endregion
 
         [HttpGet]
-        [Route("ListaHistorico")]
+        [Route("ListaHistoricoReporte")]
         public async Task<ActionResult> ListaHistorico(string empresa, string filtro)
         {
             try
             {
-                var result = await this._aplicacion.SpTraeHistorico(empresa, filtro);
+                var result = await this._aplicacion.SpTraeHistoricoReporte(empresa, filtro);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -331,5 +331,19 @@ namespace CajaBancoAPI.Controllers
                 return BadRequest(ex.ToString());
             }
         }
+
+        [HttpGet]
+        [Route("ListaDocPendienteReporte")]
+        public async Task<ActionResult> ListaDocPendienteReporte(string empresa, string filtro)
+        {
+            try {
+                var result = await this._aplicacion.SpTraeDocPendienteReporte(empresa, filtro);
+                return Ok(result);
+            }catch( Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+
     }
 }
