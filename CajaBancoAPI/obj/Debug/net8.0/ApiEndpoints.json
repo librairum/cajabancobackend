@@ -425,6 +425,48 @@
   },
   {
     "ContainingType": "CajaBancoAPI.Controllers.CobroFacturaController",
+    "Method": "ListaDocPendienteReporte",
+    "RelativePath": "CobroFactura/ListaDocPendienteReporte",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.CobroFacturaController",
+    "Method": "ListaHistorico",
+    "RelativePath": "CobroFactura/ListaHistoricoReporte",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.CobroFacturaController",
     "Method": "ListaSustento",
     "RelativePath": "CobroFactura/ListaSustento",
     "HttpMethod": "GET",
@@ -1541,6 +1583,27 @@
       },
       {
         "Name": "numeroPresupuesto",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CajaBancoAPI.Controllers.PresupuestoController",
+    "Method": "SpTraeDocPorPagarConsulta",
+    "RelativePath": "Presupuesto/SpTraeDocPorPagarConsulta",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filtro",
         "Type": "System.String",
         "IsRequired": false
       }
