@@ -13,14 +13,18 @@ namespace CajaBanco.DTO.CobroFactura
         public string tipoDoc { get; set; }
         public string tipoDocDesc { get; set; }
         public string nroComprobante { get; set; }
-        public string fecha { get; set; }
+        public string fechaFactura { get; set; }
+        public string fecVencimiento { get; set; }
+        public int diasAtraso { get; set; }
         public string importeFactura { get; set; }
-        public double importeFacturaPago { get; set; }
         public string monedaFactura { get; set; }
-        public string estadopago { get; set; }
         public string fechapago { get; set; }
         public double importePagoSoles { get; set; }
         public double importePagoDolares { get; set; }
+        public string estadopago { get; set; }
+       public double saldoSoles { get; set; }
+        public double saldDolares { get; set; }
+      
 
         public string DocumentoElectronicoEstadoSunat { get; set; }
         public string DocumentoElectronicoEstadoUsuario { get; set; }
