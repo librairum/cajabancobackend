@@ -54,7 +54,7 @@
               "RelativeDocumentMoniker": "CajaBanco.DTO\\CobroFactura\\TraeDocPendienteCtaxCobrar.cs",
               "ToolTip": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CobroFactura\\TraeDocPendienteCtaxCobrar.cs",
               "RelativeToolTip": "CajaBanco.DTO\\CobroFactura\\TraeDocPendienteCtaxCobrar.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAowBkAAAAhAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA5wBUAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-22T20:50:50.692Z",
               "EditorCaption": ""
@@ -69,8 +69,7 @@
               "RelativeToolTip": "CajaBanco.Abstractions\\IRepository\\ICobroFacturaRepository.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAkwCsAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T20:50:44.845Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T20:50:44.845Z"
             },
             {
               "$type": "Document",
@@ -95,8 +94,7 @@
               "RelativeToolTip": "CajaBancoAPI\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-21T04:53:17.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T04:53:17.238Z"
             },
             {
               "$type": "Document",
@@ -108,8 +106,7 @@
               "RelativeToolTip": "CajaBancoAPI\\Controllers\\CobroFacturaController.cs",
               "ViewState": "AQIAABUBAAAAAAAAAAD4v1MBAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T22:47:28.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-20T22:47:28.628Z"
             },
             {
               "$type": "Document",
@@ -121,8 +118,7 @@
               "RelativeToolTip": "CajaBanco.Repository\\CobroFactura\\CobroFacturaRepository.cs",
               "ViewState": "AQIAAFICAAAAAAAAAAAjwG4CAACTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T22:32:19.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T22:32:19.331Z"
             }
           ]
         }

@@ -23,7 +23,7 @@ namespace CajaBanco.DTO.CobroFactura
         public double importePagoDolares { get; set; }
         public string estadopago { get; set; }
        public double saldoSoles { get; set; }
-        public double saldDolares { get; set; }
+        public double saldoDolares { get; set; }
       
 
         public string DocumentoElectronicoEstadoSunat { get; set; }
