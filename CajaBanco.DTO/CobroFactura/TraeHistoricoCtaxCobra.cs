@@ -26,6 +26,7 @@ namespace CajaBanco.DTO.CobroFactura
             public string DocumentoElectronicoEstadoSunat { get; set; }
             public string DocumentoElectronicoEstadoUsuario { get; set; }
             public double saldo { get; set; }
+            public string numeroRegCobro { get; set; }
 
     }
 }
