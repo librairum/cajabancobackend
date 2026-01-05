@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http.Metadata;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.Elfie.Serialization;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Identity.Client;
 using System.Configuration;
 using System.Text;
 using System.Text.Json;
@@ -291,6 +292,20 @@ namespace CajaBancoAPI.Controllers
             }
             catch (Exception ex)
             {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete]
+        [Route("SpEliminaDet")]
+        public async Task<ActionResult> SpEliminaDet(string empresa, string codigoDetallePresupuesto, string numeroPresupuesto)
+        {
+            try
+            {
+                var result = await this._app.SpEliminaDet(empresa, codigoDetallePresupuesto, numeroPresupuesto);
+                return Ok(result);
+            }
+            catch (Exception ex) {
                 return BadRequest(ex.Message);
             }
         }
