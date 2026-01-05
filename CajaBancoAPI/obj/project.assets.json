@@ -8134,11 +8134,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBancoAPI\\CajaBancoAPI.csproj",
+      "projectUniqueName": "D:\\Deisi\\CAJABANCO\\cajabancobackend\\CajaBancoAPI\\CajaBancoAPI.csproj",
       "projectName": "CajaBancoAPI",
-      "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBancoAPI\\CajaBancoAPI.csproj",
+      "projectPath": "D:\\Deisi\\CAJABANCO\\cajabancobackend\\CajaBancoAPI\\CajaBancoAPI.csproj",
       "packagesPath": "C:\\Users\\sistemas\\.nuget\\packages\\",
-      "outputPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBancoAPI\\obj\\",
+      "outputPath": "D:\\Deisi\\CAJABANCO\\cajabancobackend\\CajaBancoAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sistemas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8156,20 +8156,20 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj": {
-              "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj"
+            "D:\\Deisi\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj": {
+              "projectPath": "D:\\Deisi\\CAJABANCO\\cajabancobackend\\CajaBanco.Abstractions\\CajaBanco.Abstractions.csproj"
             },
-            "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Application\\CajaBanco.Application.csproj": {
-              "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Application\\CajaBanco.Application.csproj"
+            "D:\\Deisi\\CAJABANCO\\cajabancobackend\\CajaBanco.Application\\CajaBanco.Application.csproj": {
+              "projectPath": "D:\\Deisi\\CAJABANCO\\cajabancobackend\\CajaBanco.Application\\CajaBanco.Application.csproj"
             },
-            "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj": {
-              "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj"
+            "D:\\Deisi\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj": {
+              "projectPath": "D:\\Deisi\\CAJABANCO\\cajabancobackend\\CajaBanco.DTO\\CajaBanco.DTO.csproj"
             },
-            "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Repository\\CajaBanco.Repository.csproj": {
-              "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Repository\\CajaBanco.Repository.csproj"
+            "D:\\Deisi\\CAJABANCO\\cajabancobackend\\CajaBanco.Repository\\CajaBanco.Repository.csproj": {
+              "projectPath": "D:\\Deisi\\CAJABANCO\\cajabancobackend\\CajaBanco.Repository\\CajaBanco.Repository.csproj"
             },
-            "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj": {
-              "projectPath": "D:\\PROYECTOS_29082024\\CAJABANCO\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj"
+            "D:\\Deisi\\CAJABANCO\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj": {
+              "projectPath": "D:\\Deisi\\CAJABANCO\\cajabancobackend\\CajaBanco.Services\\CajaBanco.Services.csproj"
             }
           }
         }

@@ -34,3 +34,15 @@ D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.DTO\obj\Release\net8.0\C
 D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.DTO\obj\Release\net8.0\refint\CajaBanco.DTO.dll
 D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.DTO\obj\Release\net8.0\CajaBanco.DTO.pdb
 D:\trabajo\Nivargo\cajabanco\cajabancobackend\CajaBanco.DTO\obj\Release\net8.0\ref\CajaBanco.DTO.dll
+D:\Deisi\CAJABANCO\cajabancobackend\CajaBanco.DTO\bin\Release\net8.0\CajaBanco.DTO.deps.json
+D:\Deisi\CAJABANCO\cajabancobackend\CajaBanco.DTO\bin\Release\net8.0\CajaBanco.DTO.dll
+D:\Deisi\CAJABANCO\cajabancobackend\CajaBanco.DTO\bin\Release\net8.0\CajaBanco.DTO.pdb
+D:\Deisi\CAJABANCO\cajabancobackend\CajaBanco.DTO\obj\Release\net8.0\CajaBanco.DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Deisi\CAJABANCO\cajabancobackend\CajaBanco.DTO\obj\Release\net8.0\CajaBanco.DTO.AssemblyInfoInputs.cache
+D:\Deisi\CAJABANCO\cajabancobackend\CajaBanco.DTO\obj\Release\net8.0\CajaBanco.DTO.AssemblyInfo.cs
+D:\Deisi\CAJABANCO\cajabancobackend\CajaBanco.DTO\obj\Release\net8.0\CajaBanco.DTO.csproj.CoreCompileInputs.cache
+D:\Deisi\CAJABANCO\cajabancobackend\CajaBanco.DTO\obj\Release\net8.0\CajaBanco.DTO.sourcelink.json
+D:\Deisi\CAJABANCO\cajabancobackend\CajaBanco.DTO\obj\Release\net8.0\CajaBanco.DTO.dll
+D:\Deisi\CAJABANCO\cajabancobackend\CajaBanco.DTO\obj\Release\net8.0\refint\CajaBanco.DTO.dll
+D:\Deisi\CAJABANCO\cajabancobackend\CajaBanco.DTO\obj\Release\net8.0\CajaBanco.DTO.pdb
+D:\Deisi\CAJABANCO\cajabancobackend\CajaBanco.DTO\obj\Release\net8.0\ref\CajaBanco.DTO.dll
