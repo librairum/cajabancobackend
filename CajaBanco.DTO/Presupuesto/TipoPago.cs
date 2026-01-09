@@ -11,5 +11,7 @@ namespace CajaBanco.DTO.Presupuesto
         public string Ban01Empresa { get; set; }
         public string Ban01IdTipoPago { get; set; }
         public string Ban01Descripcion { get; set; }
+
+        public string Ban01CtaBanBancoCod { get; set; }
     }
 }
